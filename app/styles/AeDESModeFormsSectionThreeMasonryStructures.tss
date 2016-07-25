@@ -1,0 +1,90 @@
+// The Window
+"#aedesModeSectionThreeMasonryStructuresWindow":
+{
+    title: L( 'aedes_mode_section_three_masonry_structures_title' ) ,
+    backgroundColor: '#ffffcc'
+} ,
+
+// Back button iOS (to papers section three view)
+"#btn_ios_back":
+{
+    title: L( 'generic_back_btn_title' )
+} ,
+
+// ScrollView
+"#scrollViewSectionThreeMasonryStructures":
+{
+    top: 10 ,
+    scrollType: "vertical"
+} ,
+
+// HorizontalMasonryStructures label
+"#lblAeDESModeFormsSectionThreeHorizontalMasonryStructures":
+{
+    text: L( 'generic_horizontal_masonry_structures_text_msg' ) ,
+    top: 0 ,
+    width: 290 ,
+    height: 18 ,
+    font:
+    {
+        fontFamily: 'Arial' ,
+        fontWeight: 'bold' ,
+        fontSize: '12'
+    } ,
+    color: '#000'
+} ,
+
+// Father title label
+"#lblAeDESModeFormsSectionThreeHorizontalMasonryStructuresFatherTitle":
+{
+    top: 30 ,
+    width: 290 ,
+    height: 18 ,
+    font:
+    {
+        fontFamily: 'Arial' ,
+        fontWeight: 'bold' ,
+        fontSize: '12'
+    } ,
+    color: '#000'
+} ,
+
+// NotIdentified view
+"#viewAppCheckBoxAeDESModeFormsSectionThreeMasonryStructuresNotIdentified":
+{
+    top: 60 ,
+    height: 50 ,
+    width: 290
+} ,
+
+// TypeOneWithoutChains view
+"#viewAppCheckBoxAeDESModeFormsSectionThreeMasonryStructuresTypeOneWithoutChains":
+{
+    top: 130 ,
+    height: 50 ,
+    width: 290
+} ,
+
+// TypeOneWithChains view
+"#viewAppCheckBoxAeDESModeFormsSectionThreeMasonryStructuresTypeOneWithChains":
+{
+    top: 200 ,
+    height: 50 ,
+    width: 290
+} ,
+
+// TypeTwoWithoutChains view
+"#viewAppCheckBoxAeDESModeFormsSectionThreeMasonryStructuresTypeTwoWithoutChains":
+{
+    top: 270 ,
+    height: 50 ,
+    width: 290
+} ,
+
+// TypeTwoWithChains view
+"#viewAppCheckBoxAeDESModeFormsSectionThreeMasonryStructuresTypeTwoWithChains":
+{
+    top: 340 ,
+    height: 50 ,
+    width: 290
+}

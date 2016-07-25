@@ -1,0 +1,12 @@
+<Alloy>
+    <NavigationWindow id="navigationWindowComingSoonView">
+        <Window id="comingSoonViewWindow">
+             <LeftNavButton>
+                <Button id="btn_ios_back" onClick="OnBtnBack_Click" />
+            </LeftNavButton>
+
+            <Label id="lblComingSoon" />
+            <ImageView id="coming_soon_image_view" />
+        </Window>
+    </NavigationWindow>
+</Alloy>

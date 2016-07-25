@@ -1,0 +1,43 @@
+// The Window
+"#baeaModeLifelinesCommunicationWindow":
+{
+    title: L( 'baea_mode_lifelines_communication_title' ) ,
+    backgroundColor: '#ffffcc'
+} ,
+
+// Back button iOS (to Landslide view)
+"#btn_ios_back":
+{
+    title: L( 'generic_back_btn_title' )
+} ,
+
+// ScrollView
+"#scrollViewLifelinesCommunication":
+{
+    top: 10 ,
+    scrollType: "vertical"
+} ,
+
+// Telephone Telegraph MobilePhone view
+"#viewAppCheckBoxBAEAModeFormsLifelinesCommunicationTelephoneTelegraphMobilePhone":
+{
+    top: 0 ,
+    height: 50 ,
+    width: 290
+} ,
+
+// Radio And Television view
+"#viewAppCheckBoxBAEAModeFormsLifelinesCommunicationRadioAndTelevision":
+{
+    top: 70 ,
+    height: 50 ,
+    width: 290
+} ,
+
+// Newspaper And Magazines view
+"#viewAppCheckBoxBAEAModeFormsLifelinesCommunicationNewspaperAndMagazines":
+{
+    top: 140 ,
+    height: 50 ,
+    width: 290
+}

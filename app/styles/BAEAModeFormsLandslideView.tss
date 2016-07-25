@@ -1,0 +1,220 @@
+// The Window
+"#baeaModeFormsLandslideWindow":
+{
+    title: L( 'baea_mode_landslide_view_title' ) ,
+    backgroundColor: '#ffffcc'
+} ,
+
+// Back button iOS (to papers manage section view)
+"#btn_ios_back":
+{
+    title: L( 'generic_back_btn_title' )
+} ,
+
+// ScrollView
+"#scrollViewLandslide":
+{
+    top: 10 ,
+    contentWidth: '100%' ,
+    scrollType: "vertical"
+} ,
+
+// SiteName view
+"#viewAppTextFieldBAEAModeFormsLandslideSiteName":
+{
+    top: 0 ,
+    height: 50 ,
+    right: 10
+} ,
+
+// Table view with the Photo
+"#tableViewBAEAModeFormsLandslidePhoto":
+{
+    top: 70 ,
+    backgroundColor: '#ffffff' ,
+    width: Ti.UI.FILL ,
+    height: 50
+}
+
+// Label photo table view row
+"#lblPhoto":
+{
+    text: L( 'generic_photo_title' ) ,
+    height: 50 ,
+    width: 200 ,
+    color: "#000"
+} ,
+
+// Load coordinates button
+"#btnBAEAModeFormsLandslideLoadAddress":
+{
+    title: L( 'generic_load_address_btn_title' ) ,
+    backgroundImage: '/images/app_button_normal.png' ,
+    backgroundSelectedImage: '/images/app_button_pressed.png' ,
+    backgroundDisabledImage: '/images/app_button_disabled.png' ,
+    top: 140 ,
+    height: 50 ,
+    left: 10 ,
+    right: 10 ,
+    font:
+    {
+        fontFamily: 'Arial' ,
+        fontWeight: 'bold' ,
+        fontSize: '12'
+    } ,
+    textAlign: Titanium.UI.TEXT_ALIGNMENT_CENTER ,
+    verticalAlign: Titanium.UI.TEXT_VERTICAL_ALIGNMENT_CENTER
+} ,
+
+// Latitude view
+"#viewAppTextFieldBAEAModeFormsLandslideLatitude":
+{
+    top: 210 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// Longitude view
+"#viewAppTextFieldBAEAModeFormsLandslideLongitude":
+{
+    top: 280 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// Address view
+"#viewAppTextFieldBAEAModeFormsLandslideAddress":
+{
+    top: 350 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// View coordinates button
+"#btnBAEAModeFormsLandslideViewAddress":
+{
+    title: L( 'generic_view_address_btn_title' ) ,
+    backgroundImage: '/images/app_button_normal.png' ,
+    backgroundSelectedImage: '/images/app_button_pressed.png' ,
+    backgroundDisabledImage: '/images/app_button_disabled.png' ,
+    top: 420 ,
+    height: 50 ,
+    left: 10 ,
+    right: 10 ,
+    font:
+    {
+        fontFamily: 'Arial' ,
+        fontWeight: 'bold' ,
+        fontSize: '12'
+    } ,
+    textAlign: Titanium.UI.TEXT_ALIGNMENT_CENTER ,
+    verticalAlign: Titanium.UI.TEXT_VERTICAL_ALIGNMENT_CENTER
+} ,
+
+// Table view with some Landslide elements
+"#tableViewBAEAModeFormsLandslide":
+{
+    top: 490 ,
+    backgroundColor: '#ffffff' ,
+    width: Ti.UI.FILL ,
+    height: 200
+}
+
+// Label Landslide Type table view row
+"#lblLandslideType":
+{
+    text: L( 'generic_landslide_type_title' ) ,
+    height: 50 ,
+    width: 200 ,
+    color: "#000"
+} ,
+
+// Label Material Type table view row
+"#lblMaterialType":
+{
+    text: L( 'generic_material_type_title' ) ,
+    height: 50 ,
+    width: 200 ,
+    color: "#000"
+} ,
+
+// Label Area Affected table view row
+"#lblAreaAffected":
+{
+    text: L( 'generic_area_affected_title' ) ,
+    height: 50 ,
+    width: 200 ,
+    color: "#000"
+} ,
+
+// Label Area Affected table view row
+"#lblVulnerableFacilities":
+{
+    text: L( 'generic_vulnerable_facilities_title' ) ,
+    height: 50 ,
+    width: 200 ,
+    color: "#000"
+} ,
+
+// Notes view
+"#viewAppTextFieldBAEAModeFormsLandslideNotes":
+{
+    top: 700 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// Record button
+"#btnBAEAModeFormsLandslideRecord":
+{
+    title: L( 'generic_record_btn_title' ) ,
+    backgroundImage: '/images/app_button_normal.png' ,
+    backgroundSelectedImage: '/images/app_button_pressed.png' ,
+    backgroundDisabledImage: '/images/app_button_disabled.png' ,
+    top: 770 ,
+    height: 50 ,
+    left: 10 ,
+    right: 10 ,
+    bottom: 10 ,
+    font:
+    {
+        fontFamily: 'Arial' ,
+        fontWeight: 'bold' ,
+        fontSize: '12'
+    } ,
+    textAlign: Titanium.UI.TEXT_ALIGNMENT_CENTER ,
+    verticalAlign: Titanium.UI.TEXT_VERTICAL_ALIGNMENT_CENTER
+} ,
+
+// Activity Indicator iOS
+"#activity_indicator[platform=ios]":
+{
+    color: '#000' ,
+    font:
+    {
+        fontFamily: 'Helvetica Neue' ,
+        fontSize: 11 ,
+        fontWeight: 'bold'
+    } ,
+    style: Ti.UI.iPhone.ActivityIndicatorStyle.DARK ,
+    width: Ti.UI.SIZE ,
+    height: Ti.UI.SIZE ,
+    zIndex: 1
+} ,
+
+// Activity Indicator Android
+"#activity_indicator":
+{
+    color: '#000' ,
+    font:
+    {
+        fontFamily: 'Helvetica Neue' ,
+        fontSize: 11 ,
+        fontWeight: 'bold'
+    } ,
+    style: Ti.UI.ActivityIndicatorStyle.DARK ,
+    width: Ti.UI.SIZE ,
+    height: Ti.UI.SIZE ,
+    zIndex: 1
+}
+

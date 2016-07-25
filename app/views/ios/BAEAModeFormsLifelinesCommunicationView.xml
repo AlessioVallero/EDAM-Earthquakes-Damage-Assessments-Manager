@@ -1,0 +1,21 @@
+<Alloy>
+    <NavigationWindow id="navigationWindowLifelinesCommunication">
+        <Window id="baeaModeLifelinesCommunicationWindow">
+            <LeftNavButton>
+                <Button id="btn_ios_back" onClick="OnBtnBack_Click" />
+            </LeftNavButton>
+
+            <ScrollView id="scrollViewLifelinesCommunication">
+                <View id="viewAppCheckBoxBAEAModeFormsLifelinesCommunicationTelephoneTelegraphMobilePhone">
+                    <Widget id="widgetAppCheckBoxBAEAModeFormsLifelinesCommunicationTelephoneTelegraphMobilePhone" src="com.diseg.AppCheckBox" />
+                </View>
+                <View id="viewAppCheckBoxBAEAModeFormsLifelinesCommunicationRadioAndTelevision">
+                    <Widget id="widgetAppCheckBoxBAEAModeFormsLifelinesCommunicationRadioAndTelevision" src="com.diseg.AppCheckBox" />
+                </View>
+                <View id="viewAppCheckBoxBAEAModeFormsLifelinesCommunicationNewspaperAndMagazines">
+                    <Widget id="widgetAppCheckBoxBAEAModeFormsLifelinesCommunicationNewspaperAndMagazines" src="com.diseg.AppCheckBox" />
+                </View>
+            </ScrollView>
+        </Window>
+    </NavigationWindow>
+</Alloy>

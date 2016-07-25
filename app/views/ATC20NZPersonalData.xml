@@ -1,0 +1,26 @@
+<Alloy>
+    <Window id="atc20NZPersonalDataWindow">
+        <ActivityIndicator id="activity_indicator" />
+
+        <View id="sign_btns_view">
+            <View id="viewAppButtonViewSign">
+                <Widget id="widgetAppButtonViewSign" src="com.diseg.AppButton" />
+            </View>
+            <View id="viewAppButtonCreateSign">
+                <Widget id="widgetAppButtonCreateSign" src="com.diseg.AppButton" />
+            </View>
+        </View>
+
+        <ScrollView id="scrollView_fields">
+            <View id="viewAppTextFieldInspectorID">
+                <Widget id="widgetAppTextFieldInspectorID" src="com.diseg.AppTextField" />
+            </View>
+            <View id="viewAppTextFieldAuthority">
+                <Widget id="widgetAppTextFieldAuthority" src="com.diseg.AppTextField" />
+            </View>
+            <View id="viewAppButtonSave">
+                <Widget id="widgetAppButtonSave" src="com.diseg.AppButton" />
+            </View>
+        </ScrollView>
+   </Window>
+</Alloy>

@@ -1,0 +1,18 @@
+<Alloy>
+    <NavigationWindow id="navigationWindowChangeLanguageView">
+        <Window id="changeLanguageViewWindow">
+             <LeftNavButton>
+                <Button id="btn_ios_back" onClick="OnBtnBack_Click" />
+            </LeftNavButton>
+
+            <ScrollView id="scrollViewChangeLanguage">
+                <View id="viewAppComboBoxChangeLanguage">
+                    <Widget id="widgetAppComboBoxChangeLanguage" src="com.diseg.AppComboBox" />
+                </View>
+                <View id="viewAppButtonDone">
+                    <Widget id="widgetAppButtonDone" src="com.diseg.AppButton" />
+                </View>
+            </ScrollView>
+        </Window>
+    </NavigationWindow>
+</Alloy>

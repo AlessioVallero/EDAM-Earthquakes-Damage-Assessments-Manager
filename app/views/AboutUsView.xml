@@ -1,0 +1,8 @@
+<Alloy>
+    <Window id="aboutUsViewWindow">
+        <ScrollView id="scrollViewAboutUs">
+            <Label id="lblAboutUsVersion" />
+            <Label id="lblAboutUs" onClick="OnLblAboutUs_Click" />
+        </ScrollView>
+    </Window>
+</Alloy>

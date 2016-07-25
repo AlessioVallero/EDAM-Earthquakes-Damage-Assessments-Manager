@@ -1,0 +1,228 @@
+// Shed Mode general section
+"#shedModeFormsGeneralSectionWindow":
+{
+    title: L( 'shed_mode_forms_general_section_view_title' ) ,
+    backgroundColor: '#ffffcc'
+} ,
+
+// Back button iOS (to papers view)
+"#btn_ios_back":
+{
+    title: L( 'generic_back_btn_title' )
+} ,
+
+"#scrollViewGeneralSection":
+{
+    top: 0 ,
+    scrollType: 'vertical'
+} ,
+
+// Slider menu manual swipe button
+"#btn_slider_menu":
+{
+    top: 0 ,
+    left: 0 ,
+    width: 60 ,
+    height: 60 ,
+    borderColor: "#C0C0C0" ,
+    borderWidth: 1 ,
+    borderRadius: 4 ,
+    backgroundImage: '/images/slider_menu_start.png'
+} ,
+
+// Slider menu manual swipe label
+"#lbl_slider_menu":
+{
+    top: 0 ,
+    left: 63 ,
+    height: 60 ,
+    text: L( 'slider_menu_show_text_msg' ) ,
+    font:
+    {
+        fontFamily: 'Arial' ,
+        fontWeight: 'bold' ,
+        fontSize: '11'
+    } ,
+    color: '#000' ,
+    textAlign: 'center'
+} ,
+
+// View image btns (iOS)
+"#images_btn_view[platform=ios]":
+{
+    top: 65 ,
+    width: 202 ,
+    height: 178
+} ,
+
+// View image btns (Android)
+"#images_btn_view[platform=android]":
+{
+    top: 65 ,
+    width: 202 ,
+    height: 268
+} ,
+
+// Save view (iOS)
+"#viewAppButtonSave[platform=ios]":
+{
+    left: 0 ,
+    width: 60
+} ,
+
+// Save view (Android)
+"#viewAppButtonSave[platform=android]":
+{
+    top: 0 ,
+    left: 71 ,
+    width: 60
+} ,
+
+// ShedDamageAssessments view (iOS)
+"#viewAppButtonShedDamageAssessments[platform=ios]":
+{
+    left: 142 ,
+    width: 60
+} ,
+
+// ShedDamageAssessments view (Android)
+"#viewAppButtonShedDamageAssessments[platform=android]":
+{
+    top: 90 ,
+    left: 0 ,
+    width: 60
+} ,
+
+// Send view (iOS)
+"#viewAppButtonSend[platform=ios]":
+{
+    left: 71 ,
+    width: 60
+} ,
+
+// Send view (Android)
+"#viewAppButtonSend[platform=android]":
+{
+    top: 90 ,
+    left: 71 ,
+    width: 60
+} ,
+
+// Make video
+"#viewAppButtonMakeVideo":
+{
+    top: 90 ,
+    left: 141 ,
+    width: 60
+} ,
+
+// Make media view (iOS)
+"#viewAppButtonMakeMedia[platform=ios]":
+{
+    top: 90 ,
+    left: 0 ,
+    width: 60
+} ,
+
+// Make media view (Android)
+"#viewAppButtonMakeMedia[platform=android]":
+{
+    top: 180 ,
+    left: 0 ,
+    width: 60
+} ,
+
+// View media view (iOS)
+"#viewAppButtonViewMedia[platform=ios]":
+{
+    top: 90 ,
+    left: 71 ,
+    width: 60
+} ,
+
+// View media view (Android)
+"#viewAppButtonViewMedia[platform=android]":
+{
+    top: 180 ,
+    left: 71 ,
+    width: 60
+} ,
+
+// Make draft view (iOS)
+"#viewAppButtonMakeDraft[platform=ios]":
+{
+    top: 90 ,
+    left: 142 ,
+    width: 60
+} ,
+
+// Make draft view (Android)
+"#viewAppButtonMakeDraft[platform=android]":
+{
+    top: 180 ,
+    left: 142 ,
+    width: 60
+} ,
+
+// Shed logo on the Window (iOS)
+"#imageViewShedLogo[platform=ios]":
+{
+    top: 245 ,
+    width: '100%' ,
+    image: '/images/Shed_logo.png'
+} ,
+
+// Shed logo on the Window (Android)
+"#imageViewShedLogo[platform=android]":
+{
+    top: 335 ,
+    width: '100%' ,
+    image: '/images/Shed_logo.png'
+} ,
+
+// Activity Indicator iOS
+"#activity_indicator[platform=ios]":
+{
+    color: '#000' ,
+    font:
+    {
+        fontFamily: 'Helvetica Neue' ,
+        fontSize: 11 ,
+        fontWeight: 'bold'
+    } ,
+    style: Ti.UI.iPhone.ActivityIndicatorStyle.DARK ,
+    width: Ti.UI.SIZE ,
+    height: Ti.UI.SIZE ,
+    zIndex: 1
+} ,
+
+// Activity Indicator Android-mobileweb
+"#activity_indicator[platform=android,mobileweb]":
+{
+    color: '#000' ,
+    font:
+    {
+        fontFamily: 'Helvetica Neue' ,
+        fontSize: 11 ,
+        fontWeight: 'bold'
+    } ,
+    style: Ti.UI.ActivityIndicatorStyle.DARK ,
+    width: Ti.UI.SIZE ,
+    height: Ti.UI.SIZE ,
+    zIndex: 1
+} ,
+
+// Activity Indicator BlackBerry
+"#activity_indicator[platform=blackberry]":
+{
+    color: '#000' ,
+    font:
+    {
+        fontFamily: 'Helvetica Neue' ,
+        fontSize: 11 ,
+        fontWeight: 'bold'
+    } ,
+    width: Ti.UI.SIZE ,
+    height: Ti.UI.SIZE ,
+    zIndex: 1
+}

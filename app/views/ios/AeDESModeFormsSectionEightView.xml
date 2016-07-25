@@ -1,0 +1,78 @@
+<Alloy>
+    <NavigationWindow id="navigationWindowSectionEight">
+        <Window id="aedesModeSectionEightWindow">
+            <LeftNavButton>
+                <Button id="btn_ios_back" onClick="OnBtnBack_Click" />
+            </LeftNavButton>
+
+            <ScrollView id="scrollViewSectionEight">
+                <View id="viewAppComboBoxAeDESModeFormsSectionEightStructural">
+                    <Widget id="widgetAppComboBoxAeDESModeFormsSectionEightStructural" src="com.diseg.AppComboBox" />
+                </View>
+                <View id="viewAppComboBoxAeDESModeFormsSectionEightNotStructural">
+                    <Widget id="widgetAppComboBoxAeDESModeFormsSectionEightNotStructural" src="com.diseg.AppComboBox" />
+                </View>
+                <View id="viewAppComboBoxAeDESModeFormsSectionEightExternal">
+                    <Widget id="widgetAppComboBoxAeDESModeFormsSectionEightExternal" src="com.diseg.AppComboBox" />
+                </View>
+                <View id="viewAppComboBoxAeDESModeFormsSectionEightGeotechnical">
+                    <Widget id="widgetAppComboBoxAeDESModeFormsSectionEightGeotechnical" src="com.diseg.AppComboBox" />
+                </View>
+                <View id="viewAppComboBoxAeDESModeFormsSectionEightOutcomePracticability">
+                    <Widget id="widgetAppComboBoxAeDESModeFormsSectionEightOutcomePracticability" src="com.diseg.AppComboBox" />
+                </View>
+                <View id="viewAppTextFieldAeDESModeFormsSectionEightHousingUnitsUninhabitable">
+                    <Widget id="widgetAppTextFieldAeDESModeFormsSectionEightHousingUnitsUninhabitable" src="com.diseg.AppTextField" />
+                </View>
+                <View id="viewAppTextFieldAeDESModeFormsSectionEightFamiliesEvacuated">
+                    <Widget id="widgetAppTextFieldAeDESModeFormsSectionEightFamiliesEvacuated" src="com.diseg.AppTextField" />
+                </View>
+                <View id="viewAppTextFieldAeDESModeFormsSectionEightEvacueesN">
+                    <Widget id="widgetAppTextFieldAeDESModeFormsSectionEightEvacueesN" src="com.diseg.AppTextField" />
+                </View>
+                <View id="viewAppComboBoxAeDESModeFormsSectionEightAccuracyVisit">
+                    <Widget id="widgetAppComboBoxAeDESModeFormsSectionEightAccuracyVisit" src="com.diseg.AppComboBox" />
+                </View>
+                <View id="viewAppTextFieldAeDESModeFormsSectionEightOther">
+                    <Widget id="widgetAppTextFieldAeDESModeFormsSectionEightOther" src="com.diseg.AppTextField" />
+                </View>
+                <Label id="lblAeDESModeFormsSectionEightMeasuresOfEmergency" />
+                <TableView id="tableViewAeDESModeFormsSectionEightMeasuresOfEmergency" onClick="OnTableViewAeDESModeFormsSectionEightMeasuresOfEmergency_Click">
+                    <TableViewRow id="tableViewAeDESModeFormsSectionEightMeasuresOfEmergencyRowHoopsStuds">
+                        <Label id="lblAeDESModeFormsSectionEightMeasuresOfEmergencyRowHoopsStuds" />
+                    </TableViewRow>
+                    <TableViewRow id="tableViewAeDESModeFormsSectionEightMeasuresOfEmergencyRowRepairsLightDamageToTheCladdingAndPartitions">
+                        <Label id="lblAeDESModeFormsSectionEightMeasuresOfEmergencyRowRepairsLightDamageToTheCladdingAndPartitions" />
+                    </TableViewRow>
+                    <TableViewRow id="tableViewAeDESModeFormsSectionEightMeasuresOfEmergencyRowRepairCoverage">
+                        <Label id="lblAeDESModeFormsSectionEightMeasuresOfEmergencyRowRepairCoverage" />
+                    </TableViewRow>
+                    <TableViewRow id="tableViewAeDESModeFormsSectionEightMeasuresOfEmergencyRowShoringStairs">
+                        <Label id="lblAeDESModeFormsSectionEightMeasuresOfEmergencyRowShoringStairs" />
+                    </TableViewRow>
+                    <TableViewRow id="tableViewAeDESModeFormsSectionEightMeasuresOfEmergencyRowRemovingPlasterPanelingFalseCeilings">
+                        <Label id="lblAeDESModeFormsSectionEightMeasuresOfEmergencyRowRemovingPlasterPanelingFalseCeilings" />
+                    </TableViewRow>
+                    <TableViewRow id="tableViewAeDESModeFormsSectionEightMeasuresOfEmergencyRowRemovingTilesChimneysParapets">
+                        <Label id="lblAeDESModeFormsSectionEightMeasuresOfEmergencyRowRemovingTilesChimneysParapets" />
+                    </TableViewRow>
+                    <TableViewRow id="tableViewAeDESModeFormsSectionEightMeasuresOfEmergencyRowRemovalOfCornicesParapetsOverhangs">
+                        <Label id="lblAeDESModeFormsSectionEightMeasuresOfEmergencyRowRemovalOfCornicesParapetsOverhangs" />
+                    </TableViewRow>
+                    <TableViewRow id="tableViewAeDESModeFormsSectionEightMeasuresOfEmergencyRowRemovalOfOtherInternalOrExternalObjects">
+                        <Label id="lblAeDESModeFormsSectionEightMeasuresOfEmergencyRowRemovalOfOtherInternalOrExternalObjects" />
+                    </TableViewRow>
+                    <TableViewRow id="tableViewAeDESModeFormsSectionEightMeasuresOfEmergencyRowBarriersAndProtectionSteps">
+                        <Label id="lblAeDESModeFormsSectionEightMeasuresOfEmergencyRowBarriersAndProtectionSteps" />
+                    </TableViewRow>
+                    <TableViewRow id="tableViewAeDESModeFormsSectionEightMeasuresOfEmergencyRowRepairsOfPlantNetworks">
+                        <Label id="lblAeDESModeFormsSectionEightMeasuresOfEmergencyRowRepairsOfPlantNetworks" />
+                    </TableViewRow>
+                </TableView>
+                <View id="viewAppButtonSave">
+                    <Widget id="widgetAppButtonSave" src="com.diseg.AppButton" />
+                </View>
+            </ScrollView>
+        </Window>
+    </NavigationWindow>
+</Alloy>

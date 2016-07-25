@@ -1,0 +1,15 @@
+<Alloy>
+    <NavigationWindow id="navigationWindowBAEATableGalleryView">
+        <Window id="baeaTableGalleryViewWindow">
+            <LeftNavButton>
+                <Button id="btn_ios_back" onClick="OnBtnBack_Click" />
+            </LeftNavButton>
+
+            <ActivityIndicator id="activity_indicator" />
+
+            <ScrollView id="scrollViewBAEATableGalleryView">
+                <TableView id="baeaTableViewGallery" onClick="OnBAEATableViewGallery_Click" />
+            </ScrollView>
+        </Window>
+    </NavigationWindow>
+</Alloy>

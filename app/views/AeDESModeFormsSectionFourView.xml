@@ -1,0 +1,50 @@
+<Alloy>
+    <Window id="aedesModeSectionFourWindow">
+        <ScrollView id="scrollViewSectionFour">
+            <Label id="lblAeDESModeFormsSectionFourType" />
+            <TableView id="tableViewAeDESModeFormsSectionFourType" onClick="OnTableViewAeDESModeFormsSectionFourType_Click">
+                <TableViewRow id="tableViewAeDESModeFormsSectionFourTypeRowVerticalStructures">
+                    <Label id="lblAeDESModeFormsSectionFourTypeRowVerticalStructures" />
+                </TableViewRow>
+                <TableViewRow id="tableViewAeDESModeFormsSectionFourTypeRowAttics">
+                    <Label id="lblAeDESModeFormsSectionFourTypeRowAttics" />
+                </TableViewRow>
+                <TableViewRow id="tableViewAeDESModeFormsSectionFourTypeRowStairs">
+                    <Label id="lblAeDESModeFormsSectionFourTypeRowStairs" />
+                </TableViewRow>
+                <TableViewRow id="tableViewAeDESModeFormsSectionFourTypeRowCoverage">
+                    <Label id="lblAeDESModeFormsSectionFourTypeRowCoverage" />
+                </TableViewRow>
+                <TableViewRow id="tableViewAeDESModeFormsSectionFourTypeRowInfillPartitions">
+                    <Label id="lblAeDESModeFormsSectionFourTypeRowInfillPartitions" />
+                </TableViewRow>
+                <TableViewRow id="tableViewAeDESModeFormsSectionFourTypeRowPreExistingDamage">
+                    <Label id="lblAeDESModeFormsSectionFourTypeRowPreExistingDamage" />
+                </TableViewRow>
+            </TableView>
+
+            <Label id="lblAeDESModeFormsSectionFourMeasuresOfEmergency" />
+            <TableView id="tableViewAeDESModeFormsSectionFourMeasuresOfEmergency" onClick="OnTableViewAeDESModeFormsSectionFourMeasuresOfEmergency_Click">
+                <TableViewRow id="tableViewAeDESModeFormsSectionFourMeasuresOfEmergencyRowVerticalStructures">
+                    <Label id="lblAeDESModeFormsSectionFourMeasuresOfEmergencyRowVerticalStructures" />
+                </TableViewRow>
+                <TableViewRow id="tableViewAeDESModeFormsSectionFourMeasuresOfEmergencyRowAttics">
+                    <Label id="lblAeDESModeFormsSectionFourMeasuresOfEmergencyRowAttics" />
+                </TableViewRow>
+                <TableViewRow id="tableViewAeDESModeFormsSectionFourMeasuresOfEmergencyRowStairs">
+                    <Label id="lblAeDESModeFormsSectionFourMeasuresOfEmergencyRowStairs" />
+                </TableViewRow>
+                <TableViewRow id="tableViewAeDESModeFormsSectionFourMeasuresOfEmergencyRowCoverage">
+                    <Label id="lblAeDESModeFormsSectionFourMeasuresOfEmergencyRowCoverage" />
+                </TableViewRow>
+                <TableViewRow id="tableViewAeDESModeFormsSectionFourMeasuresOfEmergencyRowInfillPartitions">
+                    <Label id="lblAeDESModeFormsSectionFourMeasuresOfEmergencyRowInfillPartitions" />
+                </TableViewRow>
+            </TableView>
+
+            <View id="viewAppButtonSave">
+                <Widget id="widgetAppButtonSave" src="com.diseg.AppButton" />
+            </View>
+        </ScrollView>
+    </Window>
+</Alloy>

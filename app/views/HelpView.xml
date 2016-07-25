@@ -1,0 +1,16 @@
+<Alloy>
+    <Window id="helpWindow" onAndroid:back="OnAndroidBackButton_Click" onAndroidback="OnAndroidBackButton_Click">
+        <ActivityIndicator id="activity_indicator" />
+
+        <TableView id="tableViewHelp" onClick="OnTableViewHelp_Click">
+            <TableViewRow id="tableViewHelpRowEERILFE">
+                <ImageView id="imgHelpRowEERILFE" />
+                <Label id="lblHelpRowEERILFE" />
+            </TableViewRow>
+            <TableViewRow id="tableViewHelpRowATC20Nepal">
+                <ImageView id="imgHelpRowATC20Nepal" />
+                <Label id="lblHelpRowATC20Nepal" />
+            </TableViewRow>
+        </TableView>
+    </Window>
+</Alloy>

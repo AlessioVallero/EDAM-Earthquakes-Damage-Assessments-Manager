@@ -1,0 +1,15 @@
+{
+	"id": "com.orthlieb.combobox",
+	"name": "com.orthlieb.combobox",
+	"description" : "The Combobox widget provides a field that allows the user to pick from a list of items.",
+	"author": "Carl Orthlieb",
+	"version": "2.0",
+	"copyright":"Copyright (c) 2013",
+	"license":"Apache 2.0",
+	"min-alloy-version": "1.0",
+	"min-titanium-version":"2.1",
+	"tags":"",
+	"platforms":"android,ios",
+	"dependencies": {
+	}
+}

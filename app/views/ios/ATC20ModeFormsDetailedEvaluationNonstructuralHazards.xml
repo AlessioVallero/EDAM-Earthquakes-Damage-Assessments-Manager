@@ -1,0 +1,45 @@
+<Alloy>
+    <NavigationWindow id="navigationWindowDetailedEvaluationNonstructuralHazards">
+        <Window id="atc20ModeDetailedEvaluationNonstructuralHazardsWindow">
+            <LeftNavButton>
+                <Button id="btn_ios_back" onClick="OnBtnBack_Click" />
+            </LeftNavButton>
+
+            <ScrollView id="scrollViewDetailedEvaluationNonstructuralHazards">
+                <View id="viewAppComboBoxATC20ModeFormsDetailedEvaluationNonstructuralHazardsParapetsOrnamentation">
+                    <Widget id="widgetAppComboBoxATC20ModeFormsDetailedEvaluationNonstructuralHazardsParapetsOrnamentation" src="com.diseg.AppComboBox" />
+                </View>
+                <View id="viewAppComboBoxATC20ModeFormsDetailedEvaluationNonstructuralHazardsCladdingGlazing">
+                    <Widget id="widgetAppComboBoxATC20ModeFormsDetailedEvaluationNonstructuralHazardsCladdingGlazing" src="com.diseg.AppComboBox" />
+                </View>
+                <View id="viewAppComboBoxATC20ModeFormsDetailedEvaluationNonstructuralHazardsCeilingsLightFixtures">
+                    <Widget id="widgetAppComboBoxATC20ModeFormsDetailedEvaluationNonstructuralHazardsCeilingsLightFixtures" src="com.diseg.AppComboBox" />
+                </View>
+                <View id="viewAppComboBoxATC20ModeFormsDetailedEvaluationNonstructuralHazardsInteriorWallsPartitions">
+                    <Widget id="widgetAppComboBoxATC20ModeFormsDetailedEvaluationNonstructuralHazardsInteriorWallsPartitions" src="com.diseg.AppComboBox" />
+                </View>
+                <View id="viewAppComboBoxATC20ModeFormsDetailedEvaluationNonstructuralHazardsElevators">
+                    <Widget id="widgetAppComboBoxATC20ModeFormsDetailedEvaluationNonstructuralHazardsElevators" src="com.diseg.AppComboBox" />
+                </View>
+                <View id="viewAppComboBoxATC20ModeFormsDetailedEvaluationNonstructuralHazardsStairsExits">
+                    <Widget id="widgetAppComboBoxATC20ModeFormsDetailedEvaluationNonstructuralHazardsStairsExits" src="com.diseg.AppComboBox" />
+                </View>
+                <View id="viewAppComboBoxATC20ModeFormsDetailedEvaluationNonstructuralHazardsElectricGas">
+                    <Widget id="widgetAppComboBoxATC20ModeFormsDetailedEvaluationNonstructuralHazardsElectricGas" src="com.diseg.AppComboBox" />
+                </View>
+                <View id="viewAppComboBoxATC20ModeFormsDetailedEvaluationNonstructuralHazardsSignificantFireSafetyConcerns">
+                    <Widget id="widgetAppComboBoxATC20ModeFormsDetailedEvaluationNonstructuralHazardsSignificantFireSafetyConcerns" src="com.diseg.AppComboBox" />
+                </View>
+                <View id="viewAppComboBoxATC20ModeFormsDetailedEvaluationNonstructuralHazardsOther">
+                    <Widget id="widgetAppComboBoxATC20ModeFormsDetailedEvaluationNonstructuralHazardsOther" src="com.diseg.AppComboBox" />
+                </View>
+                <View id="viewAppTextFieldATC20ModeFormsDetailedEvaluationNonstructuralHazardsOtherName">
+                    <Widget id="widgetAppTextFieldATC20ModeFormsDetailedEvaluationNonstructuralHazardsOtherName" src="com.diseg.AppTextField" />
+                </View>
+                <View id="viewAppTextFieldATC20ModeFormsDetailedEvaluationNonstructuralHazardsComments">
+                    <Widget id="widgetAppTextFieldATC20ModeFormsDetailedEvaluationNonstructuralHazardsComments" src="com.diseg.AppTextField" />
+                </View>
+            </ScrollView>
+        </Window>
+    </NavigationWindow>
+</Alloy>

@@ -1,0 +1,216 @@
+// TabGroup
+"#tabUserAuthentication":
+{
+    title: L( 'user_authentication_view_title' )
+} ,
+
+// The Login Window
+"#loginWindow":
+{
+    backgroundColor: '#ffffcc'
+} ,
+
+// The Register Window
+"#registerWindow":
+{
+    backgroundColor: '#ffffcc'
+} ,
+
+// Back button Login iOS (to papers general section view)
+"#btn_login_ios_back":
+{
+    title: L( 'generic_back_btn_title' )
+} ,
+
+// Login ScrollView
+"#scrollViewLogin":
+{
+    top: 10 ,
+    scrollType: "vertical"
+} ,
+
+// Login tab
+"#tabLogin":
+{
+    title: L( 'user_authentication_login_view_title' ) ,
+    backgroundColor: '#ffffcc' ,
+    icon: '/images/login.png'
+} ,
+
+// Login Username view
+"#viewAppTextFieldLoginUsername":
+{
+    top: 0 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// Login Password view
+"#viewAppTextFieldLoginPassword":
+{
+    top: 70 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// Login view
+"#viewAppButtonLogin":
+{
+    top: 140 ,
+    width: 60
+} ,
+
+// Back button Register iOS (to papers general section view)
+"#btn_register_ios_back":
+{
+    title: L( 'generic_back_btn_title' )
+} ,
+
+// Register ScrollView
+"#scrollViewRegister":
+{
+    top: 10 ,
+    scrollType: "vertical"
+} ,
+
+// Register tab
+"#tabRegister":
+{
+    title: L( 'user_authentication_register_view_title' ) ,
+    backgroundColor: '#ffffcc' ,
+    icon: '/images/register.png'
+} ,
+
+// Register Username view
+"#viewAppTextFieldRegisterUsername":
+{
+    top: 0 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// Register Password view
+"#viewAppTextFieldRegisterPassword":
+{
+    top: 70 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// Register Password confirm view
+"#viewAppTextFieldRegisterPasswordConfirm":
+{
+    top: 140 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// Register Name view
+"#viewAppTextFieldRegisterName":
+{
+    top: 210 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// Register Group view
+"#viewAppTextFieldRegisterGroup":
+{
+    top: 280 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// Register Email view
+"#viewAppTextFieldRegisterEmail":
+{
+    top: 350 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// Register view
+"#viewAppButtonRegister":
+{
+    top: 420 ,
+    width: 60
+} ,
+
+// Activity Indicator iOS
+"#activity_indicator_login[platform=ios]":
+{
+    color: '#000' ,
+    font:
+    {
+        fontFamily: 'Helvetica Neue' ,
+        fontSize: 11 ,
+        fontWeight: 'bold'
+    } ,
+    style: Ti.UI.iPhone.ActivityIndicatorStyle.DARK ,
+    width: Ti.UI.SIZE ,
+    height: Ti.UI.SIZE ,
+    zIndex: 1
+} ,
+
+// Activity Indicator Android
+"#activity_indicator_login":
+{
+    color: '#000' ,
+    font:
+    {
+        fontFamily: 'Helvetica Neue' ,
+        fontSize: 11 ,
+        fontWeight: 'bold'
+    } ,
+    style: Ti.UI.ActivityIndicatorStyle.DARK ,
+    width: Ti.UI.SIZE ,
+    height: Ti.UI.SIZE ,
+    zIndex: 1
+} ,
+
+// Activity Indicator iOS
+"#activity_indicator[platform=ios]":
+{
+    color: '#000' ,
+    font:
+    {
+        fontFamily: 'Helvetica Neue' ,
+        fontSize: 11 ,
+        fontWeight: 'bold'
+    } ,
+    style: Ti.UI.iPhone.ActivityIndicatorStyle.DARK ,
+    width: Ti.UI.SIZE ,
+    height: Ti.UI.SIZE ,
+    zIndex: 1
+} ,
+
+// Activity Indicator Android-mobileweb
+"#activity_indicator[platform=android,mobileweb]":
+{
+    color: '#000' ,
+    font:
+    {
+        fontFamily: 'Helvetica Neue' ,
+        fontSize: 11 ,
+        fontWeight: 'bold'
+    } ,
+    style: Ti.UI.ActivityIndicatorStyle.DARK ,
+    width: Ti.UI.SIZE ,
+    height: Ti.UI.SIZE ,
+    zIndex: 1
+} ,
+
+// Activity Indicator BlackBerry
+"#activity_indicator[platform=blackberry]":
+{
+    color: '#000' ,
+    font:
+    {
+        fontFamily: 'Helvetica Neue' ,
+        fontSize: 11 ,
+        fontWeight: 'bold'
+    } ,
+    width: Ti.UI.SIZE ,
+    height: Ti.UI.SIZE ,
+    zIndex: 1
+}

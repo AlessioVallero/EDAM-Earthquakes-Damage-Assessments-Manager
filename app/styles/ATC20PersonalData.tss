@@ -1,0 +1,95 @@
+// The Window
+"#atc20PersonalDataWindow":
+{
+    title: L( 'edit_atc20_personal_data_view_title' ) ,
+    backgroundColor: '#ffffcc'
+} ,
+
+// Back button iOS (to papers view)
+"#btn_ios_back":
+{
+    title: L( 'generic_back_btn_title' )
+} ,
+
+// ScrollView TextFields
+"#scrollView_fields":
+{
+    top: 10 ,
+    scrollType: "vertical" 
+} ,
+
+// InspectorID view
+"#viewAppTextFieldInspectorID":
+{
+    top: 0 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// Affiliation view
+"#viewAppTextFieldAffiliation":
+{
+    top: 70 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// Save button
+"#btn_ios_Save":
+{
+    title: L( 'generic_save_btn_title' )
+} ,
+
+// Save view 
+"#viewAppButtonSave":
+{
+    top: 140 ,
+    width: 72
+} ,
+
+// Activity Indicator iOS
+"#activity_indicator[platform=ios]":
+{
+    color: '#000' ,
+    font:
+    {
+        fontFamily: 'Helvetica Neue' ,
+        fontSize: 11 ,
+        fontWeight: 'bold'
+    } ,
+    style: Ti.UI.iPhone.ActivityIndicatorStyle.DARK ,
+    width: Ti.UI.SIZE ,
+    height: Ti.UI.SIZE ,
+    zIndex: 1
+} ,
+
+// Activity Indicator Android-mobileweb
+"#activity_indicator[platform=android,mobileweb]":
+{
+    color: '#000' ,
+    font:
+    {
+        fontFamily: 'Helvetica Neue' ,
+        fontSize: 11 ,
+        fontWeight: 'bold'
+    } ,
+    style: Ti.UI.ActivityIndicatorStyle.DARK ,
+    width: Ti.UI.SIZE ,
+    height: Ti.UI.SIZE ,
+    zIndex: 1
+} ,
+
+// Activity Indicator BlackBerry
+"#activity_indicator[platform=blackberry]":
+{
+    color: '#000' ,
+    font:
+    {
+        fontFamily: 'Helvetica Neue' ,
+        fontSize: 11 ,
+        fontWeight: 'bold'
+    } ,
+    width: Ti.UI.SIZE ,
+    height: Ti.UI.SIZE ,
+    zIndex: 1
+}

@@ -1,0 +1,20 @@
+<Alloy>
+    <NavigationWindow id="navigationWindowSectionEightMeasuresOfEmergency">
+        <Window id="aedesModeSectionEightMeasuresOfEmergencyWindow">
+            <LeftNavButton>
+                <Button id="btn_ios_back" onClick="OnBtnBack_Click" />
+            </LeftNavButton>
+
+            <ScrollView id="scrollViewSectionEightMeasuresOfEmergency">
+                <Label id="lblAeDESModeFormsSectionEightMeasuresOfEmergency" />
+                <Label id="lblAeDESModeFormsSectionEightMeasuresOfEmergencyFatherTitle" />
+                <View id="viewAppCheckBoxAeDESModeFormsSectionEightMeasuresOfEmergencyLimited">
+                    <Widget id="widgetAppCheckBoxAeDESModeFormsSectionEightMeasuresOfEmergencyLimited" src="com.diseg.AppCheckBox" />
+                </View>
+                <View id="viewAppCheckBoxAeDESModeFormsSectionEightMeasuresOfEmergencyExtended">
+                    <Widget id="widgetAppCheckBoxAeDESModeFormsSectionEightMeasuresOfEmergencyExtended" src="com.diseg.AppCheckBox" />
+                </View>
+            </ScrollView>
+        </Window>
+    </NavigationWindow>
+</Alloy>

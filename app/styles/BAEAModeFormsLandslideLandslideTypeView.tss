@@ -1,0 +1,75 @@
+// The Window
+"#baeaModeLandslideLandslideTypeWindow":
+{
+    title: L( 'baea_mode_landslide_landslide_type_title' ) ,
+    backgroundColor: '#ffffcc'
+} ,
+
+// Back button iOS (to Landslide view)
+"#btn_ios_back":
+{
+    title: L( 'generic_back_btn_title' )
+} ,
+
+// ScrollView
+"#scrollViewLandslideLandslideType":
+{
+    top: 10 ,
+    scrollType: "vertical"
+} ,
+
+// Slide view
+"#viewAppCheckBoxBAEAModeFormsLandslideLandslideTypeSlide":
+{
+    top: 0 ,
+    height: 50 ,
+    width: 290
+} ,
+
+// Fall view
+"#viewAppCheckBoxBAEAModeFormsLandslideLandslideTypeFall":
+{
+    top: 70 ,
+    height: 50 ,
+    width: 290
+} ,
+
+// Flow view
+"#viewAppCheckBoxBAEAModeFormsLandslideLandslideTypeFlow":
+{
+    top: 140 ,
+    height: 50 ,
+    width: 290
+} ,
+
+// Spread view
+"#viewAppCheckBoxBAEAModeFormsLandslideLandslideTypeSpread":
+{
+    top: 210 ,
+    height: 50 ,
+    width: 290
+} ,
+
+// Topple view
+"#viewAppCheckBoxBAEAModeFormsLandslideLandslideTypeTopple":
+{
+    top: 280 ,
+    height: 50 ,
+    width: 290
+} ,
+
+// Complex view
+"#viewAppCheckBoxBAEAModeFormsLandslideLandslideTypeComplex":
+{
+    top: 350 ,
+    height: 50 ,
+    width: 290
+} ,
+
+// Other view
+"#viewAppCheckBoxBAEAModeFormsLandslideLandslideTypeOther":
+{
+    top: 420 ,
+    height: 50 ,
+    width: 290
+}

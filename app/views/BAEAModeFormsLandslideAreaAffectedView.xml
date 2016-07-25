@@ -1,0 +1,21 @@
+<Alloy>
+    <Window id="baeaModeLandslideAreaAffectedWindow">
+        <ScrollView id="scrollViewLandslideAreaAffected">
+            <View id="viewAppCheckBoxBAEAModeFormsLandslideAreaAffectedLessThanTen">
+                <Widget id="widgetAppCheckBoxBAEAModeFormsLandslideAreaAffectedLessThanTen" src="com.diseg.AppCheckBox" />
+            </View>
+            <View id="viewAppCheckBoxBAEAModeFormsLandslideAreaAffectedTenToHundred">
+                <Widget id="widgetAppCheckBoxBAEAModeFormsLandslideAreaAffectedTenToHundred" src="com.diseg.AppCheckBox" />
+            </View>
+            <View id="viewAppCheckBoxBAEAModeFormsLandslideAreaAffectedHundredToThousand">
+                <Widget id="widgetAppCheckBoxBAEAModeFormsLandslideAreaAffectedHundredToThousand" src="com.diseg.AppCheckBox" />
+            </View>
+            <View id="viewAppCheckBoxBAEAModeFormsLandslideAreaAffectedThousandToTenThousand">
+                <Widget id="widgetAppCheckBoxBAEAModeFormsLandslideAreaAffectedThousandToTenThousand" src="com.diseg.AppCheckBox" />
+            </View>
+            <View id="viewAppCheckBoxBAEAModeFormsLandslideAreaAffectedGreaterThanTenThousand">
+                <Widget id="widgetAppCheckBoxBAEAModeFormsLandslideAreaAffectedGreaterThanTenThousand" src="com.diseg.AppCheckBox" />
+            </View>
+        </ScrollView>
+    </Window>
+</Alloy>

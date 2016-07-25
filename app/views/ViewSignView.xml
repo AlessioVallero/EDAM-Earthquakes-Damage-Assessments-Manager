@@ -1,0 +1,5 @@
+<Alloy>
+    <Window id="viewSignViewWindow">
+        <ImageView id="image_view_sign" />
+    </Window>
+</Alloy>

@@ -1,0 +1,33 @@
+<Alloy>
+    <NavigationWindow id="navigationWindowDamagesMeasuresOfEmergencyInfillElementsDetails">
+        <Window id="shedModeDamagesMeasuresOfEmergencyInfillElementsDetailsWindow">
+            <LeftNavButton>
+                <Button id="btn_ios_back" onClick="OnBtnBack_Click" />
+            </LeftNavButton>
+
+            <ScrollView id="scrollViewDamagesMeasuresOfEmergencyInfillElementsDetails">
+                <View id="viewAppCheckBoxShedModeFormsDamagesMeasuresOfEmergencyConnectionOfHorizontalPanelsBySteelCables">
+                    <Widget id="widgetAppCheckBoxShedModeFormsDamagesMeasuresOfEmergencyConnectionOfHorizontalPanelsBySteelCables" src="com.diseg.AppCheckBox" />
+                </View>
+                <View id="viewAppCheckBoxShedModeFormsDamagesMeasuresOfEmergencyInclusionOfAntiDropCableForHorizontalPanels">
+                    <Widget id="widgetAppCheckBoxShedModeFormsDamagesMeasuresOfEmergencyInclusionOfAntiDropCableForHorizontalPanels" src="com.diseg.AppCheckBox" />
+                </View>
+                <View id="viewAppCheckBoxShedModeFormsDamagesMeasuresOfEmergencyConnectingThePillarsOfCurtainPanel">
+                    <Widget id="widgetAppCheckBoxShedModeFormsDamagesMeasuresOfEmergencyConnectingThePillarsOfCurtainPanel" src="com.diseg.AppCheckBox" />
+                </View>
+                <View id="viewAppCheckBoxShedModeFormsDamagesMeasuresOfEmergencyConnectionOfVerticalPanelsBySteelCables">
+                    <Widget id="widgetAppCheckBoxShedModeFormsDamagesMeasuresOfEmergencyConnectionOfVerticalPanelsBySteelCables" src="com.diseg.AppCheckBox" />
+                </View>
+                <View id="viewAppCheckBoxShedModeFormsDamagesMeasuresOfEmergencyConnectionOfVerticalPanelsBySteelSquares">
+                    <Widget id="widgetAppCheckBoxShedModeFormsDamagesMeasuresOfEmergencyConnectionOfVerticalPanelsBySteelSquares" src="com.diseg.AppCheckBox" />
+                </View>
+                <View id="viewAppCheckBoxShedModeFormsDamagesMeasuresOfEmergencyInclusionOfAntiDropCableForVerticalPanels">
+                    <Widget id="widgetAppCheckBoxShedModeFormsDamagesMeasuresOfEmergencyInclusionOfAntiDropCableForVerticalPanels" src="com.diseg.AppCheckBox" />
+                </View>
+                <View id="viewAppCheckBoxShedModeFormsDamagesMeasuresOfEmergencyInclusionOfTwoAntiDropCablesPanelCorner">
+                    <Widget id="widgetAppCheckBoxShedModeFormsDamagesMeasuresOfEmergencyInclusionOfTwoAntiDropCablesPanelCorner" src="com.diseg.AppCheckBox" />
+                </View>
+            </ScrollView>
+        </Window>
+    </NavigationWindow>
+</Alloy>

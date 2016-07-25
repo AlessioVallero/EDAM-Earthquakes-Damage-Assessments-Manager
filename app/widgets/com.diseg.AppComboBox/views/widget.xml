@@ -1,0 +1,5 @@
+<Alloy>
+    <Label id="lblAppComboBox" />
+    <Widget id="widgetAppComboBox" src="com.orthlieb.combobox" />
+    <Button id="btnAppComboBoxHelp" onClick="OnBtnHelp_Click" />
+</Alloy>

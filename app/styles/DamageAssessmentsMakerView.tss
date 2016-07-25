@@ -1,0 +1,204 @@
+// Building Damage Assessments page Window
+"#damageAssessmentsMakerWindow":
+{
+    backgroundColor: '#ffffcc'
+} ,
+
+// Back button iOS (to general section view)
+"#btn_ios_back":
+{
+    title: L( 'generic_back_btn_title' )
+} ,
+
+// Label for the instructions
+"#lblInstructions":
+{
+    text: L( 'damage_assessments_manager_instructions_msg' ) ,
+	width: 'auto' ,
+	height: 'auto' ,
+	color: "#000" ,
+	top: '5%' ,
+	font:
+	{
+		fontSize: 14 ,
+        fontFamily: 'Arial' ,
+        fontWeight: 'bold'
+	} ,
+	textAlign: 'center'
+} ,
+
+// North side button
+"#btn_north_side":
+{
+    title: L( 'btn_north_side_text' ) ,
+    backgroundImage: '/images/app_button_normal.png' ,
+    backgroundSelectedImage: '/images/app_button_pressed.png' ,
+    backgroundDisabledImage: '/images/app_button_disabled.png' ,
+    textAlign: Titanium.UI.TEXT_ALIGNMENT_CENTER ,
+    verticalAlign: Titanium.UI.TEXT_VERTICAL_ALIGNMENT_CENTER ,
+    top: '22%' ,
+    width: 112 ,
+    height: '10%' ,
+    font:
+    {
+        fontFamily: 'Arial' ,
+        fontWeight: 'bold' ,
+        fontSize: '16'
+    }
+} ,
+
+// East side button
+"#btn_east_side":
+{
+    title: L( 'btn_east_side_text' ) ,
+    backgroundImage: '/images/app_button_normal.png' ,
+    backgroundSelectedImage: '/images/app_button_pressed.png' ,
+    backgroundDisabledImage: '/images/app_button_disabled.png' ,
+    textAlign: Titanium.UI.TEXT_ALIGNMENT_CENTER ,
+    verticalAlign: Titanium.UI.TEXT_VERTICAL_ALIGNMENT_CENTER ,
+    top: '35%' ,
+    width: 112 ,
+    height: '10%' ,
+    font:
+    {
+        fontFamily: 'Arial' ,
+        fontWeight: 'bold' ,
+        fontSize: '16'
+    }
+} ,
+
+// South side button
+"#btn_south_side":
+{
+    title: L( 'btn_south_side_text' ) ,
+    backgroundImage: '/images/app_button_normal.png' ,
+    backgroundSelectedImage: '/images/app_button_pressed.png' ,
+    backgroundDisabledImage: '/images/app_button_disabled.png' ,
+    textAlign: Titanium.UI.TEXT_ALIGNMENT_CENTER ,
+    verticalAlign: Titanium.UI.TEXT_VERTICAL_ALIGNMENT_CENTER ,
+    top: '47%' ,
+    width: 112 ,
+    height: '10%' ,
+    font:
+    {
+        fontFamily: 'Arial' ,
+        fontWeight: 'bold' ,
+        fontSize: '16'
+    }
+} ,
+
+// West side button
+"#btn_west_side":
+{
+    title: L( 'btn_west_side_text' ) ,
+    backgroundImage: '/images/app_button_normal.png' ,
+    backgroundSelectedImage: '/images/app_button_pressed.png' ,
+    backgroundDisabledImage: '/images/app_button_disabled.png' ,
+    textAlign: Titanium.UI.TEXT_ALIGNMENT_CENTER ,
+    verticalAlign: Titanium.UI.TEXT_VERTICAL_ALIGNMENT_CENTER ,
+    top: '60%' ,
+    width: 112 ,
+    height: '10%' ,
+    font:
+    {
+        fontFamily: 'Arial' ,
+        fontWeight: 'bold' ,
+        fontSize: '16'
+    }
+} ,
+
+// Roof button
+"#btn_roof":
+{
+    title: L( 'btn_roof_text' ) ,
+    backgroundImage: '/images/app_button_normal.png' ,
+    backgroundSelectedImage: '/images/app_button_pressed.png' ,
+    backgroundDisabledImage: '/images/app_button_disabled.png' ,
+    textAlign: Titanium.UI.TEXT_ALIGNMENT_CENTER ,
+    verticalAlign: Titanium.UI.TEXT_VERTICAL_ALIGNMENT_CENTER ,
+    top: '73%' ,
+    width: 112 ,
+    height: '10%' ,
+    font:
+    {
+        fontFamily: 'Arial' ,
+        fontWeight: 'bold' ,
+        fontSize: '16'
+    }
+} ,
+
+// Indoor button
+"#btn_indoor":
+{
+    title: L( 'btn_indoor_text' ) ,
+    backgroundImage: '/images/app_button_normal.png' ,
+    backgroundSelectedImage: '/images/app_button_pressed.png' ,
+    backgroundDisabledImage: '/images/app_button_disabled.png' ,
+    textAlign: Titanium.UI.TEXT_ALIGNMENT_CENTER ,
+    verticalAlign: Titanium.UI.TEXT_VERTICAL_ALIGNMENT_CENTER ,
+    top: '86%' ,
+    width: 112 ,
+    height: '10%' ,
+    font:
+    {
+        fontFamily: 'Arial' ,
+        fontWeight: 'bold' ,
+        fontSize: '16'
+    }
+} ,
+
+// Done view
+"#viewAppButtonDone":
+{
+    bottom: '4%' ,
+    right: '5%' ,
+    height: 100 ,
+    width: 60
+} ,
+
+// Activity Indicator iOS
+"#activity_indicator[platform=ios]":
+{
+    color: '#000' ,
+    font:
+    {
+        fontFamily: 'Helvetica Neue' ,
+        fontSize: 11 ,
+        fontWeight: 'bold'
+    } ,
+    style: Ti.UI.iPhone.ActivityIndicatorStyle.DARK ,
+    width: Ti.UI.SIZE ,
+    height: Ti.UI.SIZE ,
+    zIndex: 1
+} ,
+
+// Activity Indicator Android-mobileweb
+"#activity_indicator[platform=android,mobileweb]":
+{
+    color: '#000' ,
+    font:
+    {
+        fontFamily: 'Helvetica Neue' ,
+        fontSize: 11 ,
+        fontWeight: 'bold'
+    } ,
+    style: Ti.UI.ActivityIndicatorStyle.DARK ,
+    width: Ti.UI.SIZE ,
+    height: Ti.UI.SIZE ,
+    zIndex: 1
+} ,
+
+// Activity Indicator BlackBerry
+"#activity_indicator[platform=blackberry]":
+{
+    color: '#000' ,
+    font:
+    {
+        fontFamily: 'Helvetica Neue' ,
+        fontSize: 11 ,
+        fontWeight: 'bold'
+    } ,
+    width: Ti.UI.SIZE ,
+    height: Ti.UI.SIZE ,
+    zIndex: 1
+}

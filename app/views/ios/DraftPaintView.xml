@@ -1,0 +1,12 @@
+<Alloy>
+    <NavigationWindow id="navigationWindowDPV">
+        <Window id="draft_paint_view_container_window">
+            <LeftNavButton>
+                <Button id="btn_ios_back" onClick="OnBtnBack_Click" />
+            </LeftNavButton>
+            <ActivityIndicator id="activity_indicator" />
+
+            <Widget id="draft_paint_widget" src="com.diseg.PaintView" />
+        </Window>
+    </NavigationWindow>
+</Alloy>

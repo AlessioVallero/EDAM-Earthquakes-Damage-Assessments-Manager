@@ -1,0 +1,26 @@
+<Alloy>
+    <Window id="usersResidentsModeFormsWindow" onClose="OnUsersResidentsModeFormsWindow_Close">
+        <ActivityIndicator id="activity_indicator" />
+
+        <Button id="btnLogout" onClick = 'OnBtnLogout_Click' />
+        <Label id="lblWelcome" />
+
+        <View id="viewAppButtonEUD">
+            <Widget id="widgetAppButtonEUD" src="com.diseg.AppButton" />
+        </View>
+        <View id="viewAppButtonAdd">
+            <Widget id="widgetAppButtonAdd" src="com.diseg.AppButton" />
+        </View>
+        <View id="viewAppButtonServerSynch">
+            <Widget id="widgetAppButtonServerSynch" src="com.diseg.AppButton" />
+        </View>
+
+        <TableView id="tableViewUsersResidentsModeForms" dataCollection="UsersResidentsForms" onClick="OnTableViewForms_Click">
+            <TableViewRow id="listRow" hasChild="true" rowId="{ID}" isSynchronized="{SYNCHRONIZED}" className="form_row">
+                <ImageView id="imgCheck" />
+                <Label id="lblValue" text="{FORM_NO}" />
+                <Button id="btnDelete" />
+            </TableViewRow>
+        </TableView>
+    </Window>
+</Alloy>

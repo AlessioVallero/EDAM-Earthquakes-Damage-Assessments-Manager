@@ -1,0 +1,21 @@
+<Alloy>
+    <Window id="atc20ModeDetailedEvaluationGeotechnicalHazardsWindow">
+        <ScrollView id="scrollViewDetailedEvaluationGeotechnicalHazards">
+            <View id="viewAppComboBoxATC20ModeFormsDetailedEvaluationGeotechnicalHazardsSlopeFailureDebris">
+                <Widget id="widgetAppComboBoxATC20ModeFormsDetailedEvaluationGeotechnicalHazardsSlopeFailureDebris" src="com.diseg.AppComboBox" />
+            </View>
+            <View id="viewAppComboBoxATC20ModeFormsDetailedEvaluationGeotechnicalHazardsGroundMovementFissures">
+                <Widget id="widgetAppComboBoxATC20ModeFormsDetailedEvaluationGeotechnicalHazardsGroundMovementFissures" src="com.diseg.AppComboBox" />
+            </View>
+            <View id="viewAppComboBoxATC20ModeFormsDetailedEvaluationGeotechnicalHazardsOther">
+                <Widget id="widgetAppComboBoxATC20ModeFormsDetailedEvaluationGeotechnicalHazardsOther" src="com.diseg.AppComboBox" />
+            </View>
+            <View id="viewAppTextFieldATC20ModeFormsDetailedEvaluationGeotechnicalHazardsOtherName">
+                <Widget id="widgetAppTextFieldATC20ModeFormsDetailedEvaluationGeotechnicalHazardsOtherName" src="com.diseg.AppTextField" />
+            </View>
+            <View id="viewAppTextFieldATC20ModeFormsDetailedEvaluationGeotechnicalHazardsComments">
+                <Widget id="widgetAppTextFieldATC20ModeFormsDetailedEvaluationGeotechnicalHazardsComments" src="com.diseg.AppTextField" />
+            </View>
+        </ScrollView>
+    </Window>
+</Alloy>

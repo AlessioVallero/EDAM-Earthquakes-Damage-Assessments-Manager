@@ -1,0 +1,122 @@
+// Help home page
+"#helpWindow":
+{
+    title: L( 'help_view_title' ) ,
+    backgroundColor: '#ffffcc'
+} ,
+
+// Back button iOS (to index view)
+"#btn_ios_back":
+{
+    title: L( 'generic_back_btn_title' )
+} ,
+
+// Table view with instruction manuals
+"#tableViewHelp":
+{
+    top: 10 ,
+    backgroundColor: '#ffffff' ,
+    height: Ti.UI.SIZE ,
+    width: Ti.UI.FILL
+} ,
+
+// EERILFE row
+"#tableViewHelpRowEERILFE":
+{
+    hasChild: true ,
+    className: 'section_row' ,
+    color: "#000" ,
+} ,
+
+// EERILFE ImageView table view row
+"#imgHelpRowEERILFE":
+{
+    left: 5 ,
+    width: 34 ,
+    height: 34 ,
+    image: '/images/eeri_lfe_forms.png'
+} ,
+
+// EERILFE Label table view row
+"#lblHelpRowEERILFE":
+{
+    left: 45 ,
+    height: 50 ,
+    width: 200 ,
+    text: L( 'eeri_lfe_row_title' ) ,
+    color: "#000"
+} ,
+
+// ATC20Nepal row
+"#tableViewHelpRowATC20Nepal":
+{
+    hasChild: true ,
+    className: 'section_row' ,
+    color: "#000" ,
+} ,
+
+// ATC20Nepal ImageView table view row
+"#imgHelpRowATC20Nepal":
+{
+    left: 5 ,
+    width: 34 ,
+    height: 34 ,
+    image: '/images/nepal_forms.png'
+} ,
+
+// ATC20Nepal Label table view row
+"#lblHelpRowATC20Nepal":
+{
+    left: 45 ,
+    height: 50 ,
+    width: 200 ,
+    text: L( 'atc20_nepal_row_title' ) ,
+    color: "#000"
+} ,
+
+// Activity Indicator iOS
+"#activity_indicator[platform=ios]":
+{
+    color: '#000' ,
+    font:
+    {
+        fontFamily: 'Helvetica Neue' ,
+        fontSize: 11 ,
+        fontWeight: 'bold'
+    } ,
+    style: Ti.UI.iPhone.ActivityIndicatorStyle.DARK ,
+    width: Ti.UI.SIZE ,
+    height: Ti.UI.SIZE ,
+    zIndex: 1
+} ,
+
+// Activity Indicator Android-mobileweb
+"#activity_indicator[platform=android,mobileweb]":
+{
+    color: '#000' ,
+    font:
+    {
+        fontFamily: 'Helvetica Neue' ,
+        fontSize: 11 ,
+        fontWeight: 'bold'
+    } ,
+    style: Ti.UI.ActivityIndicatorStyle.DARK ,
+    width: Ti.UI.SIZE ,
+    height: Ti.UI.SIZE ,
+    zIndex: 1
+} ,
+
+// Activity Indicator BlackBerry
+"#activity_indicator[platform=blackberry]":
+{
+    color: '#000' ,
+    font:
+    {
+        fontFamily: 'Helvetica Neue' ,
+        fontSize: 11 ,
+        fontWeight: 'bold'
+    } ,
+    width: Ti.UI.SIZE ,
+    height: Ti.UI.SIZE ,
+    zIndex: 1
+}

@@ -1,0 +1,43 @@
+// The Window
+"#baeaModeLandslideMaterialTypeWindow":
+{
+    title: L( 'baea_mode_landslide_material_type_title' ) ,
+    backgroundColor: '#ffffcc'
+} ,
+
+// Back button iOS (to Landslide view)
+"#btn_ios_back":
+{
+    title: L( 'generic_back_btn_title' )
+} ,
+
+// ScrollView
+"#scrollViewLandslideMaterialType":
+{
+    top: 10 ,
+    scrollType: "vertical"
+} ,
+
+// AlluviumSoilFill view
+"#viewAppCheckBoxBAEAModeFormsLandslideMaterialTypeAlluviumSoilFill":
+{
+    top: 0 ,
+    height: 50 ,
+    width: 290
+} ,
+
+// SedimentaryRock view
+"#viewAppCheckBoxBAEAModeFormsLandslideMaterialTypeSedimentaryRock":
+{
+    top: 70 ,
+    height: 50 ,
+    width: 290
+} ,
+
+// CrystallineRock view
+"#viewAppCheckBoxBAEAModeFormsLandslideMaterialTypeCrystallineRock":
+{
+    top: 140 ,
+    height: 50 ,
+    width: 290
+}

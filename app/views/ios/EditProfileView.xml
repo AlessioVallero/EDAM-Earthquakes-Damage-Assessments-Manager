@@ -1,0 +1,35 @@
+<Alloy>
+    <NavigationWindow id="navigationWindowEditProfile">
+        <Window id="editProfileWindow">
+            <LeftNavButton>
+                <Button id="btn_ios_back" onClick="OnBtnBack_Click" />
+            </LeftNavButton>
+
+            <ActivityIndicator id="activity_indicator" />
+            <ScrollView id="scrollViewEditProfile">
+                <Label id="lblEditProfileUsername" />
+                <View id="viewAppTextFieldEditProfileOldPassword">
+                    <Widget id="widgetAppTextFieldEditProfileOldPassword" src="com.diseg.AppTextField" />
+                </View>
+                <View id="viewAppTextFieldEditProfilePassword">
+                    <Widget id="widgetAppTextFieldEditProfilePassword" src="com.diseg.AppTextField" />
+                </View>
+                <View id="viewAppTextFieldEditProfilePasswordConfirm">
+                    <Widget id="widgetAppTextFieldEditProfilePasswordConfirm" src="com.diseg.AppTextField" />
+                </View>
+                <View id="viewAppTextFieldEditProfileName">
+                    <Widget id="widgetAppTextFieldEditProfileName" src="com.diseg.AppTextField" />
+                </View>
+                <View id="viewAppTextFieldEditProfileGroup">
+                    <Widget id="widgetAppTextFieldEditProfileGroup" src="com.diseg.AppTextField" />
+                </View>
+                <View id="viewAppTextFieldEditProfileEmail">
+                    <Widget id="widgetAppTextFieldEditProfileEmail" src="com.diseg.AppTextField" />
+                </View>
+                <View id="viewAppButtonDone">
+                    <Widget id="widgetAppButtonDone" src="com.diseg.AppButton" />
+                </View>
+            </ScrollView>
+        </Window>
+    </NavigationWindow>
+</Alloy>

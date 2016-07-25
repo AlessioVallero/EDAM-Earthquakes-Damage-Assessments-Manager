@@ -1,0 +1,153 @@
+// DamageAssessmentsElemWindow page
+"#damageAssessmentsElemWindow":
+{
+    backgroundColor: '#ffffcc'
+} ,
+
+// Back button iOS (to index view)
+"#btn_ios_back":
+{
+    title: L( 'generic_back_btn_title' )
+} ,
+
+// Next view
+"#viewAppButtonNext":
+{
+    top: 5 ,
+    left: 5 ,
+    width: 60
+} ,
+
+// Label for the instructions
+"#lblInstructions":
+{
+    text: L( 'damage_assessments_elem_instructions_msg' ) ,
+	width: 'auto' ,
+	height: 105 ,
+	color: "#000" ,
+	top: 5 ,
+    left: 70 ,
+	font:
+	{
+		fontSize: 12 ,
+        fontFamily: 'Arial' ,
+        fontWeight: 'bold'
+	} ,
+	textAlign: 'center'
+} ,
+
+// Label for the current mode
+"#lblCurrentMode":
+{
+    text: L( 'damage_assessments_elem_mode_msg' ) ,
+    width: 100 ,
+	height: 30 ,
+	color: "#000" ,
+	top: 120 ,
+    left: 0 ,
+	font:
+	{
+		fontSize: 16 ,
+        fontFamily: 'Arial' ,
+        fontWeight: 'bold'
+	} ,
+	textAlign: 'center'
+} ,
+
+// Current mode button
+"#btnCurrentMode":
+{
+    title: L( 'damage_assessments_elem_move_pics_msg' ) ,
+    backgroundImage: '/images/app_button_normal.png' ,
+    backgroundSelectedImage: '/images/app_button_pressed.png' ,
+    backgroundDisabledImage: '/images/app_button_disabled.png' ,
+    top: 120 ,
+    left: 105 ,
+    right: 10 ,
+    height: 30 ,
+    width: Ti.UI.FILL ,
+    font:
+    {
+        fontFamily: 'Arial' ,
+        fontWeight: 'bold' ,
+        fontSize: '16'
+    }
+} ,
+
+// Main container view 
+"#viewMainContainer":
+{
+    top: 160 ,
+    left: 0 ,
+    right: 0 ,
+    bottom: 0 ,
+    backgroundColor: '#ffffcc'
+} ,
+
+// Disable draw view
+"#viewDisableDraw":
+{
+    top: 0 ,
+    borderColor: "transparent" ,
+    backgroundColor: "transparent" ,
+    zIndex: 2
+} ,
+
+// PaintView
+"#paint_view":
+{
+    backgroundColor: "transparent" ,
+    top: 0 ,
+    strokeAlpha: 255 ,
+    strokeColor: "red" ,
+    strokeWidth: 8 ,
+    eraseMode: false ,
+    zIndex: 1
+}
+
+// Activity Indicator iOS
+"#activity_indicator[platform=ios]":
+{
+    color: '#000' ,
+    font:
+    {
+        fontFamily: 'Helvetica Neue' ,
+        fontSize: 11 ,
+        fontWeight: 'bold'
+    } ,
+    style: Ti.UI.iPhone.ActivityIndicatorStyle.DARK ,
+    width: Ti.UI.SIZE ,
+    height: Ti.UI.SIZE ,
+    zIndex: 1
+} ,
+
+// Activity Indicator Android-mobileweb
+"#activity_indicator[platform=android,mobileweb]":
+{
+    color: '#000' ,
+    font:
+    {
+        fontFamily: 'Helvetica Neue' ,
+        fontSize: 11 ,
+        fontWeight: 'bold'
+    } ,
+    style: Ti.UI.ActivityIndicatorStyle.DARK ,
+    width: Ti.UI.SIZE ,
+    height: Ti.UI.SIZE ,
+    zIndex: 1
+} ,
+
+// Activity Indicator BlackBerry
+"#activity_indicator[platform=blackberry]":
+{
+    color: '#000' ,
+    font:
+    {
+        fontFamily: 'Helvetica Neue' ,
+        fontSize: 11 ,
+        fontWeight: 'bold'
+    } ,
+    width: Ti.UI.SIZE ,
+    height: Ti.UI.SIZE ,
+    zIndex: 1
+}

@@ -1,0 +1,44 @@
+<Alloy>
+    <Window id="baeaModeFormsLandslideWindow" onAndroid:back="OnAndroidBackButton_Click" onAndroidback="OnAndroidBackButton_Click">
+        <ActivityIndicator id="activity_indicator" />
+        <ScrollView id="scrollViewLandslide">
+            <View id="viewAppTextFieldBAEAModeFormsLandslideSiteName">
+                <Widget id="widgetAppTextFieldBAEAModeFormsLandslideSiteName" src="com.diseg.AppTextField" />
+            </View>
+            <TableView id="tableViewBAEAModeFormsLandslidePhoto" onClick="OnTableViewBAEAModeFormsLandslidePhoto_Click">
+                <TableViewRow hasChild="true" className="landslide_photo_row">
+                    <Label id="lblPhoto" />
+                </TableViewRow>
+            </TableView>
+            <Button id="btnBAEAModeFormsLandslideLoadAddress" onClick="OnBtnLoadAddress_Click" />
+            <View id="viewAppTextFieldBAEAModeFormsLandslideLatitude">
+                <Widget id="widgetAppTextFieldBAEAModeFormsLandslideLatitude" src="com.diseg.AppTextField" />
+            </View>
+            <View id="viewAppTextFieldBAEAModeFormsLandslideLongitude">
+                <Widget id="widgetAppTextFieldBAEAModeFormsLandslideLongitude" src="com.diseg.AppTextField" />
+            </View>
+            <View id="viewAppTextFieldBAEAModeFormsLandslideAddress">
+                <Widget id="widgetAppTextFieldBAEAModeFormsLandslideAddress" src="com.diseg.AppTextField" />
+            </View>
+            <Button id="btnBAEAModeFormsLandslideViewAddress" onClick="OnBtnViewAddress_Click" />
+            <TableView id="tableViewBAEAModeFormsLandslide" onClick="OnTableViewBAEAModeFormsLandslide_Click">
+                <TableViewRow hasChild="true" className="landslide_row">
+                    <Label id="lblLandslideType" />
+                </TableViewRow>
+                <TableViewRow hasChild="true" className="landslide_row">
+                    <Label id="lblMaterialType" />
+                </TableViewRow>
+                <TableViewRow hasChild="true" className="landslide_row">
+                    <Label id="lblAreaAffected" />
+                </TableViewRow>
+                <TableViewRow hasChild="true" className="landslide_row">
+                    <Label id="lblVulnerableFacilities" />
+                </TableViewRow>
+            </TableView>
+            <View id="viewAppTextFieldBAEAModeFormsLandslideNotes">
+                <Widget id="widgetAppTextFieldBAEAModeFormsLandslideNotes" src="com.diseg.AppTextField" />
+            </View>
+            <Button id="btnBAEAModeFormsLandslideRecord" onClick="OnBtnRecord_Click" />
+        </ScrollView>
+    </Window>
+</Alloy>

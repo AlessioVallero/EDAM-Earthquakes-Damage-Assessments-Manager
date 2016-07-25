@@ -1,0 +1,33 @@
+<Alloy>
+    <Window id="atc20ModeDetailedEvaluationStructuralHazardsWindow">
+        <ScrollView id="scrollViewDetailedEvaluationStructuralHazards">
+            <View id="viewAppComboBoxATC20ModeFormsDetailedEvaluationStructuralHazardsFoundations">
+                <Widget id="widgetAppComboBoxATC20ModeFormsDetailedEvaluationStructuralHazardsFoundations" src="com.diseg.AppComboBox" />
+            </View>
+            <View id="viewAppComboBoxATC20ModeFormsDetailedEvaluationStructuralHazardsRoofsFloors">
+                <Widget id="widgetAppComboBoxATC20ModeFormsDetailedEvaluationStructuralHazardsRoofsFloors" src="com.diseg.AppComboBox" />
+            </View>
+            <View id="viewAppComboBoxATC20ModeFormsDetailedEvaluationStructuralHazardsColumnsPilastersCorbels">
+                <Widget id="widgetAppComboBoxATC20ModeFormsDetailedEvaluationStructuralHazardsColumnsPilastersCorbels" src="com.diseg.AppComboBox" />
+            </View>
+            <View id="viewAppComboBoxATC20ModeFormsDetailedEvaluationStructuralHazardsDiaphragmsHorizontalBracing">
+                <Widget id="widgetAppComboBoxATC20ModeFormsDetailedEvaluationStructuralHazardsDiaphragmsHorizontalBracing" src="com.diseg.AppComboBox" />
+            </View>
+            <View id="viewAppComboBoxATC20ModeFormsDetailedEvaluationStructuralHazardsWallsVerticalBracing">
+                <Widget id="widgetAppComboBoxATC20ModeFormsDetailedEvaluationStructuralHazardsWallsVerticalBracing" src="com.diseg.AppComboBox" />
+            </View>
+            <View id="viewAppComboBoxATC20ModeFormsDetailedEvaluationStructuralHazardsPrecastConnections">
+                <Widget id="widgetAppComboBoxATC20ModeFormsDetailedEvaluationStructuralHazardsPrecastConnections" src="com.diseg.AppComboBox" />
+            </View>
+            <View id="viewAppComboBoxATC20ModeFormsDetailedEvaluationStructuralHazardsOther">
+                <Widget id="widgetAppComboBoxATC20ModeFormsDetailedEvaluationStructuralHazardsOther" src="com.diseg.AppComboBox" />
+            </View>
+            <View id="viewAppTextFieldATC20ModeFormsDetailedEvaluationStructuralHazardsOtherName">
+                <Widget id="widgetAppTextFieldATC20ModeFormsDetailedEvaluationStructuralHazardsOtherName" src="com.diseg.AppTextField" />
+            </View>
+            <View id="viewAppTextFieldATC20ModeFormsDetailedEvaluationStructuralHazardsComments">
+                <Widget id="widgetAppTextFieldATC20ModeFormsDetailedEvaluationStructuralHazardsComments" src="com.diseg.AppTextField" />
+            </View>
+        </ScrollView>
+    </Window>
+</Alloy>

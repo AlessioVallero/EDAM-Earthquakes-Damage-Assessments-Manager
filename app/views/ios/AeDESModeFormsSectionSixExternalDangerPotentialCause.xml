@@ -1,0 +1,29 @@
+<Alloy>
+    <NavigationWindow id="navigationWindowSectionSixPotentialCause">
+        <Window id="aedesModeSectionSixPotentialCauseWindow">
+            <LeftNavButton>
+                <Button id="btn_ios_back" onClick="OnBtnBack_Click" />
+            </LeftNavButton>
+
+            <ScrollView id="scrollViewSectionSixPotentialCause">
+                <Label id="lblAeDESModeFormsSectionSixPotentialCause" />
+                <Label id="lblAeDESModeFormsSectionSixPotentialCauseFatherTitle" />
+                <View id="viewAppCheckBoxAeDESModeFormsSectionSixPotentialCauseDangerOfBuilding">
+                    <Widget id="widgetAppCheckBoxAeDESModeFormsSectionSixPotentialCauseDangerOfBuilding" src="com.diseg.AppCheckBox" />
+                </View>
+                <View id="viewAppCheckBoxAeDESModeFormsSectionSixPotentialCauseDangerOfAccessRoad">
+                    <Widget id="widgetAppCheckBoxAeDESModeFormsSectionSixPotentialCauseDangerOfAccessRoad" src="com.diseg.AppCheckBox" />
+                </View>
+                <View id="viewAppCheckBoxAeDESModeFormsSectionSixPotentialCauseDangerOfInland">
+                    <Widget id="widgetAppCheckBoxAeDESModeFormsSectionSixPotentialCauseDangerOfInland" src="com.diseg.AppCheckBox" />
+                </View>
+                <View id="viewAppCheckBoxAeDESModeFormsSectionSixPotentialCauseMeasuresOfEmergencyDenialOfAccess">
+                    <Widget id="widgetAppCheckBoxAeDESModeFormsSectionSixPotentialCauseMeasuresOfEmergencyDenialOfAccess" src="com.diseg.AppCheckBox" />
+                </View>
+                <View id="viewAppCheckBoxAeDESModeFormsSectionSixPotentialCauseMeasuresOfEmergencyStepsProtection">
+                    <Widget id="widgetAppCheckBoxAeDESModeFormsSectionSixPotentialCauseMeasuresOfEmergencyStepsProtection" src="com.diseg.AppCheckBox" />
+                </View>
+            </ScrollView>
+        </Window>
+    </NavigationWindow>
+</Alloy>

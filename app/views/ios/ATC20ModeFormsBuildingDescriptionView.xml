@@ -1,0 +1,68 @@
+<Alloy>
+    <NavigationWindow id="navigationWindowBuildingDescription">
+        <Window id="atc20ModeBuildingDescriptionWindow">
+            <LeftNavButton>
+                <Button id="btn_ios_back" onClick="OnBtnBack_Click" />
+            </LeftNavButton>
+
+            <ActivityIndicator id="activity_indicator" />
+            <ScrollView id="scrollViewBuildingDescription">
+                <View id="viewAppTextFieldATC20ModeFormsBuildingDescriptionBuildingName">
+                    <Widget id="widgetAppTextFieldATC20ModeFormsBuildingDescriptionBuildingName" src="com.diseg.AppTextField" />
+                </View>
+                <Button id="btnATC20ModeFormsBuildingDescriptionLoadAddress" onClick="OnBtnLoadAddress_Click" />
+                <View id="viewAppTextFieldATC20ModeFormsBuildingDescriptionAddress">
+                    <Widget id="widgetAppTextFieldATC20ModeFormsBuildingDescriptionAddress" src="com.diseg.AppTextField" />
+                </View>
+                <View id="viewAppTextFieldATC20ModeFormsBuildingDescriptionAlsoKnownAs">
+                    <Widget id="widgetAppTextFieldATC20ModeFormsBuildingDescriptionAlsoKnownAs" src="com.diseg.AppTextField" />
+                </View>
+                <View id="viewAppTextFieldATC20ModeFormsBuildingDescriptionLot">
+                    <Widget id="widgetAppTextFieldATC20ModeFormsBuildingDescriptionLot" src="com.diseg.AppTextField" />
+                </View>
+                <View id="viewAppTextFieldATC20ModeFormsBuildingDescriptionDP">
+                    <Widget id="widgetAppTextFieldATC20ModeFormsBuildingDescriptionDP" src="com.diseg.AppTextField" />
+                </View>
+                <View id="viewAppTextFieldATC20ModeFormsBuildingDescriptionOtherID">
+                    <Widget id="widgetAppTextFieldATC20ModeFormsBuildingDescriptionOtherID" src="com.diseg.AppTextField" />
+                </View>
+                <View id="viewAppTextFieldATC20ModeFormsBuildingDescriptionContactName">
+                    <Widget id="widgetAppTextFieldATC20ModeFormsBuildingDescriptionContactName" src="com.diseg.AppTextField" />
+                </View>
+                <View id="viewAppTextFieldATC20ModeFormsBuildingDescriptionBuildingContactPhone">
+                    <Widget id="widgetAppTextFieldATC20ModeFormsBuildingDescriptionBuildingContactPhone" src="com.diseg.AppTextField" />
+                </View>
+                <View id="viewAppTextFieldATC20ModeFormsBuildingDescriptionNumberOfStoriesAboveTheGround">
+                    <Widget id="widgetAppTextFieldATC20ModeFormsBuildingDescriptionNumberOfStoriesAboveTheGround" src="com.diseg.AppTextField" />
+                </View>
+                <View id="viewAppTextFieldATC20ModeFormsBuildingDescriptionNumberOfStoriesBelowTheGround">
+                    <Widget id="widgetAppTextFieldATC20ModeFormsBuildingDescriptionNumberOfStoriesBelowTheGround" src="com.diseg.AppTextField" />
+                </View>
+                <View id="viewAppTextFieldATC20ModeFormsBuildingDescriptionApproxFootprintArea">
+                    <Widget id="widgetAppTextFieldATC20ModeFormsBuildingDescriptionApproxFootprintArea" src="com.diseg.AppTextField" />
+                </View>
+                <View id="viewAppTextFieldATC20ModeFormsBuildingDescriptionNumberOfResidentialUnits">
+                    <Widget id="widgetAppTextFieldATC20ModeFormsBuildingDescriptionNumberOfResidentialUnits" src="com.diseg.AppTextField" />
+                </View>
+                <View id="viewAppTextFieldATC20ModeFormsBuildingDescriptionNumberOfResidentialUnitsNotHabitable">
+                    <Widget id="widgetAppTextFieldATC20ModeFormsBuildingDescriptionNumberOfResidentialUnitsNotHabitable" src="com.diseg.AppTextField" />
+                </View>
+                <View id="viewAppComboBoxATC20ModeFormsBuildingDescriptionTypeOfConstruction">
+                    <Widget id="widgetAppComboBoxATC20ModeFormsBuildingDescriptionTypeOfConstruction" src="com.diseg.AppComboBox" />
+                </View>
+                <View id="viewAppTextFieldATC20ModeFormsBuildingDescriptionTypeOfConstructionOtherName">
+                    <Widget id="widgetAppTextFieldATC20ModeFormsBuildingDescriptionTypeOfConstructionOtherName" src="com.diseg.AppTextField" />
+                </View>
+                <View id="viewAppComboBoxATC20ModeFormsBuildingDescriptionPrimaryOccupancy">
+                    <Widget id="widgetAppComboBoxATC20ModeFormsBuildingDescriptionPrimaryOccupancy" src="com.diseg.AppComboBox" />
+                </View>
+                <View id="viewAppTextFieldATC20ModeFormsBuildingDescriptionPrimaryOccupancyOtherName">
+                    <Widget id="widgetAppTextFieldATC20ModeFormsBuildingDescriptionPrimaryOccupancyOtherName" src="com.diseg.AppTextField" />
+                </View>
+                <View id="viewAppButtonSave">
+                    <Widget id="widgetAppButtonSave" src="com.diseg.AppButton" />
+                </View>
+            </ScrollView>
+        </Window>
+    </NavigationWindow>
+</Alloy>

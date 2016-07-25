@@ -1,0 +1,38 @@
+<Alloy>
+    <Window id="shedModeDamagesTypeStructuralElementsWindow">
+        <ScrollView id="scrollViewDamagesTypeStructuralElements">
+            <TableView id="tableViewShedModeFormsDamagesTypeStructuralElements" onClick="OnTableViewShedModeFormsDamagesTypeStructuralElements_Click">
+                <TableViewRow id="tableViewShedModeFormsDamagesTypeStructuralElementsRowLossOfSupportOfTheBeam">
+                    <Label id="lblShedModeFormsDamagesTypeStructuralElementsRowLossOfSupportOfTheBeam" />
+                </TableViewRow>
+                <TableViewRow id="tableViewShedModeFormsDamagesTypeStructuralElementsRowShearFailureOfTheSupportPillar">
+                    <Label id="lblShedModeFormsDamagesTypeStructuralElementsRowShearFailureOfTheSupportPillar" />
+                </TableViewRow>
+                <TableViewRow id="tableViewShedModeFormsDamagesTypeStructuralElementsRowCollapseOfTheTransverseBeam">
+                    <Label id="lblShedModeFormsDamagesTypeStructuralElementsRowCollapseOfTheTransverseBeam" />
+                </TableViewRow>
+                <TableViewRow id="tableViewShedModeFormsDamagesTypeStructuralElementsRowRotationOfThePillar">
+                    <Label id="lblShedModeFormsDamagesTypeStructuralElementsRowRotationOfThePillar" />
+                </TableViewRow>
+                <TableViewRow id="tableViewShedModeFormsDamagesTypeStructuralElementsRowConnectionBreak">
+                    <Label id="lblShedModeFormsDamagesTypeStructuralElementsRowConnectionBreak" />
+                </TableViewRow>
+                <TableViewRow id="tableViewShedModeFormsDamagesTypeStructuralElementsRowCrisisOfTheConcreteCoverOfThePlug">
+                    <Label id="lblShedModeFormsDamagesTypeStructuralElementsRowCrisisOfTheConcreteCoverOfThePlug" />
+                </TableViewRow>
+                <TableViewRow id="tableViewShedModeFormsDamagesTypeStructuralElementsRowCollapseOfTheRoofTiles">
+                    <Label id="lblShedModeFormsDamagesTypeStructuralElementsRowCollapseOfTheRoofTiles" />
+                </TableViewRow>
+                <TableViewRow id="tableViewShedModeFormsDamagesTypeStructuralElementsRowPermanentRotationsOfTheBeamInCoverage">
+                    <Label id="lblShedModeFormsDamagesTypeStructuralElementsRowPermanentRotationsOfTheBeamInCoverage" />
+                </TableViewRow>
+                <TableViewRow id="tableViewShedModeFormsDamagesTypeStructuralElementsRowCrisisOfTheFork">
+                    <Label id="lblShedModeFormsDamagesTypeStructuralElementsRowCrisisOfTheFork" />
+                </TableViewRow>
+                <TableViewRow id="tableViewShedModeFormsDamagesTypeStructuralElementsRowCollapseOfACoverPlate">
+                    <Label id="lblShedModeFormsDamagesTypeStructuralElementsRowCollapseOfACoverPlate" />
+                </TableViewRow>
+            </TableView>
+        </ScrollView>
+    </Window>
+</Alloy>

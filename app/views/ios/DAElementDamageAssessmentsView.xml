@@ -1,0 +1,22 @@
+<Alloy>
+    <NavigationWindow id="navigationWindowDamageAssessmentsElem">
+        <Window id="damageAssessmentsElemWindow">
+            <LeftNavButton>
+                <Button id="btn_ios_back" onClick="OnBtnBack_Click" />
+            </LeftNavButton>
+            <ActivityIndicator id="activity_indicator" />
+
+            <View id="viewAppButtonNext">
+                <Widget id="widgetAppButtonNext" src="com.diseg.AppButton" />
+            </View>
+            <Label id="lblInstructions" />
+            <Label id="lblCurrentMode" />
+            <Button id="btnCurrentMode" onClick="OnBtnCurrentMode_Click" />
+
+            <View id="viewMainContainer">
+                <View id="viewDisableDraw" />
+                <Module id="paint_view" module="ti.paint" method="createPaintView" />
+            </View>
+        </Window>
+    </NavigationWindow>
+</Alloy>

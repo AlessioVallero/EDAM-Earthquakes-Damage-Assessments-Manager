@@ -1,0 +1,45 @@
+<Alloy>
+    <Window id="baeaModeFormsLiquefactionWindow" onAndroid:back="OnAndroidBackButton_Click" onAndroidback="OnAndroidBackButton_Click">
+        <ActivityIndicator id="activity_indicator" />
+        <ScrollView id="scrollViewLiquefaction">
+            <View id="viewAppTextFieldBAEAModeFormsLiquefactionSiteName">
+                <Widget id="widgetAppTextFieldBAEAModeFormsLiquefactionSiteName" src="com.diseg.AppTextField" />
+            </View>
+            <TableView id="tableViewBAEAModeFormsLiquefactionPhoto" onClick="OnTableViewBAEAModeFormsLiquefactionPhoto_Click">
+                <TableViewRow hasChild="true" className="fault_rupture_photo_row">
+                    <Label id="lblPhoto" />
+                </TableViewRow>
+            </TableView>
+            <Button id="btnBAEAModeFormsLiquefactionLoadAddress" onClick="OnBtnLoadAddress_Click" />
+            <View id="viewAppTextFieldBAEAModeFormsLiquefactionLatitude">
+                <Widget id="widgetAppTextFieldBAEAModeFormsLiquefactionLatitude" src="com.diseg.AppTextField" />
+            </View>
+            <View id="viewAppTextFieldBAEAModeFormsLiquefactionLongitude">
+                <Widget id="widgetAppTextFieldBAEAModeFormsLiquefactionLongitude" src="com.diseg.AppTextField" />
+            </View>
+            <View id="viewAppTextFieldBAEAModeFormsLiquefactionAddress">
+                <Widget id="widgetAppTextFieldBAEAModeFormsLiquefactionAddress" src="com.diseg.AppTextField" />
+            </View>
+            <Button id="btnBAEAModeFormsLiquefactionViewAddress" onClick="OnBtnViewAddress_Click" />
+            <View id="viewAppComboBoxBAEAModeFormsLiquefactionSandBlowsOrFissures">
+                <Widget id="widgetAppComboBoxBAEAModeFormsLiquefactionSandBlowsOrFissures" src="com.diseg.AppComboBox" />
+            </View>
+            <View id="viewAppComboBoxBAEAModeFormsLiquefactionGroundSettlement">
+                <Widget id="widgetAppComboBoxBAEAModeFormsLiquefactionGroundSettlement" src="com.diseg.AppComboBox" />
+            </View>
+            <View id="viewAppComboBoxBAEAModeFormsLiquefactionLateralSpreading">
+                <Widget id="widgetAppComboBoxBAEAModeFormsLiquefactionLateralSpreading" src="com.diseg.AppComboBox" />
+            </View>
+            <View id="viewAppTextFieldBAEAModeFormsLiquefactionHorizontal">
+                <Widget id="widgetAppTextFieldBAEAModeFormsLiquefactionHorizontal" src="com.diseg.AppTextField" />
+            </View>
+            <View id="viewAppTextFieldBAEAModeFormsLiquefactionVertical">
+                <Widget id="widgetAppTextFieldBAEAModeFormsLiquefactionVertical" src="com.diseg.AppTextField" />
+            </View>
+            <View id="viewAppTextFieldBAEAModeFormsLiquefactionNotes">
+                <Widget id="widgetAppTextFieldBAEAModeFormsLiquefactionNotes" src="com.diseg.AppTextField" />
+            </View>
+            <Button id="btnBAEAModeFormsLiquefactionRecord" onClick="OnBtnRecord_Click" />
+        </ScrollView>
+    </Window>
+</Alloy>

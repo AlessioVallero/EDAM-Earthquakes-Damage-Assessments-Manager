@@ -1,0 +1,74 @@
+// The Window
+"#aedesModeSectionFourMeasuresOfEmergencyWindow":
+{
+    title: L( 'aedes_mode_section_four_measures_of_emergency_title' ) ,
+    backgroundColor: '#ffffcc'
+} ,
+
+// Back button iOS (to papers section four view)
+"#btn_ios_back":
+{
+    title: L( 'generic_back_btn_title' )
+} ,
+
+// ScrollView
+"#scrollViewSectionFourMeasuresOfEmergency":
+{
+    top: 10 ,
+    scrollType: "vertical"
+} ,
+
+// Father title label
+"#lblAeDESModeFormsSectionFourMeasuresOfEmergencyFatherTitle":
+{
+    top: 0 ,
+    width: 290 ,
+    height: 18 ,
+    font:
+    {
+        fontFamily: 'Arial' ,
+        fontWeight: 'bold' ,
+        fontSize: '12'
+    } ,
+    color: '#000'
+} ,
+
+// Demolitions view
+"#viewAppCheckBoxAeDESModeFormsSectionFourMeasuresOfEmergencyDemolitions":
+{
+    top: 30 ,
+    height: 50 ,
+    width: 290
+} ,
+
+// HoopsAndOrTies view
+"#viewAppCheckBoxAeDESModeFormsSectionFourMeasuresOfEmergencyHoopsAndOrTies":
+{
+    top: 100 ,
+    height: 50 ,
+    width: 290
+} ,
+
+// Repair view
+"#viewAppCheckBoxAeDESModeFormsSectionFourMeasuresOfEmergencyRepair":
+{
+    top: 170 ,
+    height: 50 ,
+    width: 290
+} ,
+
+// Props view
+"#viewAppCheckBoxAeDESModeFormsSectionFourMeasuresOfEmergencyProps":
+{
+    top: 240 ,
+    height: 50 ,
+    width: 290
+} ,
+
+// StepsProtection view
+"#viewAppCheckBoxAeDESModeFormsSectionFourMeasuresOfEmergencyStepsProtection":
+{
+    top: 310 ,
+    height: 50 ,
+    width: 290
+}

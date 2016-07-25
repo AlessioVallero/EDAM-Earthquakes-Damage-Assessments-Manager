@@ -1,0 +1,27 @@
+<Alloy>
+    <NavigationWindow id="navigationWindowBuildingCharacteristics">
+        <Window id="usersResidentsModeBuildingCharacteristicsWindow">
+            <LeftNavButton>
+                <Button id="btn_ios_back" onClick="OnBtnBack_Click" />
+            </LeftNavButton>
+
+            <ScrollView id="scrollViewBuildingCharacteristics">
+                <View id="viewSite">
+                    <Widget id="widgetAppComboBoxUsersResidentsModeBuildingCharacteristicsSite" src="com.diseg.AppComboBox" />
+                </View>
+                <View id="viewUndergroundPlansNo">
+                    <Widget id="widgetAppComboBoxUsersResidentsModeBuildingCharacteristicsUndergroundPlansNo" src="com.diseg.AppComboBox" />
+                </View>
+                <View id="viewNotUndergroundPlansNo">
+                    <Widget id="widgetAppComboBoxUsersResidentsModeBuildingCharacteristicsNotUndergroundPlansNo" src="com.diseg.AppComboBox" />
+                </View>
+                <View id="viewUsage">
+                    <Widget id="widgetAppComboBoxUsersResidentsModeBuildingCharacteristicsUsage" src="com.diseg.AppComboBox" />
+                </View>
+                <View id="viewAppButtonSave">
+                    <Widget id="widgetAppButtonSave" src="com.diseg.AppButton" />
+                </View>
+            </ScrollView>
+        </Window>
+    </NavigationWindow>
+</Alloy>

@@ -1,0 +1,93 @@
+// The Window
+"#atc20ModeDetailedEvaluationStructuralHazardsWindow":
+{
+    title: L( 'atc20_detailed_evaluation_structural_hazards_view_title' ) ,
+    backgroundColor: '#ffffcc'
+} ,
+
+// Back button iOS (to papers general section view)
+"#btn_ios_back":
+{
+    title: L( 'generic_back_btn_title' )
+} ,
+
+// ScrollView
+"#scrollViewDetailedEvaluationStructuralHazards":
+{
+    top: 10 ,
+    contentWidth: '100%' ,
+    scrollType: "vertical"
+} ,
+
+// Foundations view
+"#viewAppComboBoxATC20ModeFormsDetailedEvaluationStructuralHazardsFoundations":
+{
+    top: 0 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// RoofsFloors view
+"#viewAppComboBoxATC20ModeFormsDetailedEvaluationStructuralHazardsRoofsFloors":
+{
+    top: 70 ,
+    height: 80 ,
+    width: Ti.UI.FILL
+} ,
+
+// ColumnsPilastersCorbels view
+"#viewAppComboBoxATC20ModeFormsDetailedEvaluationStructuralHazardsColumnsPilastersCorbels":
+{
+    top: 170 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// DiaphragmsHorizontalBracing view
+"#viewAppComboBoxATC20ModeFormsDetailedEvaluationStructuralHazardsDiaphragmsHorizontalBracing":
+{
+    top: 240 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// WallsVerticalBracing view
+"#viewAppComboBoxATC20ModeFormsDetailedEvaluationStructuralHazardsWallsVerticalBracing":
+{
+    top: 310 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// PrecastConnections view
+"#viewAppComboBoxATC20ModeFormsDetailedEvaluationStructuralHazardsPrecastConnections":
+{
+    top: 380 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// Other view
+"#viewAppComboBoxATC20ModeFormsDetailedEvaluationStructuralHazardsOther":
+{
+    top: 450 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// OtherName view
+"#viewAppTextFieldATC20ModeFormsDetailedEvaluationStructuralHazardsOtherName":
+{
+    top: 520 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// Comments view
+"#viewAppTextFieldATC20ModeFormsDetailedEvaluationStructuralHazardsComments":
+{
+    top: 590 ,
+    height: 50 ,
+    width: Ti.UI.FILL ,
+    bottom: 10
+}

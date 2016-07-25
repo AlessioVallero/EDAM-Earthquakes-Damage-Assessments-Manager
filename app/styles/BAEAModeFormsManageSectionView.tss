@@ -1,0 +1,34 @@
+// BAEAModeFormsManageSection View
+"#baeaModeFormsManageSectionViewWindow":
+{
+    title: L( 'baea_mode_forms_manage_section_view_title' ) ,
+    backgroundColor: '#ffffcc'
+} ,
+
+// Back button iOS (to general section view or building damage assessments view)
+"#btn_ios_back":
+{
+    title: L( 'generic_back_btn_title' )
+} ,
+
+// Add view 
+"#viewAppButtonAdd":
+{
+    top: 5 ,
+    width: 60
+} ,
+
+// ScrollView
+"#scrollViewBAEAModeFormsManageSectionView":
+{
+    top: 120 ,
+    scrollType: "vertical"
+} ,
+
+// Table view with the items of this type of section
+"#tableViewBAEAModeFormsManageSection":
+{
+    top: 0 ,
+    backgroundColor: '#ffffff' ,
+    width: Ti.UI.FILL
+}

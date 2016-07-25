@@ -1,0 +1,42 @@
+// Label
+"#lblAppTextField":
+{
+    top: 0 ,
+    left: 0 ,
+    width: 80 ,
+    height: 50 ,
+    font:
+    {
+        fontFamily: 'Arial' ,
+        fontWeight: 'bold' ,
+        fontSize: '12'
+    } ,
+    color: '#000' ,
+    textAlign: 'right'
+} ,
+
+// Speech recognition button
+"#btnAppTextFieldSpeechRecognition":
+{
+    left: 90 ,
+    width: 32 ,
+    title: '' ,
+    height: 32 ,
+    borderColor: "#C0C0C0" ,
+    borderWidth: 1 ,
+    borderRadius: 4 ,
+    backgroundImage: '/images/speech_recognition_normal.png' ,
+    backgroundSelectedImage: '/images/speech_recognition_pressed.png' ,
+    backgroundDisabledImage: '/images/speech_recognition_disabled.png'
+} ,
+
+// TextField
+"#txtAppTextField":
+{
+    backgroundColor: '#ffffff' ,
+    color: "black" ,
+    left: 125 ,
+    right: 10 ,
+    height: 50 ,
+    bubbleParent: false
+}

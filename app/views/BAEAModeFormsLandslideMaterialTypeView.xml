@@ -1,0 +1,15 @@
+<Alloy>
+    <Window id="baeaModeLandslideMaterialTypeWindow">
+        <ScrollView id="scrollViewLandslideMaterialType">
+            <View id="viewAppCheckBoxBAEAModeFormsLandslideMaterialTypeAlluviumSoilFill">
+                <Widget id="widgetAppCheckBoxBAEAModeFormsLandslideMaterialTypeAlluviumSoilFill" src="com.diseg.AppCheckBox" />
+            </View>
+            <View id="viewAppCheckBoxBAEAModeFormsLandslideMaterialTypeSedimentaryRock">
+                <Widget id="widgetAppCheckBoxBAEAModeFormsLandslideMaterialTypeSedimentaryRock" src="com.diseg.AppCheckBox" />
+            </View>
+            <View id="viewAppCheckBoxBAEAModeFormsLandslideMaterialTypeCrystallineRock">
+                <Widget id="widgetAppCheckBoxBAEAModeFormsLandslideMaterialTypeCrystallineRock" src="com.diseg.AppCheckBox" />
+            </View>
+        </ScrollView>
+    </Window>
+</Alloy>

@@ -1,0 +1,188 @@
+// The Window
+"#shedModeDamagesTypeStructuralElementsWindow":
+{
+    title: L( 'shed_mode_damages_type_structural_elements_view_title' ) ,
+    backgroundColor: '#ffffcc'
+} ,
+
+// Back button iOS (to papers general section view)
+"#btn_ios_back":
+{
+    title: L( 'generic_back_btn_title' )
+} ,
+
+// ScrollView
+"#scrollViewDamagesTypeStructuralElements":
+{
+    top: 10 ,
+    scrollType: "vertical"
+} ,
+
+// Table view with the type Structural elements
+"#tableViewShedModeFormsDamagesTypeStructuralElements":
+{
+    top: 0 ,
+    backgroundColor: '#ffffff' ,
+    height: 500 ,
+    width: Ti.UI.FILL
+} ,
+
+// Loss of support of the beam row
+"#tableViewShedModeFormsDamagesTypeStructuralElementsRowLossOfSupportOfTheBeam":
+{
+    hasChild: true ,
+    className: 'section_row' ,
+    color: "#000" ,
+} ,
+
+// Loss of support of the beam label
+"#lblShedModeFormsDamagesTypeStructuralElementsRowLossOfSupportOfTheBeam":
+{
+    text: L( 'generic_loss_of_support_of_the_beam_text_msg' ) ,
+    height: 50 ,
+    color: "#000" ,
+} ,
+
+// Shear failure of the support pillar row
+"#tableViewShedModeFormsDamagesTypeStructuralElementsRowShearFailureOfTheSupportPillar":
+{
+    hasChild: true ,
+    className: 'section_row' ,
+    color: "#000" ,
+} ,
+
+// Shear failure of the support pillar label
+"#lblShedModeFormsDamagesTypeStructuralElementsRowShearFailureOfTheSupportPillar":
+{
+    text: L( 'generic_shear_failure_of_the_support_pillar_text_msg' ) ,
+    height: 50 ,
+    color: "#000" ,
+} ,
+
+// Collapse of the transverse beam row
+"#tableViewShedModeFormsDamagesTypeStructuralElementsRowCollapseOfTheTransverseBeam":
+{
+    hasChild: true ,
+    className: 'section_row' ,
+    color: "#000" ,
+} ,
+
+// Collapse of the transverse beam label
+"#lblShedModeFormsDamagesTypeStructuralElementsRowCollapseOfTheTransverseBeam":
+{
+    text: L( 'generic_collapse_of_transverse_beam_text_msg' ) ,
+    height: 50 ,
+    color: "#000" ,
+} ,
+
+// Rotation of the pillar row
+"#tableViewShedModeFormsDamagesTypeStructuralElementsRowRotationOfThePillar":
+{
+    hasChild: true ,
+    className: 'section_row' ,
+    color: "#000" ,
+} ,
+
+// Rotation of the pillar label
+"#lblShedModeFormsDamagesTypeStructuralElementsRowRotationOfThePillar":
+{
+    text: L( 'generic_rotation_of_the_pillar_text_msg' ) ,
+    height: 50 ,
+    color: "#000" ,
+} ,
+
+// Connection break row
+"#tableViewShedModeFormsDamagesTypeStructuralElementsRowConnectionBreak":
+{
+    hasChild: true ,
+    className: 'section_row' ,
+    color: "#000" ,
+} ,
+
+// Connection break label
+"#lblShedModeFormsDamagesTypeStructuralElementsRowConnectionBreak":
+{
+    text: L( 'generic_connection_break_text_msg' ) ,
+    height: 50 ,
+    color: "#000" ,
+} ,
+
+// Crisis of the concrete cover of the plug row
+"#tableViewShedModeFormsDamagesTypeStructuralElementsRowCrisisOfTheConcreteCoverOfThePlug":
+{
+    hasChild: true ,
+    className: 'section_row' ,
+    color: "#000" ,
+} ,
+
+// Crisis of the concrete cover of the plug label
+"#lblShedModeFormsDamagesTypeStructuralElementsRowCrisisOfTheConcreteCoverOfThePlug":
+{
+    text: L( 'generic_crisis_of_the_concrete_cover_of_the_plug_text_msg' ) ,
+    height: 50 ,
+    color: "#000" ,
+} ,
+
+// Collapse of the roof tiles row
+"#tableViewShedModeFormsDamagesTypeStructuralElementsRowCollapseOfTheRoofTiles":
+{
+    hasChild: true ,
+    className: 'section_row' ,
+    color: "#000" ,
+} ,
+
+// Collapse of the roof tiles label
+"#lblShedModeFormsDamagesTypeStructuralElementsRowCollapseOfTheRoofTiles":
+{
+    text: L( 'generic_collapse_of_the_roof_tiles_text_msg' ) ,
+    height: 50 ,
+    color: "#000" ,
+} ,
+
+// Permanent rotations of the beam in coverage row
+"#tableViewShedModeFormsDamagesTypeStructuralElementsRowPermanentRotationsOfTheBeamInCoverage":
+{
+    hasChild: true ,
+    className: 'section_row' ,
+    color: "#000" ,
+} ,
+
+// Permanent rotations of the beam in coverage label
+"#lblShedModeFormsDamagesTypeStructuralElementsRowPermanentRotationsOfTheBeamInCoverage":
+{
+    text: L( 'generic_permament_rotations_of_the_beam_in_coverage_text_msg' ) ,
+    height: 50 ,
+    color: "#000" ,
+} ,
+
+// Crisis of the fork row
+"#tableViewShedModeFormsDamagesTypeStructuralElementsRowCrisisOfTheFork":
+{
+    hasChild: true ,
+    className: 'section_row' ,
+    color: "#000" ,
+} ,
+
+// Crisis of the fork label
+"#lblShedModeFormsDamagesTypeStructuralElementsRowCrisisOfTheFork":
+{
+    text: L( 'generic_crisis_of_the_fork_text_msg' ) ,
+    height: 50 ,
+    color: "#000" ,
+} ,
+
+// Collapse of a cover plate row
+"#tableViewShedModeFormsDamagesTypeStructuralElementsRowCollapseOfACoverPlate":
+{
+    hasChild: true ,
+    className: 'section_row' ,
+    color: "#000" ,
+} ,
+
+// Collapse of a cover plate label
+"#lblShedModeFormsDamagesTypeStructuralElementsRowCollapseOfACoverPlate":
+{
+    text: L( 'generic_collapse_of_a_cover_plate_text_msg' ) ,
+    height: 50 ,
+    color: "#000" ,
+}

@@ -1,0 +1,53 @@
+<Alloy>
+    <NavigationWindow id="navigationWindowFaultRupture">
+        <Window id="baeaModeFormsFaultRuptureWindow">
+            <LeftNavButton>
+                <Button id="btn_ios_back" onClick="OnBtnBack_Click" />
+            </LeftNavButton>
+
+            <ActivityIndicator id="activity_indicator" />
+            <ScrollView id="scrollViewFaultRupture">
+                <View id="viewAppTextFieldBAEAModeFormsFaultRuptureSiteName">
+                    <Widget id="widgetAppTextFieldBAEAModeFormsFaultRuptureSiteName" src="com.diseg.AppTextField" />
+                </View>
+                <TableView id="tableViewBAEAModeFormsFaultRupturePhoto" onClick="OnTableViewBAEAModeFormsFaultRupturePhoto_Click">
+                    <TableViewRow hasChild="true" className="fault_rupture_photo_row">
+                        <Label id="lblPhoto" />
+                    </TableViewRow>
+                </TableView>
+                <Button id="btnBAEAModeFormsFaultRuptureLoadAddress" onClick="OnBtnLoadAddress_Click" />
+                <View id="viewAppTextFieldBAEAModeFormsFaultRuptureLatitude">
+                    <Widget id="widgetAppTextFieldBAEAModeFormsFaultRuptureLatitude" src="com.diseg.AppTextField" />
+                </View>
+                <View id="viewAppTextFieldBAEAModeFormsFaultRuptureLongitude">
+                    <Widget id="widgetAppTextFieldBAEAModeFormsFaultRuptureLongitude" src="com.diseg.AppTextField" />
+                </View>
+                <View id="viewAppTextFieldBAEAModeFormsFaultRuptureAddress">
+                    <Widget id="widgetAppTextFieldBAEAModeFormsFaultRuptureAddress" src="com.diseg.AppTextField" />
+                </View>
+                <Button id="btnBAEAModeFormsFaultRuptureViewAddress" onClick="OnBtnViewAddress_Click" />
+                <View id="viewAppComboBoxBAEAModeFormsFaultRuptureSurfaceRupture">
+                    <Widget id="widgetAppComboBoxBAEAModeFormsFaultRuptureSurfaceRupture" src="com.diseg.AppComboBox" />
+                </View>
+                <TableView id="tableViewBAEAModeFormsFaultRuptureOffsetFeatureType" onClick="OnTableViewBAEAModeFormsFaultRuptureOffsetFeatureType_Click">
+                    <TableViewRow hasChild="true" className="fault_rupture_offset_feature_type_row">
+                        <Label id="lblOffsetFeatureType" />
+                    </TableViewRow>
+                </TableView>
+                <View id="viewAppTextFieldBAEAModeFormsFaultRuptureSlipAzimuth">
+                    <Widget id="widgetAppTextFieldBAEAModeFormsFaultRuptureSlipAzimuth" src="com.diseg.AppTextField" />
+                </View>
+                <View id="viewAppTextFieldBAEAModeFormsFaultRupturePlunge">
+                    <Widget id="widgetAppTextFieldBAEAModeFormsFaultRupturePlunge" src="com.diseg.AppTextField" />
+                </View>
+                <View id="viewAppTextFieldBAEAModeFormsFaultRuptureSlipLength">
+                    <Widget id="widgetAppTextFieldBAEAModeFormsFaultRuptureSlipLength" src="com.diseg.AppTextField" />
+                </View>
+                <View id="viewAppTextFieldBAEAModeFormsFaultRuptureNotes">
+                    <Widget id="widgetAppTextFieldBAEAModeFormsFaultRuptureNotes" src="com.diseg.AppTextField" />
+                </View>
+                <Button id="btnBAEAModeFormsFaultRuptureRecord" onClick="OnBtnRecord_Click" />
+            </ScrollView>
+        </Window>
+    </NavigationWindow>
+</Alloy>

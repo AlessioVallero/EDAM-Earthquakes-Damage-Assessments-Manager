@@ -1,0 +1,11 @@
+<Alloy>
+    <NavigationWindow id="navigationWindowViewSignView">
+        <Window id="viewSignViewWindow">
+            <LeftNavButton>
+                <Button id="btn_ios_back" onClick="OnBtnBack_Click" />
+            </LeftNavButton>
+
+            <ImageView id="image_view_sign" />
+        </Window>
+    </NavigationWindow>
+</Alloy>

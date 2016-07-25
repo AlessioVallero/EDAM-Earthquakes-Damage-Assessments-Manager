@@ -1,0 +1,21 @@
+<Alloy>
+    <NavigationWindow id="navigationWindowTableGalleryView">
+        <Window id="tableGalleryViewWindow">
+            <LeftNavButton>
+                <Button id="btn_ios_back" onClick="OnBtnBack_Click" />
+            </LeftNavButton>
+
+            <ActivityIndicator id="activity_indicator" />
+
+            <View id="viewAppButtonNext">
+                <Widget id="widgetAppButtonNext" src="com.diseg.AppButton" />
+            </View>
+            <View id="viewAppButtonImportFromGallery">
+                <Widget id="widgetAppButtonImportFromGallery" src="com.diseg.AppButton" />
+            </View>
+            <ScrollView id="scrollViewTableGalleryView">
+                <TableView id="tableViewGallery" onClick="OnTableViewGallery_Click" />
+            </ScrollView>
+        </Window>
+    </NavigationWindow>
+</Alloy>

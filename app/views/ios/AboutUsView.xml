@@ -1,0 +1,14 @@
+<Alloy>
+    <NavigationWindow id="navigationWindowAboutUsView">
+        <Window id="aboutUsViewWindow">
+             <LeftNavButton>
+                <Button id="btn_ios_back" onClick="OnBtnBack_Click" />
+            </LeftNavButton>
+
+            <ScrollView id="scrollViewAboutUs">
+                <Label id="lblAboutUsVersion" />
+                <Label id="lblAboutUs" onClick="OnLblAboutUs_Click" />
+            </ScrollView>
+        </Window>
+    </NavigationWindow>
+</Alloy>

@@ -1,0 +1,220 @@
+// The Window
+"#atc20ModeBuildingDescriptionWindow":
+{
+    title: L( 'atc20_mode_building_description_view_title' ) ,
+    backgroundColor: '#ffffcc'
+} ,
+
+// Back button iOS (to papers general section view)
+"#btn_ios_back":
+{
+    title: L( 'generic_back_btn_title' )
+} ,
+
+// ScrollView
+"#scrollViewBuildingDescription":
+{
+    top: 10 ,
+    contentWidth: '100%' ,
+    scrollType: "vertical"
+} ,
+
+// BuildingName view
+"#viewAppTextFieldATC20ModeFormsBuildingDescriptionBuildingName":
+{
+    top: 0 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// Load address button
+"#btnATC20ModeFormsBuildingDescriptionLoadAddress":
+{
+    title: L( 'generic_load_address_btn_title' ) ,
+    backgroundImage: '/images/app_button_normal.png' ,
+    backgroundSelectedImage: '/images/app_button_pressed.png' ,
+    backgroundDisabledImage: '/images/app_button_disabled.png' ,
+    top: 70 ,
+    height: 50 ,
+    width: Ti.UI.FILL ,
+    left: 10 ,
+    right: 10 ,
+    font:
+    {
+        fontFamily: 'Arial' ,
+        fontWeight: 'bold' ,
+        fontSize: '12'
+    } ,
+    textAlign: Titanium.UI.TEXT_ALIGNMENT_CENTER ,
+    verticalAlign: Titanium.UI.TEXT_VERTICAL_ALIGNMENT_CENTER
+} ,
+
+// Address view
+"#viewAppTextFieldATC20ModeFormsBuildingDescriptionAddress":
+{
+    top: 140 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// AlsoKnownAs view
+"#viewAppTextFieldATC20ModeFormsBuildingDescriptionAlsoKnownAs":
+{
+    top: 210 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// Lot view
+"#viewAppTextFieldATC20ModeFormsBuildingDescriptionLot":
+{
+    top: 280 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// DP view
+"#viewAppTextFieldATC20ModeFormsBuildingDescriptionDP":
+{
+    top: 350 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// OtherID view
+"#viewAppTextFieldATC20ModeFormsBuildingDescriptionOtherID":
+{
+    top: 420 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// ContactName view
+"#viewAppTextFieldATC20ModeFormsBuildingDescriptionContactName":
+{
+    top: 490 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// BuildingContactPhone view
+"#viewAppTextFieldATC20ModeFormsBuildingDescriptionBuildingContactPhone":
+{
+    top: 560 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// NumberOfStoriesAboveTheGround view
+"#viewAppTextFieldATC20ModeFormsBuildingDescriptionNumberOfStoriesAboveTheGround":
+{
+    top: 630 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// NumberOfStoriesBelowTheGround view
+"#viewAppTextFieldATC20ModeFormsBuildingDescriptionNumberOfStoriesBelowTheGround":
+{
+    top: 700 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// ApproxFootprintArea view
+"#viewAppTextFieldATC20ModeFormsBuildingDescriptionApproxFootprintArea":
+{
+    top: 770 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// NumberOfResidentialUnits view
+"#viewAppTextFieldATC20ModeFormsBuildingDescriptionNumberOfResidentialUnits":
+{
+    top: 840 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// NumberOfResidentialUnitsNotHabitable view
+"#viewAppTextFieldATC20ModeFormsBuildingDescriptionNumberOfResidentialUnitsNotHabitable":
+{
+    top: 910 ,
+    height: 80 ,
+    width: Ti.UI.FILL
+} ,
+
+// TypeOfConstruction view
+"#viewAppComboBoxATC20ModeFormsBuildingDescriptionTypeOfConstruction":
+{
+    top: 1010 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// TypeOfConstructionOtherName view
+"#viewAppTextFieldATC20ModeFormsBuildingDescriptionTypeOfConstructionOtherName":
+{
+    top: 1080 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// PrimaryOccupancy view
+"#viewAppComboBoxATC20ModeFormsBuildingDescriptionPrimaryOccupancy":
+{
+    top: 1150 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// PrimaryOccupancyOtherName view
+"#viewAppTextFieldATC20ModeFormsBuildingDescriptionPrimaryOccupancyOtherName":
+{
+    top: 1220 ,
+    height: 50 ,
+    width: Ti.UI.FILL ,
+    bottom: 10
+} ,
+
+// Save view
+"#viewAppButtonSave":
+{
+    top: 1290 ,
+    width: 60 ,
+    height: 80 ,
+    bottom: 10
+}
+
+// Activity Indicator iOS
+"#activity_indicator[platform=ios]":
+{
+    color: '#000' ,
+    font:
+    {
+        fontFamily: 'Helvetica Neue' ,
+        fontSize: 11 ,
+        fontWeight: 'bold'
+    } ,
+    style: Ti.UI.iPhone.ActivityIndicatorStyle.DARK ,
+    width: Ti.UI.SIZE ,
+    height: Ti.UI.SIZE ,
+    zIndex: 1
+} ,
+
+// Activity Indicator Android
+"#activity_indicator":
+{
+    color: '#000' ,
+    font:
+    {
+        fontFamily: 'Helvetica Neue' ,
+        fontSize: 11 ,
+        fontWeight: 'bold'
+    } ,
+    style: Ti.UI.ActivityIndicatorStyle.DARK ,
+    width: Ti.UI.SIZE ,
+    height: Ti.UI.SIZE ,
+    zIndex: 1
+}

@@ -1,0 +1,29 @@
+<Alloy>
+    <NavigationWindow id="navigationWindowSectionThreeMasonryStructures">
+        <Window id="aedesModeSectionThreeMasonryStructuresWindow">
+            <LeftNavButton>
+                <Button id="btn_ios_back" onClick="OnBtnBack_Click" />
+            </LeftNavButton>
+
+            <ScrollView id="scrollViewSectionThreeMasonryStructures">
+                <Label id="lblAeDESModeFormsSectionThreeHorizontalMasonryStructures" />
+                <Label id="lblAeDESModeFormsSectionThreeHorizontalMasonryStructuresFatherTitle" />
+                <View id="viewAppCheckBoxAeDESModeFormsSectionThreeMasonryStructuresNotIdentified">
+                    <Widget id="widgetAppCheckBoxAeDESModeFormsSectionThreeMasonryStructuresNotIdentified" src="com.diseg.AppCheckBox" />
+                </View>
+                <View id="viewAppCheckBoxAeDESModeFormsSectionThreeMasonryStructuresTypeOneWithoutChains">
+                    <Widget id="widgetAppCheckBoxAeDESModeFormsSectionThreeMasonryStructuresTypeOneWithoutChains" src="com.diseg.AppCheckBox" />
+                </View>
+                <View id="viewAppCheckBoxAeDESModeFormsSectionThreeMasonryStructuresTypeOneWithChains">
+                    <Widget id="widgetAppCheckBoxAeDESModeFormsSectionThreeMasonryStructuresTypeOneWithChains" src="com.diseg.AppCheckBox" />
+                </View>
+                <View id="viewAppCheckBoxAeDESModeFormsSectionThreeMasonryStructuresTypeTwoWithoutChains">
+                    <Widget id="widgetAppCheckBoxAeDESModeFormsSectionThreeMasonryStructuresTypeTwoWithoutChains" src="com.diseg.AppCheckBox" />
+                </View>
+                <View id="viewAppCheckBoxAeDESModeFormsSectionThreeMasonryStructuresTypeTwoWithChains">
+                    <Widget id="widgetAppCheckBoxAeDESModeFormsSectionThreeMasonryStructuresTypeTwoWithChains" src="com.diseg.AppCheckBox" />
+                </View>
+            </ScrollView>
+        </Window>
+    </NavigationWindow>
+</Alloy>

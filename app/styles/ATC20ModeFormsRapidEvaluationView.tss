@@ -1,0 +1,100 @@
+// The Window
+"#atc20ModeRapidEvaluationWindow":
+{
+    title: L( 'atc20_mode_rapid_evaluation_view_title' ) ,
+    backgroundColor: '#ffffcc'
+} ,
+
+// Back button iOS (to papers general section view)
+"#btn_ios_back":
+{
+    title: L( 'generic_back_btn_title' )
+} ,
+
+// ScrollView
+"#scrollViewRapidEvaluation":
+{
+    top: 10 ,
+    scrollType: "vertical"
+} ,
+
+// EstimatedBuildingDamage view
+"#viewAppComboBoxATC20ModeFormsRapidEvaluationEstimatedBuildingDamage":
+{
+    top: 0 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// GeneralComments view
+"#viewAppTextFieldATC20ModeFormsRapidEvaluationGeneralComments":
+{
+    top: 70 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// CollapsePartialCollapseOrBuildingOffFoundation view
+"#viewAppComboBoxATC20ModeFormsRapidEvaluationObservedConditionsCollapsePartialCollapseOrBuildingOffFoundation":
+{
+    top: 140 ,
+    height: 80 ,
+    width: Ti.UI.FILL
+} ,
+
+// BuildingOrStoryLeaning view
+"#viewAppComboBoxATC20ModeFormsRapidEvaluationObservedConditionsBuildingOrStoryLeaning":
+{
+    top: 240 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// RackingDamageToWallsOtherStructuralDamage view
+"#viewAppComboBoxATC20ModeFormsRapidEvaluationObservedConditionsRackingDamageToWallsOtherStructuralDamage":
+{
+    top: 310 ,
+    height: 80 ,
+    width: Ti.UI.FILL
+} ,
+
+// ChimneyParapetOrOtherFallingHazard view
+"#viewAppComboBoxATC20ModeFormsRapidEvaluationObservedConditionsChimneyParapetOrOtherFallingHazard":
+{
+    top: 410 ,
+    height: 80 ,
+    width: Ti.UI.FILL
+} ,
+
+// GroundSlopeMovementOrCracking view
+"#viewAppComboBoxATC20ModeFormsRapidEvaluationObservedConditionsGroundSlopeMovementOrCracking":
+{
+    top: 510 ,
+    height: 80 ,
+    width: Ti.UI.FILL
+} ,
+
+// Other view
+"#viewAppComboBoxATC20ModeFormsRapidEvaluationObservedConditionsOther":
+{
+    top: 610 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// OtherName view
+"#viewAppTextFieldATC20ModeFormsRapidEvaluationObservedConditionsOtherName":
+{
+    top: 680 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// Save view
+"#viewAppButtonSave":
+{
+    top: 750 ,
+    width: 60 ,
+    height: 80 ,
+    bottom: 10
+}

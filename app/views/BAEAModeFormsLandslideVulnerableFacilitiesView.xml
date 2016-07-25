@@ -1,0 +1,21 @@
+<Alloy>
+    <Window id="baeaModeLandslideVulnerableFacilitiesWindow">
+        <ScrollView id="scrollViewLandslideVulnerableFacilities">
+            <View id="viewAppCheckBoxBAEAModeFormsLandslideVulnerableFacilitiesBuildings">
+                <Widget id="widgetAppCheckBoxBAEAModeFormsLandslideVulnerableFacilitiesBuildings" src="com.diseg.AppCheckBox" />
+            </View>
+            <View id="viewAppCheckBoxBAEAModeFormsLandslideVulnerableFacilitiesUtilities">
+                <Widget id="widgetAppCheckBoxBAEAModeFormsLandslideVulnerableFacilitiesUtilities" src="com.diseg.AppCheckBox" />
+            </View>
+            <View id="viewAppCheckBoxBAEAModeFormsLandslideVulnerableFacilitiesRoads">
+                <Widget id="widgetAppCheckBoxBAEAModeFormsLandslideVulnerableFacilitiesRoads" src="com.diseg.AppCheckBox" />
+            </View>
+            <View id="viewAppCheckBoxBAEAModeFormsLandslideVulnerableFacilitiesNone">
+                <Widget id="widgetAppCheckBoxBAEAModeFormsLandslideVulnerableFacilitiesNone" src="com.diseg.AppCheckBox" />
+            </View>
+            <View id="viewAppCheckBoxBAEAModeFormsLandslideVulnerableFacilitiesOther">
+                <Widget id="widgetAppCheckBoxBAEAModeFormsLandslideVulnerableFacilitiesOther" src="com.diseg.AppCheckBox" />
+            </View>
+        </ScrollView>
+    </Window>
+</Alloy>

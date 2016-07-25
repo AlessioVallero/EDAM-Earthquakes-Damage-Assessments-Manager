@@ -1,0 +1,90 @@
+function __processArg(obj, key) {
+    var arg = null;
+    if (obj) {
+        arg = obj[key] || null;
+        delete obj[key];
+    }
+    return arg;
+}
+
+function Controller() {
+    function OnTopic_Change() {
+        Alloy.Globals.ShedModeOtherComments["TOPIC"] = $.widgetAppTextFieldShedModeFormsOtherCommentsTopic.get_text_value();
+    }
+    function OnOtherComments_Change() {
+        Alloy.Globals.ShedModeOtherComments["OTHER_COMMENTS"] = $.widgetAppTextAreaShedModeFormsOtherCommentsOtherComments.get_text_value();
+    }
+    require("alloy/controllers/BaseController").apply(this, Array.prototype.slice.call(arguments));
+    this.__controllerPath = "ShedModeFormsOtherCommentsView";
+    if (arguments[0]) {
+        {
+            __processArg(arguments[0], "__parentSymbol");
+        }
+        {
+            __processArg(arguments[0], "$model");
+        }
+        {
+            __processArg(arguments[0], "__itemTemplate");
+        }
+    }
+    var $ = this;
+    var exports = {};
+    $.__views.shedModeFormsOtherCommentsWindow = Ti.UI.createWindow({
+        title: L("shed_mode_other_comments_view_title"),
+        backgroundColor: "#ffffcc",
+        id: "shedModeFormsOtherCommentsWindow"
+    });
+    $.__views.shedModeFormsOtherCommentsWindow && $.addTopLevelView($.__views.shedModeFormsOtherCommentsWindow);
+    $.__views.scrollViewOtherComments = Ti.UI.createScrollView({
+        top: 10,
+        scrollType: "vertical",
+        id: "scrollViewOtherComments"
+    });
+    $.__views.shedModeFormsOtherCommentsWindow.add($.__views.scrollViewOtherComments);
+    $.__views.viewAppTextFieldShedModeFormsOtherCommentsTopic = Ti.UI.createView({
+        top: 0,
+        height: 50,
+        width: Ti.UI.FILL,
+        id: "viewAppTextFieldShedModeFormsOtherCommentsTopic"
+    });
+    $.__views.scrollViewOtherComments.add($.__views.viewAppTextFieldShedModeFormsOtherCommentsTopic);
+    $.__views.widgetAppTextFieldShedModeFormsOtherCommentsTopic = Alloy.createWidget("com.diseg.AppTextField", "widget", {
+        id: "widgetAppTextFieldShedModeFormsOtherCommentsTopic",
+        __parentSymbol: $.__views.viewAppTextFieldShedModeFormsOtherCommentsTopic
+    });
+    $.__views.widgetAppTextFieldShedModeFormsOtherCommentsTopic.setParent($.__views.viewAppTextFieldShedModeFormsOtherCommentsTopic);
+    $.__views.viewAppTextAreaShedModeFormsOtherCommentsOtherComments = Ti.UI.createView({
+        top: 70,
+        height: 380,
+        width: "90%",
+        id: "viewAppTextAreaShedModeFormsOtherCommentsOtherComments"
+    });
+    $.__views.scrollViewOtherComments.add($.__views.viewAppTextAreaShedModeFormsOtherCommentsOtherComments);
+    $.__views.widgetAppTextAreaShedModeFormsOtherCommentsOtherComments = Alloy.createWidget("com.diseg.AppTextArea", "widget", {
+        id: "widgetAppTextAreaShedModeFormsOtherCommentsOtherComments",
+        __parentSymbol: $.__views.viewAppTextAreaShedModeFormsOtherCommentsOtherComments
+    });
+    $.__views.widgetAppTextAreaShedModeFormsOtherCommentsOtherComments.setParent($.__views.viewAppTextAreaShedModeFormsOtherCommentsOtherComments);
+    exports.destroy = function() {};
+    _.extend($, $.__views);
+    var args = arguments[0] || {};
+    var current_is_synchronized = args.is_synchronized;
+    var view_enabled = true;
+    "undefined" != typeof current_is_synchronized && (view_enabled = "0" == current_is_synchronized);
+    try {
+        $.widgetAppTextFieldShedModeFormsOtherCommentsTopic.init(L("generic_topic_txt_hint"), OnTopic_Change);
+        $.widgetAppTextFieldShedModeFormsOtherCommentsTopic.set_text_value(Alloy.Globals.ShedModeOtherComments["TOPIC"]);
+        $.widgetAppTextFieldShedModeFormsOtherCommentsTopic.enabled(view_enabled);
+        $.widgetAppTextAreaShedModeFormsOtherCommentsOtherComments.init(L("generic_other_comments_txt_hint"), OnOtherComments_Change);
+        $.widgetAppTextAreaShedModeFormsOtherCommentsOtherComments.set_text_value(Alloy.Globals.ShedModeOtherComments["OTHER_COMMENTS"]);
+        $.widgetAppTextAreaShedModeFormsOtherCommentsOtherComments.enabled(view_enabled);
+        $.shedModeFormsOtherCommentsWindow.open();
+    } catch (exception) {
+        Alloy.Globals.AlertUserAndLogAsync(L("generic_exception_msg") + exception.message);
+    }
+    _.extend($, exports);
+}
+
+var Alloy = require("alloy"), Backbone = Alloy.Backbone, _ = Alloy._;
+
+module.exports = Controller;

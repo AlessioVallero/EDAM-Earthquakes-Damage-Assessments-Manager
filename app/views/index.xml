@@ -1,0 +1,19 @@
+<Alloy>
+	<Window id="mainWindow">
+        <ActivityIndicator id="activity_indicator" />
+
+        <View id="mainView">
+            <Label id="lblChooseMode" />
+            <ImageView id="imageViewAppLogo" />
+            <Label id="lblDevelopedBy" />
+            <Button id="btn_users_residents_mode" onClick="OnBtnUsersResidentsMode_Click" />
+            <Button id="btn_professional_mode" onClick="OnBtnProfessionalMode_Click" />
+            <View id="viewAppButtonHelp">
+                <Widget id="widgetAppButtonHelp" src="com.diseg.AppButton" />
+            </View>
+            <View id="viewAppButtonTools">
+                <Widget id="widgetAppButtonTools" src="com.diseg.AppButton" />
+            </View>
+        </View>
+	</Window>
+</Alloy>

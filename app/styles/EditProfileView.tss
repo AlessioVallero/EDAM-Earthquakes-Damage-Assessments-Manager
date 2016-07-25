@@ -1,0 +1,134 @@
+// Edit profile page
+"#editProfileWindow":
+{
+    title: L( 'edit_profile_view_title' ) ,
+    backgroundColor: '#ffffcc'
+} ,
+
+// Back button iOS (to index view)
+"#btn_ios_back":
+{
+    title: L( 'generic_back_btn_title' )
+} ,
+
+"#scrollViewEditProfile":
+{
+    top: 0 ,
+    scrollType: "vertical"
+} ,
+
+// Label Username
+"#lblEditProfileUsername":
+{
+    color: "#000" ,
+	top: 5 ,
+    font:
+    {
+        fontSize: 16 ,
+        fontFamily: 'Arial' ,
+        fontWeight: 'bold'
+    } ,
+    textAlign: 'center'
+} ,
+
+// EditProfile OldPassword view
+"#viewAppTextFieldEditProfileOldPassword":
+{
+    top: 35 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// EditProfile Password view
+"#viewAppTextFieldEditProfilePassword":
+{
+    top: 105 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// EditProfile Password confirm view
+"#viewAppTextFieldEditProfilePasswordConfirm":
+{
+    top: 175 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// EditProfile Name view
+"#viewAppTextFieldEditProfileName":
+{
+    top: 245 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// EditProfile Group view
+"#viewAppTextFieldEditProfileGroup":
+{
+    top: 315 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// EditProfile Email view
+"#viewAppTextFieldEditProfileEmail":
+{
+    top: 385 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// Done view
+"#viewAppButtonDone":
+{
+    top: 455 ,
+    width: 60
+} ,
+
+// Activity Indicator iOS
+"#activity_indicator[platform=ios]":
+{
+    color: '#000' ,
+    font:
+    {
+        fontFamily: 'Helvetica Neue' ,
+        fontSize: 11 ,
+        fontWeight: 'bold'
+    } ,
+    style: Ti.UI.iPhone.ActivityIndicatorStyle.DARK ,
+    width: Ti.UI.SIZE ,
+    height: Ti.UI.SIZE ,
+    zIndex: 1
+} ,
+
+// Activity Indicator Android-mobileweb
+"#activity_indicator[platform=android,mobileweb]":
+{
+    color: '#000' ,
+    font:
+    {
+        fontFamily: 'Helvetica Neue' ,
+        fontSize: 11 ,
+        fontWeight: 'bold'
+    } ,
+    style: Ti.UI.ActivityIndicatorStyle.DARK ,
+    width: Ti.UI.SIZE ,
+    height: Ti.UI.SIZE ,
+    zIndex: 1
+} ,
+
+// Activity Indicator BlackBerry
+"#activity_indicator[platform=blackberry]":
+{
+    color: '#000' ,
+    font:
+    {
+        fontFamily: 'Helvetica Neue' ,
+        fontSize: 11 ,
+        fontWeight: 'bold'
+    } ,
+    width: Ti.UI.SIZE ,
+    height: Ti.UI.SIZE ,
+    zIndex: 1
+}

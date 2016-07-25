@@ -1,0 +1,35 @@
+// The Window
+"#baeaModeLifelinesElectricPowerDeliveryWindow":
+{
+    title: L( 'baea_mode_lifelines_electric_power_delivery_title' ) ,
+    backgroundColor: '#ffffcc'
+} ,
+
+// Back button iOS (to Landslide view)
+"#btn_ios_back":
+{
+    title: L( 'generic_back_btn_title' )
+} ,
+
+// ScrollView
+"#scrollViewLifelinesElectricPowerDelivery":
+{
+    top: 10 ,
+    scrollType: "vertical"
+} ,
+
+// Overhead And Buried Transmission Lines view
+"#viewAppCheckBoxBAEAModeFormsLifelinesElectricPowerDeliveryOverheadAndBuriedTransmissionLines":
+{
+    top: 0 ,
+    height: 50 ,
+    width: 290
+} ,
+
+// Substation And Switchyards view
+"#viewAppCheckBoxBAEAModeFormsLifelinesElectricPowerDeliverySubstationAndSwitchyards":
+{
+    top: 70 ,
+    height: 50 ,
+    width: 290
+}

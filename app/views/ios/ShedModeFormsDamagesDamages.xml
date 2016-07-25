@@ -1,0 +1,26 @@
+<Alloy>
+    <NavigationWindow id="navigationWindowDamagesDamages">
+        <Window id="shedModeDamagesDamagesWindow">
+            <LeftNavButton>
+                <Button id="btn_ios_back" onClick="OnBtnBack_Click" />
+            </LeftNavButton>
+
+            <ScrollView id="scrollViewDamagesDamages">
+                <Label id="lblAeDESModeFormsDamagesDamage" />
+                <Label id="lblAeDESModeFormsDamagesDamageFatherTitle" />
+                <View id="viewAppComboBoxAeDESModeFormsDamagesDamagesD4D5">
+                    <Widget id="widgetAppComboBoxAeDESModeFormsDamagesDamagesD4D5" src="com.diseg.AppComboBox" />
+                </View>
+                <View id="viewAppComboBoxAeDESModeFormsDamagesDamagesD2D3">
+                    <Widget id="widgetAppComboBoxAeDESModeFormsDamagesDamagesD2D3" src="com.diseg.AppComboBox" />
+                </View>
+                <View id="viewAppComboBoxAeDESModeFormsDamagesDamagesD0D1">
+                    <Widget id="widgetAppComboBoxAeDESModeFormsDamagesDamagesD0D1" src="com.diseg.AppComboBox" />
+                </View>
+                <View id="viewAppButtonSave">
+                    <Widget id="widgetAppButtonSave" src="com.diseg.AppButton" />
+                </View>
+            </ScrollView>
+        </Window>
+    </NavigationWindow>
+</Alloy>

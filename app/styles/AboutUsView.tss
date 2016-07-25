@@ -1,0 +1,54 @@
+// View about us window
+"#aboutUsViewWindow":
+{
+    title: L( 'about_us_view_title' ) ,
+    backgroundColor: '#ffffcc'
+} ,
+
+// Back button iOS (to papers general section view)
+"#btn_ios_back":
+{
+    title: L( 'generic_back_btn_title' )
+}
+
+// ScrollView
+"#scrollViewAboutUs":
+{
+    top: 0 ,
+    contentWidth: '100%' ,
+    scrollType: "vertical"
+} ,
+
+// Label about us version
+"#lblAboutUsVersion":
+{
+    text: L( 'about_us_version_msg' ) ,
+	width: '90%' ,
+    top: 10 ,
+	color: "#000" ,
+	font:
+	{
+		fontSize: 16 ,
+        fontFamily: 'Arial' ,
+        fontWeight: 'bold'
+	} ,
+	textAlign: 'center' ,
+    layout: 'vertical'
+}
+
+// Label about us
+"#lblAboutUs":
+{
+    text: L( 'about_us_msg' ) ,
+	width: '90%' ,
+    top: 45 ,
+    left: '5%' ,
+	color: "#000" ,
+	font:
+	{
+		fontSize: 16 ,
+        fontFamily: 'Arial'
+	} ,
+	textAlign: 'center' ,
+    layout: 'vertical'
+}

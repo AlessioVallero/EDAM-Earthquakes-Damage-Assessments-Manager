@@ -1,0 +1,5 @@
+<Alloy>
+    <Label id="lblAppTextArea" />
+    <Button id="btnAppTextAreaSpeechRecognition" onClick="OnBtnSpeechRecognition_Click" />
+    <TextArea id="txtAppTextArea" />
+</Alloy>

@@ -1,0 +1,14 @@
+<Alloy>
+    <Window id="aedesModeSectionEightMeasuresOfEmergencyWindow">
+        <ScrollView id="scrollViewSectionEightMeasuresOfEmergency">
+            <Label id="lblAeDESModeFormsSectionEightMeasuresOfEmergency" />
+            <Label id="lblAeDESModeFormsSectionEightMeasuresOfEmergencyFatherTitle" />
+            <View id="viewAppCheckBoxAeDESModeFormsSectionEightMeasuresOfEmergencyLimited">
+                <Widget id="widgetAppCheckBoxAeDESModeFormsSectionEightMeasuresOfEmergencyLimited" src="com.diseg.AppCheckBox" />
+            </View>
+            <View id="viewAppCheckBoxAeDESModeFormsSectionEightMeasuresOfEmergencyExtended">
+                <Widget id="widgetAppCheckBoxAeDESModeFormsSectionEightMeasuresOfEmergencyExtended" src="com.diseg.AppCheckBox" />
+            </View>
+        </ScrollView>
+    </Window>
+</Alloy>

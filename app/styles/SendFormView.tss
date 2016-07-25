@@ -1,0 +1,128 @@
+// Send form window
+"#viewSendFormViewWindow":
+{
+    title: L( 'send_form_view_title' ) ,
+    backgroundColor: '#ffffcc'
+} ,
+
+// Back button iOS (to papers general section view)
+"#btn_ios_back":
+{
+    title: L( 'generic_back_btn_title' )
+} ,
+
+// Next button iOS
+"#btn_ios_next":
+{
+    title: L( 'generic_next_btn_title' )
+} ,
+
+// ScrollView
+"#scrollViewSendForm":
+{
+    top: 10 ,
+    contentWidth: '100%' ,
+    scrollType: "vertical"
+} ,
+
+// Next view 
+"#viewAppButtonNext":
+{
+    top: 0 ,
+    width: 60
+} ,
+
+// Preview view iOS
+"#viewAppCheckBoxSendFormViewPreview[platform=ios]":
+{
+    top: 0 ,
+    height: 50 ,
+    width: 290
+} ,
+
+// MediaContents view iOS
+"#viewAppCheckBoxSendFormViewMediaContents[platform=ios]":
+{
+    top: 100 ,
+    height: 50 ,
+    width: 290
+} ,
+
+// SendEmail logo on the Window iOS
+"#imageViewSendEmailLogo[platform=ios]":
+{
+    top: 170 ,
+    width: '100%' ,
+    image: '/images/send_email_logo.png'
+} ,
+
+// Preview view Android
+"#viewAppCheckBoxSendFormViewPreview":
+{
+    top: 90 ,
+    height: 50 ,
+    width: 290
+} ,
+
+// MediaContents view Android
+"#viewAppCheckBoxSendFormViewMediaContents":
+{
+    top: 190 ,
+    height: 50 ,
+    width: 290
+} ,
+
+// SendEmail logo on the Window (Android)
+"#imageViewSendEmailLogo":
+{
+    top: 260 ,
+    width: '100%' ,
+    image: '/images/send_email_logo.png'
+} ,
+
+// Activity Indicator iOS
+"#activity_indicator[platform=ios]":
+{
+    color: '#000' ,
+    font:
+    {
+        fontFamily: 'Helvetica Neue' ,
+        fontSize: 11 ,
+        fontWeight: 'bold'
+    } ,
+    style: Ti.UI.iPhone.ActivityIndicatorStyle.DARK ,
+    width: Ti.UI.SIZE ,
+    height: Ti.UI.SIZE ,
+    zIndex: 1
+} ,
+
+// Activity Indicator Android-mobileweb
+"#activity_indicator[platform=android,mobileweb]":
+{
+    color: '#000' ,
+    font:
+    {
+        fontFamily: 'Helvetica Neue' ,
+        fontSize: 11 ,
+        fontWeight: 'bold'
+    } ,
+    style: Ti.UI.ActivityIndicatorStyle.DARK ,
+    width: Ti.UI.SIZE ,
+    height: Ti.UI.SIZE ,
+    zIndex: 1
+} ,
+
+// Activity Indicator BlackBerry
+"#activity_indicator[platform=blackberry]":
+{
+    color: '#000' ,
+    font:
+    {
+        fontFamily: 'Helvetica Neue' ,
+        fontSize: 11 ,
+        fontWeight: 'bold'
+    } ,
+    width: Ti.UI.SIZE ,
+    height: Ti.UI.SIZE ,
+    zIndex: 1
+}

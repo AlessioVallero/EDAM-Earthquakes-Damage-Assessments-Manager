@@ -1,0 +1,37 @@
+<Alloy>
+    <NavigationWindow id="navigationWindowDamages">
+        <Window id="shedModeDamagesWindow">
+            <LeftNavButton>
+                <Button id="btn_ios_back" onClick="OnBtnBack_Click" />
+            </LeftNavButton>
+
+            <ScrollView id="scrollViewDamages">
+                <Label id="lblShedModeFormsDamagesType" />
+                <TableView id="tableViewShedModeFormsDamagesType" onClick="OnTableViewShedModeFormsDamagesType_Click">
+                    <TableViewRow id="tableViewShedModeFormsDamagesTypeRowLossOfSupportAndDamagesToTheConnectionsBetweenTheStructuralElements">
+                        <Label id="lblShedModeFormsDamagesTypeRowLossOfSupportAndDamagesToTheConnectionsBetweenTheStructuralElements" />
+                    </TableViewRow>
+                    <TableViewRow id="tableViewShedModeFormsDamagesTypeRowCollapseOfElementsOfTheInfill">
+                        <Label id="lblShedModeFormsDamagesTypeRowCollapseOfElementsOfTheInfill" />
+                    </TableViewRow>
+                </TableView>
+
+                <Label id="lblShedModeFormsDamagesMeasuresOfEmergency" />
+                <TableView id="tableViewShedModeFormsDamagesMeasuresOfEmergency" onClick="OnTableViewShedModeFormsDamagesMeasuresOfEmergency_Click">
+                    <TableViewRow id="tableViewShedModeFormsDamagesMeasuresOfEmergencyRowLossOfSupportAndDamagesToTheConnectionsBetweenTheStructuralElements">
+                        <Label id="lblShedModeFormsDamagesMeasuresOfEmergencyRowLossOfSupportAndDamagesToTheConnectionsBetweenTheStructuralElements" />
+                    </TableViewRow>
+                    <TableViewRow id="tableViewShedModeFormsDamagesMeasuresOfEmergencyRowCollapseOfElementsOfTheInfill">
+                        <Label id="lblShedModeFormsDamagesMeasuresOfEmergencyRowCollapseOfElementsOfTheInfill" />
+                    </TableViewRow>
+                    <TableViewRow id="tableViewShedModeFormsDamagesMeasuresOfEmergencyRowDamagedOrDeficientVerticalStructureElements">
+                        <Label id="lblShedModeFormsDamagesMeasuresOfEmergencyRowDamagedOrDeficientVerticalStructureElements" />
+                    </TableViewRow>
+                </TableView>
+                <View id="viewAppButtonSave">
+                    <Widget id="widgetAppButtonSave" src="com.diseg.AppButton" />
+                </View>
+            </ScrollView>
+        </Window>
+    </NavigationWindow>
+</Alloy>

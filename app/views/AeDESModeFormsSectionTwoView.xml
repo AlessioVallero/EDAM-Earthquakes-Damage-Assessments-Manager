@@ -1,0 +1,60 @@
+<Alloy>
+    <Window id="aedesModeSectionTwoWindow">
+        <ScrollView id="scrollViewSectionTwo">
+            <View id="viewAppComboBoxAeDESModeFormsSectionTwoPlansNo">
+                <Widget id="widgetAppComboBoxAeDESModeFormsSectionTwoPlansNo" src="com.diseg.AppComboBox" />
+            </View>
+            <View id="viewAppComboBoxAeDESModeFormsSectionTwoAverageHeightOfFloor">
+                <Widget id="widgetAppComboBoxAeDESModeFormsSectionTwoAverageHeightOfFloor" src="com.diseg.AppComboBox" />
+            </View>
+            <View id="viewAppComboBoxAeDESModeFormsSectionTwoUndergroundPlansNo">
+                <Widget id="widgetAppComboBoxAeDESModeFormsSectionTwoUndergroundPlansNo" src="com.diseg.AppComboBox" />
+            </View>
+            <View id="viewAppComboBoxAeDESModeFormsSectionTwoAverageSurface">
+                <Widget id="widgetAppComboBoxAeDESModeFormsSectionTwoAverageSurface" src="com.diseg.AppComboBox" />
+            </View>
+            <View id="viewAppComboBoxAeDESModeFormsSectionTwoConstructionAge">
+                <Widget id="widgetAppComboBoxAeDESModeFormsSectionTwoConstructionAge" src="com.diseg.AppComboBox" />
+            </View>
+            <View id="viewAppComboBoxAeDESModeFormsSectionTwoRenovationAge">
+                <Widget id="widgetAppComboBoxAeDESModeFormsSectionTwoRenovationAge" src="com.diseg.AppComboBox" />
+            </View>
+            <View id="viewAppComboBoxAeDESModeFormsSectionTwoUtilization">
+                <Widget id="widgetAppComboBoxAeDESModeFormsSectionTwoUtilization" src="com.diseg.AppComboBox" />
+            </View>
+            <View id="viewAppComboBoxAeDESModeFormsSectionTwoProperty">
+                <Widget id="widgetAppComboBoxAeDESModeFormsSectionTwoProperty" src="com.diseg.AppComboBox" />
+            </View>
+            <View id="viewAppTextFieldAeDESModeFormsSectionTwoUnitOfUseHousing">
+                <Widget id="widgetAppTextFieldAeDESModeFormsSectionTwoUnitOfUseHousing" src="com.diseg.AppTextField" />
+            </View>
+            <View id="viewAppTextFieldAeDESModeFormsSectionTwoUnitOfUseProductive">
+                <Widget id="widgetAppTextFieldAeDESModeFormsSectionTwoUnitOfUseProductive" src="com.diseg.AppTextField" />
+            </View>
+            <View id="viewAppTextFieldAeDESModeFormsSectionTwoUnitOfUseCommerce">
+                <Widget id="widgetAppTextFieldAeDESModeFormsSectionTwoUnitOfUseCommerce" src="com.diseg.AppTextField" />
+            </View>
+            <View id="viewAppTextFieldAeDESModeFormsSectionTwoUnitOfUseOffices">
+                <Widget id="widgetAppTextFieldAeDESModeFormsSectionTwoUnitOfUseOffices" src="com.diseg.AppTextField" />
+            </View>
+            <View id="viewAppTextFieldAeDESModeFormsSectionTwoUnitOfUsePublicServices">
+                <Widget id="widgetAppTextFieldAeDESModeFormsSectionTwoUnitOfUsePublicServices" src="com.diseg.AppTextField" />
+            </View>
+            <View id="viewAppTextFieldAeDESModeFormsSectionTwoUnitOfUseDeposit">
+                <Widget id="widgetAppTextFieldAeDESModeFormsSectionTwoUnitOfUseDeposit" src="com.diseg.AppTextField" />
+            </View>
+            <View id="viewAppTextFieldAeDESModeFormsSectionTwoUnitOfUseStrategic">
+                <Widget id="widgetAppTextFieldAeDESModeFormsSectionTwoUnitOfUseStrategic" src="com.diseg.AppTextField" />
+            </View>
+            <View id="viewAppTextFieldAeDESModeFormsSectionTwoUnitOfUseTourism">
+                <Widget id="widgetAppTextFieldAeDESModeFormsSectionTwoUnitOfUseTourism" src="com.diseg.AppTextField" />
+            </View>
+            <View id="viewAppTextFieldAeDESModeFormsSectionTwoOccupants">
+                <Widget id="widgetAppTextFieldAeDESModeFormsSectionTwoOccupants" src="com.diseg.AppTextField" />
+            </View>
+            <View id="viewAppButtonSave">
+                <Widget id="widgetAppButtonSave" src="com.diseg.AppButton" />
+            </View>
+        </ScrollView>
+    </Window>
+</Alloy>

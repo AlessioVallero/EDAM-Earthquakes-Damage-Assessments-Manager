@@ -1,0 +1,19 @@
+<Alloy>
+    <Window id="viewSendFormViewWindow" onAndroid:back="OnAndroidBackButton_Click" onAndroidback="OnAndroidBackButton_Click">
+        <ActivityIndicator id="activity_indicator" />
+
+        <ScrollView id="scrollViewSendForm">
+            <View id="viewAppButtonNext">
+                <Widget id="widgetAppButtonNext" src="com.diseg.AppButton" />
+            </View>
+            <View id="viewAppCheckBoxSendFormViewPreview">
+                <Widget id="widgetAppCheckBoxSendFormViewPreview" src="com.diseg.AppCheckBox" />
+            </View>
+            <View id="viewAppCheckBoxSendFormViewMediaContents">
+                <Widget id="widgetAppCheckBoxSendFormViewMediaContents" src="com.diseg.AppCheckBox" />
+            </View>
+
+            <ImageView id="imageViewSendEmailLogo" />
+        </ScrollView>
+    </Window>
+</Alloy>

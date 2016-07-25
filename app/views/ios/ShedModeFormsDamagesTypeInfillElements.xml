@@ -1,0 +1,41 @@
+<Alloy>
+    <NavigationWindow id="navigationWindowDamagesTypeInfillElements">
+        <Window id="shedModeDamagesTypeInfillElementsWindow">
+            <LeftNavButton>
+                <Button id="btn_ios_back" onClick="OnBtnBack_Click" />
+            </LeftNavButton>
+
+            <ScrollView id="scrollViewDamagesTypeInfillElements">
+                <TableView id="tableViewShedModeFormsDamagesTypeInfillElements" onClick="OnTableViewShedModeFormsDamagesTypeInfillElements_Click">
+                    <TableViewRow id="tableViewShedModeFormsDamagesTypeInfillElementsRowShearFailureOfConnector">
+                        <Label id="lblShedModeFormsDamagesTypeInfillElementsRowShearFailureOfConnector" />
+                    </TableViewRow>
+                    <TableViewRow id="tableViewShedModeFormsDamagesTypeInfillElementsRowChippedOrDisconnectedProfilesOnThePillar">
+                        <Label id="lblShedModeFormsDamagesTypeInfillElementsRowChippedOrDisconnectedProfilesOnThePillar" />
+                    </TableViewRow>
+                    <TableViewRow id="tableViewShedModeFormsDamagesTypeInfillElementsRowShelfBreak">
+                        <Label id="lblShedModeFormsDamagesTypeInfillElementsRowShelfBreak" />
+                    </TableViewRow>
+                    <TableViewRow id="tableViewShedModeFormsDamagesTypeInfillElementsRowCollapseDueToRolloverOfThePillar">
+                        <Label id="lblShedModeFormsDamagesTypeInfillElementsRowCollapseDueToRolloverOfThePillar" />
+                    </TableViewRow>
+                    <TableViewRow id="tableViewShedModeFormsDamagesTypeInfillElementsRowPlasticHingeOnThePillar">
+                        <Label id="lblShedModeFormsDamagesTypeInfillElementsRowPlasticHingeOnThePillar" />
+                    </TableViewRow>
+                    <TableViewRow id="tableViewShedModeFormsDamagesTypeInfillElementsRowHammeringOfTheRoofElements">
+                        <Label id="lblShedModeFormsDamagesTypeInfillElementsRowHammeringOfTheRoofElements" />
+                    </TableViewRow>
+                    <TableViewRow id="tableViewShedModeFormsDamagesTypeInfillElementsRowHammeringOfThePillar">
+                        <Label id="lblShedModeFormsDamagesTypeInfillElementsRowHammeringOfThePillar" />
+                    </TableViewRow>
+                    <TableViewRow id="tableViewShedModeFormsDamagesTypeInfillElementsRowHammeringOfTheOrthogonalPanels">
+                        <Label id="lblShedModeFormsDamagesTypeInfillElementsRowHammeringOfTheOrthogonalPanels" />
+                    </TableViewRow>
+                    <TableViewRow id="tableViewShedModeFormsDamagesTypeInfillElementsRowHorizontalPillarBeamShift">
+                        <Label id="lblShedModeFormsDamagesTypeInfillElementsRowHorizontalPillarBeamShift" />
+                    </TableViewRow>
+                </TableView>
+            </ScrollView>
+        </Window>
+    </NavigationWindow>
+</Alloy>

@@ -1,0 +1,84 @@
+// The Window
+"#aedesModeSectionSixWindow":
+{
+    title: L( 'aedes_mode_section_six_view_title' ) ,
+    backgroundColor: '#ffffcc'
+} ,
+
+// Back button iOS (to papers general section view)
+"#btn_ios_back":
+{
+    title: L( 'generic_back_btn_title' )
+} ,
+
+// ScrollView
+"#scrollViewSectionSix":
+{
+    top: 10 ,
+    scrollType: "vertical"
+} ,
+
+// ExternalDanger label
+"#lblAeDESModeFormsSectionSixExternalDanger":
+{
+    text: L( 'generic_external_danger_text_msg' ) ,
+    top: 0 ,
+    width: 290 ,
+    height: 18 ,
+    font:
+    {
+        fontFamily: 'Arial' ,
+        fontWeight: 'bold' ,
+        fontSize: '12'
+    } ,
+    color: '#000'
+} ,
+
+// Table view with ExternalDanger
+"#tableViewAeDESModeFormsSectionSixExternalDanger":
+{
+    top: 30 ,
+    backgroundColor: '#ffffff' ,
+    height: 180 ,
+    width: Ti.UI.FILL
+} ,
+
+// CollapsesOrFallsFromOtherBuildings row
+"#tableViewAeDESModeFormsSectionSixExternalDangerRowCollapsesOrFallsFromOtherBuildings":
+{
+    hasChild: true ,
+    className: 'section_row' ,
+    color: "#000" ,
+} ,
+
+// CollapsesOrFallsFromOtherBuildings label
+"#lblAeDESModeFormsSectionSixExternalDangerRowCollapsesOrFallsFromOtherBuildings":
+{
+    text: L( 'generic_collapses_or_falls_from_other_buildings_text_msg' ) ,
+    height: 90 ,
+    color: "#000" ,
+} ,
+
+// RuptureOfDistributionNetworks row
+"#tableViewAeDESModeFormsSectionSixExternalDangerRowRuptureOfDistributionNetworks":
+{
+    hasChild: true ,
+    className: 'section_row' ,
+    color: "#000" ,
+} ,
+
+// RuptureOfDistributionNetworks label
+"#lblAeDESModeFormsSectionSixExternalDangerRowRuptureOfDistributionNetworks":
+{
+    text: L( 'generic_rupture_of_distribution_networks_text_msg' ) ,
+    height: 90 ,
+    color: "#000" ,
+} ,
+
+// Save view
+"#viewAppButtonSave":
+{
+    top: 220 ,
+    width: 60 ,
+    height: 80
+}

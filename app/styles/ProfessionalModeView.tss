@@ -1,0 +1,176 @@
+// Professional Mode home page
+"#professionalModeFormsWindow":
+{
+    title: L( 'professional_mode_forms_view_title' ) ,
+    backgroundColor: '#ffffcc'
+} ,
+
+// Back button iOS (to index view)
+"#btn_ios_back":
+{
+    title: L( 'generic_back_btn_title' )
+} ,
+
+// Table view with Forms
+"#tableViewProfessionalModeForms":
+{
+    top: 10 ,
+    backgroundColor: '#ffffff' ,
+    height: Ti.UI.SIZE ,
+    width: Ti.UI.FILL
+} ,
+
+// USAForms row
+"#tableViewProfessionalModeRowUSAForms":
+{
+    hasChild: true ,
+    className: 'section_row' ,
+    color: "#000" ,
+} ,
+
+// USAForms ImageView table view row
+"#imgProfessionalModeRowUSAForms":
+{
+    left: 5 ,
+    width: 34 ,
+    height: 34 ,
+    image: '/images/usa_forms.png'
+} ,
+
+// USAForms Label table view row
+"#lblProfessionalModeRowUSAForms":
+{
+    left: 45 ,
+    height: 50 ,
+    width: 200 ,
+    text: L( 'usa_forms_row_title' ) ,
+    color: "#000"
+} ,
+
+// NepalForms row
+"#tableViewProfessionalModeRowNepalForms":
+{
+    hasChild: true ,
+    className: 'section_row' ,
+    color: "#000" ,
+} ,
+
+// NepalForms ImageView table view row
+"#imgProfessionalModeRowNepalForms":
+{
+    left: 5 ,
+    width: 34 ,
+    height: 34 ,
+    image: '/images/nepal_forms.png'
+} ,
+
+// NepalForms Label table view row
+"#lblProfessionalModeRowNepalForms":
+{
+    left: 45 ,
+    height: 50 ,
+    width: 200 ,
+    text: L( 'nepal_forms_row_title' ) ,
+    color: "#000"
+} ,
+
+// NZForms row
+"#tableViewProfessionalModeRowNZForms":
+{
+    hasChild: true ,
+    className: 'section_row' ,
+    color: "#000" ,
+} ,
+
+// NZForms ImageView table view row
+"#imgProfessionalModeRowNZForms":
+{
+    left: 5 ,
+    width: 34 ,
+    height: 34 ,
+    image: '/images/nz_forms.png'
+} ,
+
+// NZForms Label table view row
+"#lblProfessionalModeRowNZForms":
+{
+    left: 45 ,
+    height: 50 ,
+    width: 200 ,
+    text: L( 'nz_forms_row_title' ) ,
+    color: "#000"
+} ,
+
+// ItalyForms row
+"#tableViewProfessionalModeRowItalyForms":
+{
+    hasChild: true ,
+    className: 'section_row' ,
+    color: "#000" ,
+} ,
+
+// ItalyForms ImageView table view row
+"#imgProfessionalModeRowItalyForms":
+{
+    left: 5 ,
+    width: 34 ,
+    height: 34 ,
+    image: '/images/italy_forms.png'
+} ,
+
+// ItalyForms Label table view row
+"#lblProfessionalModeRowItalyForms":
+{
+    left: 45 ,
+    height: 50 ,
+    width: 200 ,
+    text: L( 'italy_forms_row_title' ) ,
+    color: "#000"
+} ,
+
+// Activity Indicator iOS
+"#activity_indicator[platform=ios]":
+{
+    color: '#000' ,
+    font:
+    {
+        fontFamily: 'Helvetica Neue' ,
+        fontSize: 11 ,
+        fontWeight: 'bold'
+    } ,
+    style: Ti.UI.iPhone.ActivityIndicatorStyle.DARK ,
+    width: Ti.UI.SIZE ,
+    height: Ti.UI.SIZE ,
+    zIndex: 1
+} ,
+
+// Activity Indicator Android-mobileweb
+"#activity_indicator[platform=android,mobileweb]":
+{
+    color: '#000' ,
+    font:
+    {
+        fontFamily: 'Helvetica Neue' ,
+        fontSize: 11 ,
+        fontWeight: 'bold'
+    } ,
+    style: Ti.UI.ActivityIndicatorStyle.DARK ,
+    width: Ti.UI.SIZE ,
+    height: Ti.UI.SIZE ,
+    zIndex: 1
+} ,
+
+// Activity Indicator BlackBerry
+"#activity_indicator[platform=blackberry]":
+{
+    color: '#000' ,
+    font:
+    {
+        fontFamily: 'Helvetica Neue' ,
+        fontSize: 11 ,
+        fontWeight: 'bold'
+    } ,
+    width: Ti.UI.SIZE ,
+    height: Ti.UI.SIZE ,
+    zIndex: 1
+}

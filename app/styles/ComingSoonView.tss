@@ -1,0 +1,35 @@
+// View image window
+"#comingSoonViewWindow":
+{
+    backgroundColor: '#ffffcc'
+} ,
+
+// Back button iOS (to papers general section view)
+"#btn_ios_back":
+{
+    title: L( 'generic_back_btn_title' )
+}
+
+// Label coming soon
+"#lblComingSoon":
+{
+    text: L( 'coming_soon_msg' ) ,
+	width: '90%' ,
+    top: 10 ,
+    left: '5%' ,
+	color: "#000" ,
+	font:
+	{
+		fontSize: 22 ,
+        fontFamily: 'Georgia-Italic' ,
+        fontWeight: 'bold'
+	} ,
+	textAlign: 'center'
+} ,
+
+// ImageView coming soon
+"#coming_soon_image_view":
+{
+    top: 50 ,
+    image: "/images/coming_soon.png"
+}

@@ -1,0 +1,99 @@
+// The Window
+"#aedesModeFormsDetailsWindow":
+{
+    title: L( 'aedes_mode_form_details_view_title' ) ,
+    backgroundColor: '#ffffcc'
+} ,
+
+// Back button iOS (to forms general section view)
+"#btn_ios_back":
+{
+    title: L( 'generic_back_btn_title' )
+} ,
+
+// ScrollView
+"#scrollViewFormsDetails":
+{
+    top: 0 ,
+    contentWidth: '100%' ,
+    scrollType: "vertical"
+} ,
+
+// Form no view
+"#viewAppTextFieldAeDESModeFormsDetailsFormNo":
+{
+    top: 10 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// Date view iOS
+"#viewDate[platform=ios]":
+{
+    top: 80 ,
+    left: 0 ,
+    right: 10 ,
+    height: 200
+} ,
+
+// Date view Android
+"#viewDate":
+{
+    top: 80 ,
+    left: 0 ,
+    right: 10 ,
+    height: 100
+} ,
+
+// Date label
+"#lblDate":
+{
+    text: L( 'generic_date_text_msg' ) ,
+    left: 0 ,
+    width: 50 ,
+    height: 50 ,
+    font:
+    {
+        fontFamily: 'Arial' ,
+        fontWeight: 'bold' ,
+        fontSize: '12'
+    } ,
+    color: '#000' ,
+    textAlign: 'right'
+} ,
+
+// View disabler (workaround to disable a picker)
+"#viewDisabler":
+{
+    left: 60 ,
+    right: 10 ,
+    borderColor: "transparent" ,
+    backgroundColor: "transparent" ,
+    zIndex: 1
+} ,
+
+// Date picker
+"#datePickerDate":
+{
+    left: 60 ,
+    right: 10 ,
+    type: Titanium.UI.PICKER_TYPE_DATE ,
+    selectionIndicator: true ,
+    useSpinner: true
+} ,
+
+// Save view iOS
+"#viewAppButtonSave[platform=ios]":
+{
+    top: 290 ,
+    width: 60 ,
+    height: 80 ,
+} ,
+
+// Save view Android
+"#viewAppButtonSave":
+{
+    top: 190 ,
+    width: 60 ,
+    height: 80 ,
+}

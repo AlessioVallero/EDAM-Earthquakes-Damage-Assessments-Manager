@@ -1,0 +1,63 @@
+// Table Gallery View
+"#tableGalleryViewWindow":
+{
+    backgroundColor: '#ffffcc'
+} ,
+
+// Back button iOS (to general section view or building damage assessments view)
+"#btn_ios_back":
+{
+    title: L( 'generic_back_btn_title' )
+} ,
+
+// Next view 
+"#viewAppButtonNext":
+{
+    top: 5 ,
+    width: 60
+} ,
+
+// Import from gallery view
+"#viewAppButtonImportFromGallery":
+{
+    top: 5 ,
+    width: 60
+} ,
+
+// Import view 
+"#viewAppButtonImport":
+{
+    top: 5 ,
+    width: 140
+} ,
+
+// Import pic from gallery view
+"#viewAppButtonImportPicFromGallery":
+{
+    top: 0 ,
+    left: 0 ,
+    width: 60
+} ,
+
+// Import video from gallery view
+"#viewAppButtonImportVideoFromGallery":
+{
+    top: 0 ,
+    left: 80 ,
+    width: 60
+} ,
+
+// ScrollView
+"#scrollViewTableGalleryView":
+{
+    top: 120 ,
+    scrollType: "vertical"
+} ,
+
+// Table view with Pics and Videos
+"#tableViewGallery":
+{
+    top: 0 ,
+    backgroundColor: '#ffffff' ,
+    width: Ti.UI.FILL
+}

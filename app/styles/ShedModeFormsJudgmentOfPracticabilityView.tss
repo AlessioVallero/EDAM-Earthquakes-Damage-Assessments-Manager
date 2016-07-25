@@ -1,0 +1,108 @@
+// The Window
+"#shedModeJudgmentOfPracticabilityWindow":
+{
+    title: L( 'shed_mode_judgment_of_practicability_view_title' ) ,
+    backgroundColor: '#ffffcc'
+} ,
+
+// Back button iOS (to papers general section view)
+"#btn_ios_back":
+{
+    title: L( 'generic_back_btn_title' )
+} ,
+
+// ScrollView
+"#scrollViewJudgmentOfPracticability":
+{
+    top: 10 ,
+    contentWidth: '100%' ,
+    scrollType: "vertical"
+} ,
+
+// AccuracyVisit view
+"#viewAppComboBoxShedModeFormsJudgmentOfPracticabilityAccuracyVisit":
+{
+    top: 0 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// OutcomePracticability view
+"#viewAppComboBoxShedModeFormsJudgmentOfPracticabilityOutcomePracticability":
+{
+    top: 70 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// Structural view
+"#viewAppComboBoxShedModeFormsJudgmentOfPracticabilityStructural":
+{
+    top: 140 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// NotStructural view
+"#viewAppComboBoxShedModeFormsJudgmentOfPracticabilityNotStructural":
+{
+    top: 210 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// External view
+"#viewAppComboBoxShedModeFormsJudgmentOfPracticabilityExternal":
+{
+    top: 280 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// Geotechnical view
+"#viewAppComboBoxShedModeFormsJudgmentOfPracticabilityGeotechnical":
+{
+    top: 350 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// HousingUnitsUninhabitable view
+"#viewAppTextFieldShedModeFormsJudgmentOfPracticabilityHousingUnitsUninhabitable":
+{
+    top: 420 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// FamiliesEvacuated view
+"#viewAppTextFieldShedModeFormsJudgmentOfPracticabilityFamiliesEvacuated":
+{
+    top: 490 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// EvacueesN view
+"#viewAppTextFieldShedModeFormsJudgmentOfPracticabilityEvacueesN":
+{
+    top: 560 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// Other view
+"#viewAppTextFieldShedModeFormsJudgmentOfPracticabilityOther":
+{
+    top: 630 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// Save view
+"#viewAppButtonSave":
+{
+    top: 700 ,
+    width: 60 ,
+    height: 80
+}

@@ -1,0 +1,30 @@
+<Alloy>
+    <NavigationWindow id="navigationWindowDamagesMeasuresOfEmergencyDamagesOrDeficientVerticalStructureElements">
+        <Window id="shedModeDamagesMeasuresOfEmergencyDamagesOrDeficientVerticalStructureElementsWindow">
+            <LeftNavButton>
+                <Button id="btn_ios_back" onClick="OnBtnBack_Click" />
+            </LeftNavButton>
+
+            <ScrollView id="scrollViewDamagesMeasuresOfEmergencyDamagesOrDeficientVerticalStructureElements">
+                <View id="viewAppCheckBoxShedModeFormsDamagesMeasuresOfEmergencyConnectionBetweenThePierAndIndustrialFloor">
+                    <Widget id="widgetAppCheckBoxShedModeFormsDamagesMeasuresOfEmergencyConnectionBetweenThePierAndIndustrialFloor" src="com.diseg.AppCheckBox" />
+                </View>
+                <View id="viewAppCheckBoxShedModeFormsDamagesMeasuresOfEmergencyConsolidationOfTheFoundationByLowPressureCementMixtures">
+                    <Widget id="widgetAppCheckBoxShedModeFormsDamagesMeasuresOfEmergencyConsolidationOfTheFoundationByLowPressureCementMixtures" src="com.diseg.AppCheckBox" />
+                </View>
+                <View id="viewAppCheckBoxShedModeFormsDamagesMeasuresOfEmergencyRestoringTheFillingInterspaceBetweenThePierAndGlassByManualCasting">
+                    <Widget id="widgetAppCheckBoxShedModeFormsDamagesMeasuresOfEmergencyRestoringTheFillingInterspaceBetweenThePierAndGlassByManualCasting" src="com.diseg.AppCheckBox" />
+                </View>
+                <View id="viewAppCheckBoxShedModeFormsDamagesMeasuresOfEmergencyConfinementAtTheBaseOfThePillars">
+                    <Widget id="widgetAppCheckBoxShedModeFormsDamagesMeasuresOfEmergencyConfinementAtTheBaseOfThePillars" src="com.diseg.AppCheckBox" />
+                </View>
+                <View id="viewAppCheckBoxShedModeFormsDamagesMeasuresOfEmergencyLocalStrengtheningWithMetalNecktie">
+                    <Widget id="widgetAppCheckBoxShedModeFormsDamagesMeasuresOfEmergencyLocalStrengtheningWithMetalNecktie" src="com.diseg.AppCheckBox" />
+                </View>
+                <View id="viewAppCheckBoxShedModeFormsDamagesMeasuresOfEmergencyContainmentAndStrengtheningOfTheBasicOfThePier">
+                    <Widget id="widgetAppCheckBoxShedModeFormsDamagesMeasuresOfEmergencyContainmentAndStrengtheningOfTheBasicOfThePier" src="com.diseg.AppCheckBox" />
+                </View>
+            </ScrollView>
+        </Window>
+    </NavigationWindow>
+</Alloy>

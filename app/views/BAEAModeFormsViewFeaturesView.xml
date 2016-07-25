@@ -1,0 +1,47 @@
+<Alloy>
+    <Window id="baeaModeViewFeaturesWindow" onAndroid:back="OnAndroidBackButton_Click" onAndroidback="OnAndroidBackButton_Click">
+        <ActivityIndicator id="activity_indicator" />
+        <ScrollView id="scrollViewViewFeatures">
+            <Label id="lblBAEAModeFormsViewFeaturesDescription" />
+            <View id="viewAppCheckBoxBAEAModeFormsViewFeaturesOnlyMyObservations">
+                <Widget id="widgetAppCheckBoxBAEAModeFormsViewFeaturesOnlyMyObservations" src="com.diseg.AppCheckBox" />
+            </View>
+            <TableView id="tableViewBAEAModeFormsViewMaps" onClick="OnTableViewBAEAModeFormsViewMaps_Click">
+                <TableViewRow id="tableViewBAEAModeFormsViewMapsRowPastHour">
+                    <Label id="lblBAEAModeFormsViewMapsRowPastHour" />
+                </TableViewRow>
+                <TableViewRow id="tableViewBAEAModeFormsViewMapsRowPastDay">
+                    <Label id="lblBAEAModeFormsViewMapsRowPastDay" />
+                </TableViewRow>
+                <TableViewRow id="tableViewBAEAModeFormsViewMapsRowWeek">
+                    <Label id="lblBAEAModeFormsViewMapsRowWeek" />
+                </TableViewRow>
+                <TableViewRow id="tableViewBAEAModeFormsViewMapsRowPastMonth">
+                    <Label id="lblBAEAModeFormsViewMapsRowPastMonth" />
+                </TableViewRow>
+                <TableViewRow id="tableViewBAEAModeFormsViewMapsRowAll">
+                    <Label id="lblBAEAModeFormsViewMapsRowAll" />
+                </TableViewRow>
+            </TableView>
+
+            <Label id="lblBAEAModeFormsViewFeaturesDownloads" />
+            <TableView id="tableViewBAEAModeFormsViewFeaturesDownloads" onClick="OnTableViewBAEAModeFormsViewFeaturesDownloads_Click">
+                <TableViewRow id="tableViewBAEAModeFormsViewFeaturesDownloadsRowExportCSV">
+                    <Label id="lblBAEAModeFormsViewFeaturesDownloadsRowExportCSV" />
+                </TableViewRow>
+                <TableViewRow id="tableViewBAEAModeFormsViewFeaturesDownloadsRowGoogleEarthPastMonth">
+                    <Label id="lblBAEAModeFormsViewFeaturesDownloadsRowGoogleEarthPastMonth" />
+                </TableViewRow>
+                <TableViewRow id="tableViewBAEAModeFormsViewFeaturesDownloadsRowGoogleEarthAll">
+                    <Label id="lblBAEAModeFormsViewFeaturesDownloadsRowPastGoogleEarthAll" />
+                </TableViewRow>
+                <TableViewRow id="tableViewBAEAModeFormsViewFeaturesDownloadsRowGeoJSONPastMonth">
+                    <Label id="lblBAEAModeFormsViewFeaturesDownloadsRowGeoJSONPastMonth" />
+                </TableViewRow>
+                <TableViewRow id="tableViewBAEAModeFormsViewFeaturesDownloadsRowGeoJSONAll">
+                    <Label id="lblBAEAModeFormsViewFeaturesDownloadsRowGeoJSONAll" />
+                </TableViewRow>
+            </TableView>
+        </ScrollView>
+    </Window>
+</Alloy>

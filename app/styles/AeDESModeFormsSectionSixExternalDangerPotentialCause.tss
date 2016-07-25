@@ -1,0 +1,90 @@
+// The Window
+"#aedesModeSectionSixPotentialCauseWindow":
+{
+    title: L( 'aedes_mode_section_six_potential_cause_title' ) ,
+    backgroundColor: '#ffffcc'
+} ,
+
+// Back button iOS (to papers section six view)
+"#btn_ios_back":
+{
+    title: L( 'generic_back_btn_title' )
+} ,
+
+// ScrollView
+"#scrollViewSectionSixPotentialCause":
+{
+    top: 10 ,
+    scrollType: "vertical"
+} ,
+
+// PotentialCause label
+"#lblAeDESModeFormsSectionSixPotentialCause":
+{
+    text: L( 'generic_potential_cause_text_msg' ) ,
+    top: 0 ,
+    width: 290 ,
+    height: 18 ,
+    font:
+    {
+        fontFamily: 'Arial' ,
+        fontWeight: 'bold' ,
+        fontSize: '12'
+    } ,
+    color: '#000'
+} ,
+
+// Father title label
+"#lblAeDESModeFormsSectionSixPotentialCauseFatherTitle":
+{
+    top: 30 ,
+    width: 290 ,
+    height: 18 ,
+    font:
+    {
+        fontFamily: 'Arial' ,
+        fontWeight: 'bold' ,
+        fontSize: '12'
+    } ,
+    color: '#000'
+} ,
+
+// DangerOfBuilding view
+"#viewAppCheckBoxAeDESModeFormsSectionSixPotentialCauseDangerOfBuilding":
+{
+    top: 60 ,
+    height: 50 ,
+    width: 290
+} ,
+
+// DangerOfAccessRoad view
+"#viewAppCheckBoxAeDESModeFormsSectionSixPotentialCauseDangerOfAccessRoad":
+{
+    top: 130 ,
+    height: 50 ,
+    width: 290
+} ,
+
+// DangerOfInland view
+"#viewAppCheckBoxAeDESModeFormsSectionSixPotentialCauseDangerOfInland":
+{
+    top: 200 ,
+    height: 50 ,
+    width: 290
+} ,
+
+// DenialOfAccess view
+"#viewAppCheckBoxAeDESModeFormsSectionSixPotentialCauseMeasuresOfEmergencyDenialOfAccess":
+{
+    top: 270 ,
+    height: 80 ,
+    width: 290
+} ,
+
+// StepsProtection view
+"#viewAppCheckBoxAeDESModeFormsSectionSixPotentialCauseMeasuresOfEmergencyStepsProtection":
+{
+    top: 340 ,
+    height: 80 ,
+    width: 290
+}

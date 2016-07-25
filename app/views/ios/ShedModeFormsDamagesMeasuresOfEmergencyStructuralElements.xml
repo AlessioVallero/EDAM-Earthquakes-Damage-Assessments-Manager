@@ -1,0 +1,44 @@
+<Alloy>
+    <NavigationWindow id="navigationWindowDamagesMeasuresOfEmergencyStructuralElements">
+        <Window id="shedModeDamagesMeasuresOfEmergencyStructuralElementsWindow">
+            <LeftNavButton>
+                <Button id="btn_ios_back" onClick="OnBtnBack_Click" />
+            </LeftNavButton>
+
+            <ScrollView id="scrollViewDamagesMeasuresOfEmergencyStructuralElements">
+                <TableView id="tableViewShedModeFormsMeasuresOfEmergencyStructuralElements" onClick="OnTableViewShedModeFormsMeasuresOfEmergencyStructuralElements_Click">
+                    <TableViewRow id="tableViewShedModeFormsMeasuresOfEmergencyStructuralElementsRowLossOfSupportOfTheBeam">
+                        <Label id="lblShedModeFormsMeasuresOfEmergencyStructuralElementsRowLossOfSupportOfTheBeam" />
+                    </TableViewRow>
+                    <TableViewRow id="tableViewShedModeFormsMeasuresOfEmergencyStructuralElementsRowShearFailureOfTheSupportPillar">
+                        <Label id="lblShedModeFormsMeasuresOfEmergencyStructuralElementsRowShearFailureOfTheSupportPillar" />
+                    </TableViewRow>
+                    <TableViewRow id="tableViewShedModeFormsMeasuresOfEmergencyStructuralElementsRowCollapseOfTransverseBeam">
+                        <Label id="lblShedModeFormsMeasuresOfEmergencyStructuralElementsRowCollapseOfTransverseBeam" />
+                    </TableViewRow>
+                    <TableViewRow id="tableViewShedModeFormsMeasuresOfEmergencyStructuralElementsRowRotationOfThePillar">
+                        <Label id="lblShedModeFormsMeasuresOfEmergencyStructuralElementsRowRotationOfThePillar" />
+                    </TableViewRow>
+                    <TableViewRow id="tableViewShedModeFormsMeasuresOfEmergencyStructuralElementsRowConnectionBreak">
+                        <Label id="lblShedModeFormsMeasuresOfEmergencyStructuralElementsRowConnectionBreak" />
+                    </TableViewRow>
+                    <TableViewRow id="tableViewShedModeFormsMeasuresOfEmergencyStructuralElementsRowCrisisOfTheConcreteCoverOfThePlug">
+                        <Label id="lblShedModeFormsMeasuresOfEmergencyStructuralElementsRowCrisisOfTheConcreteCoverOfThePlug" />
+                    </TableViewRow>
+                    <TableViewRow id="tableViewShedModeFormsMeasuresOfEmergencyStructuralElementsRowCollapseOfTheRoofTiles">
+                        <Label id="lblShedModeFormsMeasuresOfEmergencyStructuralElementsRowCollapseOfTheRoofTiles" />
+                    </TableViewRow>
+                    <TableViewRow id="tableViewShedModeFormsMeasuresOfEmergencyStructuralElementsRowPermamentRotationsOfTheBeamInCoverage">
+                        <Label id="lblShedModeFormsMeasuresOfEmergencyStructuralElementsRowPermamentRotationsOfTheBeamInCoverage" />
+                    </TableViewRow>
+                    <TableViewRow id="tableViewShedModeFormsMeasuresOfEmergencyStructuralElementsRowCrisisOfTheFork">
+                        <Label id="lblShedModeFormsMeasuresOfEmergencyStructuralElementsRowCrisisOfTheFork" />
+                    </TableViewRow>
+                    <TableViewRow id="tableViewShedModeFormsMeasuresOfEmergencyStructuralElementsRowCollapseOfACoverPlate">
+                        <Label id="lblShedModeFormsMeasuresOfEmergencyStructuralElementsRowCollapseOfACoverPlate" />
+                    </TableViewRow>
+                </TableView>
+            </ScrollView>
+        </Window>
+    </NavigationWindow>
+</Alloy>

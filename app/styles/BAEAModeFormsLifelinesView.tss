@@ -1,0 +1,235 @@
+// The Window
+"#baeaModeFormsLifelinesWindow":
+{
+    title: L( 'baea_mode_lifelines_view_title' ) ,
+    backgroundColor: '#ffffcc'
+} ,
+
+// Back button iOS (to papers manage section view)
+"#btn_ios_back":
+{
+    title: L( 'generic_back_btn_title' )
+} ,
+
+// ScrollView
+"#scrollViewLifelines":
+{
+    top: 10 ,
+    contentWidth: '100%' ,
+    scrollType: "vertical"
+} ,
+
+// SiteName view
+"#viewAppTextFieldBAEAModeFormsLifelinesSiteName":
+{
+    top: 0 ,
+    height: 50 ,
+    right: 10
+} ,
+
+// Table view with the Photo
+"#tableViewBAEAModeFormsLifelinesPhoto":
+{
+    top: 70 ,
+    backgroundColor: '#ffffff' ,
+    width: Ti.UI.FILL ,
+    height: 50
+}
+
+// Label photo table view row
+"#lblPhoto":
+{
+    text: L( 'generic_photo_title' ) ,
+    height: 50 ,
+    width: 200 ,
+    color: "#000"
+} ,
+
+// Load coordinates button
+"#btnBAEAModeFormsLifelinesLoadAddress":
+{
+    title: L( 'generic_load_address_btn_title' ) ,
+    backgroundImage: '/images/app_button_normal.png' ,
+    backgroundSelectedImage: '/images/app_button_pressed.png' ,
+    backgroundDisabledImage: '/images/app_button_disabled.png' ,
+    top: 140 ,
+    height: 50 ,
+    left: 10 ,
+    right: 10 ,
+    font:
+    {
+        fontFamily: 'Arial' ,
+        fontWeight: 'bold' ,
+        fontSize: '12'
+    } ,
+    textAlign: Titanium.UI.TEXT_ALIGNMENT_CENTER ,
+    verticalAlign: Titanium.UI.TEXT_VERTICAL_ALIGNMENT_CENTER
+} ,
+
+// Latitude view
+"#viewAppTextFieldBAEAModeFormsLifelinesLatitude":
+{
+    top: 210 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// Longitude view
+"#viewAppTextFieldBAEAModeFormsLifelinesLongitude":
+{
+    top: 280 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// Address view
+"#viewAppTextFieldBAEAModeFormsLifelinesAddress":
+{
+    top: 350 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// View coordinates button
+"#btnBAEAModeFormsLifelinesViewAddress":
+{
+    title: L( 'generic_view_address_btn_title' ) ,
+    backgroundImage: '/images/app_button_normal.png' ,
+    backgroundSelectedImage: '/images/app_button_pressed.png' ,
+    backgroundDisabledImage: '/images/app_button_disabled.png' ,
+    top: 420 ,
+    height: 50 ,
+    left: 10 ,
+    right: 10 ,
+    font:
+    {
+        fontFamily: 'Arial' ,
+        fontWeight: 'bold' ,
+        fontSize: '12'
+    } ,
+    textAlign: Titanium.UI.TEXT_ALIGNMENT_CENTER ,
+    verticalAlign: Titanium.UI.TEXT_VERTICAL_ALIGNMENT_CENTER
+} ,
+
+// Table view with some Lifelines elements
+"#tableViewBAEAModeFormsLifelines":
+{
+    top: 490 ,
+    backgroundColor: '#ffffff' ,
+    width: Ti.UI.FILL ,
+    height: 150
+}
+
+// Label Communication table view row
+"#lblCommunication":
+{
+    text: L( 'generic_communication_title' ) ,
+    height: 50 ,
+    width: 200 ,
+    color: "#000"
+} ,
+
+// Label Electric Power Delivery table view row
+"#lblElectricPowerDelivery":
+{
+    text: L( 'generic_electric_power_delivery_title' ) ,
+    height: 50 ,
+    width: 200 ,
+    color: "#000"
+} ,
+
+// Label Other table view row
+"#lblOther":
+{
+    text: L( 'generic_other_title' ) ,
+    height: 50 ,
+    width: 200 ,
+    color: "#000"
+} ,
+
+// Functionality view
+"#viewAppComboBoxBAEAModeFormsLifelinesFunctionality":
+{
+    top: 650 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// RepairTime view
+"#viewAppComboBoxBAEAModeFormsLifelinesRepairTime":
+{
+    top: 720 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// RecommendFurtherInvestigation view
+"#viewAppComboBoxBAEAModeFormsLifelinesRecommendFurtherInvestigation":
+{
+    top: 790 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// Notes view
+"#viewAppTextFieldBAEAModeFormsLifelinesNotes":
+{
+    top: 860 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// Record button
+"#btnBAEAModeFormsLifelinesRecord":
+{
+    title: L( 'generic_record_btn_title' ) ,
+    backgroundImage: '/images/app_button_normal.png' ,
+    backgroundSelectedImage: '/images/app_button_pressed.png' ,
+    backgroundDisabledImage: '/images/app_button_disabled.png' ,
+    top: 930 ,
+    height: 50 ,
+    left: 10 ,
+    right: 10 ,
+    bottom: 10 ,
+    font:
+    {
+        fontFamily: 'Arial' ,
+        fontWeight: 'bold' ,
+        fontSize: '12'
+    } ,
+    textAlign: Titanium.UI.TEXT_ALIGNMENT_CENTER ,
+    verticalAlign: Titanium.UI.TEXT_VERTICAL_ALIGNMENT_CENTER
+} ,
+
+// Activity Indicator iOS
+"#activity_indicator[platform=ios]":
+{
+    color: '#000' ,
+    font:
+    {
+        fontFamily: 'Helvetica Neue' ,
+        fontSize: 11 ,
+        fontWeight: 'bold'
+    } ,
+    style: Ti.UI.iPhone.ActivityIndicatorStyle.DARK ,
+    width: Ti.UI.SIZE ,
+    height: Ti.UI.SIZE ,
+    zIndex: 1
+} ,
+
+// Activity Indicator Android
+"#activity_indicator":
+{
+    color: '#000' ,
+    font:
+    {
+        fontFamily: 'Helvetica Neue' ,
+        fontSize: 11 ,
+        fontWeight: 'bold'
+    } ,
+    style: Ti.UI.ActivityIndicatorStyle.DARK ,
+    width: Ti.UI.SIZE ,
+    height: Ti.UI.SIZE ,
+    zIndex: 1
+}
+

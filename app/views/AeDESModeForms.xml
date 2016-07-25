@@ -1,0 +1,26 @@
+<Alloy>
+    <Window id="aedesModeFormsWindow" onClose="OnAeDESModeFormsWindow_Close">
+        <ActivityIndicator id="activity_indicator" />
+
+        <Button id="btnLogout" onClick = 'OnBtnLogout_Click' />
+        <Label id="lblWelcome" />
+
+        <View id="viewAppButtonETD">
+            <Widget id="widgetAppButtonETD" src="com.diseg.AppButton" />
+        </View>
+        <View id="viewAppButtonAdd">
+            <Widget id="widgetAppButtonAdd" src="com.diseg.AppButton" />
+        </View>
+        <View id="viewAppButtonServerSynch">
+            <Widget id="widgetAppButtonServerSynch" src="com.diseg.AppButton" />
+        </View>
+
+        <TableView id="tableViewAeDESModeForms" dataCollection="AeDESForms" onClick="OnTableViewForms_Click">
+            <TableViewRow hasChild="true" rowId="{ID}" isSynchronized="{SYNCHRONIZED}" className="form_row">
+                <ImageView id="imgCheck" />
+                <Label id="lblValue" text="{FORM_NO}" />
+                <Button id="btnDelete" />
+            </TableViewRow>
+        </TableView>
+    </Window>
+</Alloy>

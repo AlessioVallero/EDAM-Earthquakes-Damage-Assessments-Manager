@@ -1,0 +1,34 @@
+<Alloy>
+    <NavigationWindow id="navigationWindowATC20ModeForms">
+        <Window id="atc20ModeFormsWindow" onClose="OnATC20ModeFormsWindow_Close">
+            <LeftNavButton>
+                <Button id="btn_ios_back" onClick="OnBtnBack_Click" />
+            </LeftNavButton>
+            <ActivityIndicator id="activity_indicator" />
+
+            <Button id="btnLogout" onClick = 'OnBtnLogout_Click' />
+            <Label id="lblWelcome" />
+
+            <Button id="btnExportCSV" onClick = 'OnBtnExportCSV_Click' />
+
+            <View id="viewAppButtonEID">
+                <Widget id="widgetAppButtonEID" src="com.diseg.AppButton" />
+            </View>
+            <View id="viewAppButtonAdd">
+                <Widget id="widgetAppButtonAdd" src="com.diseg.AppButton" />
+            </View>
+            <View id="viewAppButtonServerSynch">
+                <Widget id="widgetAppButtonServerSynch" src="com.diseg.AppButton" />
+            </View>
+
+            <TableView id="tableViewATC20ModeForms" dataCollection="ATC20Forms" onClick="OnTableViewForms_Click">
+                <TableViewRow hasChild="true" rowId="{ID}" formType="{TYPE}" isSynchronized="{SYNCHRONIZED}" className="form_row">
+                    <ImageView id="imgCheck" />
+                    <Label id="lblValue" text="{ID}" />
+                    <ImageView id="imgFormType" />
+                    <Button id="btnDelete" />
+                </TableViewRow>
+            </TableView>
+        </Window>
+    </NavigationWindow>
+</Alloy>

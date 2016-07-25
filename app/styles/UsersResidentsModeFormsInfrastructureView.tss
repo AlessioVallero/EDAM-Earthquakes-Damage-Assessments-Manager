@@ -1,0 +1,70 @@
+// The Window
+"#usersResidentsModeInfrastructureWindow":
+{
+    title: L( 'users_residents_mode_infrastructure_view_title' ) ,
+    backgroundColor: '#ffffcc'
+} ,
+
+// Back button iOS (to papers general section view)
+"#btn_ios_back":
+{
+    title: L( 'generic_back_btn_title' )
+} ,
+
+// ScrollView
+"#scrollViewInfrastructure":
+{
+    top: 10 ,
+    contentWidth: '100%' ,
+    scrollType: "vertical"
+} ,
+
+// Ground breaks view
+"#viewGroundBreaks":
+{
+    top: 0 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// Water leaks view
+"#viewWaterLeaks":
+{
+    top: 70 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// Gas leaks view
+"#viewGasLeaks":
+{
+    top: 140 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// Electric current operation view
+"#viewElectricCurrentOperation[platform=ios]":
+{
+    top: 210 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// Electric current operation view
+"#viewElectricCurrentOperation":
+{
+    top: 210 ,
+    height: 50 ,
+    width: Ti.UI.FILL ,
+    bottom: 150
+} ,
+
+// Save view
+"#viewAppButtonSave":
+{
+    top: 280 ,
+    width: 60 ,
+    height: 80 ,
+    bottom: 80
+}

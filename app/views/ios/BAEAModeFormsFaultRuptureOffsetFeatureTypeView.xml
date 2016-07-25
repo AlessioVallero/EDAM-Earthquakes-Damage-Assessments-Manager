@@ -1,0 +1,30 @@
+<Alloy>
+    <NavigationWindow id="navigationWindowFaultRuptureOffsetFeatureType">
+        <Window id="baeaModeFaultRuptureOffsetFeatureTypeWindow">
+            <LeftNavButton>
+                <Button id="btn_ios_back" onClick="OnBtnBack_Click" />
+            </LeftNavButton>
+
+            <ScrollView id="scrollViewFaultRuptureOffsetFeatureType">
+                <View id="viewAppCheckBoxBAEAModeFormsFaultRuptureOffsetFeatureTypeSoil">
+                    <Widget id="widgetAppCheckBoxBAEAModeFormsFaultRuptureOffsetFeatureTypeSoil" src="com.diseg.AppCheckBox" />
+                </View>
+                <View id="viewAppCheckBoxBAEAModeFormsFaultRuptureOffsetFeatureTypeBedrock">
+                    <Widget id="widgetAppCheckBoxBAEAModeFormsFaultRuptureOffsetFeatureTypeBedrock" src="com.diseg.AppCheckBox" />
+                </View>
+                <View id="viewAppCheckBoxBAEAModeFormsFaultRuptureOffsetFeatureTypeRoadOrSidewalk">
+                    <Widget id="widgetAppCheckBoxBAEAModeFormsFaultRuptureOffsetFeatureTypeRoadOrSidewalk" src="com.diseg.AppCheckBox" />
+                </View>
+                <View id="viewAppCheckBoxBAEAModeFormsFaultRuptureOffsetFeatureTypeConcreteFoundation">
+                    <Widget id="widgetAppCheckBoxBAEAModeFormsFaultRuptureOffsetFeatureTypeConcreteFoundation" src="com.diseg.AppCheckBox" />
+                </View>
+                <View id="viewAppCheckBoxBAEAModeFormsFaultRuptureOffsetFeatureTypePipeline">
+                    <Widget id="widgetAppCheckBoxBAEAModeFormsFaultRuptureOffsetFeatureTypePipeline" src="com.diseg.AppCheckBox" />
+                </View>
+                <View id="viewAppCheckBoxBAEAModeFormsFaultRuptureOffsetFeatureTypeOther">
+                    <Widget id="widgetAppCheckBoxBAEAModeFormsFaultRuptureOffsetFeatureTypeOther" src="com.diseg.AppCheckBox" />
+                </View>
+            </ScrollView>
+        </Window>
+    </NavigationWindow>
+</Alloy>

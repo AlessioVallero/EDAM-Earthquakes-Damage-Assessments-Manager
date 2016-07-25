@@ -1,0 +1,35 @@
+<Alloy>
+    <Window id="shedModeFormsShedPositionWindow" onAndroid:back="OnAndroidBackButton_Click" onAndroidback="OnAndroidBackButton_Click">
+        <ActivityIndicator id="activity_indicator" />
+        <ScrollView id="scrollViewShedPosition">
+            <Button id="btnShedModeFormsShedPositionLoadPosition" onClick="OnBtnLoadPosition_Click" />
+            <View id="viewAppTextFieldShedModeFormsShedPositionLatitude">
+                <Widget id="widgetAppTextFieldShedModeFormsShedPositionLatitude" src="com.diseg.AppTextField" />
+            </View>
+            <View id="viewAppTextFieldShedModeFormsShedPositionLongitude">
+                <Widget id="widgetAppTextFieldShedModeFormsShedPositionLongitude" src="com.diseg.AppTextField" />
+            </View>
+            <View id="viewAppTextFieldShedModeFormsShedPositionAltitude">
+                <Widget id="widgetAppTextFieldShedModeFormsShedPositionAltitude" src="com.diseg.AppTextField" />
+            </View>
+            <View id="viewAppTextFieldShedModeFormsShedPositionProvince">
+                <Widget id="widgetAppTextFieldShedModeFormsShedPositionProvince" src="com.diseg.AppTextField" />
+            </View>
+            <View id="viewAppTextFieldShedModeFormsShedPositionMunicipality">
+                <Widget id="widgetAppTextFieldShedModeFormsShedPositionMunicipality" src="com.diseg.AppTextField" />
+            </View>
+            <View id="viewAppTextFieldShedModeFormsShedPositionPlace">
+                <Widget id="widgetAppTextFieldShedModeFormsShedPositionPlace" src="com.diseg.AppTextField" />
+            </View>
+            <View id="viewAppTextFieldShedModeFormsShedPositionAddress">
+                <Widget id="widgetAppTextFieldShedModeFormsShedPositionAddress" src="com.diseg.AppTextField" />
+            </View>
+            <View id="viewAppTextFieldShedModeFormsShedPositionCivicNo">
+                <Widget id="widgetAppTextFieldShedModeFormsShedPositionCivicNo" src="com.diseg.AppTextField" />
+            </View>
+            <View id="viewAppButtonSave">
+                <Widget id="widgetAppButtonSave" src="com.diseg.AppButton" />
+            </View>
+        </ScrollView>
+    </Window>
+</Alloy>

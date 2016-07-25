@@ -1,0 +1,67 @@
+// The Window
+"#shedModeDamagesMeasuresOfEmergencyDamagesOrDeficientVerticalStructureElementsWindow":
+{
+    title: L( 'shed_mode_damages_measures_of_emergency_damaged_or_deficient_vertical_structure_elements_view_title' ) ,
+    backgroundColor: '#ffffcc'
+} ,
+
+// Back button iOS (to papers general section view)
+"#btn_ios_back":
+{
+    title: L( 'generic_back_btn_title' )
+} ,
+
+// ScrollView
+"#scrollViewDamagesMeasuresOfEmergencyDamagesOrDeficientVerticalStructureElements":
+{
+    top: 10 ,
+    scrollType: "vertical"
+} ,
+
+// ConnectionBetweenThePierAndIndustrialFloor view
+"#viewAppCheckBoxShedModeFormsDamagesMeasuresOfEmergencyConnectionBetweenThePierAndIndustrialFloor":
+{
+    top: 0 ,
+    height: 50 ,
+    width: 290
+} ,
+
+// ConsolidationOfTheFoundationByLowPressureCementMixtures view
+"#viewAppCheckBoxShedModeFormsDamagesMeasuresOfEmergencyConsolidationOfTheFoundationByLowPressureCementMixtures":
+{
+    top: 70 ,
+    height: 80 ,
+    width: 290
+} ,
+
+// RestoringTheFillingInterspaceBetweenThePierAndGlassByManualCasting view
+"#viewAppCheckBoxShedModeFormsDamagesMeasuresOfEmergencyRestoringTheFillingInterspaceBetweenThePierAndGlassByManualCasting":
+{
+    top: 170 ,
+    height: 80 ,
+    width: 290
+} ,
+
+// ConfinementAtTheBaseOfThePillars view
+"#viewAppCheckBoxShedModeFormsDamagesMeasuresOfEmergencyConfinementAtTheBaseOfThePillars":
+{
+    top: 270 ,
+    height: 50 ,
+    width: 290
+} ,
+
+// LocalStrengtheningWithMetalNecktie view
+"#viewAppCheckBoxShedModeFormsDamagesMeasuresOfEmergencyLocalStrengtheningWithMetalNecktie":
+{
+    top: 340 ,
+    height: 50 ,
+    width: 290
+} ,
+
+// ContainmentAndStrengtheningOfTheBasicOfThePier view
+"#viewAppCheckBoxShedModeFormsDamagesMeasuresOfEmergencyContainmentAndStrengtheningOfTheBasicOfThePier":
+{
+    top: 410 ,
+    height: 50 ,
+    width: 290
+}

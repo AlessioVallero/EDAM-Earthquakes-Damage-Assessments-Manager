@@ -1,0 +1,21 @@
+<Alloy>
+    <NavigationWindow id="navigationWindowOtherComments">
+        <Window id="shedModeFormsOtherCommentsWindow">
+            <LeftNavButton>
+                <Button id="btn_ios_back" onClick="OnBtnBack_Click" />
+            </LeftNavButton>
+
+            <ScrollView id="scrollViewOtherComments">
+                <View id="viewAppTextFieldShedModeFormsOtherCommentsTopic">
+                    <Widget id="widgetAppTextFieldShedModeFormsOtherCommentsTopic" src="com.diseg.AppTextField" />
+                </View>
+                <View id="viewAppTextAreaShedModeFormsOtherCommentsOtherComments">
+                    <Widget id="widgetAppTextAreaShedModeFormsOtherCommentsOtherComments" src="com.diseg.AppTextArea" />
+                </View>
+                <View id="viewAppButtonSave">
+                    <Widget id="widgetAppButtonSave" src="com.diseg.AppButton" />
+                </View>
+            </ScrollView>
+        </Window>
+    </NavigationWindow>
+</Alloy>

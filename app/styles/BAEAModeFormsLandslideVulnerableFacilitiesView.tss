@@ -1,0 +1,59 @@
+// The Window
+"#baeaModeLandslideVulnerableFacilitiesWindow":
+{
+    title: L( 'baea_mode_landslide_vulnerable_facilities_title' ) ,
+    backgroundColor: '#ffffcc'
+} ,
+
+// Back button iOS (to Landslide view)
+"#btn_ios_back":
+{
+    title: L( 'generic_back_btn_title' )
+} ,
+
+// ScrollView
+"#scrollViewLandslideVulnerableFacilities":
+{
+    top: 10 ,
+    scrollType: "vertical"
+} ,
+
+// Buildings view
+"#viewAppCheckBoxBAEAModeFormsLandslideVulnerableFacilitiesBuildings":
+{
+    top: 0 ,
+    height: 50 ,
+    width: 290
+} ,
+
+// Utilities view
+"#viewAppCheckBoxBAEAModeFormsLandslideVulnerableFacilitiesUtilities":
+{
+    top: 70 ,
+    height: 50 ,
+    width: 290
+} ,
+
+// Roads view
+"#viewAppCheckBoxBAEAModeFormsLandslideVulnerableFacilitiesRoads":
+{
+    top: 140 ,
+    height: 50 ,
+    width: 290
+} ,
+
+// None view
+"#viewAppCheckBoxBAEAModeFormsLandslideVulnerableFacilitiesNone":
+{
+    top: 210 ,
+    height: 50 ,
+    width: 290
+} ,
+
+// Other view
+"#viewAppCheckBoxBAEAModeFormsLandslideVulnerableFacilitiesOther":
+{
+    top: 280 ,
+    height: 50 ,
+    width: 290
+}

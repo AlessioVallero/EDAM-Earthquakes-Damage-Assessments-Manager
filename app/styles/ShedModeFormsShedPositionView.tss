@@ -1,0 +1,146 @@
+// The Window
+"#shedModeFormsShedPositionWindow":
+{
+    title: L( 'shed_mode_shed_position_view_title' ) ,
+    backgroundColor: '#ffffcc'
+} ,
+
+// Back button iOS (to papers general section view)
+"#btn_ios_back":
+{
+    title: L( 'generic_back_btn_title' )
+} ,
+
+// ScrollView
+"#scrollViewShedPosition":
+{
+    top: 10 ,
+    scrollType: "vertical"
+} ,
+
+// Load position button
+"#btnShedModeFormsShedPositionLoadPosition":
+{
+    title: L( 'generic_load_location_btn_title' ) ,
+    backgroundImage: '/images/app_button_normal.png' ,
+    backgroundSelectedImage: '/images/app_button_pressed.png' ,
+    backgroundDisabledImage: '/images/app_button_disabled.png' ,
+    top: 0 ,
+    height: 50 ,
+    width: Ti.UI.FILL ,
+    left: 10 ,
+    right: 10 ,
+    font:
+    {
+        fontFamily: 'Arial' ,
+        fontWeight: 'bold' ,
+        fontSize: '12'
+    } ,
+    textAlign: Titanium.UI.TEXT_ALIGNMENT_CENTER ,
+    verticalAlign: Titanium.UI.TEXT_VERTICAL_ALIGNMENT_CENTER
+} ,
+
+// Latitude view
+"#viewAppTextFieldShedModeFormsShedPositionLatitude":
+{
+    top: 70 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// Longitude view
+"#viewAppTextFieldShedModeFormsShedPositionLongitude":
+{
+    top: 140 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// Altitude view
+"#viewAppTextFieldShedModeFormsShedPositionAltitude":
+{
+    top: 210 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// Province view
+"#viewAppTextFieldShedModeFormsShedPositionProvince":
+{
+    top: 280 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// Municipality view
+"#viewAppTextFieldShedModeFormsShedPositionMunicipality":
+{
+    top: 350 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// Place view
+"#viewAppTextFieldShedModeFormsShedPositionPlace":
+{
+    top: 420 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// Address view
+"#viewAppTextFieldShedModeFormsShedPositionAddress":
+{
+    top: 490 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// Civic no view
+"#viewAppTextFieldShedModeFormsShedPositionCivicNo":
+{
+    top: 560 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// Save view
+"#viewAppButtonSave":
+{
+    top: 630 ,
+    width: 60 ,
+    height: 80 ,
+    bottom: 10
+} ,
+
+// Activity Indicator iOS
+"#activity_indicator[platform=ios]":
+{
+    color: '#000' ,
+    font:
+    {
+        fontFamily: 'Helvetica Neue' ,
+        fontSize: 11 ,
+        fontWeight: 'bold'
+    } ,
+    style: Ti.UI.iPhone.ActivityIndicatorStyle.DARK ,
+    width: Ti.UI.SIZE ,
+    height: Ti.UI.SIZE ,
+    zIndex: 1
+} ,
+
+// Activity Indicator Android
+"#activity_indicator":
+{
+    color: '#000' ,
+    font:
+    {
+        fontFamily: 'Helvetica Neue' ,
+        fontSize: 11 ,
+        fontWeight: 'bold'
+    } ,
+    style: Ti.UI.ActivityIndicatorStyle.DARK ,
+    width: Ti.UI.SIZE ,
+    height: Ti.UI.SIZE ,
+    zIndex: 1
+}

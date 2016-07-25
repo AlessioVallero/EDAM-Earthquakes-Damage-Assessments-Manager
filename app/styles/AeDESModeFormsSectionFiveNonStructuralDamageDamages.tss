@@ -1,0 +1,98 @@
+// The Window
+"#aedesModeSectionFiveNonStructuralDamageWindow":
+{
+    title: L( 'aedes_mode_section_five_damages_title' ) ,
+    backgroundColor: '#ffffcc'
+} ,
+
+// Back button iOS (to papers section five view)
+"#btn_ios_back":
+{
+    title: L( 'generic_back_btn_title' )
+} ,
+
+// ScrollView
+"#scrollViewSectionFiveNonStructuralDamage":
+{
+    top: 10 ,
+    scrollType: "vertical"
+} ,
+
+// DamageType label
+"#lblAeDESModeFormsSectionFiveDamageType":
+{
+    text: L( 'generic_damage_type_text_msg' ) ,
+    top: 0 ,
+    width: 290 ,
+    height: 18 ,
+    font:
+    {
+        fontFamily: 'Arial' ,
+        fontWeight: 'bold' ,
+        fontSize: '12'
+    } ,
+    color: '#000'
+} ,
+
+// Father title label
+"#lblAeDESModeFormsSectionFiveDamageTypeFatherTitle":
+{
+    top: 30 ,
+    width: 290 ,
+    height: 18 ,
+    font:
+    {
+        fontFamily: 'Arial' ,
+        fontWeight: 'bold' ,
+        fontSize: '12'
+    } ,
+    color: '#000'
+} ,
+
+// PresenceOfDamage view
+"#viewAppCheckBoxAeDESModeFormsSectionFiveNonStructuralDamagePresenceOfDamage":
+{
+    top: 60 ,
+    height: 50 ,
+    width: 290
+} ,
+
+// Removal view
+"#viewAppCheckBoxAeDESModeFormsSectionFiveNonStructuralDamageRemoval":
+{
+    top: 130 ,
+    height: 50 ,
+    width: 290
+} ,
+
+// Props view
+"#viewAppCheckBoxAeDESModeFormsSectionFiveNonStructuralDamageProps":
+{
+    top: 200 ,
+    height: 50 ,
+    width: 290
+} ,
+
+// Repair view
+"#viewAppCheckBoxAeDESModeFormsSectionFiveNonStructuralDamageRepair":
+{
+    top: 270 ,
+    height: 50 ,
+    width: 290
+} ,
+
+// DenialOfAccess view
+"#viewAppCheckBoxAeDESModeFormsSectionFiveNonStructuralDamageDenialOfAccess":
+{
+    top: 340 ,
+    height: 50 ,
+    width: 290
+} ,
+
+// StepsProtection view
+"#viewAppCheckBoxAeDESModeFormsSectionFiveNonStructuralDamageStepsProtection":
+{
+    top: 410 ,
+    height: 50 ,
+    width: 290
+}

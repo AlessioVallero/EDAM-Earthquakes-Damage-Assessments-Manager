@@ -1,0 +1,35 @@
+<Alloy>
+    <Window id="shedModeDamagesMeasuresOfEmergencyInfillElementsWindow">
+        <ScrollView id="scrollViewDamagesMeasuresOfEmergencyInfillElements">
+            <TableView id="tableViewShedModeFormsMeasuresOfEmergencyInfillElements" onClick="OnTableViewShedModeFormsMeasuresOfEmergencyInfillElements_Click">
+                <TableViewRow id="tableViewShedModeFormsMeasuresOfEmergencyInfillElementsRowShearFailureOfConnector">
+                    <Label id="lblShedModeFormsMeasuresOfEmergencyInfillElementsRowShearFailureOfConnector" />
+                </TableViewRow>
+                <TableViewRow id="tableViewShedModeFormsMeasuresOfEmergencyInfillElementsRowChippedOrDisconnectedProfilesOnThePillar">
+                    <Label id="lblShedModeFormsMeasuresOfEmergencyInfillElementsRowChippedOrDisconnectedProfilesOnThePillar" />
+                </TableViewRow>
+                <TableViewRow id="tableViewShedModeFormsMeasuresOfEmergencyInfillElementsRowShelfBreak">
+                    <Label id="lblShedModeFormsMeasuresOfEmergencyInfillElementsRowShelfBreak" />
+                </TableViewRow>
+                <TableViewRow id="tableViewShedModeFormsMeasuresOfEmergencyInfillElementsRowCollapseDueToRolloverOfThePillar">
+                    <Label id="lblShedModeFormsMeasuresOfEmergencyInfillElementsRowCollapseDueToRolloverOfThePillar" />
+                </TableViewRow>
+                <TableViewRow id="tableViewShedModeFormsMeasuresOfEmergencyInfillElementsRowPlasticHingeOnThePillar">
+                    <Label id="lblShedModeFormsMeasuresOfEmergencyInfillElementsRowPlasticHingeOnThePillar" />
+                </TableViewRow>
+                <TableViewRow id="tableViewShedModeFormsMeasuresOfEmergencyInfillElementsRowHammeringOfTheRoofElements">
+                    <Label id="lblShedModeFormsMeasuresOfEmergencyInfillElementsRowHammeringOfTheRoofElements" />
+                </TableViewRow>
+                <TableViewRow id="tableViewShedModeFormsMeasuresOfEmergencyInfillElementsRowHammeringOfThePillar">
+                    <Label id="lblShedModeFormsMeasuresOfEmergencyInfillElementsRowHammeringOfThePillar" />
+                </TableViewRow>
+                <TableViewRow id="tableViewShedModeFormsMeasuresOfEmergencyInfillElementsRowHammeringOfTheOrthogonalPanels">
+                    <Label id="lblShedModeFormsMeasuresOfEmergencyInfillElementsRowHammeringOfTheOrthogonalPanels" />
+                </TableViewRow>
+                <TableViewRow id="tableViewShedModeFormsMeasuresOfEmergencyInfillElementsRowHorizontalPillarBeamShift">
+                    <Label id="lblShedModeFormsMeasuresOfEmergencyInfillElementsRowHorizontalPillarBeamShift" />
+                </TableViewRow>
+            </TableView>
+        </ScrollView>
+    </Window>
+</Alloy>

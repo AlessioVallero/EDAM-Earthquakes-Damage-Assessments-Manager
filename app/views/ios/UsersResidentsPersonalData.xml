@@ -1,0 +1,37 @@
+<Alloy>
+    <NavigationWindow id="navigationWindowURPD">
+        <Window id="usersResidentsPersonalDataWindow">
+            <LeftNavButton>
+                <Button id="btn_ios_back" onClick="OnBtnBack_Click" />
+            </LeftNavButton>
+            <RightNavButton>
+                <Button id="btn_ios_Save" onClick="OnBtnSave_Click" />
+            </RightNavButton>
+            <ActivityIndicator id="activity_indicator" />
+
+            <View id="sign_btns_view">
+                <View id="viewAppButtonViewSign">
+                    <Widget id="widgetAppButtonViewSign" src="com.diseg.AppButton" />
+                </View>
+                <View id="viewAppButtonCreateSign">
+                    <Widget id="widgetAppButtonCreateSign" src="com.diseg.AppButton" />
+                </View>
+            </View>
+
+            <ScrollView id="scrollView_fields">
+                <View id="viewAppTextFieldName">
+                    <Widget id="widgetAppTextFieldName" src="com.diseg.AppTextField" />
+                </View>
+                <View id="viewAppTextFieldCell">
+                    <Widget id="widgetAppTextFieldCell" src="com.diseg.AppTextField" />
+                </View>
+                <View id="viewAppTextFieldAge">
+                    <Widget id="widgetAppTextFieldAge" src="com.diseg.AppTextField" />
+                </View>
+                <View id="viewAppTextFieldJob">
+                    <Widget id="widgetAppTextFieldJob" src="com.diseg.AppTextField" />
+                </View>
+            </ScrollView>
+	   </Window>
+    </NavigationWindow>
+</Alloy>

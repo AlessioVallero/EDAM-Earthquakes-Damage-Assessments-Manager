@@ -1,0 +1,26 @@
+// Table Gallery View
+"#baeaTableGalleryViewWindow":
+{
+    backgroundColor: '#ffffcc'
+} ,
+
+// Back button iOS
+"#btn_ios_back":
+{
+    title: L( 'generic_back_btn_title' )
+} ,
+
+// ScrollView
+"#scrollViewBAEATableGalleryView":
+{
+    top: 5 ,
+    scrollType: "vertical"
+} ,
+
+// Table view with Pics
+"#baeaTableViewGallery":
+{
+    top: 0 ,
+    backgroundColor: '#ffffff' ,
+    width: Ti.UI.FILL
+}

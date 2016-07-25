@@ -1,0 +1,43 @@
+// The Window
+"#shedModeFormsOtherCommentsWindow":
+{
+    title: L( 'shed_mode_other_comments_view_title' ) ,
+    backgroundColor: '#ffffcc'
+} ,
+
+// Back button iOS (to papers general section view)
+"#btn_ios_back":
+{
+    title: L( 'generic_back_btn_title' )
+} ,
+
+// ScrollView
+"#scrollViewOtherComments":
+{
+    top: 10 ,
+    scrollType: "vertical"
+} ,
+
+// Topic view
+"#viewAppTextFieldShedModeFormsOtherCommentsTopic":
+{
+    top: 0 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// OtherComments view
+"#viewAppTextAreaShedModeFormsOtherCommentsOtherComments":
+{
+    top: 70 ,
+    height: 380 ,
+    width: '90%'
+} ,
+
+// Save view
+"#viewAppButtonSave":
+{
+    top: 460 ,
+    width: 60 ,
+    height: 80
+}

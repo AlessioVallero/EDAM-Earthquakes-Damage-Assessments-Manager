@@ -1,0 +1,30 @@
+<Alloy>
+    <NavigationWindow id="navigationWindowFurtherActions">
+        <Window id="atc20ModeFurtherActionsWindow">
+            <LeftNavButton>
+                <Button id="btn_ios_back" onClick="OnBtnBack_Click" />
+            </LeftNavButton>
+
+            <ScrollView id="scrollViewFurtherActions">
+                <View id="viewAppTextFieldATC20ModeFormsFurtherActionsBarricadesNeededInTheFollowingAreas">
+                    <Widget id="widgetAppTextFieldATC20ModeFormsFurtherActionsBarricadesNeededInTheFollowingAreas" src="com.diseg.AppTextField" />
+                </View>
+                <View id="viewAppComboBoxATC20ModeFormsFurtherActionsEvaluationRecommended">
+                    <Widget id="widgetAppComboBoxATC20ModeFormsFurtherActionsEvaluationRecommended" src="com.diseg.AppComboBox" />
+                </View>
+                <View id="viewAppTextFieldATC20ModeFormsFurtherActionsOtherEvaluationRecommended">
+                    <Widget id="widgetAppTextFieldATC20ModeFormsFurtherActionsOtherEvaluationRecommended" src="com.diseg.AppTextField" />
+                </View>
+                <View id="viewAppTextFieldATC20ModeFormsFurtherActionsOtherRecommendations">
+                    <Widget id="widgetAppTextFieldATC20ModeFormsFurtherActionsOtherRecommendations" src="com.diseg.AppTextField" />
+                </View>
+                <View id="viewAppTextFieldATC20ModeFormsFurtherActionsComments">
+                    <Widget id="widgetAppTextFieldATC20ModeFormsFurtherActionsComments" src="com.diseg.AppTextField" />
+                </View>
+                <View id="viewAppButtonSave">
+                    <Widget id="widgetAppButtonSave" src="com.diseg.AppButton" />
+                </View>
+            </ScrollView>
+        </Window>
+    </NavigationWindow>
+</Alloy>

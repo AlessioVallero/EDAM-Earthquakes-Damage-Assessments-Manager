@@ -1,0 +1,36 @@
+<Alloy>
+    <Window id="atc20ModeRapidEvaluationWindow">
+        <ScrollView id="scrollViewRapidEvaluation">
+            <View id="viewAppComboBoxATC20ModeFormsRapidEvaluationEstimatedBuildingDamage">
+                <Widget id="widgetAppComboBoxATC20ModeFormsRapidEvaluationEstimatedBuildingDamage" src="com.diseg.AppComboBox" />
+            </View>
+            <View id="viewAppTextFieldATC20ModeFormsRapidEvaluationGeneralComments">
+                <Widget id="widgetAppTextFieldATC20ModeFormsRapidEvaluationGeneralComments" src="com.diseg.AppTextField" />
+            </View>
+            <View id="viewAppComboBoxATC20ModeFormsRapidEvaluationObservedConditionsCollapsePartialCollapseOrBuildingOffFoundation">
+                <Widget id="widgetAppComboBoxATC20ModeFormsRapidEvaluationObservedConditionsCollapsePartialCollapseOrBuildingOffFoundation" src="com.diseg.AppComboBox" />
+            </View>
+            <View id="viewAppComboBoxATC20ModeFormsRapidEvaluationObservedConditionsBuildingOrStoryLeaning">
+                <Widget id="widgetAppComboBoxATC20ModeFormsRapidEvaluationObservedConditionsBuildingOrStoryLeaning" src="com.diseg.AppComboBox" />
+            </View>
+            <View id="viewAppComboBoxATC20ModeFormsRapidEvaluationObservedConditionsRackingDamageToWallsOtherStructuralDamage">
+                <Widget id="widgetAppComboBoxATC20ModeFormsRapidEvaluationObservedConditionsRackingDamageToWallsOtherStructuralDamage" src="com.diseg.AppComboBox" />
+            </View>
+            <View id="viewAppComboBoxATC20ModeFormsRapidEvaluationObservedConditionsChimneyParapetOrOtherFallingHazard">
+                <Widget id="widgetAppComboBoxATC20ModeFormsRapidEvaluationObservedConditionsChimneyParapetOrOtherFallingHazard" src="com.diseg.AppComboBox" />
+            </View>
+            <View id="viewAppComboBoxATC20ModeFormsRapidEvaluationObservedConditionsGroundSlopeMovementOrCracking">
+                <Widget id="widgetAppComboBoxATC20ModeFormsRapidEvaluationObservedConditionsGroundSlopeMovementOrCracking" src="com.diseg.AppComboBox" />
+            </View>
+            <View id="viewAppComboBoxATC20ModeFormsRapidEvaluationObservedConditionsOther">
+                <Widget id="widgetAppComboBoxATC20ModeFormsRapidEvaluationObservedConditionsOther" src="com.diseg.AppComboBox" />
+            </View>
+            <View id="viewAppTextFieldATC20ModeFormsRapidEvaluationObservedConditionsOtherName">
+                <Widget id="widgetAppTextFieldATC20ModeFormsRapidEvaluationObservedConditionsOtherName" src="com.diseg.AppTextField" />
+            </View>
+            <View id="viewAppButtonSave">
+                <Widget id="widgetAppButtonSave" src="com.diseg.AppButton" />
+            </View>
+        </ScrollView>
+    </Window>
+</Alloy>

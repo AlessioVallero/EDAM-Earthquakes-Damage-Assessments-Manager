@@ -1,0 +1,183 @@
+// The container View
+"#paint_view_container":
+{
+    top: 0 ,
+    right: 0 ,
+    bottom: 0 ,
+    left: 0
+} ,
+
+// View image btns
+"#images_btn_view":
+{
+    top: 20 ,
+    width: 279 ,
+    height: 155
+} ,
+
+// The Stroke color eraser button
+"#btnStrokeColorEraser":
+{
+    backgroundImage: "/images/rubber.png" ,
+    top: 0 ,
+    left: 0 ,
+    width: 60 ,
+    height: 60 ,
+    textAlign: Titanium.UI.TEXT_ALIGNMENT_CENTER ,
+    verticalAlign: Titanium.UI.TEXT_VERTICAL_ALIGNMENT_CENTER ,
+    borderColor: "#C0C0C0" ,
+    borderWidth: 1 ,
+    borderRadius: 4 ,
+} ,
+
+// The Stroke color eraser label
+"#lblStrokeColorEraser":
+{
+    text: L( 'generic_erase_msg' ) ,
+    top: 60 ,
+    left: 0 ,
+    width: 60 ,
+    height: 25 ,
+    font:
+    {
+        fontFamily: 'Arial' ,
+        fontWeight: 'bold' ,
+        fontSize: '11'
+    } ,
+    color: '#000' ,
+    textAlign: 'center'
+} ,
+
+// Done view 
+"#viewAppButtonDone":
+{
+    top: 0 ,
+    left: 82 ,
+    width: 60 ,
+    height: 84
+} ,
+
+// The Stroke color red button
+"#btnStrokeColorRed":
+{
+    backgroundImage: '/images/red_normal.png' ,
+    backgroundSelectedImage: '/images/red_pressed.png' ,
+    backgroundDisabledImage: '/images/red_disabled.png' ,
+    top: 88 ,
+    left: 0 ,
+    width: 48 ,
+    height: 48 ,
+    textAlign: Titanium.UI.TEXT_ALIGNMENT_CENTER ,
+    verticalAlign: Titanium.UI.TEXT_VERTICAL_ALIGNMENT_CENTER
+} ,
+
+// The Stroke color blue button
+"#btnStrokeColorBlue":
+{
+    backgroundImage: '/images/blue_normal.png' ,
+    backgroundSelectedImage: '/images/blue_pressed.png' ,
+    backgroundDisabledImage: '/images/blue_disabled.png' ,
+    top: 88 ,
+    left: 58 ,
+    width: 48 ,
+    height: 48 ,
+    textAlign: Titanium.UI.TEXT_ALIGNMENT_CENTER ,
+    verticalAlign: Titanium.UI.TEXT_VERTICAL_ALIGNMENT_CENTER
+} ,
+
+// The Stroke color black button
+"#btnStrokeColorBlack":
+{
+    backgroundImage: '/images/black_normal.png' ,
+    backgroundSelectedImage: '/images/black_pressed.png' ,
+    backgroundDisabledImage: '/images/black_disabled.png' ,
+    top: 88 ,
+    left: 116 ,
+    width: 48 ,
+    height: 48 ,
+    textAlign: Titanium.UI.TEXT_ALIGNMENT_CENTER ,
+    verticalAlign: Titanium.UI.TEXT_VERTICAL_ALIGNMENT_CENTER
+} ,
+
+// The Stroke transparency button iOS
+"#btnStrokeTransparency[platform=ios]":
+{
+    top: 0 ,
+    left: 174 ,
+    width: 108 ,
+    height: 50 ,
+    font:
+    {
+        fontSize: 11 ,
+        fontFamily: 'Arial'
+    } ,
+    textAlign: Titanium.UI.TEXT_ALIGNMENT_CENTER ,
+    verticalAlign: Titanium.UI.TEXT_VERTICAL_ALIGNMENT_CENTER ,
+    title: L( 'full_stroke_alpha_title' )
+} ,
+
+// The Stroke transparency button Android
+"#btnStrokeTransparency[platform=android]":
+{
+    top: 0 ,
+    left: 174 ,
+    width: 115 ,
+    height: 50 ,
+    font:
+    {
+        fontSize: 11 ,
+        fontFamily: 'Arial' ,
+        fontWeight: 'bold'
+    } ,
+    backgroundColor: '#808080' ,
+    textAlign: Titanium.UI.TEXT_ALIGNMENT_CENTER ,
+    verticalAlign: Titanium.UI.TEXT_VERTICAL_ALIGNMENT_CENTER ,
+    title: L( 'full_stroke_alpha_title' )
+} ,
+
+// The Stroke width button iOS
+"#btnStrokeWidth[platform=ios]":
+{
+    top: 60,
+    left: 174 ,
+    width: 115 ,
+    height: 50 ,
+    font:
+    {
+        fontSize: 11 ,
+        fontFamily: 'Arial'
+    } ,
+    textAlign: Titanium.UI.TEXT_ALIGNMENT_CENTER ,
+    verticalAlign: Titanium.UI.TEXT_VERTICAL_ALIGNMENT_CENTER ,
+    title: L( 'full_stroke_width_title' )
+} ,
+
+// The Stroke width button Android
+"#btnStrokeWidth[platform=android]":
+{
+    top: 60,
+    left: 174 ,
+    width: 115 ,
+    height: 50 ,
+    font:
+    {
+        fontSize: 11 ,
+        fontFamily: 'Arial' ,
+        fontWeight: 'bold'
+    } ,
+    backgroundColor: '#808080' ,
+    textAlign: Titanium.UI.TEXT_ALIGNMENT_CENTER ,
+    verticalAlign: Titanium.UI.TEXT_VERTICAL_ALIGNMENT_CENTER ,
+    title: L( 'full_stroke_width_title' )
+} ,
+
+// PaintView
+"#paint_view":
+{
+    backgroundColor: "#ffffff" ,
+    top: 167 ,
+    strokeAlpha: 255 ,
+    strokeColor: "#000" ,
+    strokeWidth: 10 ,
+    eraseMode: false 
+}

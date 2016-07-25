@@ -1,0 +1,48 @@
+// Label
+"#lblAppCheckBox":
+{
+    left: 0 ,
+    width: 165 ,
+    height: 50 ,
+    font:
+    {
+        fontFamily: 'Arial' ,
+        fontWeight: 'bold' ,
+        fontSize: '12'
+    } ,
+    color: '#000' ,
+    textAlign: 'right'
+} ,
+
+// Help button
+"#btnAppCheckBoxHelp":
+{
+    left: 167 ,
+    width: 32 ,
+    title: '' ,
+    height: 32 ,
+    backgroundImage: '/images/help_normal.png' ,
+    backgroundSelectedImage: '/images/help_pressed.png' ,
+    backgroundDisabledImage: '/images/help_disabled.png'
+} ,
+
+// CheckBox
+"#cbAppCheckBox":
+{
+    left: 207 ,
+    width: 30 ,
+    title: '' ,
+    height: 30 ,
+    borderColor: '#666' ,
+    borderWidth: 2 ,
+    borderRadius: 3 ,
+    backgroundColor: '#aaa' ,
+    backgroundImage: 'none' ,
+    color: '#fff' ,
+    font:
+    {
+        fontSize: 22 ,
+        fontWeight: 'bold'
+    } ,
+    value: "0" // value is a custom property in this case here.
+}

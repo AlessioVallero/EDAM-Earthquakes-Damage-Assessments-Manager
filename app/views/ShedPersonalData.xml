@@ -1,0 +1,46 @@
+<Alloy>
+	<Window id="shedPersonalDataWindow" onAndroid:back="OnAndroidBackButton_Click" onAndroidback="OnAndroidBackButton_Click">
+	    <ActivityIndicator id="activity_indicator" />
+        <ScrollView id="scrollView_fields">
+            <View id="sign_btns_view1" platform="android"><!-- TODO integrate a ti.paint module also for Blackberry to make this button visible -->
+                <View id="viewAppButtonViewSign1">
+                    <Widget id="widgetAppButtonViewSign1" src="com.diseg.AppButton" />
+                </View>
+                <View id="viewAppButtonCreateSign1">
+                    <Widget id="widgetAppButtonCreateSign1" src="com.diseg.AppButton" />
+                </View>
+            </View>
+            <View id="viewAppTextFieldName1">
+                <Widget id="widgetAppTextFieldName1" src="com.diseg.AppTextField" />
+            </View>
+
+            <View id="sign_btns_view2" platform="android"><!-- TODO integrate a ti.paint module also for Blackberry to make this button visible -->
+                <View id="viewAppButtonViewSign2">
+                    <Widget id="widgetAppButtonViewSign2" src="com.diseg.AppButton" />
+                </View>
+                <View id="viewAppButtonCreateSign2">
+                    <Widget id="widgetAppButtonCreateSign2" src="com.diseg.AppButton" />
+                </View>
+            </View>
+            <View id="viewAppTextFieldName2">
+                <Widget id="widgetAppTextFieldName2" src="com.diseg.AppTextField" />
+            </View>
+
+            <View id="sign_btns_view3" platform="android"><!-- TODO integrate a ti.paint module also for Blackberry to make this button visible -->
+                <View id="viewAppButtonViewSign3">
+                    <Widget id="widgetAppButtonViewSign3" src="com.diseg.AppButton" />
+                </View>
+                <View id="viewAppButtonCreateSign3">
+                    <Widget id="widgetAppButtonCreateSign3" src="com.diseg.AppButton" />
+                </View>
+            </View>
+            <View id="viewAppTextFieldName3">
+                <Widget id="widgetAppTextFieldName3" src="com.diseg.AppTextField" />
+            </View>
+
+            <View id="viewAppButtonSave">
+                <Widget id="widgetAppButtonSave" src="com.diseg.AppButton" />
+            </View>
+        </ScrollView>
+	</Window>
+</Alloy>

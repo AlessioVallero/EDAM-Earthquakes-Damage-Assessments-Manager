@@ -1,0 +1,13 @@
+<Alloy>
+    <NavigationWindow id="navigationWindowViewHelpView">
+        <Window id="viewHelpViewWindow">
+            <LeftNavButton>
+                <Button id="btn_ios_back" onClick="OnBtnBack_Click" />
+            </LeftNavButton>
+
+            <ScrollView id="scrollViewViewHelpView">
+                <ImageView id="image_view_help" />
+            </ScrollView>
+        </Window>
+    </NavigationWindow>
+</Alloy>

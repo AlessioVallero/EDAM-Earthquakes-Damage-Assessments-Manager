@@ -1,0 +1,30 @@
+<Alloy>
+    <Window id="baeaModeFormsGeneralWindow" onAndroid:back="OnAndroidBackButton_Click" onAndroidback="OnAndroidBackButton_Click">
+        <ActivityIndicator id="activity_indicator" />
+        <ScrollView id="scrollViewGeneral">
+            <View id="viewAppTextFieldBAEAModeFormsGeneralSiteName">
+                <Widget id="widgetAppTextFieldBAEAModeFormsGeneralSiteName" src="com.diseg.AppTextField" />
+            </View>
+            <TableView id="tableViewBAEAModeFormsGeneralPhoto" onClick="OnTableViewBAEAModeFormsGeneralPhoto_Click">
+                <TableViewRow hasChild="true" className="general_photo_row">
+                    <Label id="lblPhoto" />
+                </TableViewRow>
+            </TableView>
+            <Button id="btnBAEAModeFormsGeneralLoadAddress" onClick="OnBtnLoadAddress_Click" />
+            <View id="viewAppTextFieldBAEAModeFormsGeneralLatitude">
+                <Widget id="widgetAppTextFieldBAEAModeFormsGeneralLatitude" src="com.diseg.AppTextField" />
+            </View>
+            <View id="viewAppTextFieldBAEAModeFormsGeneralLongitude">
+                <Widget id="widgetAppTextFieldBAEAModeFormsGeneralLongitude" src="com.diseg.AppTextField" />
+            </View>
+            <View id="viewAppTextFieldBAEAModeFormsGeneralAddress">
+                <Widget id="widgetAppTextFieldBAEAModeFormsGeneralAddress" src="com.diseg.AppTextField" />
+            </View>
+            <Button id="btnBAEAModeFormsGeneralViewAddress" onClick="OnBtnViewAddress_Click" />
+            <View id="viewAppTextFieldBAEAModeFormsGeneralNotes">
+                <Widget id="widgetAppTextFieldBAEAModeFormsGeneralNotes" src="com.diseg.AppTextField" />
+            </View>
+            <Button id="btnBAEAModeFormsGeneralRecord" onClick="OnBtnRecord_Click" />
+        </ScrollView>
+    </Window>
+</Alloy>

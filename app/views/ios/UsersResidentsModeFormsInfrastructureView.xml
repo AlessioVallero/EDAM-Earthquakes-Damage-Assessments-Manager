@@ -1,0 +1,27 @@
+<Alloy>
+    <NavigationWindow id="navigationWindowInfrastructure">
+        <Window id="usersResidentsModeInfrastructureWindow">
+            <LeftNavButton>
+                <Button id="btn_ios_back" onClick="OnBtnBack_Click" />
+            </LeftNavButton>
+
+            <ScrollView id="scrollViewInfrastructure">
+                <View id="viewGroundBreaks">
+                    <Widget id="widgetAppComboBoxUsersResidentsModeInfrastructureGroundBreaks" src="com.diseg.AppComboBox" />
+                </View>
+                <View id="viewWaterLeaks">
+                    <Widget id="widgetAppComboBoxUsersResidentsModeInfrastructureWaterLeaks" src="com.diseg.AppComboBox" />
+                </View>
+                <View id="viewGasLeaks">
+                    <Widget id="widgetAppComboBoxUsersResidentsModeInfrastructureGasLeaks" src="com.diseg.AppComboBox" />
+                </View>
+                <View id="viewElectricCurrentOperation">
+                    <Widget id="widgetAppComboBoxUsersResidentsModeInfrastructureElectricCurrentOperation" src="com.diseg.AppComboBox" />
+                </View>
+                <View id="viewAppButtonSave">
+                    <Widget id="widgetAppButtonSave" src="com.diseg.AppButton" />
+                </View>
+            </ScrollView>
+        </Window>
+    </NavigationWindow>
+</Alloy>

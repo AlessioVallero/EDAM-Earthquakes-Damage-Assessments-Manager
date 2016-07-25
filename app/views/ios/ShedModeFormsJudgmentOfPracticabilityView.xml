@@ -1,0 +1,45 @@
+<Alloy>
+    <NavigationWindow id="navigationWindowJudgmentOfPracticability">
+        <Window id="shedModeJudgmentOfPracticabilityWindow">
+            <LeftNavButton>
+                <Button id="btn_ios_back" onClick="OnBtnBack_Click" />
+            </LeftNavButton>
+
+            <ScrollView id="scrollViewJudgmentOfPracticability">
+                <View id="viewAppComboBoxShedModeFormsJudgmentOfPracticabilityAccuracyVisit">
+                    <Widget id="widgetAppComboBoxShedModeFormsJudgmentOfPracticabilityAccuracyVisit" src="com.diseg.AppComboBox" />
+                </View>
+                <View id="viewAppComboBoxShedModeFormsJudgmentOfPracticabilityOutcomePracticability">
+                    <Widget id="widgetAppComboBoxShedModeFormsJudgmentOfPracticabilityOutcomePracticability" src="com.diseg.AppComboBox" />
+                </View>
+                <View id="viewAppComboBoxShedModeFormsJudgmentOfPracticabilityStructural">
+                    <Widget id="widgetAppComboBoxShedModeFormsJudgmentOfPracticabilityStructural" src="com.diseg.AppComboBox" />
+                </View>
+                <View id="viewAppComboBoxShedModeFormsJudgmentOfPracticabilityNotStructural">
+                    <Widget id="widgetAppComboBoxShedModeFormsJudgmentOfPracticabilityNotStructural" src="com.diseg.AppComboBox" />
+                </View>
+                <View id="viewAppComboBoxShedModeFormsJudgmentOfPracticabilityExternal">
+                    <Widget id="widgetAppComboBoxShedModeFormsJudgmentOfPracticabilityExternal" src="com.diseg.AppComboBox" />
+                </View>
+                <View id="viewAppComboBoxShedModeFormsJudgmentOfPracticabilityGeotechnical">
+                    <Widget id="widgetAppComboBoxShedModeFormsJudgmentOfPracticabilityGeotechnical" src="com.diseg.AppComboBox" />
+                </View>
+                <View id="viewAppTextFieldShedModeFormsJudgmentOfPracticabilityHousingUnitsUninhabitable">
+                    <Widget id="widgetAppTextFieldShedModeFormsJudgmentOfPracticabilityHousingUnitsUninhabitable" src="com.diseg.AppTextField" />
+                </View>
+                <View id="viewAppTextFieldShedModeFormsJudgmentOfPracticabilityFamiliesEvacuated">
+                    <Widget id="widgetAppTextFieldShedModeFormsJudgmentOfPracticabilityFamiliesEvacuated" src="com.diseg.AppTextField" />
+                </View>
+                <View id="viewAppTextFieldShedModeFormsJudgmentOfPracticabilityEvacueesN">
+                    <Widget id="widgetAppTextFieldShedModeFormsJudgmentOfPracticabilityEvacueesN" src="com.diseg.AppTextField" />
+                </View>
+                <View id="viewAppTextFieldShedModeFormsJudgmentOfPracticabilityOther">
+                    <Widget id="widgetAppTextFieldShedModeFormsJudgmentOfPracticabilityOther" src="com.diseg.AppTextField" />
+                </View>
+                <View id="viewAppButtonSave">
+                    <Widget id="widgetAppButtonSave" src="com.diseg.AppButton" />
+                </View>
+            </ScrollView>
+        </Window>
+    </NavigationWindow>
+</Alloy>

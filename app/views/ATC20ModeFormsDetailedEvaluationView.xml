@@ -1,0 +1,32 @@
+<Alloy>
+    <Window id="atc20ModeDetailedEvaluationWindow">
+        <ScrollView id="scrollViewDetailedEvaluation">
+            <View id="viewAppComboBoxATC20ModeFormsDetailedEvaluationEstimatedBuildingDamage">
+                <Widget id="widgetAppComboBoxATC20ModeFormsDetailedEvaluationEstimatedBuildingDamage" src="com.diseg.AppComboBox" />
+            </View>
+            <View id="viewAppTextFieldATC20ModeFormsDetailedEvaluationGeneralComments">
+                <Widget id="widgetAppTextFieldATC20ModeFormsDetailedEvaluationGeneralComments" src="com.diseg.AppTextField" />
+            </View>
+            <TableView id="tableViewATC20ModeFormsDetailedEvaluation" onClick="OnTableViewATC20ModeFormsDetailedEvaluation_Click">
+                <TableViewRow id="tableViewATC20ModeFormsDetailedEvaluationRowOverallHazards">
+                    <Label id="lblATC20ModeFormsDetailedEvaluationRowOverallHazards" />
+                </TableViewRow>
+                <TableViewRow id="tableViewATC20ModeFormsDetailedEvaluationRowStructuralHazards">
+                    <Label id="lblATC20ModeFormsDetailedEvaluationRowStructuralHazards" />
+                </TableViewRow>
+                <TableViewRow id="tableViewATC20ModeFormsDetailedEvaluationRowNonstructuralHazards">
+                    <Label id="lblATC20ModeFormsDetailedEvaluationRowNonstructuralHazards" />
+                </TableViewRow>
+                <TableViewRow id="tableViewATC20ModeFormsDetailedEvaluationRowGeotechnicalHazards">
+                    <Label id="lblATC20ModeFormsDetailedEvaluationRowGeotechnicalHazards" />
+                </TableViewRow>
+                <TableViewRow id="tableViewATC20ModeFormsDetailedEvaluationRowSketch">
+                    <Label id="lblATC20ModeFormsDetailedEvaluationRowSketch" />
+                </TableViewRow>
+            </TableView>
+            <View id="viewAppButtonSave">
+                <Widget id="widgetAppButtonSave" src="com.diseg.AppButton" />
+            </View>
+        </ScrollView>
+    </Window>
+</Alloy>

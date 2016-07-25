@@ -1,0 +1,51 @@
+// Label
+"#lblAppTextArea":
+{
+    top: 0 ,
+    left: 0 ,
+    width: '90%' ,
+    height: 40 ,
+    font:
+    {
+        fontFamily: 'Arial' ,
+        fontWeight: 'bold' ,
+        fontSize: '12'
+    } ,
+    color: '#000' ,
+    textAlign: 'left'
+} ,
+
+// Speech recognition button
+"#btnAppTextAreaSpeechRecognition":
+{
+    top: 60 ,
+    left: 0 ,
+    width: 32 ,
+    title: '' ,
+    height: 32 ,
+    borderColor: "#C0C0C0" ,
+    borderWidth: 1 ,
+    borderRadius: 4 ,
+    backgroundImage: '/images/speech_recognition_normal.png' ,
+    backgroundSelectedImage: '/images/speech_recognition_pressed.png' ,
+    backgroundDisabledImage: '/images/speech_recognition_disabled.png'
+} ,
+
+// TextArea
+"#txtAppTextArea":
+{
+    backgroundColor: '#ffffff' ,
+    color: "black" ,
+    top: 60 ,
+    left: 35 ,
+    width: '90%' ,
+    height: 300 ,
+    font:
+    {
+        fontFamily: 'Arial' ,
+        fontWeight: 'bold' ,
+        fontSize: 15
+    } ,
+    textAlign: 'left' ,
+    bubbleParent: false
+}

@@ -1,0 +1,38 @@
+<Alloy>
+    <Window id="usersResidentsModeFormsBuildingPositionWindow" onAndroid:back="OnAndroidBackButton_Click" onAndroidback="OnAndroidBackButton_Click">
+        <ActivityIndicator id="activity_indicator" />
+        <ScrollView id="scrollViewBuildingPosition">
+            <Button id="btnUsersResidentsModeFormsBuildingPositionLoadPosition" onClick="OnBtnLoadPosition_Click" />
+            <View id="viewAppTextFieldUsersResidentsModeFormsBuildingPositionLatitude">
+                <Widget id="widgetAppTextFieldUsersResidentsModeFormsBuildingPositionLatitude" src="com.diseg.AppTextField" />
+            </View>
+            <View id="viewAppTextFieldUsersResidentsModeFormsBuildingPositionLongitude">
+                <Widget id="widgetAppTextFieldUsersResidentsModeFormsBuildingPositionLongitude" src="com.diseg.AppTextField" />
+            </View>
+            <View id="viewAppTextFieldUsersResidentsModeFormsBuildingPositionAltitude">
+                <Widget id="widgetAppTextFieldUsersResidentsModeFormsBuildingPositionAltitude" src="com.diseg.AppTextField" />
+            </View>
+            <View id="viewAppTextFieldUsersResidentsModeFormsBuildingPositionProvince">
+                <Widget id="widgetAppTextFieldUsersResidentsModeFormsBuildingPositionProvince" src="com.diseg.AppTextField" />
+            </View>
+            <View id="viewAppTextFieldUsersResidentsModeFormsBuildingPositionMunicipality">
+                <Widget id="widgetAppTextFieldUsersResidentsModeFormsBuildingPositionMunicipality" src="com.diseg.AppTextField" />
+            </View>
+            <View id="viewAppTextFieldUsersResidentsModeFormsBuildingPositionPlace">
+                <Widget id="widgetAppTextFieldUsersResidentsModeFormsBuildingPositionPlace" src="com.diseg.AppTextField" />
+            </View>
+            <View id="viewAppTextFieldUsersResidentsModeFormsBuildingPositionAddress">
+                <Widget id="widgetAppTextFieldUsersResidentsModeFormsBuildingPositionAddress" src="com.diseg.AppTextField" />
+            </View>
+            <View id="viewAppTextFieldUsersResidentsModeFormsBuildingPositionCivicNo">
+                <Widget id="widgetAppTextFieldUsersResidentsModeFormsBuildingPositionCivicNo" src="com.diseg.AppTextField" />
+            </View>
+            <View id="viewCompilerPosition">
+                <Widget id="widgetAppComboBoxUsersResidentsModeFormsDetailsCompilerPosition" src="com.diseg.AppComboBox" />
+            </View>
+            <View id="viewAppButtonSave">
+                <Widget id="widgetAppButtonSave" src="com.diseg.AppButton" />
+            </View>
+        </ScrollView>
+    </Window>
+</Alloy>

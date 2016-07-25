@@ -1,0 +1,188 @@
+// The Window
+"#shedModeDamagesMeasuresOfEmergencyInfillElementsWindow":
+{
+    title: L( 'shed_mode_damages_measures_of_emergency_infill_elements_view_title' ) ,
+    backgroundColor: '#ffffcc'
+} ,
+
+// Back button iOS (to papers general section view)
+"#btn_ios_back":
+{
+    title: L( 'generic_back_btn_title' )
+} ,
+
+// ScrollView
+"#scrollViewDamagesMeasuresOfEmergencyInfillElements":
+{
+    top: 10 ,
+    scrollType: "vertical"
+} ,
+
+// Table view with StructuralElements
+"#tableViewShedModeFormsMeasuresOfEmergencyInfillElements":
+{
+    top: 10 ,
+    backgroundColor: '#ffffff' ,
+    height: 450 ,
+    width: Ti.UI.FILL
+} ,
+
+// Shear failure of connector row
+"#tableViewShedModeFormsMeasuresOfEmergencyInfillElementsRowShearFailureOfConnector":
+{
+    hasChild: true ,
+    className: 'section_row' ,
+    color: "#000" ,
+} ,
+
+// Shear failure of connector label
+"#lblShedModeFormsMeasuresOfEmergencyInfillElementsRowShearFailureOfConnector":
+{
+    text: L( 'generic_shear_failure_of_connector_text_msg' ) ,
+    height: 50 ,
+    color: "#000" ,
+} ,
+
+// Chipped or disconnected profiles on the pillar row
+"#tableViewShedModeFormsMeasuresOfEmergencyInfillElementsRowChippedOrDisconnectedProfilesOnThePillar":
+{
+    hasChild: true ,
+    className: 'section_row' ,
+    color: "#000" ,
+} ,
+
+// Chipped or disconnected profiles on the pillar label
+"#lblShedModeFormsMeasuresOfEmergencyInfillElementsRowChippedOrDisconnectedProfilesOnThePillar":
+{
+    text: L( 'generic_chipped_or_disconnected_profiles_on_the_pillar_text_msg' ) ,
+    height: 50 ,
+    color: "#000" ,
+} ,
+
+// Shelf break row
+"#tableViewShedModeFormsMeasuresOfEmergencyInfillElementsRowShelfBreak":
+{
+    hasChild: true ,
+    className: 'section_row' ,
+    color: "#000" ,
+} ,
+
+// Shelf break label
+"#lblShedModeFormsMeasuresOfEmergencyInfillElementsRowShelfBreak":
+{
+    text: L( 'generic_shelf_break_text_msg' ) ,
+    height: 50 ,
+    color: "#000" ,
+} ,
+
+// Collapse due to rollover of the pillar row
+"#tableViewShedModeFormsMeasuresOfEmergencyInfillElementsRowCollapseDueToRolloverOfThePillar":
+{
+    hasChild: true ,
+    className: 'section_row' ,
+    color: "#000" ,
+} ,
+
+// Collapse due to rollover of the pillar label
+"#lblShedModeFormsMeasuresOfEmergencyInfillElementsRowCollapseDueToRolloverOfThePillar":
+{
+    text: L( 'generic_collapse_due_to_rollover_of_the_pillar_text_msg' ) ,
+    height: 50 ,
+    color: "#000" ,
+} ,
+
+// Plastic hinge on the pillar row
+"#tableViewShedModeFormsMeasuresOfEmergencyInfillElementsRowPlasticHingeOnThePillar":
+{
+    hasChild: true ,
+    className: 'section_row' ,
+    color: "#000" ,
+} ,
+
+// Plastic hinge on the pillar label
+"#lblShedModeFormsMeasuresOfEmergencyInfillElementsRowPlasticHingeOnThePillar":
+{
+    text: L( 'generic_plastic_hinge_on_the_pillar_text_msg' ) ,
+    height: 50 ,
+    color: "#000" ,
+} ,
+
+// Hammering of the roof elements row
+"#tableViewShedModeFormsMeasuresOfEmergencyInfillElementsRowHammeringOfTheRoofElements":
+{
+    hasChild: true ,
+    className: 'section_row' ,
+    color: "#000" ,
+} ,
+
+// Hammering of the roof elements label
+"#lblShedModeFormsMeasuresOfEmergencyInfillElementsRowHammeringOfTheRoofElements":
+{
+    text: L( 'generic_hammering_of_the_roof_elements_text_msg' ) ,
+    height: 50 ,
+    color: "#000" ,
+} ,
+
+// Hammering of the pillar row
+"#tableViewShedModeFormsMeasuresOfEmergencyInfillElementsRowHammeringOfThePillar":
+{
+    hasChild: true ,
+    className: 'section_row' ,
+    color: "#000" ,
+} ,
+
+// Hammering of the pillar label
+"#lblShedModeFormsMeasuresOfEmergencyInfillElementsRowHammeringOfThePillar":
+{
+    text: L( 'generic_hammering_of_the_pillar_text_msg' ) ,
+    height: 50 ,
+    color: "#000" ,
+} ,
+
+// Hammering of the orthogonal panels row
+"#tableViewShedModeFormsMeasuresOfEmergencyInfillElementsRowHammeringOfTheOrthogonalPanels":
+{
+    hasChild: true ,
+    className: 'section_row' ,
+    color: "#000" ,
+} ,
+
+// Hammering of the orthogonal panels label
+"#lblShedModeFormsMeasuresOfEmergencyInfillElementsRowHammeringOfTheOrthogonalPanels":
+{
+    text: L( 'generic_hammering_of_the_orthogonal_panels_text_msg' ) ,
+    height: 50 ,
+    color: "#000" ,
+} ,
+
+// Horizontal pillar beam shift row
+"#tableViewShedModeFormsMeasuresOfEmergencyInfillElementsRowHorizontalPillarBeamShift":
+{
+    hasChild: true ,
+    className: 'section_row' ,
+    color: "#000" ,
+} ,
+
+// Horizontal pillar beam shift label
+"#lblShedModeFormsMeasuresOfEmergencyInfillElementsRowHorizontalPillarBeamShift":
+{
+    text: L( 'generic_horizontal_pillar_beam_shift_text_msg' ) ,
+    height: 50 ,
+    color: "#000" ,
+} ,
+
+// Loss of support of the beam row
+"#tableViewShedModeFormsMeasuresOfEmergencyStructuralElementsRowCollapseOfACoverPlate":
+{
+    hasChild: true ,
+    className: 'section_row' ,
+    color: "#000" ,
+} ,
+
+// Loss of support of the beam label
+"#lblShedModeFormsMeasuresOfEmergencyStructuralElementsRowCollapseOfACoverPlate":
+{
+    text: L( 'generic_collapse_of_a_cover_plate_text_msg' ) ,
+    height: 50 ,
+    color: "#000" ,
+}

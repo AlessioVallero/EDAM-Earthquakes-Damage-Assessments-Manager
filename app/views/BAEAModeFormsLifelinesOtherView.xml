@@ -1,0 +1,18 @@
+<Alloy>
+    <Window id="baeaModeLifelinesOtherWindow">
+        <ScrollView id="scrollViewLifelinesOther">
+            <View id="viewAppCheckBoxBAEAModeFormsLifelinesOtherWaterWastewater">
+                <Widget id="widgetAppCheckBoxBAEAModeFormsLifelinesOtherWaterWastewater" src="com.diseg.AppCheckBox" />
+            </View>
+            <View id="viewAppCheckBoxBAEAModeFormsLifelinesOtherGasAndFuelLines">
+                <Widget id="widgetAppCheckBoxBAEAModeFormsLifelinesOtherGasAndFuelLines" src="com.diseg.AppCheckBox" />
+            </View>
+            <View id="viewAppCheckBoxBAEAModeFormsLifelinesOtherTransportation">
+                <Widget id="widgetAppCheckBoxBAEAModeFormsLifelinesOtherTransportation" src="com.diseg.AppCheckBox" />
+            </View>
+            <View id="viewAppCheckBoxBAEAModeFormsLifelinesOtherOther">
+                <Widget id="widgetAppCheckBoxBAEAModeFormsLifelinesOtherOther" src="com.diseg.AppCheckBox" />
+            </View>
+        </ScrollView>
+    </Window>
+</Alloy>

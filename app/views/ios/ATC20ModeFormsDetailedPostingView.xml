@@ -1,0 +1,35 @@
+<Alloy>
+    <NavigationWindow id="navigationWindowDetailedPosting">
+        <Window id="atc20ModeDetailedPostingWindow">
+            <LeftNavButton>
+                <Button id="btn_ios_back" onClick="OnBtnBack_Click" />
+            </LeftNavButton>
+
+            <ScrollView id="scrollViewDetailedPosting">
+                <View id="viewAppComboBoxATC20ModeFormsDetailedPostingPreviousPosting">
+                    <Widget id="widgetAppComboBoxATC20ModeFormsDetailedPostingPreviousPosting" src="com.diseg.AppComboBox" />
+                </View>
+                <View id="viewAppTextFieldATC20ModeFormsDetailedPostingPreviousInspectorID">
+                    <Widget id="widgetAppTextFieldATC20ModeFormsDetailedPostingPreviousInspectorID" src="com.diseg.AppTextField" />
+                </View>
+                <View id="viewDate">
+                    <Label id="lblDate" />
+                    <View id="viewDisabler" />
+                    <Picker id="datePickerDate" onChange="OnDate_Change" />
+                </View>
+                <View id="viewAppComboBoxATC20ModeFormsDetailedPostingPosting">
+                    <Widget id="widgetAppComboBoxATC20ModeFormsDetailedPostingPosting" src="com.diseg.AppComboBox" />
+                </View>
+                <View id="viewAppComboBoxATC20ModeFormsDetailedPostingClassification">
+                    <Widget id="widgetAppComboBoxATC20ModeFormsDetailedPostingClassification" src="com.diseg.AppComboBox" />
+                </View>
+                <View id="viewAppTextFieldATC20ModeFormsDetailedPostingUseAndEntryRestrictions">
+                    <Widget id="widgetAppTextFieldATC20ModeFormsDetailedPostingUseAndEntryRestrictions" src="com.diseg.AppTextField" />
+                </View>
+                <View id="viewAppButtonSave">
+                    <Widget id="widgetAppButtonSave" src="com.diseg.AppButton" />
+                </View>
+            </ScrollView>
+        </Window>
+    </NavigationWindow>
+</Alloy>

@@ -1,0 +1,21 @@
+<Alloy>
+    <Window id="mediaDamagesDetailsWindow">
+        <ScrollView id="scrollViewMediaDamagesDetails">
+            <View id="viewAppButtonDone">
+                <Widget id="widgetAppButtonDone" src="com.diseg.AppButton" />
+            </View>
+            <View id="viewAppComboBoxMediaDamagesDetailsHeading">
+                <Widget id="widgetAppComboBoxMediaDamagesDetailsHeading" src="com.diseg.AppComboBox" />
+            </View>
+            <View id="viewAppTextFieldMediaDamagesDetailsDamagesLevel">
+                <Widget id="widgetAppTextFieldMediaDamagesDetailsDamagesLevel" src="com.diseg.AppTextField" />
+            </View>
+            <View id="viewAppTextFieldMediaDamagesDetailsDamagesArea">
+                <Widget id="widgetAppTextFieldMediaDamagesDetailsDamagesArea" src="com.diseg.AppTextField" />
+            </View>
+            <View id="viewAppTextAreaMediaDamagesDetailsComment">
+                <Widget id="widgetAppTextAreaMediaDamagesDetailsComment" src="com.diseg.AppTextArea" />
+            </View>
+        </ScrollView>
+    </Window>
+</Alloy>

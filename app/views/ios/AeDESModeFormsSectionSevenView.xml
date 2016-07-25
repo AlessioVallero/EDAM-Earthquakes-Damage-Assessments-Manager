@@ -1,0 +1,25 @@
+<Alloy>
+    <NavigationWindow id="navigationWindowSectionSeven">
+        <Window id="aedesModeSectionSevenWindow">
+            <LeftNavButton>
+                <Button id="btn_ios_back" onClick="OnBtnBack_Click" />
+            </LeftNavButton>
+
+            <ScrollView id="scrollViewSectionSeven">
+                <View id="viewAppComboBoxAeDESModeFormsSectionSevenMorphologySite">
+                    <Widget id="widgetAppComboBoxAeDESModeFormsSectionSevenMorphologySite" src="com.diseg.AppComboBox" />
+                </View>
+                <Label id="lblAeDESModeFormsSectionSevenFailuresActualOrFeared" />
+                <View id="viewAppComboBoxAeDESModeFormsSectionSevenSlopesLooming">
+                    <Widget id="widgetAppComboBoxAeDESModeFormsSectionSevenSlopesLooming" src="com.diseg.AppComboBox" />
+                </View>
+                <View id="viewAppComboBoxAeDESModeFormsSectionSevenSubsoil">
+                    <Widget id="widgetAppComboBoxAeDESModeFormsSectionSevenSubsoil" src="com.diseg.AppComboBox" />
+                </View>
+                <View id="viewAppButtonSave">
+                    <Widget id="widgetAppButtonSave" src="com.diseg.AppButton" />
+                </View>
+            </ScrollView>
+        </Window>
+    </NavigationWindow>
+</Alloy>

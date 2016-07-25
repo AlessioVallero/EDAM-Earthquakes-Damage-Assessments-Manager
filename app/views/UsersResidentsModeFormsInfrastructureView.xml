@@ -1,0 +1,21 @@
+<Alloy>
+    <Window id="usersResidentsModeInfrastructureWindow">
+        <ScrollView id="scrollViewInfrastructure">
+            <View id="viewGroundBreaks">
+                <Widget id="widgetAppComboBoxUsersResidentsModeInfrastructureGroundBreaks" src="com.diseg.AppComboBox" />
+            </View>
+            <View id="viewWaterLeaks">
+                <Widget id="widgetAppComboBoxUsersResidentsModeInfrastructureWaterLeaks" src="com.diseg.AppComboBox" />
+            </View>
+            <View id="viewGasLeaks">
+                <Widget id="widgetAppComboBoxUsersResidentsModeInfrastructureGasLeaks" src="com.diseg.AppComboBox" />
+            </View>
+            <View id="viewElectricCurrentOperation">
+                <Widget id="widgetAppComboBoxUsersResidentsModeInfrastructureElectricCurrentOperation" src="com.diseg.AppComboBox" />
+            </View>
+            <View id="viewAppButtonSave">
+                <Widget id="widgetAppButtonSave" src="com.diseg.AppButton" />
+            </View>
+        </ScrollView>
+    </Window>
+</Alloy>

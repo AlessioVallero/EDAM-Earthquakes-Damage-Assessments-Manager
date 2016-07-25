@@ -1,0 +1,122 @@
+// The Window
+"#shedModeDamagesMeasuresOfEmergencyStructuralElementsDetailsWindow":
+{
+    backgroundColor: '#ffffcc'
+} ,
+
+// Back button iOS (to papers general section view)
+"#btn_ios_back":
+{
+    title: L( 'generic_back_btn_title' )
+} ,
+
+// ScrollView
+"#scrollViewDamagesMeasuresOfEmergencyStructuralElementsDetails":
+{
+    top: 10 ,
+    scrollType: "vertical"
+} ,
+
+// BeamColumnConnectionThroughAxleSteel view
+"#viewAppCheckBoxShedModeFormsDamagesMeasuresOfEmergencyBeamColumnConnectionThroughAxleSteel":
+{
+    top: 0 ,
+    height: 50 ,
+    width: 290
+} ,
+
+// BeamColumnConnectionByPinsAndSteelPlates view
+"#viewAppCheckBoxShedModeFormsDamagesMeasuresOfEmergencyBeamColumnConnectionByPinsAndSteelPlates":
+{
+    top: 70 ,
+    height: 50 ,
+    width: 290
+} ,
+
+// BeamColumnConnectionInSteelByCables view
+"#viewAppCheckBoxShedModeFormsDamagesMeasuresOfEmergencyBeamColumnConnectionInSteelByCables":
+{
+    top: 140 ,
+    height: 50 ,
+    width: 290
+} ,
+
+// InclusionOfConnectorsForSteelBeamBoltedAPillarWithConfinement view
+"#viewAppCheckBoxShedModeFormsDamagesMeasuresOfEmergencyInclusionOfConnectorsForSteelBeamBoltedAPillarWithConfinement":
+{
+    top: 210 ,
+    height: 80 ,
+    width: 290
+} ,
+
+// PrefabSystemRollOfBeam view
+"#viewAppCheckBoxShedModeFormsDamagesMeasuresOfEmergencyPrefabSystemRollOfBeam":
+{
+    top: 310 ,
+    height: 50 ,
+    width: 290
+} ,
+
+// PillarPillarConnectionThroughMetalProfilesOnAxisAtThePier view
+"#viewAppCheckBoxShedModeFormsDamagesMeasuresOfEmergencyPillarPillarConnectionThroughMetalProfilesOnAxisAtThePier":
+{
+    top: 380 ,
+    height: 50 ,
+    width: 290
+} ,
+
+// PillarPillarConnectionThroughMetalDishesAtTheEndOfThePier view
+"#viewAppCheckBoxShedModeFormsDamagesMeasuresOfEmergencyPillarPillarConnectionThroughMetalDishesAtTheEndOfThePier":
+{
+    top: 450 ,
+    height: 50 ,
+    width: 290
+} ,
+
+// PillarPillarConnectionThroughStrandSteel view
+"#viewAppCheckBoxShedModeFormsDamagesMeasuresOfEmergencyPillarPillarConnectionThroughStrandSteel":
+{
+    top: 520 ,
+    height: 50 ,
+    width: 290
+} ,
+
+// BeamTileConnectionThroughAnchoredSteelCablesOnTheSidesOfTheLegs view
+"#viewAppCheckBoxShedModeFormsDamagesMeasuresOfEmergencyBeamTileConnectionThroughAnchoredSteelCablesOnTheSidesOfTheLegs":
+{
+    top: 590 ,
+    height: 80 ,
+    width: 290
+} ,
+
+// BeamTileConnectionThroughAnchoredSteelCablesUnderTheLegs view
+"#viewAppCheckBoxShedModeFormsDamagesMeasuresOfEmergencyBeamTileConnectionThroughAnchoredSteelCablesUnderTheLegs":
+{
+    top: 690 ,
+    height: 80 ,
+    width: 290
+} ,
+
+// InclusionOfConnectorsMadeOfElementsInABoltedSteelBeamAndTile view
+"#viewAppCheckBoxShedModeFormsDamagesMeasuresOfEmergencyInclusionOfConnectorsMadeOfElementsInABoltedSteelBeamAndTile":
+{
+    top: 790 ,
+    height: 50 ,
+    width: 290
+} ,
+
+// TileBeamConnection view
+"#viewAppCheckBoxShedModeFormsDamagesMeasuresOfEmergencyStructuralElementsRowTileBeamConnection":
+{
+    top: 860 ,
+    height: 50 ,
+    width: 290
+} ,
+
+// ConstructionOfBracingGroundWithSteelRopes view
+"#viewAppCheckBoxShedModeFormsDamagesMeasuresOfEmergencyConstructionOfBracingGroundWithSteelRopes":
+{
+    top: 930 ,
+    height: 50 ,
+    width: 290
+}

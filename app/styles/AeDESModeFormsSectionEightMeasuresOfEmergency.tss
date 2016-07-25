@@ -1,0 +1,66 @@
+// The Window
+"#aedesModeSectionEightMeasuresOfEmergencyWindow":
+{
+    title: L( 'aedes_mode_section_eight_measures_of_emergency_title' ) ,
+    backgroundColor: '#ffffcc'
+} ,
+
+// Back button iOS (to papers section eight view)
+"#btn_ios_back":
+{
+    title: L( 'generic_back_btn_title' )
+} ,
+
+// ScrollView
+"#scrollViewSectionEightMeasuresOfEmergency":
+{
+    top: 10 ,
+    scrollType: "vertical"
+} ,
+
+// MeasuresOfEmergency label
+"#lblAeDESModeFormsSectionEightMeasuresOfEmergency":
+{
+    text: L( 'generic_measures_of_emergency_text_msg' ) ,
+    top: 0 ,
+    width: 290 ,
+    height: 18 ,
+    font:
+    {
+        fontFamily: 'Arial' ,
+        fontWeight: 'bold' ,
+        fontSize: '12'
+    } ,
+    color: '#000'
+} ,
+
+// Father title label
+"#lblAeDESModeFormsSectionEightMeasuresOfEmergencyFatherTitle":
+{
+    top: 30 ,
+    width: 290 ,
+    height: 18 ,
+    font:
+    {
+        fontFamily: 'Arial' ,
+        fontWeight: 'bold' ,
+        fontSize: '12'
+    } ,
+    color: '#000'
+} ,
+
+// Limited view
+"#viewAppCheckBoxAeDESModeFormsSectionEightMeasuresOfEmergencyLimited":
+{
+    top: 60 ,
+    height: 50 ,
+    width: 290
+} ,
+
+// Extended view
+"#viewAppCheckBoxAeDESModeFormsSectionEightMeasuresOfEmergencyExtended":
+{
+    top: 130 ,
+    height: 50 ,
+    width: 290
+}

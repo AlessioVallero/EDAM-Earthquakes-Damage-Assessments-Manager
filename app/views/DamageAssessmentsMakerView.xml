@@ -1,0 +1,15 @@
+<Alloy>
+	<Window id="damageAssessmentsMakerWindow" onAndroid:back="OnAndroidBackButton_Click" onAndroidback="OnAndroidBackButton_Click">
+        <ActivityIndicator id="activity_indicator" />
+        <Label id="lblInstructions" />
+        <Button id="btn_north_side" onClick="OnBtnNorthSide_Click" />
+        <Button id="btn_east_side" onClick="OnBtnEastSide_Click" />
+        <Button id="btn_south_side" onClick="OnBtnSouthSide_Click" />
+        <Button id="btn_west_side" onClick="OnBtnWestSide_Click" />
+        <Button id="btn_roof" onClick="OnBtnRoof_Click" />
+        <Button id="btn_indoor" onClick="OnBtnIndoor_Click" />
+        <View id="viewAppButtonDone">
+            <Widget id="widgetAppButtonDone" src="com.diseg.AppButton" />
+        </View>
+	</Window>
+</Alloy>

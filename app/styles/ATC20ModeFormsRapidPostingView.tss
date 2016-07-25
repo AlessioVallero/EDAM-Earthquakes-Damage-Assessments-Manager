@@ -1,0 +1,53 @@
+// The Window
+"#atc20ModeRapidPostingWindow":
+{
+    title: L( 'atc20_mode_rapid_posting_view_title' ) ,
+    backgroundColor: '#ffffcc'
+} ,
+
+// Back button iOS (to papers general section view)
+"#btn_ios_back":
+{
+    title: L( 'generic_back_btn_title' )
+} ,
+
+// ScrollView
+"#scrollViewRapidPosting":
+{
+    top: 10 ,
+    contentWidth: '100%' ,
+    scrollType: "vertical"
+} ,
+
+// Posting view
+"#viewAppComboBoxATC20ModeFormsRapidPostingPosting":
+{
+    top: 0 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// Classification view
+"#viewAppComboBoxATC20ModeFormsRapidPostingClassification":
+{
+    top: 70 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// UseAndEntryRestrictions view
+"#viewAppTextFieldATC20ModeFormsRapidPostingUseAndEntryRestrictions":
+{
+    top: 140 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// Save view
+"#viewAppButtonSave":
+{
+    top: 210 ,
+    width: 60 ,
+    height: 80 ,
+    bottom: 10
+}

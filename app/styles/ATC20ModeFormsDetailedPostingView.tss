@@ -1,0 +1,157 @@
+// The Window
+"#atc20ModeDetailedPostingWindow":
+{
+    title: L( 'atc20_mode_detailed_posting_view_title' ) ,
+    backgroundColor: '#ffffcc'
+} ,
+
+// Back button iOS (to papers general section view)
+"#btn_ios_back":
+{
+    title: L( 'generic_back_btn_title' )
+} ,
+
+// ScrollView
+"#scrollViewDetailedPosting":
+{
+    top: 10 ,
+    contentWidth: '100%' ,
+    scrollType: "vertical"
+} ,
+
+// PreviousPosting view
+"#viewAppComboBoxATC20ModeFormsDetailedPostingPreviousPosting":
+{
+    top: 0 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// PreviousInspectorID view
+"#viewAppTextFieldATC20ModeFormsDetailedPostingPreviousInspectorID":
+{
+    top: 70 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// Date view iOS
+"#viewDate[platform=ios]":
+{
+    top: 140 ,
+    left: 0 ,
+    right: 10 ,
+    height: 200
+} ,
+
+// Date view Android
+"#viewDate":
+{
+    top: 140 ,
+    left: 0 ,
+    right: 10 ,
+    height: 100
+} ,
+
+// Date label
+"#lblDate":
+{
+    text: L( 'generic_date_text_msg' ) ,
+    left: 0 ,
+    width: 50 ,
+    height: 50 ,
+    font:
+    {
+        fontFamily: 'Arial' ,
+        fontWeight: 'bold' ,
+        fontSize: '12'
+    } ,
+    color: '#000' ,
+    textAlign: 'right'
+} ,
+
+// View disabler (workaround to disable a picker)
+"#viewDisabler":
+{
+    left: 60 ,
+    right: 10 ,
+    borderColor: "transparent" ,
+    backgroundColor: "transparent" ,
+    zIndex: 1
+} ,
+
+// Date picker
+"#datePickerDate":
+{
+    left: 60 ,
+    right: 10 ,
+    type: Titanium.UI.PICKER_TYPE_DATE ,
+    selectionIndicator: true ,
+    useSpinner: true
+} ,
+
+// Posting view iOS
+"#viewAppComboBoxATC20ModeFormsDetailedPostingPosting[platform=ios]":
+{
+    top: 360 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// Classification view iOS
+"#viewAppComboBoxATC20ModeFormsDetailedPostingClassification[platform=ios]":
+{
+    top: 430 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// UseAndEntryRestrictions view iOS
+"#viewAppTextFieldATC20ModeFormsDetailedPostingUseAndEntryRestrictions[platform=ios]":
+{
+    top: 500 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+}
+
+// Save view iOS
+"#viewAppButtonSave[platform=ios]":
+{
+    top: 570 ,
+    width: 60 ,
+    height: 80 ,
+    bottom: 10
+}
+
+// Posting view
+"#viewAppComboBoxATC20ModeFormsDetailedPostingPosting":
+{
+    top: 260 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// Classification view
+"#viewAppComboBoxATC20ModeFormsDetailedPostingClassification":
+{
+    top: 330 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// UseAndEntryRestrictions view
+"#viewAppTextFieldATC20ModeFormsDetailedPostingUseAndEntryRestrictions":
+{
+    top: 400 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// Save view
+"#viewAppButtonSave":
+{
+    top: 470 ,
+    width: 60 ,
+    height: 80 ,
+    bottom: 10
+}

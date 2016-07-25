@@ -1,0 +1,19 @@
+// View users locations window
+"#viewUsersLocationsViewWindow":
+{
+    backgroundColor: '#ffffcc'
+} ,
+
+// Back button iOS (to papers general section view)
+"#btn_ios_back":
+{
+    title: L( 'generic_back_btn_title' )
+} ,
+
+// Google Maps v2
+"#map":
+{
+    userLocation: true ,
+    mapType: Alloy.Globals.Map.NORMAL_TYPE ,
+    top: 0
+}

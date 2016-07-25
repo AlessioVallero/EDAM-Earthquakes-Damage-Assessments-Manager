@@ -1,0 +1,27 @@
+<Alloy>
+    <NavigationWindow id="navigationWindowDetailedEvaluationOverallHazards">
+        <Window id="atc20ModeDetailedEvaluationOverallHazardsWindow">
+            <LeftNavButton>
+                <Button id="btn_ios_back" onClick="OnBtnBack_Click" />
+            </LeftNavButton>
+
+            <ScrollView id="scrollViewDetailedEvaluationOverallHazards">
+                <View id="viewAppComboBoxATC20ModeFormsDetailedEvaluationOverallHazardsCollapseOrPartialCollapse">
+                    <Widget id="widgetAppComboBoxATC20ModeFormsDetailedEvaluationOverallHazardsCollapseOrPartialCollapse" src="com.diseg.AppComboBox" />
+                </View>
+                <View id="viewAppComboBoxATC20ModeFormsDetailedEvaluationOverallHazardsBuildingOrStoryLeaning">
+                    <Widget id="widgetAppComboBoxATC20ModeFormsDetailedEvaluationOverallHazardsBuildingOrStoryLeaning" src="com.diseg.AppComboBox" />
+                </View>
+                <View id="viewAppComboBoxATC20ModeFormsDetailedEvaluationOverallHazardsOther">
+                    <Widget id="widgetAppComboBoxATC20ModeFormsDetailedEvaluationOverallHazardsOther" src="com.diseg.AppComboBox" />
+                </View>
+                <View id="viewAppTextFieldATC20ModeFormsDetailedEvaluationOverallHazardsOtherName">
+                    <Widget id="widgetAppTextFieldATC20ModeFormsDetailedEvaluationOverallHazardsOtherName" src="com.diseg.AppTextField" />
+                </View>
+                <View id="viewAppTextFieldATC20ModeFormsDetailedEvaluationOverallHazardsComments">
+                    <Widget id="widgetAppTextFieldATC20ModeFormsDetailedEvaluationOverallHazardsComments" src="com.diseg.AppTextField" />
+                </View>
+            </ScrollView>
+        </Window>
+    </NavigationWindow>
+</Alloy>

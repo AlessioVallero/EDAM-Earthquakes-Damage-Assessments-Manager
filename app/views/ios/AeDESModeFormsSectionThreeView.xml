@@ -1,0 +1,64 @@
+<Alloy>
+    <NavigationWindow id="navigationWindowSectionThree">
+        <Window id="aedesModeSectionThreeWindow">
+            <LeftNavButton>
+                <Button id="btn_ios_back" onClick="OnBtnBack_Click" />
+            </LeftNavButton>
+
+            <ScrollView id="scrollViewSectionThree">
+                <View id="viewAppComboBoxAeDESModeFormsSectionThreeCoverage">
+                    <Widget id="widgetAppComboBoxAeDESModeFormsSectionThreeCoverage" src="com.diseg.AppComboBox" />
+                </View>
+                <Label id="lblAeDESModeFormsSectionThreeRegularity" />
+                <View id="viewAppComboBoxAeDESModeFormsSectionThreePlanAndElevation">
+                    <Widget id="widgetAppComboBoxAeDESModeFormsSectionThreePlanAndElevation" src="com.diseg.AppComboBox" />
+                </View>
+                <View id="viewAppComboBoxAeDESModeFormsSectionThreeInfillDisposal">
+                    <Widget id="widgetAppComboBoxAeDESModeFormsSectionThreeInfillDisposal" src="com.diseg.AppComboBox" />
+                </View>
+                <View id="viewAppComboBoxAeDESModeFormsSectionThreeIsolatedColumns">
+                    <Widget id="widgetAppComboBoxAeDESModeFormsSectionThreeIsolatedColumns" src="com.diseg.AppComboBox" />
+                </View>
+                <View id="viewAppComboBoxAeDESModeFormsSectionThreeMixed">
+                    <Widget id="widgetAppComboBoxAeDESModeFormsSectionThreeMixed" src="com.diseg.AppComboBox" />
+                </View>
+                <View id="viewAppComboBoxAeDESModeFormsSectionThreeReinforced">
+                    <Widget id="widgetAppComboBoxAeDESModeFormsSectionThreeReinforced" src="com.diseg.AppComboBox" />
+                </View>
+                <View id="viewAppCheckBoxAeDESModeFormsSectionThreeReinforcedConcreteFrames">
+                    <Widget id="widgetAppCheckBoxAeDESModeFormsSectionThreeReinforcedConcreteFrames" src="com.diseg.AppCheckBox" />
+                </View>
+                <View id="viewAppCheckBoxAeDESModeFormsSectionThreeReinforcedConcreteWalls">
+                    <Widget id="widgetAppCheckBoxAeDESModeFormsSectionThreeReinforcedConcreteWalls" src="com.diseg.AppCheckBox" />
+                </View>
+                <View id="viewAppCheckBoxAeDESModeFormsSectionThreeSteelFrames">
+                    <Widget id="widgetAppCheckBoxAeDESModeFormsSectionThreeSteelFrames" src="com.diseg.AppCheckBox" />
+                </View>
+                <Label id="lblAeDESModeFormsSectionThreeVerticalMasonryStructures" />
+                <TableView id="tableViewAeDESModeFormsSectionThreeMasonryStructure" onClick="OnTableViewAeDESModeFormsSectionThreeMasonryStructure_Click">
+                    <TableViewRow id="tableViewAeDESModeFormsSectionThreeMasonryStructureRowNotIdentified">
+                        <Label id="lblAeDESModeFormsSectionThreeMasonryStructureRowNotIdentified" />
+                    </TableViewRow>
+                    <TableViewRow id="tableViewAeDESModeFormsSectionThreeMasonryStructureRowVaultsWithoutChains">
+                        <Label id="lblAeDESModeFormsSectionThreeMasonryStructureRowVaultsWithoutChains" />
+                    </TableViewRow>
+                    <TableViewRow id="tableViewAeDESModeFormsSectionThreeMasonryStructureRowVaultsWithChains">
+                        <Label id="lblAeDESModeFormsSectionThreeMasonryStructureRowVaultsWithChains" />
+                    </TableViewRow>
+                    <TableViewRow id="tableViewAeDESModeFormsSectionThreeMasonryStructureRowDeformableAttics">
+                        <Label id="lblAeDESModeFormsSectionThreeMasonryStructureRowDeformableAttics" />
+                    </TableViewRow>
+                    <TableViewRow id="tableViewAeDESModeFormsSectionThreeMasonryStructureRowSemiDeformableAttics">
+                        <Label id="lblAeDESModeFormsSectionThreeMasonryStructureRowSemiDeformableAttics" />
+                    </TableViewRow>
+                    <TableViewRow id="tableViewAeDESModeFormsSectionThreeMasonryStructureRowRigidAttics">
+                        <Label id="lblAeDESModeFormsSectionThreeMasonryStructureRowRigidAttics" />
+                    </TableViewRow>
+                </TableView>
+                <View id="viewAppButtonSave">
+                    <Widget id="widgetAppButtonSave" src="com.diseg.AppButton" />
+                </View>
+            </ScrollView>
+        </Window>
+    </NavigationWindow>
+</Alloy>

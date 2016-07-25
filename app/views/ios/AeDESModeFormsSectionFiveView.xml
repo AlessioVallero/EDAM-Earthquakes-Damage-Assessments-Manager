@@ -1,0 +1,36 @@
+<Alloy>
+    <NavigationWindow id="navigationWindowSectionFive">
+        <Window id="aedesModeSectionFiveWindow">
+            <LeftNavButton>
+                <Button id="btn_ios_back" onClick="OnBtnBack_Click" />
+            </LeftNavButton>
+
+            <ScrollView id="scrollViewSectionFive">
+                <Label id="lblAeDESModeFormsSectionFiveNonStructuralDamage" />
+                <TableView id="tableViewAeDESModeFormsSectionFiveNonStructuralDamage" onClick="OnTableViewAeDESModeFormsSectionFiveNonStructuralDamage_Click">
+                    <TableViewRow id="tableViewAeDESModeFormsSectionFiveNonStructuralDamageRowPdCC">
+                        <Label id="lblAeDESModeFormsSectionFiveNonStructuralDamageRowPdCC" />
+                    </TableViewRow>
+                    <TableViewRow id="tableViewAeDESModeFormsSectionFiveNonStructuralDamageRowFallingTilesChimneys">
+                        <Label id="lblAeDESModeFormsSectionFiveNonStructuralDamageRowFallingTilesChimneys" />
+                    </TableViewRow>
+                    <TableViewRow id="tableViewAeDESModeFormsSectionFiveNonStructuralDamageRowFallingCornicesParapets">
+                        <Label id="lblAeDESModeFormsSectionFiveNonStructuralDamageRowFallingCornicesParapets" />
+                    </TableViewRow>
+                    <TableViewRow id="tableViewAeDESModeFormsSectionFiveNonStructuralDamageRowFallingInternalExternalObjects">
+                        <Label id="lblAeDESModeFormsSectionFiveNonStructuralDamageRowFallingInternalExternalObjects" />
+                    </TableViewRow>
+                    <TableViewRow id="tableViewAeDESModeFormsSectionFiveNonStructuralDamageRowWaterSupplySewerageOrThermohydraulicDamage">
+                        <Label id="lblAeDESModeFormsSectionFiveNonStructuralDamageRowWaterSupplySewerageOrThermohydraulicDamage" />
+                    </TableViewRow>
+                    <TableViewRow id="tableViewAeDESModeFormsSectionFiveNonStructuralDamageRowMainsElectricityOrGasDamage">
+                        <Label id="lblAeDESModeFormsSectionFiveNonStructuralDamageRowMainsElectricityOrGasDamage" />
+                    </TableViewRow>
+                </TableView>
+                <View id="viewAppButtonSave">
+                    <Widget id="widgetAppButtonSave" src="com.diseg.AppButton" />
+                </View>
+            </ScrollView>
+        </Window>
+    </NavigationWindow>
+</Alloy>

@@ -1,0 +1,18 @@
+<Alloy>
+    <Window id="aedesModeSectionSixWindow">
+        <ScrollView id="scrollViewSectionSix">
+            <Label id="lblAeDESModeFormsSectionSixExternalDanger" />
+            <TableView id="tableViewAeDESModeFormsSectionSixExternalDanger" onClick="OnTableViewAeDESModeFormsSectionSixExternalDanger_Click">
+                <TableViewRow id="tableViewAeDESModeFormsSectionSixExternalDangerRowCollapsesOrFallsFromOtherBuildings">
+                    <Label id="lblAeDESModeFormsSectionSixExternalDangerRowCollapsesOrFallsFromOtherBuildings" />
+                </TableViewRow>
+                <TableViewRow id="tableViewAeDESModeFormsSectionSixExternalDangerRowRuptureOfDistributionNetworks">
+                    <Label id="lblAeDESModeFormsSectionSixExternalDangerRowRuptureOfDistributionNetworks" />
+                </TableViewRow>
+            </TableView>
+            <View id="viewAppButtonSave">
+                <Widget id="widgetAppButtonSave" src="com.diseg.AppButton" />
+            </View>
+        </ScrollView>
+    </Window>
+</Alloy>

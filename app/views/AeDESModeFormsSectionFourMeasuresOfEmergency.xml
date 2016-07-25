@@ -1,0 +1,22 @@
+<Alloy>
+    <Window id="aedesModeSectionFourMeasuresOfEmergencyWindow">
+        <ScrollView id="scrollViewSectionFourMeasuresOfEmergency">
+            <Label id="lblAeDESModeFormsSectionFourMeasuresOfEmergencyFatherTitle" />
+            <View id="viewAppCheckBoxAeDESModeFormsSectionFourMeasuresOfEmergencyDemolitions">
+                <Widget id="widgetAppCheckBoxAeDESModeFormsSectionFourMeasuresOfEmergencyDemolitions" src="com.diseg.AppCheckBox" />
+            </View>
+            <View id="viewAppCheckBoxAeDESModeFormsSectionFourMeasuresOfEmergencyHoopsAndOrTies">
+                <Widget id="widgetAppCheckBoxAeDESModeFormsSectionFourMeasuresOfEmergencyHoopsAndOrTies" src="com.diseg.AppCheckBox" />
+            </View>
+            <View id="viewAppCheckBoxAeDESModeFormsSectionFourMeasuresOfEmergencyRepair">
+                <Widget id="widgetAppCheckBoxAeDESModeFormsSectionFourMeasuresOfEmergencyRepair" src="com.diseg.AppCheckBox" />
+            </View>
+            <View id="viewAppCheckBoxAeDESModeFormsSectionFourMeasuresOfEmergencyProps">
+                <Widget id="widgetAppCheckBoxAeDESModeFormsSectionFourMeasuresOfEmergencyProps" src="com.diseg.AppCheckBox" />
+            </View>
+            <View id="viewAppCheckBoxAeDESModeFormsSectionFourMeasuresOfEmergencyStepsProtection">
+                <Widget id="widgetAppCheckBoxAeDESModeFormsSectionFourMeasuresOfEmergencyStepsProtection" src="com.diseg.AppCheckBox" />
+            </View>
+        </ScrollView>
+    </Window>
+</Alloy>

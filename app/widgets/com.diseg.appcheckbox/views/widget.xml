@@ -1,0 +1,5 @@
+<Alloy>
+    <Label id="lblAppCheckBox" />
+    <Button id="btnAppCheckBoxHelp" onClick="OnBtnHelp_Click" />
+    <Button id="cbAppCheckBox" />
+</Alloy>

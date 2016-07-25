@@ -1,0 +1,157 @@
+// Home page Window
+"#mainWindow":
+{
+    backgroundColor: '#ffffcc'
+} ,
+
+// Home page View
+"#mainView":
+{
+    backgroundColor: '#ffffcc'
+} ,
+
+// Label for choosing mode
+"#lblChooseMode":
+{
+    text: L( 'main_choose_mode' ) ,
+	width: 'auto' ,
+	height: 'auto' ,
+	color: "#000" ,
+	top: '5%' ,
+	font:
+	{
+		fontSize: 16 ,
+        fontFamily: 'Arial' ,
+        fontWeight: 'bold'
+	} ,
+	textAlign: 'center'
+} ,
+
+// App Logo on the Window
+"#imageViewAppLogo":
+{
+    top: '25%' ,
+    height: '30%' ,
+    image: '/images/app_logo.png'
+} ,
+
+// Label developer by
+"#lblDevelopedBy":
+{
+    text: L( 'main_developed_by' ) ,
+    top: '55%' ,
+    height: '8%' ,
+	color: "#000" ,
+	font:
+	{
+		fontSize: 12 ,
+        fontFamily: 'Arial' ,
+        fontWeight: 'bold'
+	} ,
+	textAlign: 'center'
+} ,
+
+// UsersResidents mode button
+"#btn_users_residents_mode":
+{
+    title: L( 'main_users_residents_mode' ) ,
+    backgroundImage: '/images/app_button_normal.png' ,
+    backgroundSelectedImage: '/images/app_button_pressed.png' ,
+    backgroundDisabledImage: '/images/app_button_disabled.png' ,
+    textAlign: Titanium.UI.TEXT_ALIGNMENT_CENTER ,
+    verticalAlign: Titanium.UI.TEXT_VERTICAL_ALIGNMENT_CENTER ,
+    top: '64%' ,
+    width: 110 ,
+    height: '14%' ,
+    font:
+    {
+        fontFamily: 'Arial' ,
+        fontWeight: 'bold' ,
+        fontSize: '14'
+    }
+} ,
+
+// Professional mode button
+"#btn_professional_mode":
+{
+    title: L( 'main_professional_mode' ) ,
+    backgroundImage: '/images/app_button_normal.png' ,
+    backgroundSelectedImage: '/images/app_button_pressed.png' ,
+    backgroundDisabledImage: '/images/app_button_disabled.png' ,
+    textAlign: Titanium.UI.TEXT_ALIGNMENT_CENTER ,
+    verticalAlign: Titanium.UI.TEXT_VERTICAL_ALIGNMENT_CENTER ,
+    top: '82%' ,
+    width: 110 ,
+    height: '14%' ,
+    font:
+    {
+        fontFamily: 'Arial' ,
+        fontWeight: 'bold' ,
+        fontSize: '14'
+    }
+} ,
+
+// About us view
+"#viewAppButtonHelp":
+{
+    top: '64%' ,
+    left: 3 ,
+    height: 100 ,
+    width: 60
+} ,
+
+// Tools view
+"#viewAppButtonTools":
+{
+    top: '64%' ,
+    right: 3 ,
+    height: 100 ,
+    width: 60
+} ,
+
+// Activity Indicator iOS
+"#activity_indicator[platform=ios]":
+{
+    color: '#000' ,
+    font:
+    {
+        fontFamily: 'Helvetica Neue' ,
+        fontSize: 11 ,
+        fontWeight: 'bold'
+    } ,
+    style: Ti.UI.iPhone.ActivityIndicatorStyle.DARK ,
+    width: Ti.UI.SIZE ,
+    height: Ti.UI.SIZE ,
+    zIndex: 1
+} ,
+
+// Activity Indicator Android-mobileweb
+"#activity_indicator[platform=android,mobileweb]":
+{
+    color: '#000' ,
+    font:
+    {
+        fontFamily: 'Helvetica Neue' ,
+        fontSize: 11 ,
+        fontWeight: 'bold'
+    } ,
+    style: Ti.UI.ActivityIndicatorStyle.DARK ,
+    width: Ti.UI.SIZE ,
+    height: Ti.UI.SIZE ,
+    zIndex: 1
+} ,
+
+// Activity Indicator BlackBerry
+"#activity_indicator[platform=blackberry]":
+{
+    color: '#000' ,
+    font:
+    {
+        fontFamily: 'Helvetica Neue' ,
+        fontSize: 11 ,
+        fontWeight: 'bold'
+    } ,
+    width: Ti.UI.SIZE ,
+    height: Ti.UI.SIZE ,
+    zIndex: 1
+}

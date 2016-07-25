@@ -1,0 +1,5 @@
+<Alloy>
+    <Window id="baeaSinglePictureViewWindow">
+        <ImageView id="baea_single_picture_view" />
+    </Window>
+</Alloy>

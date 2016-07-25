@@ -1,0 +1,26 @@
+<Alloy>
+    <Window id="baeaModeFormsWindow" onClose="OnBAEAModeFormsWindow_Close">
+        <ActivityIndicator id="activity_indicator" />
+
+        <Button id="btnLogout" onClick = 'OnBtnLogout_Click' />
+        <Label id="lblWelcome" />
+
+        <View id="viewAppButtonViewFeatures">
+            <Widget id="widgetAppButtonViewFeatures" src="com.diseg.AppButton" />
+        </View>
+        <View id="viewAppButtonAdd">
+            <Widget id="widgetAppButtonAdd" src="com.diseg.AppButton" />
+        </View>
+        <View id="viewAppButtonServerSynch">
+            <Widget id="widgetAppButtonServerSynch" src="com.diseg.AppButton" />
+        </View>
+
+        <TableView id="tableViewBAEAModeForms" dataCollection="BAEAForms" onClick="OnTableViewForms_Click">
+            <TableViewRow hasChild="true" rowId="{ID}" isSynchronized="{SYNCHRONIZED}" className="form_row">
+                <ImageView id="imgCheck" />
+                <Label id="lblValue" text="{ID}" />
+                <Button id="btnDelete" />
+            </TableViewRow>
+        </TableView>
+    </Window>
+</Alloy>

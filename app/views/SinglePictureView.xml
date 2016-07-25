@@ -1,0 +1,35 @@
+<Alloy>
+    <Window id="singlePictureViewWindow" onOpen="OnSinglePictureWindow_Open">
+        <ScrollableView id="scrollable_picture_data">
+            <View id="viewImageView">
+                <ImageView id="single_picture_view" />
+            </View>
+            <View id="viewData">
+                <ScrollView id="scrollViewSinglePictureView">
+                    <View id="viewAppTextFieldLatitude">
+                        <Widget id="widgetAppTextFieldLatitude" src="com.diseg.AppTextField" />
+                    </View>
+                    <View id="viewAppTextFieldLongitude">
+                        <Widget id="widgetAppTextFieldLongitude" src="com.diseg.AppTextField" />
+                    </View>
+                    <View id="viewAppTextFieldAddress">
+                        <Widget id="widgetAppTextFieldAddress" src="com.diseg.AppTextField" />
+                    </View>
+                    <View id="viewAppComboBoxHeading">
+                        <Widget id="widgetAppComboBoxHeading" src="com.diseg.AppComboBox" />
+                    </View>
+                    <View id="viewAppTextFieldDamagesLevel">
+                        <Widget id="widgetAppTextFieldDamagesLevel" src="com.diseg.AppTextField" />
+                    </View>
+                    <View id="viewAppTextFieldDamagesArea">
+                        <Widget id="widgetAppTextFieldDamagesArea" src="com.diseg.AppTextField" />
+                    </View>
+                    <View id="viewAppTextFieldComment">
+                        <Widget id="widgetAppTextFieldComment" src="com.diseg.AppTextField" />
+                    </View>
+                    <!--<Button id="btnExportToGallery" onClick="OnBtnExportToGallery_Click" /> NOT SUPPORTED IN ANDROID AT THE MOMENT-->
+                </ScrollView>
+            </View>
+        </ScrollableView>
+    </Window>
+</Alloy>

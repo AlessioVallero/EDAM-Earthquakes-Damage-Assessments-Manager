@@ -1,0 +1,74 @@
+// The Window
+"#shedModeDamagesMeasuresOfEmergencyInfillElementsDetailsWindow":
+{
+    backgroundColor: '#ffffcc'
+} ,
+
+// Back button iOS (to papers general section view)
+"#btn_ios_back":
+{
+    title: L( 'generic_back_btn_title' )
+} ,
+
+// ScrollView
+"#scrollViewDamagesMeasuresOfEmergencyInfillElementsDetails":
+{
+    top: 10 ,
+    scrollType: "vertical"
+} ,
+
+// ConnectionOfHorizontalPanelsBySteelCables view
+"#viewAppCheckBoxShedModeFormsDamagesMeasuresOfEmergencyConnectionOfHorizontalPanelsBySteelCables":
+{
+    top: 0 ,
+    height: 50 ,
+    width: 290
+} ,
+
+// InclusionOfAntiDropCableForHorizontalPanels view
+"#viewAppCheckBoxShedModeFormsDamagesMeasuresOfEmergencyInclusionOfAntiDropCableForHorizontalPanels":
+{
+    top: 70 ,
+    height: 50 ,
+    width: 290
+} ,
+
+// ConnectingThePillarsOfCurtainPanel view
+"#viewAppCheckBoxShedModeFormsDamagesMeasuresOfEmergencyConnectingThePillarsOfCurtainPanel":
+{
+    top: 140 ,
+    height: 50 ,
+    width: 290
+} ,
+
+// ConnectionOfVerticalPanelsBySteelCables view
+"#viewAppCheckBoxShedModeFormsDamagesMeasuresOfEmergencyConnectionOfVerticalPanelsBySteelCables":
+{
+    top: 210 ,
+    height: 50 ,
+    width: 290
+} ,
+
+// ConnectionOfVerticalPanelsBySteelSquares view
+"#viewAppCheckBoxShedModeFormsDamagesMeasuresOfEmergencyConnectionOfVerticalPanelsBySteelSquares":
+{
+    top: 280 ,
+    height: 50 ,
+    width: 290
+} ,
+
+// InclusionOfAntiDropCableForVerticalPanels view
+"#viewAppCheckBoxShedModeFormsDamagesMeasuresOfEmergencyInclusionOfAntiDropCableForVerticalPanels":
+{
+    top: 350 ,
+    height: 50 ,
+    width: 290
+} ,
+
+// InclusionOfTwoAntiDropCablesPanelCorner view
+"#viewAppCheckBoxShedModeFormsDamagesMeasuresOfEmergencyInclusionOfTwoAntiDropCablesPanelCorner":
+{
+    top: 420 ,
+    height: 50 ,
+    width: 290
+}

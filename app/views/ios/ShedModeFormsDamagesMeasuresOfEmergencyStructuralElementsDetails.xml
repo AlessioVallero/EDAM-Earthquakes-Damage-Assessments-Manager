@@ -1,0 +1,51 @@
+<Alloy>
+    <NavigationWindow id="navigationWindowDamagesMeasuresOfEmergencyStructuralElementsDetails">
+        <Window id="shedModeDamagesMeasuresOfEmergencyStructuralElementsDetailsWindow">
+            <LeftNavButton>
+                <Button id="btn_ios_back" onClick="OnBtnBack_Click" />
+            </LeftNavButton>
+
+            <ScrollView id="scrollViewDamagesMeasuresOfEmergencyStructuralElementsDetails">
+                <View id="viewAppCheckBoxShedModeFormsDamagesMeasuresOfEmergencyBeamColumnConnectionThroughAxleSteel">
+                    <Widget id="widgetAppCheckBoxShedModeFormsDamagesMeasuresOfEmergencyBeamColumnConnectionThroughAxleSteel" src="com.diseg.AppCheckBox" />
+                </View>
+                <View id="viewAppCheckBoxShedModeFormsDamagesMeasuresOfEmergencyBeamColumnConnectionByPinsAndSteelPlates">
+                    <Widget id="widgetAppCheckBoxShedModeFormsDamagesMeasuresOfEmergencyBeamColumnConnectionByPinsAndSteelPlates" src="com.diseg.AppCheckBox" />
+                </View>
+                <View id="viewAppCheckBoxShedModeFormsDamagesMeasuresOfEmergencyBeamColumnConnectionInSteelByCables">
+                    <Widget id="widgetAppCheckBoxShedModeFormsDamagesMeasuresOfEmergencyBeamColumnConnectionInSteelByCables" src="com.diseg.AppCheckBox" />
+                </View>
+                <View id="viewAppCheckBoxShedModeFormsDamagesMeasuresOfEmergencyInclusionOfConnectorsForSteelBeamBoltedAPillarWithConfinement">
+                    <Widget id="widgetAppCheckBoxShedModeFormsDamagesMeasuresOfEmergencyInclusionOfConnectorsForSteelBeamBoltedAPillarWithConfinement" src="com.diseg.AppCheckBox" />
+                </View>
+                <View id="viewAppCheckBoxShedModeFormsDamagesMeasuresOfEmergencyPrefabSystemRollOfBeam">
+                    <Widget id="widgetAppCheckBoxShedModeFormsDamagesMeasuresOfEmergencyPrefabSystemRollOfBeam" src="com.diseg.AppCheckBox" />
+                </View>
+                <View id="viewAppCheckBoxShedModeFormsDamagesMeasuresOfEmergencyPillarPillarConnectionThroughMetalProfilesOnAxisAtThePier">
+                    <Widget id="widgetAppCheckBoxShedModeFormsDamagesMeasuresOfEmergencyPillarPillarConnectionThroughMetalProfilesOnAxisAtThePier" src="com.diseg.AppCheckBox" />
+                </View>
+                <View id="viewAppCheckBoxShedModeFormsDamagesMeasuresOfEmergencyPillarPillarConnectionThroughMetalDishesAtTheEndOfThePier">
+                    <Widget id="widgetAppCheckBoxShedModeFormsDamagesMeasuresOfEmergencyPillarPillarConnectionThroughMetalDishesAtTheEndOfThePier" src="com.diseg.AppCheckBox" />
+                </View>
+                <View id="viewAppCheckBoxShedModeFormsDamagesMeasuresOfEmergencyPillarPillarConnectionThroughStrandSteel">
+                    <Widget id="widgetAppCheckBoxShedModeFormsDamagesMeasuresOfEmergencyPillarPillarConnectionThroughStrandSteel" src="com.diseg.AppCheckBox" />
+                </View>
+                <View id="viewAppCheckBoxShedModeFormsDamagesMeasuresOfEmergencyBeamTileConnectionThroughAnchoredSteelCablesOnTheSidesOfTheLegs">
+                    <Widget id="widgetAppCheckBoxShedModeFormsDamagesMeasuresOfEmergencyBeamTileConnectionThroughAnchoredSteelCablesOnTheSidesOfTheLegs" src="com.diseg.AppCheckBox" />
+                </View>
+                <View id="viewAppCheckBoxShedModeFormsDamagesMeasuresOfEmergencyBeamTileConnectionThroughAnchoredSteelCablesUnderTheLegs">
+                    <Widget id="widgetAppCheckBoxShedModeFormsDamagesMeasuresOfEmergencyBeamTileConnectionThroughAnchoredSteelCablesUnderTheLegs" src="com.diseg.AppCheckBox" />
+                </View>
+                <View id="viewAppCheckBoxShedModeFormsDamagesMeasuresOfEmergencyInclusionOfConnectorsMadeOfElementsInABoltedSteelBeamAndTile">
+                    <Widget id="widgetAppCheckBoxShedModeFormsDamagesMeasuresOfEmergencyInclusionOfConnectorsMadeOfElementsInABoltedSteelBeamAndTile" src="com.diseg.AppCheckBox" />
+                </View>
+                <View id="viewAppCheckBoxShedModeFormsDamagesMeasuresOfEmergencyStructuralElementsRowTileBeamConnection">
+                    <Widget id="widgetAppCheckBoxShedModeFormsDamagesMeasuresOfEmergencyStructuralElementsRowTileBeamConnection" src="com.diseg.AppCheckBox" />
+                </View>
+                <View id="viewAppCheckBoxShedModeFormsDamagesMeasuresOfEmergencyConstructionOfBracingGroundWithSteelRopes">
+                    <Widget id="widgetAppCheckBoxShedModeFormsDamagesMeasuresOfEmergencyConstructionOfBracingGroundWithSteelRopes" src="com.diseg.AppCheckBox" />
+                </View>
+            </ScrollView>
+        </Window>
+    </NavigationWindow>
+</Alloy>

@@ -1,0 +1,18 @@
+<Alloy>
+    <NavigationWindow id="navigationWindowBAEAModeFormsManageSectionView">
+        <Window id="baeaModeFormsManageSectionViewWindow">
+            <LeftNavButton>
+                <Button id="btn_ios_back" onClick="OnBtnBack_Click" />
+            </LeftNavButton>
+
+            <ActivityIndicator id="activity_indicator" />
+
+            <View id="viewAppButtonAdd">
+                <Widget id="widgetAppButtonAdd" src="com.diseg.AppButton" />
+            </View>
+            <ScrollView id="scrollViewBAEAModeFormsManageSectionView">
+                <TableView id="tableViewBAEAModeFormsManageSection" onClick="OnTableViewBAEAModeFormsManageSection_Click" />
+            </ScrollView>
+        </Window>
+    </NavigationWindow>
+</Alloy>

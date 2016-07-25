@@ -1,0 +1,84 @@
+// The Window
+"#aedesModeSectionFourDamagesWindow":
+{
+    title: L( 'aedes_mode_section_four_damages_title' ) ,
+    backgroundColor: '#ffffcc'
+} ,
+
+// Back button iOS (to papers general section view)
+"#btn_ios_back":
+{
+    title: L( 'generic_back_btn_title' )
+} ,
+
+// ScrollView
+"#scrollViewSectionFourDamages":
+{
+    top: 10 ,
+    contentWidth: '100%' ,
+    scrollType: "vertical"
+} ,
+
+// Damage label
+"#lblAeDESModeFormsSectionFourDamage":
+{
+    text: L( 'generic_damage_text_msg' ) ,
+    top: 0 ,
+    width: 290 ,
+    height: 18 ,
+    font:
+    {
+        fontFamily: 'Arial' ,
+        fontWeight: 'bold' ,
+        fontSize: '12'
+    } ,
+    color: '#000'
+} ,
+
+// Father title label
+"#lblAeDESModeFormsSectionFourDamageFatherTitle":
+{
+    top: 30 ,
+    width: 290 ,
+    height: 18 ,
+    font:
+    {
+        fontFamily: 'Arial' ,
+        fontWeight: 'bold' ,
+        fontSize: '12'
+    } ,
+    color: '#000'
+} ,
+
+// D4D5 view
+"#viewAppComboBoxAeDESModeFormsSectionFourDamagesD4D5":
+{
+    top: 60 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// D2D3 view
+"#viewAppComboBoxAeDESModeFormsSectionFourDamagesD2D3":
+{
+    top: 130 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// D0D1 view
+"#viewAppComboBoxAeDESModeFormsSectionFourDamagesD0D1[platform=ios]":
+{
+    top: 200 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// D0D1 view
+"#viewAppComboBoxAeDESModeFormsSectionFourDamagesD0D1":
+{
+    top: 200 ,
+    height: 50 ,
+    width: Ti.UI.FILL ,
+    bottom: 200
+}

@@ -1,0 +1,4 @@
+<resources>
+    <string name="NSLocationWhenInUseUsageDescription">Geolocalizzazione precisa</string>
+    <string name="NSLocationAlwaysUsageDescription">Geolocalizzazione precisa</string>
+</resources>

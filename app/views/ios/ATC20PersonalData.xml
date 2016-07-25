@@ -1,0 +1,22 @@
+<Alloy>
+    <NavigationWindow id="navigationWindowATC20PD">
+        <Window id="atc20PersonalDataWindow">
+            <LeftNavButton>
+                <Button id="btn_ios_back" onClick="OnBtnBack_Click" />
+            </LeftNavButton>
+            <RightNavButton>
+                <Button id="btn_ios_Save" onClick="OnBtnSave_Click" />
+            </RightNavButton>
+            <ActivityIndicator id="activity_indicator" />
+
+            <ScrollView id="scrollView_fields">
+                <View id="viewAppTextFieldInspectorID">
+                    <Widget id="widgetAppTextFieldInspectorID" src="com.diseg.AppTextField" />
+                </View>
+                <View id="viewAppTextFieldAffiliation">
+                    <Widget id="widgetAppTextFieldAffiliation" src="com.diseg.AppTextField" />
+                </View>
+            </ScrollView>
+	   </Window>
+    </NavigationWindow>
+</Alloy>

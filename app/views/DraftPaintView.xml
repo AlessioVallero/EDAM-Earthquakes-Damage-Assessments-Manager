@@ -1,0 +1,7 @@
+<Alloy>
+    <Window id="draft_paint_view_container_window">
+        <ActivityIndicator id="activity_indicator" />
+
+        <Widget id="draft_paint_widget" src="com.diseg.PaintView" />
+    </Window>
+</Alloy>

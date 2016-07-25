@@ -1,0 +1,26 @@
+// Button
+"#btnAppButton":
+{
+    top: 0 ,
+    borderColor: "#C0C0C0" ,
+    borderWidth: 1 ,
+    borderRadius: 4 ,
+    height: 60 ,
+    width: 60
+} ,
+
+// Label
+"#lblAppButton":
+{
+    top: 60 ,
+    width: 60 ,
+    height: 28 ,
+    font:
+    {
+        fontFamily: 'Arial' ,
+        fontWeight: 'bold' ,
+        fontSize: '11'
+    } ,
+    color: '#000' ,
+    textAlign: 'center'
+}

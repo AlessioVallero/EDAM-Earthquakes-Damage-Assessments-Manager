@@ -1,0 +1,31 @@
+<Alloy>
+    <NavigationWindow id="navigationWindowATC20NZPD">
+        <Window id="atc20NZPersonalDataWindow">
+            <LeftNavButton>
+                <Button id="btn_ios_back" onClick="OnBtnBack_Click" />
+            </LeftNavButton>
+            <RightNavButton>
+                <Button id="btn_ios_Save" onClick="OnBtnSave_Click" />
+            </RightNavButton>
+            <ActivityIndicator id="activity_indicator" />
+
+            <View id="sign_btns_view">
+                <View id="viewAppButtonViewSign">
+                    <Widget id="widgetAppButtonViewSign" src="com.diseg.AppButton" />
+                </View>
+                <View id="viewAppButtonCreateSign">
+                    <Widget id="widgetAppButtonCreateSign" src="com.diseg.AppButton" />
+                </View>
+            </View>
+
+            <ScrollView id="scrollView_fields">
+                <View id="viewAppTextFieldInspectorID">
+                    <Widget id="widgetAppTextFieldInspectorID" src="com.diseg.AppTextField" />
+                </View>
+                <View id="viewAppTextFieldAuthority">
+                    <Widget id="widgetAppTextFieldAuthority" src="com.diseg.AppTextField" />
+                </View>
+            </ScrollView>
+	   </Window>
+    </NavigationWindow>
+</Alloy>

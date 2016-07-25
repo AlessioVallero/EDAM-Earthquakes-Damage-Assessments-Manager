@@ -1,0 +1,44 @@
+<Alloy>
+    <Window id="aedesModeFormsSectionOneWindow" onAndroid:back="OnAndroidBackButton_Click" onAndroidback="OnAndroidBackButton_Click">
+        <ActivityIndicator id="activity_indicator" />
+        <ScrollView id="scrollViewSectionOne">
+            <View id="viewAppComboBoxAeDESModeFormsSectionOneCodeOfUse">
+                <Widget id="widgetAppComboBoxAeDESModeFormsSectionOneCodeOfUse" src="com.diseg.AppComboBox" />
+            </View>
+            <View id="viewAppComboBoxAeDESModeFormsSectionOneBuildingPosition">
+                <Widget id="widgetAppComboBoxAeDESModeFormsSectionOneBuildingPosition" src="com.diseg.AppComboBox" />
+            </View>
+            <Button id="btnAeDESModeFormsSectionOneLoadPosition" onClick="OnBtnLoadPosition_Click" />
+            <View id="viewAppTextFieldAeDESModeFormsSectionOneLatitude">
+                <Widget id="widgetAppTextFieldAeDESModeFormsSectionOneLatitude" src="com.diseg.AppTextField" />
+            </View>
+            <View id="viewAppTextFieldAeDESModeFormsSectionOneLongitude">
+                <Widget id="widgetAppTextFieldAeDESModeFormsSectionOneLongitude" src="com.diseg.AppTextField" />
+            </View>
+            <View id="viewAppTextFieldAeDESModeFormsSectionOneAltitude">
+                <Widget id="widgetAppTextFieldAeDESModeFormsSectionOneAltitude" src="com.diseg.AppTextField" />
+            </View>
+            <View id="viewAppTextFieldAeDESModeFormsSectionOneProvince">
+                <Widget id="widgetAppTextFieldAeDESModeFormsSectionOneProvince" src="com.diseg.AppTextField" />
+            </View>
+            <View id="viewAppTextFieldAeDESModeFormsSectionOneMunicipality">
+                <Widget id="widgetAppTextFieldAeDESModeFormsSectionOneMunicipality" src="com.diseg.AppTextField" />
+            </View>
+            <View id="viewAppTextFieldAeDESModeFormsSectionOnePlace">
+                <Widget id="widgetAppTextFieldAeDESModeFormsSectionOnePlace" src="com.diseg.AppTextField" />
+            </View>
+            <View id="viewAppTextFieldAeDESModeFormsSectionOneAddress">
+                <Widget id="widgetAppTextFieldAeDESModeFormsSectionOneAddress" src="com.diseg.AppTextField" />
+            </View>
+            <View id="viewAppTextFieldAeDESModeFormsSectionOneCivicNo">
+                <Widget id="widgetAppTextFieldAeDESModeFormsSectionOneCivicNo" src="com.diseg.AppTextField" />
+            </View>
+            <View id="viewAppTextFieldAeDESModeFormsSectionOneBuildingNameOrOwner">
+                <Widget id="widgetAppTextFieldAeDESModeFormsSectionOneBuildingNameOrOwner" src="com.diseg.AppTextField" />
+            </View>
+            <View id="viewAppButtonSave">
+                <Widget id="widgetAppButtonSave" src="com.diseg.AppButton" />
+            </View>
+        </ScrollView>
+    </Window>
+</Alloy>

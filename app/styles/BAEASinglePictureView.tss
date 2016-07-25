@@ -1,0 +1,18 @@
+// View image window
+"#baeaSinglePictureViewWindow":
+{
+    title: L( 'baea_single_picture_view_title' ) ,
+    backgroundColor: '#ffffcc'
+} ,
+
+// Back button iOS
+"#btn_ios_back":
+{
+    title: L( 'generic_back_btn_title' )
+}
+
+// ImageView
+"#baea_single_picture_view":
+{
+    defaultImage: "/images/img_not_found.png"
+}

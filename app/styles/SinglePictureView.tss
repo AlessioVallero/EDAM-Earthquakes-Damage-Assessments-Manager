@@ -1,0 +1,124 @@
+// View image window
+"#singlePictureViewWindow":
+{
+    title: L( 'single_picture_view_title' ) ,
+    backgroundColor: '#ffffcc'
+} ,
+
+// Back button iOS (to papers general section view)
+"#btn_ios_back":
+{
+    title: L( 'generic_back_btn_title' )
+}
+
+// ScrollableView
+"#scrollable_picture_data":
+{
+    showPagingControl: true ,
+    currentPage: 0
+} ,
+
+// ImageView
+"#single_picture_view":
+{
+    defaultImage: "/images/img_not_found.png"
+} ,
+
+"#scrollViewSinglePictureView":
+{
+    top: 0 ,
+    scrollType: "vertical"
+} ,
+
+// Latitude view
+"#viewAppTextFieldLatitude":
+{
+    top: 10 ,
+    left: 5 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// Longitude view
+"#viewAppTextFieldLongitude":
+{
+    top: 62 ,
+    left: 5 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// Address view
+"#viewAppTextFieldAddress":
+{
+    top: 114 ,
+    left: 5 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// Heading view
+"#viewAppComboBoxHeading":
+{
+    top: 166 ,
+    left: 5 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// DamagesLevel view
+"#viewAppTextFieldDamagesLevel":
+{
+    top: 218 ,
+    left: 5 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// DamagesArea view
+"#viewAppTextFieldDamagesArea":
+{
+    top: 270 ,
+    left: 5 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// Comment view iOS
+"#viewAppTextFieldComment[platform=ios]":
+{
+    top: 322 ,
+    left: 5 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// Comment view Android
+"#viewAppTextFieldComment":
+{
+    top: 322 ,
+    left: 5 ,
+    height: 50 ,
+    width: Ti.UI.FILL ,
+    bottom: 10
+} ,
+
+// Export to gallery button
+"#btnExportToGallery":
+{
+    title: L( 'generic_export_to_gallery_btn_title' ) ,
+    backgroundImage: '/images/app_button_normal.png' ,
+    backgroundSelectedImage: '/images/app_button_pressed.png' ,
+    backgroundDisabledImage: '/images/app_button_disabled.png' ,
+    top: 377 ,
+    height: 50 ,
+    left: 10 ,
+    right: 10 ,
+    font:
+    {
+        fontFamily: 'Arial' ,
+        fontWeight: 'bold' ,
+        fontSize: '12'
+    } ,
+    bottom: 10
+}

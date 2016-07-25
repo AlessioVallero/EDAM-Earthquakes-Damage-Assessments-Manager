@@ -1,0 +1,12 @@
+<Alloy>
+    <Window id="baeaModeLifelinesElectricPowerDeliveryWindow">
+        <ScrollView id="scrollViewLifelinesElectricPowerDelivery">
+            <View id="viewAppCheckBoxBAEAModeFormsLifelinesElectricPowerDeliveryOverheadAndBuriedTransmissionLines">
+                <Widget id="widgetAppCheckBoxBAEAModeFormsLifelinesElectricPowerDeliveryOverheadAndBuriedTransmissionLines" src="com.diseg.AppCheckBox" />
+            </View>
+            <View id="viewAppCheckBoxBAEAModeFormsLifelinesElectricPowerDeliverySubstationAndSwitchyards">
+                <Widget id="widgetAppCheckBoxBAEAModeFormsLifelinesElectricPowerDeliverySubstationAndSwitchyards" src="com.diseg.AppCheckBox" />
+            </View>
+        </ScrollView>
+    </Window>
+</Alloy>

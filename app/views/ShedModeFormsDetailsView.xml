@@ -1,0 +1,17 @@
+<Alloy>
+    <Window id="shedModeFormsDetailsWindow">
+        <ScrollView id="scrollViewFormsDetails">
+            <View id="viewAppTextFieldShedModeFormsDetailsFormNo">
+                <Widget id="widgetAppTextFieldShedModeFormsDetailsFormNo" src="com.diseg.AppTextField" />
+            </View>
+            <View id="viewDate">
+                <Label id="lblDate" />
+                <View id="viewDisabler" />
+                <Picker id="datePickerDate" onChange="OnDate_Change" />
+            </View>
+            <View id="viewAppButtonSave">
+                <Widget id="widgetAppButtonSave" src="com.diseg.AppButton" />
+            </View>
+        </ScrollView>
+    </Window>
+</Alloy>

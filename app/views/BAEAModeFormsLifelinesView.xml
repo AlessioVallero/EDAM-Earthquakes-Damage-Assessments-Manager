@@ -1,0 +1,50 @@
+<Alloy>
+    <Window id="baeaModeFormsLifelinesWindow" onAndroid:back="OnAndroidBackButton_Click" onAndroidback="OnAndroidBackButton_Click">
+        <ActivityIndicator id="activity_indicator" />
+        <ScrollView id="scrollViewLifelines">
+            <View id="viewAppTextFieldBAEAModeFormsLifelinesSiteName">
+                <Widget id="widgetAppTextFieldBAEAModeFormsLifelinesSiteName" src="com.diseg.AppTextField" />
+            </View>
+            <TableView id="tableViewBAEAModeFormsLifelinesPhoto" onClick="OnTableViewBAEAModeFormsLifelinesPhoto_Click">
+                <TableViewRow hasChild="true" className="lifelines_photo_row">
+                    <Label id="lblPhoto" />
+                </TableViewRow>
+            </TableView>
+            <Button id="btnBAEAModeFormsLifelinesLoadAddress" onClick="OnBtnLoadAddress_Click" />
+            <View id="viewAppTextFieldBAEAModeFormsLifelinesLatitude">
+                <Widget id="widgetAppTextFieldBAEAModeFormsLifelinesLatitude" src="com.diseg.AppTextField" />
+            </View>
+            <View id="viewAppTextFieldBAEAModeFormsLifelinesLongitude">
+                <Widget id="widgetAppTextFieldBAEAModeFormsLifelinesLongitude" src="com.diseg.AppTextField" />
+            </View>
+            <View id="viewAppTextFieldBAEAModeFormsLifelinesAddress">
+                <Widget id="widgetAppTextFieldBAEAModeFormsLifelinesAddress" src="com.diseg.AppTextField" />
+            </View>
+            <Button id="btnBAEAModeFormsLifelinesViewAddress" onClick="OnBtnViewAddress_Click" />
+            <TableView id="tableViewBAEAModeFormsLifelines" onClick="OnTableViewBAEAModeFormsLifelines_Click">
+                <TableViewRow hasChild="true" className="lifelines_row">
+                    <Label id="lblCommunication" />
+                </TableViewRow>
+                <TableViewRow hasChild="true" className="lifelines_row">
+                    <Label id="lblElectricPowerDelivery" />
+                </TableViewRow>
+                <TableViewRow hasChild="true" className="lifelines_row">
+                    <Label id="lblOther" />
+                </TableViewRow>
+            </TableView>
+            <View id="viewAppComboBoxBAEAModeFormsLifelinesFunctionality">
+                <Widget id="widgetAppComboBoxBAEAModeFormsLifelinesFunctionality" src="com.diseg.AppComboBox" />
+            </View>
+            <View id="viewAppComboBoxBAEAModeFormsLifelinesRepairTime">
+                <Widget id="widgetAppComboBoxBAEAModeFormsLifelinesRepairTime" src="com.diseg.AppComboBox" />
+            </View>
+            <View id="viewAppComboBoxBAEAModeFormsLifelinesRecommendFurtherInvestigation">
+                <Widget id="widgetAppComboBoxBAEAModeFormsLifelinesRecommendFurtherInvestigation" src="com.diseg.AppComboBox" />
+            </View>
+            <View id="viewAppTextFieldBAEAModeFormsLifelinesNotes">
+                <Widget id="widgetAppTextFieldBAEAModeFormsLifelinesNotes" src="com.diseg.AppTextField" />
+            </View>
+            <Button id="btnBAEAModeFormsLifelinesRecord" onClick="OnBtnRecord_Click" />
+        </ScrollView>
+    </Window>
+</Alloy>

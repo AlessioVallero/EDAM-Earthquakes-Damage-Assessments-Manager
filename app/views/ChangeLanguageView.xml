@@ -1,0 +1,12 @@
+<Alloy>
+    <Window id="changeLanguageViewWindow" onAndroid:back="OnAndroidBackButton_Click" onAndroidback="OnAndroidBackButton_Click">
+        <ScrollView id="scrollViewChangeLanguage">
+            <View id="viewAppComboBoxChangeLanguage">
+                <Widget id="widgetAppComboBoxChangeLanguage" src="com.diseg.AppComboBox" />
+            </View>
+            <View id="viewAppButtonDone">
+                <Widget id="widgetAppButtonDone" src="com.diseg.AppButton" />
+            </View>
+        </ScrollView>
+    </Window>
+</Alloy>

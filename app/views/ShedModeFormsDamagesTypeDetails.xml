@@ -1,0 +1,17 @@
+<Alloy>
+    <Window id="shedModeDamageDetailsWindow">
+        <ScrollView id="scrollViewDamageDetails">
+            <Label id="lblShedModeFormsDamageDetailsFatherTitle" />
+            <View id="viewAppComboBoxShedModeFormsDamageDetailsD4D5">
+                <Widget id="widgetAppComboBoxShedModeFormsDamageDetailsD4D5" src="com.diseg.AppComboBox" />
+            </View>
+            <View id="viewAppComboBoxShedModeFormsDamageDetailsD2D3">
+                <Widget id="widgetAppComboBoxShedModeFormsDamageDetailsD2D3" src="com.diseg.AppComboBox" />
+            </View>
+            <View id="viewAppComboBoxShedModeFormsDamageDetailsD0D1">
+                <Widget id="widgetAppComboBoxShedModeFormsDamageDetailsD0D1" src="com.diseg.AppComboBox" />
+            </View>
+            <Button id="btnShedModeFormsDamageDetailsHelp" onClick="OnBtnHelp_Click" />
+        </ScrollView>
+    </Window>
+</Alloy>

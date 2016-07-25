@@ -1,0 +1,43 @@
+// Label
+"#lblAppComboBox":
+{
+    left: 0 ,
+    width: 80 ,
+    height: 50 ,
+    font:
+    {
+        fontFamily: 'Arial' ,
+        fontWeight: 'bold' ,
+        fontSize: '12'
+    } ,
+    color: '#000' ,
+    textAlign: 'right'
+} ,
+
+// Widget ComboBox
+"#widgetAppComboBox":
+{
+    left: 90 ,
+    right: 50 ,
+    height: 50 ,
+    width: Ti.UI.FILL ,
+    borderStyle: Ti.UI.INPUT_BORDERSTYLE_ROUNDED ,
+    dropButton:
+    {
+        color: "black" ,
+        selectedColor: "yellow" ,
+        style: Ti.UI.iPhone.SystemButtonStyle.PLAIN
+    } 
+} ,
+
+// Help button
+"#btnAppComboBoxHelp":
+{
+    right: 10 ,
+    width: 32 ,
+    title: '' ,
+    height: 32 ,
+    backgroundImage: '/images/help_normal.png' ,
+    backgroundSelectedImage: '/images/help_pressed.png' ,
+    backgroundDisabledImage: '/images/help_disabled.png'
+}

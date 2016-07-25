@@ -1,0 +1,36 @@
+// View change language window
+"#changeLanguageViewWindow":
+{
+    title: L( 'change_language_view_title' ) ,
+    backgroundColor: '#ffffcc'
+} ,
+
+// Back button iOS (to papers general section view)
+"#btn_ios_back":
+{
+    title: L( 'generic_back_btn_title' )
+}
+
+// ScrollView
+"#scrollViewChangeLanguage":
+{
+    top: 20 ,
+    contentWidth: '100%' ,
+    scrollType: "vertical"
+} ,
+
+// ChangeLanguage view
+"#viewAppComboBoxChangeLanguage":
+{
+    top: 0 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// Done view 
+"#viewAppButtonDone":
+{
+    top: 80 ,
+    width: 60 ,
+    height: 84
+}

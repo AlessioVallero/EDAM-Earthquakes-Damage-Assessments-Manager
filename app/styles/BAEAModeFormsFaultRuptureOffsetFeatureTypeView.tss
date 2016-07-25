@@ -1,0 +1,67 @@
+// The Window
+"#baeaModeFaultRuptureOffsetFeatureTypeWindow":
+{
+    title: L( 'baea_mode_fault_rupture_offset_feature_type_title' ) ,
+    backgroundColor: '#ffffcc'
+} ,
+
+// Back button iOS (to FaultRupture view)
+"#btn_ios_back":
+{
+    title: L( 'generic_back_btn_title' )
+} ,
+
+// ScrollView
+"#scrollViewFaultRuptureOffsetFeatureType":
+{
+    top: 10 ,
+    scrollType: "vertical"
+} ,
+
+// Soil view
+"#viewAppCheckBoxBAEAModeFormsFaultRuptureOffsetFeatureTypeSoil":
+{
+    top: 0 ,
+    height: 50 ,
+    width: 290
+} ,
+
+// Bedrock view
+"#viewAppCheckBoxBAEAModeFormsFaultRuptureOffsetFeatureTypeBedrock":
+{
+    top: 70 ,
+    height: 50 ,
+    width: 290
+} ,
+
+// RoadOrSidewalk view
+"#viewAppCheckBoxBAEAModeFormsFaultRuptureOffsetFeatureTypeRoadOrSidewalk":
+{
+    top: 140 ,
+    height: 50 ,
+    width: 290
+} ,
+
+// ConcreteFoundation view
+"#viewAppCheckBoxBAEAModeFormsFaultRuptureOffsetFeatureTypeConcreteFoundation":
+{
+    top: 210 ,
+    height: 50 ,
+    width: 290
+} ,
+
+// Pipeline view
+"#viewAppCheckBoxBAEAModeFormsFaultRuptureOffsetFeatureTypePipeline":
+{
+    top: 280 ,
+    height: 50 ,
+    width: 290
+} ,
+
+// Other view
+"#viewAppCheckBoxBAEAModeFormsFaultRuptureOffsetFeatureTypeOther":
+{
+    top: 350 ,
+    height: 50 ,
+    width: 290
+}

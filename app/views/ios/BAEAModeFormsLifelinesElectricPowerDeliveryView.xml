@@ -1,0 +1,18 @@
+<Alloy>
+    <NavigationWindow id="navigationWindowLifelinesElectricPowerDelivery">
+        <Window id="baeaModeLifelinesElectricPowerDeliveryWindow">
+            <LeftNavButton>
+                <Button id="btn_ios_back" onClick="OnBtnBack_Click" />
+            </LeftNavButton>
+
+            <ScrollView id="scrollViewLifelinesElectricPowerDelivery">
+                <View id="viewAppCheckBoxBAEAModeFormsLifelinesElectricPowerDeliveryOverheadAndBuriedTransmissionLines">
+                    <Widget id="widgetAppCheckBoxBAEAModeFormsLifelinesElectricPowerDeliveryOverheadAndBuriedTransmissionLines" src="com.diseg.AppCheckBox" />
+                </View>
+                <View id="viewAppCheckBoxBAEAModeFormsLifelinesElectricPowerDeliverySubstationAndSwitchyards">
+                    <Widget id="widgetAppCheckBoxBAEAModeFormsLifelinesElectricPowerDeliverySubstationAndSwitchyards" src="com.diseg.AppCheckBox" />
+                </View>
+            </ScrollView>
+        </Window>
+    </NavigationWindow>
+</Alloy>

@@ -1,0 +1,25 @@
+<Alloy>
+    <NavigationWindow id="navigationWindowFormsInspection">
+        <Window id="atc20ModeFormsInspectionWindow">
+            <LeftNavButton>
+                <Button id="btn_ios_back" onClick="OnBtnBack_Click" />
+            </LeftNavButton>
+
+            <ScrollView id="scrollViewFormsInspection">
+                <View id="viewDateTime">
+                    <Label id="lblDateTime" />
+                    <View id="viewDisablerDateTime" />
+                    <Picker id="datePickerDate" onChange="OnDateTime_Change" />
+                </View>
+                <View id="viewAreasInspectedWrapper">
+                    <View id="viewAreasInspected">
+                        <Widget id="widgetAppComboBoxATC20ModeInspectionAreasInspected" src="com.diseg.AppComboBox" />
+                    </View>
+                </View>
+                <View id="viewAppButtonSave">
+                    <Widget id="widgetAppButtonSave" src="com.diseg.AppButton" />
+                </View>
+            </ScrollView>
+        </Window>
+    </NavigationWindow>
+</Alloy>

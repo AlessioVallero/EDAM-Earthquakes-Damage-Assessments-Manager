@@ -1,0 +1,26 @@
+<Alloy>
+    <Window id="aedesModeSectionFiveNonStructuralDamageWindow">
+        <ScrollView id="scrollViewSectionFiveNonStructuralDamage">
+            <Label id="lblAeDESModeFormsSectionFiveDamageType" />
+            <Label id="lblAeDESModeFormsSectionFiveDamageTypeFatherTitle" />
+            <View id="viewAppCheckBoxAeDESModeFormsSectionFiveNonStructuralDamagePresenceOfDamage">
+                <Widget id="widgetAppCheckBoxAeDESModeFormsSectionFiveNonStructuralDamagePresenceOfDamage" src="com.diseg.AppCheckBox" />
+            </View>
+            <View id="viewAppCheckBoxAeDESModeFormsSectionFiveNonStructuralDamageRemoval">
+                <Widget id="widgetAppCheckBoxAeDESModeFormsSectionFiveNonStructuralDamageRemoval" src="com.diseg.AppCheckBox" />
+            </View>
+            <View id="viewAppCheckBoxAeDESModeFormsSectionFiveNonStructuralDamageProps">
+                <Widget id="widgetAppCheckBoxAeDESModeFormsSectionFiveNonStructuralDamageProps" src="com.diseg.AppCheckBox" />
+            </View>
+            <View id="viewAppCheckBoxAeDESModeFormsSectionFiveNonStructuralDamageRepair">
+                <Widget id="widgetAppCheckBoxAeDESModeFormsSectionFiveNonStructuralDamageRepair" src="com.diseg.AppCheckBox" />
+            </View>
+            <View id="viewAppCheckBoxAeDESModeFormsSectionFiveNonStructuralDamageDenialOfAccess">
+                <Widget id="widgetAppCheckBoxAeDESModeFormsSectionFiveNonStructuralDamageDenialOfAccess" src="com.diseg.AppCheckBox" />
+            </View>
+            <View id="viewAppCheckBoxAeDESModeFormsSectionFiveNonStructuralDamageStepsProtection">
+                <Widget id="widgetAppCheckBoxAeDESModeFormsSectionFiveNonStructuralDamageStepsProtection" src="com.diseg.AppCheckBox" />
+            </View>
+        </ScrollView>
+    </Window>
+</Alloy>

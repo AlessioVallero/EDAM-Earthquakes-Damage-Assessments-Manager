@@ -1,0 +1,21 @@
+<Alloy>
+    <NavigationWindow id="navigationWindowHelp">
+        <Window id="helpWindow">
+            <LeftNavButton>
+                <Button id="btn_ios_back" onClick="OnBtnBack_Click" />
+            </LeftNavButton>
+            <ActivityIndicator id="activity_indicator" />
+
+            <TableView id="tableViewHelp" onClick="OnTableViewHelp_Click">
+                <TableViewRow id="tableViewHelpRowEERILFE">
+                    <ImageView id="imgHelpRowEERILFE" />
+                    <Label id="lblHelpRowEERILFE" />
+                </TableViewRow>
+                <TableViewRow id="tableViewHelpRowATC20Nepal">
+                    <ImageView id="imgHelpRowATC20Nepal" />
+                    <Label id="lblHelpRowATC20Nepal" />
+                </TableViewRow>
+            </TableView>
+        </Window>
+    </NavigationWindow>
+</Alloy>

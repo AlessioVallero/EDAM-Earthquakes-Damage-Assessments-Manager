@@ -1,0 +1,17 @@
+<Alloy>
+    <Window id="aedesModeSectionFourDamagesWindow">
+        <ScrollView id="scrollViewSectionFourDamages">
+            <Label id="lblAeDESModeFormsSectionFourDamage" />
+            <Label id="lblAeDESModeFormsSectionFourDamageFatherTitle" />
+            <View id="viewAppComboBoxAeDESModeFormsSectionFourDamagesD4D5">
+                <Widget id="widgetAppComboBoxAeDESModeFormsSectionFourDamagesD4D5" src="com.diseg.AppComboBox" />
+            </View>
+            <View id="viewAppComboBoxAeDESModeFormsSectionFourDamagesD2D3">
+                <Widget id="widgetAppComboBoxAeDESModeFormsSectionFourDamagesD2D3" src="com.diseg.AppComboBox" />
+            </View>
+            <View id="viewAppComboBoxAeDESModeFormsSectionFourDamagesD0D1">
+                <Widget id="widgetAppComboBoxAeDESModeFormsSectionFourDamagesD0D1" src="com.diseg.AppComboBox" />
+            </View>
+        </ScrollView>
+    </Window>
+</Alloy>

@@ -1,0 +1,40 @@
+<Alloy>
+    <NavigationWindow id="navigationWindowToolsView">
+        <Window id="toolsViewWindow">
+            <LeftNavButton>
+                <Button id="btn_ios_back" onClick="OnBtnBack_Click" />
+            </LeftNavButton>
+ 
+            <ActivityIndicator id="activity_indicator" />
+ 
+            <ScrollView id="scrollViewToolsView">
+                <TableView id="tableViewTools" onClick="OnTableViewTools_Click">
+                    <TableViewRow id="tableViewToolsRowLoginRegisterLogout">
+                        <ImageView id="tableViewToolsRowLoginRegisterLogoutImg" />
+                        <Label id="tableViewToolsRowLoginRegisterLogoutLbl" />
+                    </TableViewRow>
+                    <TableViewRow id="tableViewToolsRowUsersLocations">
+                        <ImageView id="tableViewToolsRowUsersLocationsImg" />
+                        <Label id="tableViewToolsRowUsersLocationsLbl" />
+                    </TableViewRow>
+                    <TableViewRow id="tableViewToolsRowChangeLanguage">
+                        <ImageView id="tableViewToolsRowChangeLanguageImg" />
+                        <Label id="tableViewToolsRowChangeLanguageLbl" />
+                    </TableViewRow>
+                    <TableViewRow id="tableViewToolsRowEditProfile">
+                        <ImageView id="tableViewToolsRowEditProfileImg" />
+                        <Label id="tableViewToolsRowEditProfileLbl" />
+                    </TableViewRow>
+                    <TableViewRow id="tableViewToolsRowSendErrors">
+                        <ImageView id="tableViewToolsRowSendErrorsImg" />
+                        <Label id="tableViewToolsRowSendErrorsLbl" />
+                    </TableViewRow>
+                    <TableViewRow id="tableViewToolsRowAboutUs">
+                        <ImageView id="tableViewToolsRowAboutUsImg" />
+                        <Label id="tableViewToolsRowAboutUsLbl" />
+                    </TableViewRow>
+                </TableView>
+            </ScrollView>
+        </Window>
+    </NavigationWindow>
+</Alloy>

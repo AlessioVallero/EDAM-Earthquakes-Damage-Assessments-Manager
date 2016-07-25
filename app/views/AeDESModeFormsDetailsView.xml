@@ -1,0 +1,17 @@
+<Alloy>
+    <Window id="aedesModeFormsDetailsWindow">
+        <ScrollView id="scrollViewFormsDetails">
+            <View id="viewAppTextFieldAeDESModeFormsDetailsFormNo">
+                <Widget id="widgetAppTextFieldAeDESModeFormsDetailsFormNo" src="com.diseg.AppTextField" />
+            </View>
+            <View id="viewDate">
+                <Label id="lblDate" />
+                <View id="viewDisabler" />
+                <Picker id="datePickerDate" onChange="OnDate_Change" />
+            </View>
+            <View id="viewAppButtonSave">
+                <Widget id="widgetAppButtonSave" src="com.diseg.AppButton" />
+            </View>
+        </ScrollView>
+    </Window>
+</Alloy>

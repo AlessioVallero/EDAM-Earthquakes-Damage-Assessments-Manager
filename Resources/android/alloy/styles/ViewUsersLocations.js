@@ -1,0 +1,1 @@
+module.exports = [{"isId":true,"priority":100000.1412,"key":"viewUsersLocationsViewWindow","style":{backgroundColor:"#ffffcc",}},{"isId":true,"priority":100000.1413,"key":"btn_ios_back","style":{title:L('generic_back_btn_title'),}},{"isId":true,"priority":100000.1414,"key":"map","style":{userLocation:true,mapType:Alloy.Globals.Map.NORMAL_TYPE,top:0,}}];

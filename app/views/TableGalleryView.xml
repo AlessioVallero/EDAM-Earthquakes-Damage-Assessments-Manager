@@ -1,0 +1,20 @@
+<Alloy>
+    <Window id="tableGalleryViewWindow" onAndroid:back="OnAndroidBackButton_Click" onAndroidback="OnAndroidBackButton_Click">
+        <ActivityIndicator id="activity_indicator" />
+
+        <View id="viewAppButtonNext">
+            <Widget id="widgetAppButtonNext" src="com.diseg.AppButton" />
+        </View>
+        <View id="viewAppButtonImport">
+            <View id="viewAppButtonImportPicFromGallery">
+                <Widget id="widgetAppButtonImportPicFromGallery" src="com.diseg.AppButton" />
+            </View>
+            <View id="viewAppButtonImportVideoFromGallery">
+                <Widget id="widgetAppButtonImportVideoFromGallery" src="com.diseg.AppButton" />
+            </View>
+        </View>
+        <ScrollView id="scrollViewTableGalleryView">
+            <TableView id="tableViewGallery" onClick="OnTableViewGallery_Click" />
+        </ScrollView>
+    </Window>
+</Alloy>

@@ -1,0 +1,176 @@
+// Tools View
+"#toolsViewWindow":
+{
+    backgroundColor: '#ffffcc' ,
+    title: L( 'tools_view_title' )
+} ,
+
+// Back button iOS (to general section view or building damage assessments view)
+"#btn_ios_back":
+{
+    title: L( 'generic_back_btn_title' )
+} ,
+
+// ScrollView
+"#scrollViewToolsView":
+{
+    top: 20 ,
+    scrollType: "vertical"
+} ,
+
+// Table view with the Tools
+"#tableViewTools":
+{
+    top: 0 ,
+    height: 300 ,
+    backgroundColor: '#ffffff' ,
+    width: Ti.UI.FILL
+} ,
+
+// Table view row Login/Register Logout
+"#tableViewToolsRowLoginRegisterLogout":
+{
+    height: 50 ,
+    hasChild: true ,
+    className: 'tools'
+} ,
+
+// Table view row Login/Register Logout ImageView
+"#tableViewToolsRowLoginRegisterLogoutImg":
+{
+    left: 5 ,
+    width: 34 ,
+    height: 34
+} ,
+
+// Table view row Login/Register Logout label
+"#tableViewToolsRowLoginRegisterLogoutLbl":
+{
+    left: 50 ,
+    color: 'black'
+} ,
+
+// Table view row Users Locations
+"#tableViewToolsRowUsersLocations":
+{
+    height: 50 ,
+    hasChild: true ,
+    className: 'tools'
+} ,
+
+// Table view row Users Locations ImageView
+"#tableViewToolsRowUsersLocationsImg":
+{
+    left: 5 ,
+    width: 34 ,
+    height: 34 ,
+    image: '/images/google_maps.png'
+} ,
+
+// Table view row Users Locations label
+"#tableViewToolsRowUsersLocationsLbl":
+{
+    left: 50 ,
+    color: 'black' ,
+    text: L( 'table_tools_users_locations_title' )
+} ,
+
+// Table view row Change Language
+"#tableViewToolsRowChangeLanguage":
+{
+    height: 50 ,
+    hasChild: true ,
+    className: 'tools'
+} ,
+
+// Table view row Change Language ImageView
+"#tableViewToolsRowChangeLanguageImg":
+{
+    left: 5 ,
+    width: 34 ,
+    height: 34 ,
+    image: '/images/change_language.png'
+} ,
+
+// Table view row Change Language label
+"#tableViewToolsRowChangeLanguageLbl":
+{
+    left: 50 ,
+    color: 'black' ,
+    text: L( 'table_tools_change_language_title' )
+} ,
+
+// Table view row Edit Profile
+"#tableViewToolsRowEditProfile":
+{
+    height: 50 ,
+    hasChild: true ,
+    className: 'tools'
+} ,
+
+// Table view row Edit Profile ImageView
+"#tableViewToolsRowEditProfileImg":
+{
+    left: 5 ,
+    width: 34 ,
+    height: 34 ,
+    image: '/images/edit_profile.png'
+} ,
+
+// Table view row Edit Profile label
+"#tableViewToolsRowEditProfileLbl":
+{
+    left: 50 ,
+    color: 'black' ,
+    text: L( 'table_tools_edit_profile_title' )
+} ,
+
+// Table view row Send Errors
+"#tableViewToolsRowSendErrors":
+{
+    height: 50 ,
+    hasChild: true ,
+    className: 'tools'
+} ,
+
+// Table view row Send Errors ImageView
+"#tableViewToolsRowSendErrorsImg":
+{
+    left: 5 ,
+    width: 34 ,
+    height: 34 ,
+    image: '/images/send_errors.png'
+} ,
+
+// Table view row Send Errors label
+"#tableViewToolsRowSendErrorsLbl":
+{
+    left: 50 ,
+    color: 'black' ,
+    text: L( 'table_tools_send_errors_title' )
+} ,
+
+// Table view row About Us
+"#tableViewToolsRowAboutUs":
+{
+    height: 50 ,
+    hasChild: true ,
+    className: 'tools'
+} ,
+
+// Table view row About Us ImageView
+"#tableViewToolsRowAboutUsImg":
+{
+    left: 5 ,
+    width: 34 ,
+    height: 34 ,
+    image: '/images/about_us.png'
+} ,
+
+// Table view row About Us label
+"#tableViewToolsRowAboutUsLbl":
+{
+    left: 50 ,
+    color: 'black' ,
+    text: L( 'table_tools_about_us_title' )
+}

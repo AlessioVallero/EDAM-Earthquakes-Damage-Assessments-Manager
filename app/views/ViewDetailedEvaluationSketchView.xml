@@ -1,0 +1,5 @@
+<Alloy>
+    <Window id="viewDetailedEvaluationSketchViewWindow">
+        <ImageView id="image_view_detailed_evaluation_sketch" />
+    </Window>
+</Alloy>

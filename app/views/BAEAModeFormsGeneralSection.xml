@@ -1,0 +1,24 @@
+<Alloy>
+    <Window id="baeaModeFormsGeneralSectionWindow" onAndroid:back="OnAndroidBackButton_Click" onAndroidback="OnAndroidBackButton_Click">
+        <ActivityIndicator id="activity_indicator" />
+
+        <Widget id="slideMenu" src="com.mcongrove.slideMenu" />
+        <View id="appWrapper">
+            <ScrollView id="scrollViewGeneralSection">
+                <Button id="btn_slider_menu" onClick="OnBtnSliderMenu_Click" />
+                <Label id="lbl_slider_menu" />
+
+                <View id="images_btn_view">
+                    <View id="viewAppButtonSave">
+                        <Widget id="widgetAppButtonSave" src="com.diseg.AppButton" />
+                    </View>
+                </View>
+                <View id="viewAppTextFieldBAEAModeFormsOperator">
+                    <Widget id="widgetAppTextFieldBAEAModeFormsOperator" src="com.diseg.AppTextField" />
+                </View>
+
+                <ImageView id="imageViewBAEALogo" />
+            </ScrollView>
+        </View>
+    </Window>
+</Alloy>

@@ -1,0 +1,24 @@
+<Alloy>
+    <Window id="atc20ModeFormsInspectionWindow">
+        <ScrollView id="scrollViewFormsInspection">
+            <View id="viewDate">
+                <Label id="lblDate" />
+                <View id="viewDisablerDate" />
+                <Picker id="datePickerDate" onChange="OnDate_Change" />
+            </View>
+            <View id="viewTime">
+                <Label id="lblTime" />
+                <View id="viewDisablerTime" />
+                <Picker id="timePickerTime" onChange="OnTime_Change" />
+            </View>
+            <View id="viewAreasInspectedWrapper">
+                <View id="viewAreasInspected">
+                    <Widget id="widgetAppComboBoxATC20ModeInspectionAreasInspected" src="com.diseg.AppComboBox" />
+                </View>
+            </View>
+            <View id="viewAppButtonSave">
+                <Widget id="widgetAppButtonSave" src="com.diseg.AppButton" />
+            </View>
+        </ScrollView>
+    </Window>
+</Alloy>

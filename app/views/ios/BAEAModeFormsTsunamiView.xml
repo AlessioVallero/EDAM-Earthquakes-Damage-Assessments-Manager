@@ -1,0 +1,51 @@
+<Alloy>
+    <NavigationWindow id="navigationWindowTsunami">
+        <Window id="baeaModeFormsTsunamiWindow">
+            <LeftNavButton>
+                <Button id="btn_ios_back" onClick="OnBtnBack_Click" />
+            </LeftNavButton>
+
+            <ActivityIndicator id="activity_indicator" />
+            <ScrollView id="scrollViewTsunami">
+                <View id="viewAppTextFieldBAEAModeFormsTsunamiSiteName">
+                    <Widget id="widgetAppTextFieldBAEAModeFormsTsunamiSiteName" src="com.diseg.AppTextField" />
+                </View>
+                <TableView id="tableViewBAEAModeFormsTsunamiPhoto" onClick="OnTableViewBAEAModeFormsTsunamiPhoto_Click">
+                    <TableViewRow hasChild="true" className="tsunami_photo_row">
+                        <Label id="lblPhoto" />
+                    </TableViewRow>
+                </TableView>
+                <Button id="btnBAEAModeFormsTsunamiLoadAddress" onClick="OnBtnLoadAddress_Click" />
+                <View id="viewAppTextFieldBAEAModeFormsTsunamiLatitude">
+                    <Widget id="widgetAppTextFieldBAEAModeFormsTsunamiLatitude" src="com.diseg.AppTextField" />
+                </View>
+                <View id="viewAppTextFieldBAEAModeFormsTsunamiLongitude">
+                    <Widget id="widgetAppTextFieldBAEAModeFormsTsunamiLongitude" src="com.diseg.AppTextField" />
+                </View>
+                <View id="viewAppTextFieldBAEAModeFormsTsunamiAddress">
+                    <Widget id="widgetAppTextFieldBAEAModeFormsTsunamiAddress" src="com.diseg.AppTextField" />
+                </View>
+                <Button id="btnBAEAModeFormsTsunamiViewAddress" onClick="OnBtnViewAddress_Click" />
+                <View id="viewAppTextFieldBAEAModeFormsTsunamiInundation">
+                    <Widget id="widgetAppTextFieldBAEAModeFormsTsunamiInundation" src="com.diseg.AppTextField" />
+                </View>
+                <View id="viewAppTextFieldBAEAModeFormsTsunamiWaveHeight">
+                    <Widget id="widgetAppTextFieldBAEAModeFormsTsunamiWaveHeight" src="com.diseg.AppTextField" />
+                </View>
+                <View id="viewAppTextFieldBAEAModeFormsTsunamiPeakToTrough">
+                    <Widget id="widgetAppTextFieldBAEAModeFormsTsunamiPeakToTrough" src="com.diseg.AppTextField" />
+                </View>
+                <View id="viewAppTextFieldBAEAModeFormsTsunamiWaveCycle">
+                    <Widget id="widgetAppTextFieldBAEAModeFormsTsunamiWaveCycle" src="com.diseg.AppTextField" />
+                </View>
+                <View id="viewAppTextFieldBAEAModeFormsTsunamiDamage">
+                    <Widget id="widgetAppTextFieldBAEAModeFormsTsunamiDamage" src="com.diseg.AppTextField" />
+                </View>
+                <View id="viewAppTextFieldBAEAModeFormsTsunamiNotes">
+                    <Widget id="widgetAppTextFieldBAEAModeFormsTsunamiNotes" src="com.diseg.AppTextField" />
+                </View>
+                <Button id="btnBAEAModeFormsTsunamiRecord" onClick="OnBtnRecord_Click" />
+            </ScrollView>
+        </Window>
+    </NavigationWindow>
+</Alloy>

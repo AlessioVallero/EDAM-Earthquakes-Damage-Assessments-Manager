@@ -1,0 +1,293 @@
+// The Window
+"#aedesModeSectionEightWindow":
+{
+    title: L( 'aedes_mode_section_eight_view_title' ) ,
+    backgroundColor: '#ffffcc'
+} ,
+
+// Back button iOS (to papers general section view)
+"#btn_ios_back":
+{
+    title: L( 'generic_back_btn_title' )
+} ,
+
+// ScrollView
+"#scrollViewSectionEight":
+{
+    top: 10 ,
+    contentWidth: '100%' ,
+    scrollType: "vertical"
+} ,
+
+// Structural view
+"#viewAppComboBoxAeDESModeFormsSectionEightStructural":
+{
+    top: 0 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// NotStructural view
+"#viewAppComboBoxAeDESModeFormsSectionEightNotStructural":
+{
+    top: 70 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// External view
+"#viewAppComboBoxAeDESModeFormsSectionEightExternal":
+{
+    top: 140 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// Geotechnical view
+"#viewAppComboBoxAeDESModeFormsSectionEightGeotechnical":
+{
+    top: 210 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// OutcomePracticability view
+"#viewAppComboBoxAeDESModeFormsSectionEightOutcomePracticability":
+{
+    top: 280 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// HousingUnitsUninhabitable view
+"#viewAppTextFieldAeDESModeFormsSectionEightHousingUnitsUninhabitable":
+{
+    top: 350 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// FamiliesEvacuated view
+"#viewAppTextFieldAeDESModeFormsSectionEightFamiliesEvacuated":
+{
+    top: 420 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// EvacueesN view
+"#viewAppTextFieldAeDESModeFormsSectionEightEvacueesN":
+{
+    top: 490 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// AccuracyVisit view
+"#viewAppComboBoxAeDESModeFormsSectionEightAccuracyVisit":
+{
+    top: 560 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// Other view
+"#viewAppTextFieldAeDESModeFormsSectionEightOther":
+{
+    top: 630 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// MeasuresOfEmergency label
+"#lblAeDESModeFormsSectionEightMeasuresOfEmergency":
+{
+    text: L( 'generic_measures_of_emergency_text_msg' ) ,
+    top: 700 ,
+    width: 290 ,
+    height: 18 ,
+    font:
+    {
+        fontFamily: 'Arial' ,
+        fontWeight: 'bold' ,
+        fontSize: '12'
+    } ,
+    color: '#000'
+} ,
+
+// Table view with MeasuresOfEmergency
+"#tableViewAeDESModeFormsSectionEightMeasuresOfEmergency":
+{
+    top: 730 ,
+    backgroundColor: '#ffffff' ,
+    height: 300 ,
+    width: Ti.UI.FILL
+} ,
+
+// HoopsStuds row
+"#tableViewAeDESModeFormsSectionEightMeasuresOfEmergencyRowHoopsStuds":
+{
+    hasChild: true ,
+    className: 'section_row' ,
+    color: "#000" ,
+} ,
+
+// HoopsStuds label
+"#lblAeDESModeFormsSectionEightMeasuresOfEmergencyRowHoopsStuds":
+{
+    text: L( 'generic_hoops_studs_text_msg' ) ,
+    height: 50 ,
+    color: "#000" ,
+} ,
+
+// RepairsLightDamageToTheCladdingAndPartitions row
+"#tableViewAeDESModeFormsSectionEightMeasuresOfEmergencyRowRepairsLightDamageToTheCladdingAndPartitions":
+{
+    hasChild: true ,
+    className: 'section_row' ,
+    color: "#000" ,
+} ,
+
+// RepairsLightDamageToTheCladdingAndPartitions label
+"#lblAeDESModeFormsSectionEightMeasuresOfEmergencyRowRepairsLightDamageToTheCladdingAndPartitions":
+{
+    text: L( 'generic_repairs_light_damage_to_the_cladding_and_partitions_text_msg' ) ,
+    height: 50 ,
+    color: "#000" ,
+} ,
+
+// RepairCoverage row
+"#tableViewAeDESModeFormsSectionEightMeasuresOfEmergencyRowRepairCoverage":
+{
+    hasChild: true ,
+    className: 'section_row' ,
+    color: "#000" ,
+} ,
+
+// RepairCoverage label
+"#lblAeDESModeFormsSectionEightMeasuresOfEmergencyRowRepairCoverage":
+{
+    text: L( 'generic_repair_coverage_text_msg' ) ,
+    height: 50 ,
+    color: "#000" ,
+} ,
+
+// ShoringStairs row
+"#tableViewAeDESModeFormsSectionEightMeasuresOfEmergencyRowShoringStairs":
+{
+    hasChild: true ,
+    className: 'section_row' ,
+    color: "#000" ,
+} ,
+
+// ShoringStairs label
+"#lblAeDESModeFormsSectionEightMeasuresOfEmergencyRowShoringStairs":
+{
+    text: L( 'generic_shoring_stairs_text_msg' ) ,
+    height: 50 ,
+    color: "#000" ,
+} ,
+
+// RemovingPlasterPanelingFalseCeilings row
+"#tableViewAeDESModeFormsSectionEightMeasuresOfEmergencyRowRemovingPlasterPanelingFalseCeilings":
+{
+    hasChild: true ,
+    className: 'section_row' ,
+    color: "#000" ,
+} ,
+
+// RemovingPlasterPanelingFalseCeilings label
+"#lblAeDESModeFormsSectionEightMeasuresOfEmergencyRowRemovingPlasterPanelingFalseCeilings":
+{
+    text: L( 'generic_removing_plaster_paneling_false_ceilings_text_msg' ) ,
+    height: 50 ,
+    color: "#000" ,
+} ,
+
+// RemovingTilesChimneysParapets row
+"#tableViewAeDESModeFormsSectionEightMeasuresOfEmergencyRowRemovingTilesChimneysParapets":
+{
+    hasChild: true ,
+    className: 'section_row' ,
+    color: "#000" ,
+} ,
+
+// RemovingTilesChimneysParapets label
+"#lblAeDESModeFormsSectionEightMeasuresOfEmergencyRowRemovingTilesChimneysParapets":
+{
+    text: L( 'generic_removing_tiles_chimneys_parapets_text_msg' ) ,
+    height: 50 ,
+    color: "#000" ,
+} ,
+
+// RemovalOfCornicesParapetsOverhangs row
+"#tableViewAeDESModeFormsSectionEightMeasuresOfEmergencyRowRemovalOfCornicesParapetsOverhangs":
+{
+    hasChild: true ,
+    className: 'section_row' ,
+    color: "#000" ,
+} ,
+
+// RemovalOfCornicesParapetsOverhangs label
+"#lblAeDESModeFormsSectionEightMeasuresOfEmergencyRowRemovalOfCornicesParapetsOverhangs":
+{
+    text: L( 'generic_removal_of_cornices_parapets_overhangs_text_msg' ) ,
+    height: 50 ,
+    color: "#000" ,
+} ,
+
+// RemovalOfOtherInternalOrExternalObjects row
+"#tableViewAeDESModeFormsSectionEightMeasuresOfEmergencyRowRemovalOfOtherInternalOrExternalObjects":
+{
+    hasChild: true ,
+    className: 'section_row' ,
+    color: "#000" ,
+} ,
+
+// RemovalOfOtherInternalOrExternalObjects label
+"#lblAeDESModeFormsSectionEightMeasuresOfEmergencyRowRemovalOfOtherInternalOrExternalObjects":
+{
+    text: L( 'generic_removal_of_other_internal_or_external_objects_text_msg' ) ,
+    height: 50 ,
+    color: "#000" ,
+} ,
+
+// BarriersAndProtectionSteps row
+"#tableViewAeDESModeFormsSectionEightMeasuresOfEmergencyRowBarriersAndProtectionSteps":
+{
+    hasChild: true ,
+    className: 'section_row' ,
+    color: "#000" ,
+} ,
+
+// BarriersAndProtectionSteps label
+"#lblAeDESModeFormsSectionEightMeasuresOfEmergencyRowBarriersAndProtectionSteps":
+{
+    text: L( 'generic_barriers_and_protection_steps_text_msg' ) ,
+    height: 50 ,
+    color: "#000" ,
+} ,
+
+// RepairsOfPlantNetworks row
+"#tableViewAeDESModeFormsSectionEightMeasuresOfEmergencyRowRepairsOfPlantNetworks":
+{
+    hasChild: true ,
+    className: 'section_row' ,
+    color: "#000" ,
+} ,
+
+// RepairsOfPlantNetworks label
+"#lblAeDESModeFormsSectionEightMeasuresOfEmergencyRowRepairsOfPlantNetworks":
+{
+    text: L( 'generic_repairs_of_plant_networks_text_msg' ) ,
+    height: 50 ,
+    color: "#000" ,
+} ,
+
+// Save view
+"#viewAppButtonSave":
+{
+    top: 1040 ,
+    width: 60 ,
+    height: 80
+}

@@ -1,0 +1,11 @@
+<Alloy>
+    <NavigationWindow id="navigationWindowViewUsersLocationsView">
+        <Window id="viewUsersLocationsViewWindow">
+            <LeftNavButton>
+                <Button id="btn_ios_back" onClick="OnBtnBack_Click" />
+            </LeftNavButton>
+
+            <View id="map" ns="Alloy.Globals.Map" />
+        </Window>
+    </NavigationWindow>
+</Alloy>

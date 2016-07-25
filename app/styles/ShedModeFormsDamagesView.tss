@@ -1,0 +1,157 @@
+// The Window
+"#shedModeDamagesWindow":
+{
+    title: L( 'shed_mode_damages_view_title' ) ,
+    backgroundColor: '#ffffcc'
+} ,
+
+// Back button iOS (to papers general section view)
+"#btn_ios_back":
+{
+    title: L( 'generic_back_btn_title' )
+} ,
+
+// ScrollView
+"#scrollViewDamages":
+{
+    top: 10 ,
+    scrollType: "vertical"
+} ,
+
+// Type label
+"#lblShedModeFormsDamagesType":
+{
+    text: L( 'generic_type_text_msg' ) ,
+    top: 0 ,
+    width: 290 ,
+    height: 18 ,
+    font:
+    {
+        fontFamily: 'Arial' ,
+        fontWeight: 'bold' ,
+        fontSize: '12'
+    } ,
+    color: '#000'
+} ,
+
+// Table view with Types
+"#tableViewShedModeFormsDamagesType":
+{
+    top: 30 ,
+    backgroundColor: '#ffffff' ,
+    height: 100 ,
+    width: Ti.UI.FILL
+} ,
+
+// Loss of support and damage to the connections between the structural elements row
+"#tableViewShedModeFormsDamagesTypeRowLossOfSupportAndDamagesToTheConnectionsBetweenTheStructuralElements":
+{
+    hasChild: true ,
+    className: 'section_row' ,
+    color: "#000" ,
+} ,
+
+// Loss of support and damages to the connections between the structural elements label
+"#lblShedModeFormsDamagesTypeRowLossOfSupportAndDamagesToTheConnectionsBetweenTheStructuralElements":
+{
+    text: L( 'generic_loss_of_support_and_damages_to_the_connections_between_the_structural_elements_text_msg' ) ,
+    height: 50 ,
+    color: "#000" ,
+} ,
+
+// Collapse of elements of the infill row
+"#tableViewShedModeFormsDamagesTypeRowCollapseOfElementsOfTheInfill":
+{
+    hasChild: true ,
+    className: 'section_row' ,
+    color: "#000" ,
+} ,
+
+// Collapse of elements of the infill label
+"#lblShedModeFormsDamagesTypeRowCollapseOfElementsOfTheInfill":
+{
+    text: L( 'generic_collapse_of_elements_of_the_infill_text_msg' ) ,
+    height: 50 ,
+    color: "#000" ,
+} ,
+
+// MeasuresOfEmergency label
+"#lblShedModeFormsDamagesMeasuresOfEmergency":
+{
+    text: L( 'generic_measures_of_emergency_text_msg' ) ,
+    top: 150 ,
+    width: 290 ,
+    height: 18 ,
+    font:
+    {
+        fontFamily: 'Arial' ,
+        fontWeight: 'bold' ,
+        fontSize: '12'
+    } ,
+    color: '#000'
+} ,
+
+// Table view with MeasuresOfEmergency
+"#tableViewShedModeFormsDamagesMeasuresOfEmergency":
+{
+    top: 180 ,
+    backgroundColor: '#ffffff' ,
+    height: 150 ,
+    width: Ti.UI.FILL
+} ,
+
+// Loss of support and damage to the connections between the structural elements row
+"#tableViewShedModeFormsDamagesMeasuresOfEmergencyRowLossOfSupportAndDamagesToTheConnectionsBetweenTheStructuralElements":
+{
+    hasChild: true ,
+    className: 'section_row' ,
+    color: "#000" ,
+} ,
+
+// Loss of support and damages to the connections between the structural elements label
+"#lblShedModeFormsDamagesMeasuresOfEmergencyRowLossOfSupportAndDamagesToTheConnectionsBetweenTheStructuralElements":
+{
+    text: L( 'generic_loss_of_support_and_damages_to_the_connections_between_the_structural_elements_text_msg' ) ,
+    height: 50 ,
+    color: "#000" ,
+} ,
+
+// Collapse of elements of the infill row
+"#tableViewShedModeFormsDamagesMeasuresOfEmergencyRowCollapseOfElementsOfTheInfill":
+{
+    hasChild: true ,
+    className: 'section_row' ,
+    color: "#000" ,
+} ,
+
+// Collapse of elements of the infill label
+"#lblShedModeFormsDamagesMeasuresOfEmergencyRowCollapseOfElementsOfTheInfill":
+{
+    text: L( 'generic_collapse_of_elements_of_the_infill_text_msg' ) ,
+    height: 50 ,
+    color: "#000" ,
+} ,
+
+// Damaged or deficient vertical structure elements row
+"#tableViewShedModeFormsDamagesMeasuresOfEmergencyRowDamagedOrDeficientVerticalStructureElements":
+{
+    hasChild: true ,
+    className: 'section_row' ,
+    color: "#000" ,
+} ,
+
+// Damaged or deficient vertical structure elements label
+"#lblShedModeFormsDamagesMeasuresOfEmergencyRowDamagedOrDeficientVerticalStructureElements":
+{
+    text: L( 'generic_damaged_or_deficient_vertical_structure_elements_text_msg' ) ,
+    height: 50 ,
+    color: "#000" ,
+} ,
+
+// Save view
+"#viewAppButtonSave":
+{
+    top: 340 ,
+    width: 60 ,
+    height: 80
+}

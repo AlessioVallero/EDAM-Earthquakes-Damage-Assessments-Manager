@@ -1,0 +1,15 @@
+<Alloy>
+    <Window id="baeaModeLifelinesCommunicationWindow">
+        <ScrollView id="scrollViewLifelinesCommunication">
+            <View id="viewAppCheckBoxBAEAModeFormsLifelinesCommunicationTelephoneTelegraphMobilePhone">
+                <Widget id="widgetAppCheckBoxBAEAModeFormsLifelinesCommunicationTelephoneTelegraphMobilePhone" src="com.diseg.AppCheckBox" />
+            </View>
+            <View id="viewAppCheckBoxBAEAModeFormsLifelinesCommunicationRadioAndTelevision">
+                <Widget id="widgetAppCheckBoxBAEAModeFormsLifelinesCommunicationRadioAndTelevision" src="com.diseg.AppCheckBox" />
+            </View>
+            <View id="viewAppCheckBoxBAEAModeFormsLifelinesCommunicationNewspaperAndMagazines">
+                <Widget id="widgetAppCheckBoxBAEAModeFormsLifelinesCommunicationNewspaperAndMagazines" src="com.diseg.AppCheckBox" />
+            </View>
+        </ScrollView>
+    </Window>
+</Alloy>

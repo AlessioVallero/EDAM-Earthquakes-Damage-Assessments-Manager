@@ -1,0 +1,25 @@
+// View help window
+"#viewHelpViewWindow":
+{
+    backgroundColor: '#ffffcc'
+} ,
+
+// Back button iOS (to papers previous view)
+"#btn_ios_back":
+{
+    title: L( 'generic_back_btn_title' )
+} ,
+
+// ScrollView
+"#scrollViewViewHelpView":
+{
+    top: 10 ,
+    scrollType: "vertical"
+} ,
+
+// ImageView
+"#image_view_help":
+{
+    left: 0 ,
+    right: 0
+}

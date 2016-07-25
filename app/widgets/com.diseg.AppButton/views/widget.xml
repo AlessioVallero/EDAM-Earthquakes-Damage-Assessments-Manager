@@ -1,0 +1,4 @@
+<Alloy>
+    <Button id="btnAppButton" />
+    <Label id="lblAppButton" />
+</Alloy>

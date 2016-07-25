@@ -1,0 +1,51 @@
+<Alloy>
+    <NavigationWindow id="navigationWindowBuildings">
+        <Window id="baeaModeFormsBuildingsWindow">
+            <LeftNavButton>
+                <Button id="btn_ios_back" onClick="OnBtnBack_Click" />
+            </LeftNavButton>
+
+            <ActivityIndicator id="activity_indicator" />
+            <ScrollView id="scrollViewBuildings">
+                <View id="viewAppTextFieldBAEAModeFormsBuildingsSiteName">
+                    <Widget id="widgetAppTextFieldBAEAModeFormsBuildingsSiteName" src="com.diseg.AppTextField" />
+                </View>
+                <TableView id="tableViewBAEAModeFormsBuildingsPhoto" onClick="OnTableViewBAEAModeFormsBuildingsPhoto_Click">
+                    <TableViewRow hasChild="true" className="buildings_photo_row">
+                        <Label id="lblPhoto" />
+                    </TableViewRow>
+                </TableView>
+                <Button id="btnBAEAModeFormsBuildingsLoadAddress" onClick="OnBtnLoadAddress_Click" />
+                <View id="viewAppTextFieldBAEAModeFormsBuildingsLatitude">
+                    <Widget id="widgetAppTextFieldBAEAModeFormsBuildingsLatitude" src="com.diseg.AppTextField" />
+                </View>
+                <View id="viewAppTextFieldBAEAModeFormsBuildingsLongitude">
+                    <Widget id="widgetAppTextFieldBAEAModeFormsBuildingsLongitude" src="com.diseg.AppTextField" />
+                </View>
+                <View id="viewAppTextFieldBAEAModeFormsBuildingsAddress">
+                    <Widget id="widgetAppTextFieldBAEAModeFormsBuildingsAddress" src="com.diseg.AppTextField" />
+                </View>
+                <Button id="btnBAEAModeFormsBuildingsViewAddress" onClick="OnBtnViewAddress_Click" />
+                <View id="viewAppComboBoxBAEAModeFormsBuildingsBuildingType">
+                    <Widget id="widgetAppComboBoxBAEAModeFormsBuildingsBuildingType" src="com.diseg.AppComboBox" />
+                </View>
+                <View id="viewAppComboBoxBAEAModeFormsBuildingsOccupancyUse">
+                    <Widget id="widgetAppComboBoxBAEAModeFormsBuildingsOccupancyUse" src="com.diseg.AppComboBox" />
+                </View>
+                <View id="viewAppTextFieldBAEAModeFormsBuildingsStories">
+                    <Widget id="widgetAppTextFieldBAEAModeFormsBuildingsStories" src="com.diseg.AppTextField" />
+                </View>
+                <View id="viewAppComboBoxBAEAModeFormsBuildingsDamage">
+                    <Widget id="widgetAppComboBoxBAEAModeFormsBuildingsDamage" src="com.diseg.AppComboBox" />
+                </View>
+                <View id="viewAppComboBoxBAEAModeFormsBuildingsRecommendFurtherInvestigation">
+                    <Widget id="widgetAppComboBoxBAEAModeFormsBuildingsRecommendFurtherInvestigation" src="com.diseg.AppComboBox" />
+                </View>
+                <View id="viewAppTextFieldBAEAModeFormsBuildingsNotes">
+                    <Widget id="widgetAppTextFieldBAEAModeFormsBuildingsNotes" src="com.diseg.AppTextField" />
+                </View>
+                <Button id="btnBAEAModeFormsBuildingsRecord" onClick="OnBtnRecord_Click" />
+            </ScrollView>
+        </Window>
+    </NavigationWindow>
+</Alloy>

@@ -1,0 +1,9 @@
+<Alloy>
+    <Window id="baeaTableGalleryViewWindow" onAndroid:back="OnAndroidBackButton_Click" onAndroidback="OnAndroidBackButton_Click">
+        <ActivityIndicator id="activity_indicator" />
+
+        <ScrollView id="scrollViewBAEATableGalleryView">
+            <TableView id="baeaTableViewGallery" onClick="OnBAEATableViewGallery_Click" />
+        </ScrollView>
+    </Window>
+</Alloy>

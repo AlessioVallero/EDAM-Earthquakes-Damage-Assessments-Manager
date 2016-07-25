@@ -1,0 +1,33 @@
+<Alloy>
+    <Window id="shedModeInfrastructureWindow">
+        <ScrollView id="scrollViewInfrastructure">
+            <View id="viewPrimaryGirders">
+                <Widget id="widgetAppComboBoxShedModeInfrastructurePrimaryGirders" src="com.diseg.AppComboBox" />
+            </View>
+            <View id="viewThicknessOfTheTiles">
+                <Widget id="widgetAppComboBoxShedModeInfrastructureThicknessOfTheTiles" src="com.diseg.AppComboBox" />
+            </View>
+            <View id="viewTypicalLights">
+                <Widget id="widgetAppComboBoxShedModeInfrastructureTypicalLights" src="com.diseg.AppComboBox" />
+            </View>
+            <View id="viewCoverage">
+                <Widget id="widgetAppComboBoxShedModeInfrastructureCoverage" src="com.diseg.AppComboBox" />
+            </View>
+            <View id="viewInclinationOfTheRoof">
+                <Widget id="widgetAppComboBoxShedModeInfrastructureInclinationOfTheRoof" src="com.diseg.AppComboBox" />
+            </View>
+            <View id="viewInfillElements">
+                <Widget id="widgetAppComboBoxShedModeInfrastructureInfillElements" src="com.diseg.AppComboBox" />
+            </View>
+            <View id="viewVerticalWalls">
+                <Widget id="widgetAppComboBoxShedModeInfrastructureVerticalWalls" src="com.diseg.AppComboBox" />
+            </View>
+            <View id="viewShelving">
+                <Widget id="widgetAppComboBoxShedModeInfrastructureShelving" src="com.diseg.AppComboBox" />
+            </View>
+            <View id="viewAppButtonSave">
+                <Widget id="widgetAppButtonSave" src="com.diseg.AppButton" />
+            </View>
+        </ScrollView>
+    </Window>
+</Alloy>

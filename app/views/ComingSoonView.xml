@@ -1,0 +1,6 @@
+<Alloy>
+    <Window id="comingSoonViewWindow">
+        <Label id="lblComingSoon" />
+        <ImageView id="coming_soon_image_view" />
+    </Window>
+</Alloy>

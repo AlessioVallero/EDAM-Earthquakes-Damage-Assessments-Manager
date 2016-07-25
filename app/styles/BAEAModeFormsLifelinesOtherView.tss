@@ -1,0 +1,51 @@
+// The Window
+"#baeaModeLifelinesOtherWindow":
+{
+    title: L( 'baea_mode_lifelines_other_title' ) ,
+    backgroundColor: '#ffffcc'
+} ,
+
+// Back button iOS (to Landslide view)
+"#btn_ios_back":
+{
+    title: L( 'generic_back_btn_title' )
+} ,
+
+// ScrollView
+"#scrollViewLifelinesOther":
+{
+    top: 10 ,
+    scrollType: "vertical"
+} ,
+
+// Water Wastewater view
+"#viewAppCheckBoxBAEAModeFormsLifelinesOtherWaterWastewater":
+{
+    top: 0 ,
+    height: 50 ,
+    width: 290
+} ,
+
+// Gas And Fuel Lines view
+"#viewAppCheckBoxBAEAModeFormsLifelinesOtherGasAndFuelLines":
+{
+    top: 70 ,
+    height: 50 ,
+    width: 290
+} ,
+
+// Transportation view
+"#viewAppCheckBoxBAEAModeFormsLifelinesOtherTransportation":
+{
+    top: 140 ,
+    height: 50 ,
+    width: 290
+} ,
+
+// Other view
+"#viewAppCheckBoxBAEAModeFormsLifelinesOtherOther":
+{
+    top: 210 ,
+    height: 50 ,
+    width: 290
+}

@@ -1,0 +1,58 @@
+// The Window
+"#mediaDamagesDetailsWindow":
+{
+    title: L( 'media_damages_details_view_title' ) ,
+    backgroundColor: '#ffffcc'
+} ,
+
+// Back button iOS (to papers general section view)
+"#btn_ios_back":
+{
+    title: L( 'generic_back_btn_title' )
+} ,
+
+// ScrollView
+"#scrollViewMediaDamagesDetails":
+{
+    top: 10 ,
+    scrollType: "vertical"
+} ,
+
+// Done view 
+"#viewAppButtonDone":
+{
+    top: 0 ,
+    width: 60
+} ,
+
+// Heading view
+"#viewAppComboBoxMediaDamagesDetailsHeading":
+{
+    top: 90 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// Damages level view
+"#viewAppTextFieldMediaDamagesDetailsDamagesLevel":
+{
+    top: 160 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// Damages area view
+"#viewAppTextFieldMediaDamagesDetailsDamagesArea":
+{
+    top: 230 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// Comment view
+"#viewAppTextAreaMediaDamagesDetailsComment":
+{
+    top: 300 ,
+    height: 380 ,
+    width: '90%'
+}

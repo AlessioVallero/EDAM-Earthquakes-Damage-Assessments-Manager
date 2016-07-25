@@ -1,0 +1,17 @@
+<Alloy>
+    <Window id="atc20PersonalDataWindow">
+        <ActivityIndicator id="activity_indicator" />
+
+        <ScrollView id="scrollView_fields">
+            <View id="viewAppTextFieldInspectorID">
+                <Widget id="widgetAppTextFieldInspectorID" src="com.diseg.AppTextField" />
+            </View>
+            <View id="viewAppTextFieldAffiliation">
+                <Widget id="widgetAppTextFieldAffiliation" src="com.diseg.AppTextField" />
+            </View>
+            <View id="viewAppButtonSave">
+                <Widget id="widgetAppButtonSave" src="com.diseg.AppButton" />
+            </View>
+        </ScrollView>
+   </Window>
+</Alloy>

@@ -1,0 +1,17 @@
+// View sign window
+"#viewSignViewWindow":
+{
+    title: L( 'view_sign_view_title' ) ,
+    backgroundColor: '#ffffcc'
+} ,
+
+// Back button iOS (to papers general section view)
+"#btn_ios_back":
+{
+    title: L( 'generic_back_btn_title' )
+} ,
+
+"#image_view_sign":
+{
+    defaultImage: "/images/img_not_found.png"
+}

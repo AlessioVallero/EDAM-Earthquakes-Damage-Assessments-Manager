@@ -1,0 +1,11 @@
+<Alloy>
+    <NavigationWindow id="navigationWindowBAEASinglePictureView">
+        <Window id="baeaSinglePictureViewWindow">
+            <LeftNavButton>
+                <Button id="btn_ios_back" onClick="OnBtnBack_Click" />
+            </LeftNavButton>
+
+            <ImageView id="baea_single_picture_view" />
+        </Window>
+    </NavigationWindow>
+</Alloy>

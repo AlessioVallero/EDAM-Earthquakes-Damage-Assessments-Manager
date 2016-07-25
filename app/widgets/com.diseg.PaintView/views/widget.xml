@@ -1,0 +1,17 @@
+<Alloy>
+    <View id="paint_view_container">
+        <View id="images_btn_view">
+            <Button id="btnStrokeColorRed" onClick="OnBtnStrokeColorRed_Click" />
+            <Button id="btnStrokeColorBlue" onClick="OnBtnStrokeColorBlue_Click" />
+            <Button id="btnStrokeColorBlack" onClick="OnBtnStrokeColorBlack_Click" />
+            <Button id="btnStrokeColorEraser" onClick="OnBtnStrokeColorEraser_Click" />
+            <Label id="lblStrokeColorEraser" />
+            <View id="viewAppButtonDone">
+                <Widget id="widgetAppButtonDone" src="com.diseg.AppButton" />
+            </View>
+            <Button id="btnStrokeTransparency" onClick="OnBtnStrokeTransparency_Click" />
+            <Button id="btnStrokeWidth" onClick="OnBtnStrokeWidth_Click" />
+        </View>
+        <Module id="paint_view" module="ti.paint" method="createPaintView" />
+    </View>
+</Alloy>

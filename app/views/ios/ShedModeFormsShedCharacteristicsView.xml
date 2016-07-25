@@ -1,0 +1,24 @@
+<Alloy>
+    <NavigationWindow id="navigationWindowShedCharacteristics">
+        <Window id="shedModeShedCharacteristicsWindow">
+            <LeftNavButton>
+                <Button id="btn_ios_back" onClick="OnBtnBack_Click" />
+            </LeftNavButton>
+
+            <ScrollView id="scrollViewShedCharacteristics">
+                <View id="viewSite">
+                    <Widget id="widgetAppComboBoxShedModeShedCharacteristicsSite" src="com.diseg.AppComboBox" />
+                </View>
+                <View id="viewNotUndergroundPlansNo">
+                    <Widget id="widgetAppComboBoxShedModeShedCharacteristicsNotUndergroundPlansNo" src="com.diseg.AppComboBox" />
+                </View>
+                <View id="viewUsage">
+                    <Widget id="widgetAppComboBoxShedModeShedCharacteristicsUsage" src="com.diseg.AppComboBox" />
+                </View>
+                <View id="viewAppButtonSave">
+                    <Widget id="widgetAppButtonSave" src="com.diseg.AppButton" />
+                </View>
+            </ScrollView>
+        </Window>
+    </NavigationWindow>
+</Alloy>

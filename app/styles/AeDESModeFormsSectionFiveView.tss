@@ -1,0 +1,148 @@
+// The Window
+"#aedesModeSectionFiveWindow":
+{
+    title: L( 'aedes_mode_section_five_view_title' ) ,
+    backgroundColor: '#ffffcc'
+} ,
+
+// Back button iOS (to papers general section view)
+"#btn_ios_back":
+{
+    title: L( 'generic_back_btn_title' )
+} ,
+
+// ScrollView
+"#scrollViewSectionFive":
+{
+    top: 10 ,
+    scrollType: "vertical"
+} ,
+
+// NonStructuralDamage label
+"#lblAeDESModeFormsSectionFiveNonStructuralDamage":
+{
+    text: L( 'generic_non_structural_damage_text_msg' ) ,
+    top: 0 ,
+    width: 290 ,
+    height: 18 ,
+    font:
+    {
+        fontFamily: 'Arial' ,
+        fontWeight: 'bold' ,
+        fontSize: '12'
+    } ,
+    color: '#000'
+} ,
+
+// Table view with NonStructuralDamage
+"#tableViewAeDESModeFormsSectionFiveNonStructuralDamage":
+{
+    top: 30 ,
+    backgroundColor: '#ffffff' ,
+    height: 300 ,
+    width: Ti.UI.FILL
+} ,
+
+// PdCC row
+"#tableViewAeDESModeFormsSectionFiveNonStructuralDamageRowPdCC":
+{
+    hasChild: true ,
+    className: 'section_row' ,
+    color: "#000" ,
+} ,
+
+// PdCC label
+"#lblAeDESModeFormsSectionFiveNonStructuralDamageRowPdCC":
+{
+    text: L( 'generic_pdcc_text_msg' ) ,
+    height: 50 ,
+    color: "#000" ,
+} ,
+
+// FallingTilesChimneys row
+"#tableViewAeDESModeFormsSectionFiveNonStructuralDamageRowFallingTilesChimneys":
+{
+    hasChild: true ,
+    className: 'section_row' ,
+    color: "#000" ,
+} ,
+
+// FallingTilesChimneys label
+"#lblAeDESModeFormsSectionFiveNonStructuralDamageRowFallingTilesChimneys":
+{
+    text: L( 'generic_falling_tiles_chimneys_text_msg' ) ,
+    height: 50 ,
+    color: "#000" ,
+} ,
+
+// FallingCornicesParapets row
+"#tableViewAeDESModeFormsSectionFiveNonStructuralDamageRowFallingCornicesParapets":
+{
+    hasChild: true ,
+    className: 'section_row' ,
+    color: "#000" ,
+} ,
+
+// FallingCornicesParapets label
+"#lblAeDESModeFormsSectionFiveNonStructuralDamageRowFallingCornicesParapets":
+{
+    text: L( 'generic_falling_cornices_parapets_text_msg' ) ,
+    height: 50 ,
+    color: "#000" ,
+} ,
+
+// FallingInternalExternalObject row
+"#tableViewAeDESModeFormsSectionFiveNonStructuralDamageRowFallingInternalExternalObjects":
+{
+    hasChild: true ,
+    className: 'section_row' ,
+    color: "#000" ,
+} ,
+
+// FallingInternalExternalObject label
+"#lblAeDESModeFormsSectionFiveNonStructuralDamageRowFallingInternalExternalObjects":
+{
+    text: L( 'generic_falling_internal_external_objects_text_msg' ) ,
+    height: 50 ,
+    color: "#000" ,
+} ,
+
+// WaterSupplySewerageOrThermohydraulicDamage row
+"#tableViewAeDESModeFormsSectionFiveNonStructuralDamageRowWaterSupplySewerageOrThermohydraulicDamage":
+{
+    hasChild: true ,
+    className: 'section_row' ,
+    color: "#000" ,
+} ,
+
+// WaterSupplySewerageOrThermohydraulicDamage label
+"#lblAeDESModeFormsSectionFiveNonStructuralDamageRowWaterSupplySewerageOrThermohydraulicDamage":
+{
+    text: L( 'generic_water_supply_sewerage_or_thermohydraulic_damage_text_msg' ) ,
+    height: 50 ,
+    color: "#000" ,
+} ,
+
+// MainsElectricityOrGasDamage row
+"#tableViewAeDESModeFormsSectionFiveNonStructuralDamageRowMainsElectricityOrGasDamage":
+{
+    hasChild: true ,
+    className: 'section_row' ,
+    color: "#000" ,
+} ,
+
+// MainsElectricityOrGasDamage label
+"#lblAeDESModeFormsSectionFiveNonStructuralDamageRowMainsElectricityOrGasDamage":
+{
+    text: L( 'generic_mains_electricity_or_gas_damage_text_msg' ) ,
+    height: 50 ,
+    color: "#000" ,
+} ,
+
+// Save view
+"#viewAppButtonSave":
+{
+    top: 340 ,
+    width: 60 ,
+    height: 80
+}

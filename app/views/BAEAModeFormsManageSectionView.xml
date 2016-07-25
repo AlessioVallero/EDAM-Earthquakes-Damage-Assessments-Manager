@@ -1,0 +1,12 @@
+<Alloy>
+    <Window id="baeaModeFormsManageSectionViewWindow" onAndroid:back="OnAndroidBackButton_Click" onAndroidback="OnAndroidBackButton_Click">
+        <ActivityIndicator id="activity_indicator" />
+
+        <View id="viewAppButtonAdd">
+            <Widget id="widgetAppButtonAdd" src="com.diseg.AppButton" />
+        </View>
+        <ScrollView id="scrollViewBAEAModeFormsManageSectionView">
+            <TableView id="tableViewBAEAModeFormsManageSection" onClick="OnTableViewBAEAModeFormsManageSection_Click" />
+        </ScrollView>
+    </Window>
+</Alloy>

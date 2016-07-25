@@ -1,0 +1,30 @@
+<Alloy>
+    <NavigationWindow id="navigationWindowProfessionalModeForms">
+        <Window id="professionalModeFormsWindow">
+            <LeftNavButton>
+                <Button id="btn_ios_back" onClick="OnBtnBack_Click" />
+            </LeftNavButton>
+    
+            <ActivityIndicator id="activity_indicator" />
+    
+            <TableView id="tableViewProfessionalModeForms" onClick="OnTableViewProfessionalModeForms_Click">
+                <TableViewRow id="tableViewProfessionalModeRowUSAForms">
+                    <ImageView id="imgProfessionalModeRowUSAForms" />
+                    <Label id="lblProfessionalModeRowUSAForms" />
+                </TableViewRow>
+                <TableViewRow id="tableViewProfessionalModeRowNepalForms">
+                    <ImageView id="imgProfessionalModeRowNepalForms" />
+                    <Label id="lblProfessionalModeRowNepalForms" />
+                </TableViewRow>
+                <TableViewRow id="tableViewProfessionalModeRowNZForms">
+                    <ImageView id="imgProfessionalModeRowNZForms" />
+                    <Label id="lblProfessionalModeRowNZForms" />
+                </TableViewRow>
+                <TableViewRow id="tableViewProfessionalModeRowItalyForms">
+                    <ImageView id="imgProfessionalModeRowItalyForms" />
+                    <Label id="lblProfessionalModeRowItalyForms" />
+                </TableViewRow>
+            </TableView>
+        </Window>
+    </NavigationWindow>
+</Alloy>

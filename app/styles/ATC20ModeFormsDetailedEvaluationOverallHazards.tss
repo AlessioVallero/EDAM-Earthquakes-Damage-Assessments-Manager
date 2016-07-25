@@ -1,0 +1,60 @@
+// The Window
+"#atc20ModeDetailedEvaluationOverallHazardsWindow":
+{
+    title: L( 'atc20_detailed_evaluation_overall_hazards_view_title' ) ,
+    backgroundColor: '#ffffcc'
+} ,
+
+// Back button iOS (to papers general section view)
+"#btn_ios_back":
+{
+    title: L( 'generic_back_btn_title' )
+} ,
+
+// ScrollView
+"#scrollViewDetailedEvaluationOverallHazards":
+{
+    top: 10 ,
+    contentWidth: '100%' ,
+    scrollType: "vertical"
+} ,
+
+// CollapseOrPartialCollapse view
+"#viewAppComboBoxATC20ModeFormsDetailedEvaluationOverallHazardsCollapseOrPartialCollapse":
+{
+    top: 0 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// BuildingOrStoryLeaning view
+"#viewAppComboBoxATC20ModeFormsDetailedEvaluationOverallHazardsBuildingOrStoryLeaning":
+{
+    top: 70 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// Other view
+"#viewAppComboBoxATC20ModeFormsDetailedEvaluationOverallHazardsOther":
+{
+    top: 140 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// OtherName view
+"#viewAppTextFieldATC20ModeFormsDetailedEvaluationOverallHazardsOtherName":
+{
+    top: 210 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// Comments view
+"#viewAppTextFieldATC20ModeFormsDetailedEvaluationOverallHazardsComments":
+{
+    top: 280 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+}

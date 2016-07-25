@@ -1,0 +1,60 @@
+// The Window
+"#atc20ModeDetailedEvaluationGeotechnicalHazardsWindow":
+{
+    title: L( 'atc20_detailed_evaluation_geotechnical_hazards_view_title' ) ,
+    backgroundColor: '#ffffcc'
+} ,
+
+// Back button iOS (to papers general section view)
+"#btn_ios_back":
+{
+    title: L( 'generic_back_btn_title' )
+} ,
+
+// ScrollView
+"#scrollViewDetailedEvaluationGeotechnicalHazards":
+{
+    top: 10 ,
+    contentWidth: '100%' ,
+    scrollType: "vertical"
+} ,
+
+// SlopeFailureDebris view
+"#viewAppComboBoxATC20ModeFormsDetailedEvaluationGeotechnicalHazardsSlopeFailureDebris":
+{
+    top: 0 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// GroundMovementFissures view
+"#viewAppComboBoxATC20ModeFormsDetailedEvaluationGeotechnicalHazardsGroundMovementFissures":
+{
+    top: 70 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// Other view
+"#viewAppComboBoxATC20ModeFormsDetailedEvaluationGeotechnicalHazardsOther":
+{
+    top: 140 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// OtherName view
+"#viewAppTextFieldATC20ModeFormsDetailedEvaluationGeotechnicalHazardsOtherName":
+{
+    top: 210 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// Comments view
+"#viewAppTextFieldATC20ModeFormsDetailedEvaluationGeotechnicalHazardsComments":
+{
+    top: 280 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+}

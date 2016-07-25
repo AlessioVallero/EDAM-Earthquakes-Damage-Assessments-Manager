@@ -1,0 +1,27 @@
+<Alloy>
+    <Window id="baeaModeLandslideLandslideTypeWindow">
+        <ScrollView id="scrollViewLandslideLandslideType">
+            <View id="viewAppCheckBoxBAEAModeFormsLandslideLandslideTypeSlide">
+                <Widget id="widgetAppCheckBoxBAEAModeFormsLandslideLandslideTypeSlide" src="com.diseg.AppCheckBox" />
+            </View>
+            <View id="viewAppCheckBoxBAEAModeFormsLandslideLandslideTypeFall">
+                <Widget id="widgetAppCheckBoxBAEAModeFormsLandslideLandslideTypeFall" src="com.diseg.AppCheckBox" />
+            </View>
+            <View id="viewAppCheckBoxBAEAModeFormsLandslideLandslideTypeFlow">
+                <Widget id="widgetAppCheckBoxBAEAModeFormsLandslideLandslideTypeFlow" src="com.diseg.AppCheckBox" />
+            </View>
+            <View id="viewAppCheckBoxBAEAModeFormsLandslideLandslideTypeSpread">
+                <Widget id="widgetAppCheckBoxBAEAModeFormsLandslideLandslideTypeSpread" src="com.diseg.AppCheckBox" />
+            </View>
+            <View id="viewAppCheckBoxBAEAModeFormsLandslideLandslideTypeTopple">
+                <Widget id="widgetAppCheckBoxBAEAModeFormsLandslideLandslideTypeTopple" src="com.diseg.AppCheckBox" />
+            </View>
+            <View id="viewAppCheckBoxBAEAModeFormsLandslideLandslideTypeComplex">
+                <Widget id="widgetAppCheckBoxBAEAModeFormsLandslideLandslideTypeComplex" src="com.diseg.AppCheckBox" />
+            </View>
+            <View id="viewAppCheckBoxBAEAModeFormsLandslideLandslideTypeOther">
+                <Widget id="widgetAppCheckBoxBAEAModeFormsLandslideLandslideTypeOther" src="com.diseg.AppCheckBox" />
+            </View>
+        </ScrollView>
+    </Window>
+</Alloy>

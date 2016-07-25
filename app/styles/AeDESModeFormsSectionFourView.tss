@@ -1,0 +1,253 @@
+// The Window
+"#aedesModeSectionFourWindow":
+{
+    title: L( 'aedes_mode_section_four_view_title' ) ,
+    backgroundColor: '#ffffcc'
+} ,
+
+// Back button iOS (to papers general section view)
+"#btn_ios_back":
+{
+    title: L( 'generic_back_btn_title' )
+} ,
+
+// ScrollView
+"#scrollViewSectionFour":
+{
+    top: 10 ,
+    scrollType: "vertical"
+} ,
+
+// Type label
+"#lblAeDESModeFormsSectionFourType":
+{
+    text: L( 'generic_type_text_msg' ) ,
+    top: 0 ,
+    width: 290 ,
+    height: 18 ,
+    font:
+    {
+        fontFamily: 'Arial' ,
+        fontWeight: 'bold' ,
+        fontSize: '12'
+    } ,
+    color: '#000'
+} ,
+
+// Table view with Types
+"#tableViewAeDESModeFormsSectionFourType":
+{
+    top: 30 ,
+    backgroundColor: '#ffffff' ,
+    height: 300 ,
+    width: Ti.UI.FILL
+} ,
+
+// Vertical structures row
+"#tableViewAeDESModeFormsSectionFourTypeRowVerticalStructures":
+{
+    hasChild: true ,
+    className: 'section_row' ,
+    color: "#000" ,
+} ,
+
+// Vertical structures label
+"#lblAeDESModeFormsSectionFourTypeRowVerticalStructures":
+{
+    text: L( 'generic_vertical_structures_text_msg' ) ,
+    height: 50 ,
+    color: "#000" ,
+} ,
+
+// Attics row
+"#tableViewAeDESModeFormsSectionFourTypeRowAttics":
+{
+    hasChild: true ,
+    className: 'section_row' ,
+    color: "#000" ,
+} ,
+
+// Attics label
+"#lblAeDESModeFormsSectionFourTypeRowAttics":
+{
+    text: L( 'generic_attics_text_msg' ) ,
+    height: 50 ,
+    color: "#000" ,
+} ,
+
+// Stairs row
+"#tableViewAeDESModeFormsSectionFourTypeRowStairs":
+{
+    hasChild: true ,
+    className: 'section_row' ,
+    color: "#000" ,
+} ,
+
+// Stairs label
+"#lblAeDESModeFormsSectionFourTypeRowStairs":
+{
+    text: L( 'generic_stairs_text_msg' ) ,
+    height: 50 ,
+    color: "#000" ,
+} ,
+
+// Coverage row
+"#tableViewAeDESModeFormsSectionFourTypeRowCoverage":
+{
+    hasChild: true ,
+    className: 'section_row' ,
+    color: "#000" ,
+} ,
+
+// Coverage label
+"#lblAeDESModeFormsSectionFourTypeRowCoverage":
+{
+    text: L( 'generic_coverage_text_msg' ) ,
+    height: 50 ,
+    color: "#000" ,
+} ,
+
+// InfillPartitions row
+"#tableViewAeDESModeFormsSectionFourTypeRowInfillPartitions":
+{
+    hasChild: true ,
+    className: 'section_row' ,
+    color: "#000" ,
+} ,
+
+// InfillPartitions label
+"#lblAeDESModeFormsSectionFourTypeRowInfillPartitions":
+{
+    text: L( 'generic_infill_partitions_text_msg' ) ,
+    height: 50 ,
+    color: "#000" ,
+} ,
+
+// PreExistingDamage row
+"#tableViewAeDESModeFormsSectionFourTypeRowPreExistingDamage":
+{
+    hasChild: true ,
+    className: 'section_row' ,
+    color: "#000" ,
+} ,
+
+// PreExistingDamage label
+"#lblAeDESModeFormsSectionFourTypeRowPreExistingDamage":
+{
+    text: L( 'generic_pre_existing_damage_text_msg' ) ,
+    height: 50 ,
+    color: "#000" ,
+} ,
+
+// MeasuresOfEmergency label
+"#lblAeDESModeFormsSectionFourMeasuresOfEmergency":
+{
+    text: L( 'generic_measures_of_emergency_text_msg' ) ,
+    top: 350 ,
+    width: 290 ,
+    height: 18 ,
+    font:
+    {
+        fontFamily: 'Arial' ,
+        fontWeight: 'bold' ,
+        fontSize: '12'
+    } ,
+    color: '#000'
+} ,
+
+// Table view with MeasuresOfEmergency
+"#tableViewAeDESModeFormsSectionFourMeasuresOfEmergency":
+{
+    top: 380 ,
+    backgroundColor: '#ffffff' ,
+    height: 250 ,
+    width: Ti.UI.FILL
+} ,
+
+// Vertical structures row
+"#tableViewAeDESModeFormsSectionFourMeasuresOfEmergencyRowVerticalStructures":
+{
+    hasChild: true ,
+    className: 'section_row' ,
+    color: "#000" ,
+} ,
+
+// Vertical structures label
+"#lblAeDESModeFormsSectionFourMeasuresOfEmergencyRowVerticalStructures":
+{
+    text: L( 'generic_vertical_structures_text_msg' ) ,
+    height: 50 ,
+    color: "#000" ,
+} ,
+
+// Attics row
+"#tableViewAeDESModeFormsSectionFourMeasuresOfEmergencyRowAttics":
+{
+    hasChild: true ,
+    className: 'section_row' ,
+    color: "#000" ,
+} ,
+
+// Attics label
+"#lblAeDESModeFormsSectionFourMeasuresOfEmergencyRowAttics":
+{
+    text: L( 'generic_attics_text_msg' ) ,
+    height: 50 ,
+    color: "#000" ,
+} ,
+
+// Stairs row
+"#tableViewAeDESModeFormsSectionFourMeasuresOfEmergencyRowStairs":
+{
+    hasChild: true ,
+    className: 'section_row' ,
+    color: "#000" ,
+} ,
+
+// Stairs label
+"#lblAeDESModeFormsSectionFourMeasuresOfEmergencyRowStairs":
+{
+    text: L( 'generic_stairs_text_msg' ) ,
+    height: 50 ,
+    color: "#000" ,
+} ,
+
+// Coverage row
+"#tableViewAeDESModeFormsSectionFourMeasuresOfEmergencyRowCoverage":
+{
+    hasChild: true ,
+    className: 'section_row' ,
+    color: "#000" ,
+} ,
+
+// Coverage label
+"#lblAeDESModeFormsSectionFourMeasuresOfEmergencyRowCoverage":
+{
+    text: L( 'generic_coverage_text_msg' ) ,
+    height: 50 ,
+    color: "#000" ,
+} ,
+
+// InfillPartitions row
+"#tableViewAeDESModeFormsSectionFourMeasuresOfEmergencyRowInfillPartitions":
+{
+    hasChild: true ,
+    className: 'section_row' ,
+    color: "#000" ,
+} ,
+
+// InfillPartitions label
+"#lblAeDESModeFormsSectionFourMeasuresOfEmergencyRowInfillPartitions":
+{
+    text: L( 'generic_infill_partitions_text_msg' ) ,
+    height: 50 ,
+    color: "#000" ,
+} ,
+
+// Save view
+"#viewAppButtonSave":
+{
+    top: 640 ,
+    width: 60 ,
+    height: 80
+}

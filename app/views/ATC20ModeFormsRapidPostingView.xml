@@ -1,0 +1,18 @@
+<Alloy>
+    <Window id="atc20ModeRapidPostingWindow">
+        <ScrollView id="scrollViewRapidPosting">
+            <View id="viewAppComboBoxATC20ModeFormsRapidPostingPosting">
+                <Widget id="widgetAppComboBoxATC20ModeFormsRapidPostingPosting" src="com.diseg.AppComboBox" />
+            </View>
+            <View id="viewAppComboBoxATC20ModeFormsRapidPostingClassification">
+                <Widget id="widgetAppComboBoxATC20ModeFormsRapidPostingClassification" src="com.diseg.AppComboBox" />
+            </View>
+            <View id="viewAppTextFieldATC20ModeFormsRapidPostingUseAndEntryRestrictions">
+                <Widget id="widgetAppTextFieldATC20ModeFormsRapidPostingUseAndEntryRestrictions" src="com.diseg.AppTextField" />
+            </View>
+            <View id="viewAppButtonSave">
+                <Widget id="widgetAppButtonSave" src="com.diseg.AppButton" />
+            </View>
+        </ScrollView>
+    </Window>
+</Alloy>

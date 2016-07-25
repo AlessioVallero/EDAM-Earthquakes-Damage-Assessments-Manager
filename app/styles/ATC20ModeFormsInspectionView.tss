@@ -1,0 +1,185 @@
+// The Window
+"#atc20ModeFormsInspectionWindow":
+{
+    title: L( 'atc20_mode_form_inspection_view_title' ) ,
+    backgroundColor: '#ffffcc'
+} ,
+
+// Back button iOS (to papers general section view)
+"#btn_ios_back":
+{
+    title: L( 'generic_back_btn_title' )
+} ,
+
+// ScrollView
+"#scrollViewFormsInspection":
+{
+    top: 0 ,
+    contentWidth: '100%' ,
+    scrollType: "vertical"
+} ,
+
+// DateTime view
+"#viewDateTime":
+{
+    top: 10 ,
+    left: 0 ,
+    right: 10 ,
+    height: 200 ,
+} ,
+
+// DateTime label
+"#lblDateTime":
+{
+    text: L( 'generic_datetime_text_msg' ) ,
+    left: 0 ,
+    width: 50 ,
+    height: 50 ,
+    font:
+    {
+        fontFamily: 'Arial' ,
+        fontWeight: 'bold' ,
+        fontSize: '12'
+    } ,
+    color: '#000' ,
+    textAlign: 'right'
+} ,
+
+// View disabler DateTime (workaround to disable a picker)
+"#viewDisablerDateTime":
+{
+    left: 60 ,
+    right: 10 ,
+    borderColor: "transparent" ,
+    backgroundColor: "transparent" ,
+    zIndex: 1
+} ,
+
+// Date picker
+"#datePickerDate[platform=ios]":
+{
+    left: 60 ,
+    right: 10 ,
+    type: Titanium.UI.PICKER_TYPE_DATE_AND_TIME ,
+    format24: false ,
+    selectionIndicator: true ,
+    useSpinner: true
+} ,
+
+// Date view
+"#viewDate":
+{
+    top: 10 ,
+    left: 0 ,
+    right: 10 ,
+    height: 100 ,
+} ,
+
+// Date label
+"#lblDate":
+{
+    text: L( 'generic_date_text_msg' ) ,
+    left: 0 ,
+    width: 50 ,
+    height: 50 ,
+    font:
+    {
+        fontFamily: 'Arial' ,
+        fontWeight: 'bold' ,
+        fontSize: '12'
+    } ,
+    color: '#000' ,
+    textAlign: 'right'
+} ,
+
+// View disabler Date (workaround to disable a picker)
+"#viewDisablerDate":
+{
+    left: 60 ,
+    right: 10 ,
+    borderColor: "transparent" ,
+    backgroundColor: "transparent" ,
+    zIndex: 1
+} ,
+
+// Date picker
+"#datePickerDate":
+{
+    left: 60 ,
+    right: 10 ,
+    type: Titanium.UI.PICKER_TYPE_DATE ,
+    selectionIndicator: true ,
+    useSpinner: true
+} ,
+
+// Time view
+"#viewTime":
+{
+    top: 120 ,
+    left: 0 ,
+    right: 10 ,
+    height: 100 ,
+} ,
+
+// Time label
+"#lblTime":
+{
+    text: L( 'generic_time_text_msg' ) ,
+    left: 0 ,
+    width: 50 ,
+    height: 50 ,
+    font:
+    {
+        fontFamily: 'Arial' ,
+        fontWeight: 'bold' ,
+        fontSize: '12'
+    } ,
+    color: '#000' ,
+    textAlign: 'right'
+} ,
+
+// View disabler Time (workaround to disable a picker)
+"#viewDisablerTime":
+{
+    left: 60 ,
+    right: 10 ,
+    borderColor: "transparent" ,
+    backgroundColor: "transparent" ,
+    zIndex: 1
+} ,
+
+// Time picker
+"#timePickerTime":
+{
+    left: 60 ,
+    right: 10 ,
+    type: Titanium.UI.PICKER_TYPE_TIME ,
+    format24: false ,
+    selectionIndicator: true ,
+    useSpinner: true
+} ,
+
+// AreasInspectedWrapper view
+"#viewAreasInspectedWrapper":
+{
+    top: 230 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// AreasInspected view
+"#viewAreasInspected":
+{
+    top: 0 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// Save view
+"#viewAppButtonSave":
+{
+    top: 300 ,
+    width: 60 ,
+    height: 80 ,
+    bottom: 10
+}

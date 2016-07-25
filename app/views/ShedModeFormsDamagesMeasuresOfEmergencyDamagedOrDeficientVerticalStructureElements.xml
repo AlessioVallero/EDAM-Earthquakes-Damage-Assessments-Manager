@@ -1,0 +1,24 @@
+<Alloy>
+    <Window id="shedModeDamagesMeasuresOfEmergencyDamagesOrDeficientVerticalStructureElementsWindow">
+        <ScrollView id="scrollViewDamagesMeasuresOfEmergencyDamagesOrDeficientVerticalStructureElements">
+            <View id="viewAppCheckBoxShedModeFormsDamagesMeasuresOfEmergencyConnectionBetweenThePierAndIndustrialFloor">
+                <Widget id="widgetAppCheckBoxShedModeFormsDamagesMeasuresOfEmergencyConnectionBetweenThePierAndIndustrialFloor" src="com.diseg.AppCheckBox" />
+            </View>
+            <View id="viewAppCheckBoxShedModeFormsDamagesMeasuresOfEmergencyConsolidationOfTheFoundationByLowPressureCementMixtures">
+                <Widget id="widgetAppCheckBoxShedModeFormsDamagesMeasuresOfEmergencyConsolidationOfTheFoundationByLowPressureCementMixtures" src="com.diseg.AppCheckBox" />
+            </View>
+            <View id="viewAppCheckBoxShedModeFormsDamagesMeasuresOfEmergencyRestoringTheFillingInterspaceBetweenThePierAndGlassByManualCasting">
+                <Widget id="widgetAppCheckBoxShedModeFormsDamagesMeasuresOfEmergencyRestoringTheFillingInterspaceBetweenThePierAndGlassByManualCasting" src="com.diseg.AppCheckBox" />
+            </View>
+            <View id="viewAppCheckBoxShedModeFormsDamagesMeasuresOfEmergencyConfinementAtTheBaseOfThePillars">
+                <Widget id="widgetAppCheckBoxShedModeFormsDamagesMeasuresOfEmergencyConfinementAtTheBaseOfThePillars" src="com.diseg.AppCheckBox" />
+            </View>
+            <View id="viewAppCheckBoxShedModeFormsDamagesMeasuresOfEmergencyLocalStrengtheningWithMetalNecktie">
+                <Widget id="widgetAppCheckBoxShedModeFormsDamagesMeasuresOfEmergencyLocalStrengtheningWithMetalNecktie" src="com.diseg.AppCheckBox" />
+            </View>
+            <View id="viewAppCheckBoxShedModeFormsDamagesMeasuresOfEmergencyContainmentAndStrengtheningOfTheBasicOfThePier">
+                <Widget id="widgetAppCheckBoxShedModeFormsDamagesMeasuresOfEmergencyContainmentAndStrengtheningOfTheBasicOfThePier" src="com.diseg.AppCheckBox" />
+            </View>
+        </ScrollView>
+    </Window>
+</Alloy>

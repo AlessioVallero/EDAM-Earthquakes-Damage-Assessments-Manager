@@ -1,0 +1,237 @@
+// The Window
+"#aedesModeSectionThreeWindow":
+{
+    title: L( 'aedes_mode_section_three_view_title' ) ,
+    backgroundColor: '#ffffcc'
+} ,
+
+// Back button iOS (to papers general section view)
+"#btn_ios_back":
+{
+    title: L( 'generic_back_btn_title' )
+} ,
+
+// ScrollView
+"#scrollViewSectionThree":
+{
+    top: 10 ,
+    contentWidth: '100%' ,
+    scrollType: "vertical"
+} ,
+
+// Coverage view
+"#viewAppComboBoxAeDESModeFormsSectionThreeCoverage":
+{
+    top: 0 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// Regularity label
+"#lblAeDESModeFormsSectionThreeRegularity":
+{
+    text: L( 'generic_regularity_text_msg' ) ,
+    top: 70 ,
+    width: 290 ,
+    height: 18 ,
+    font:
+    {
+        fontFamily: 'Arial' ,
+        fontWeight: 'bold' ,
+        fontSize: '12'
+    } ,
+    color: '#000'
+} ,
+
+// PlanAndElevation view
+"#viewAppComboBoxAeDESModeFormsSectionThreePlanAndElevation":
+{
+    top: 100 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// InfillDisposal view
+"#viewAppComboBoxAeDESModeFormsSectionThreeInfillDisposal":
+{
+    top: 170 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// IsolatedColumns view
+"#viewAppComboBoxAeDESModeFormsSectionThreeIsolatedColumns":
+{
+    top: 240 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// Mixed view
+"#viewAppComboBoxAeDESModeFormsSectionThreeMixed":
+{
+    top: 310 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// Reinforced view
+"#viewAppComboBoxAeDESModeFormsSectionThreeReinforced":
+{
+    top: 380 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// ReinforcedConcreteFrames view
+"#viewAppCheckBoxAeDESModeFormsSectionThreeReinforcedConcreteFrames":
+{
+    top: 450 ,
+    height: 50 ,
+    width: 290
+} ,
+
+// ReinforcedConcreteWalls view
+"#viewAppCheckBoxAeDESModeFormsSectionThreeReinforcedConcreteWalls":
+{
+    top: 520 ,
+    height: 50 ,
+    width: 290
+} ,
+
+// SteelFrames view
+"#viewAppCheckBoxAeDESModeFormsSectionThreeSteelFrames":
+{
+    top: 590 ,
+    height: 50 ,
+    width: 290
+} ,
+
+// VerticalMasonryStructures label
+"#lblAeDESModeFormsSectionThreeVerticalMasonryStructures":
+{
+    text: L( 'generic_vertical_masonry_structures_text_msg' ) ,
+    top: 660 ,
+    width: 290 ,
+    height: 18 ,
+    font:
+    {
+        fontFamily: 'Arial' ,
+        fontWeight: 'bold' ,
+        fontSize: '12'
+    } ,
+    color: '#000'
+} ,
+
+// Table view with Masonry structures
+"#tableViewAeDESModeFormsSectionThreeMasonryStructure":
+{
+    top: 690 ,
+    backgroundColor: '#ffffff' ,
+    height: 300 ,
+    width: Ti.UI.FILL
+} ,
+
+// NotIdentified row
+"#tableViewAeDESModeFormsSectionThreeMasonryStructureRowNotIdentified":
+{
+    hasChild: true ,
+    className: 'section_row' ,
+    color: "#000" ,
+} ,
+
+// NotIdentified label
+"#lblAeDESModeFormsSectionThreeMasonryStructureRowNotIdentified":
+{
+    text: L( 'generic_not_identified_text_msg' ) ,
+    height: 50 ,
+    color: "#000" ,
+} ,
+
+// VaultsWithoutChains row
+"#tableViewAeDESModeFormsSectionThreeMasonryStructureRowVaultsWithoutChains":
+{
+    hasChild: true ,
+    className: 'section_row' ,
+    color: "#000" ,
+} ,
+
+// VaultsWithoutChains label
+"#lblAeDESModeFormsSectionThreeMasonryStructureRowVaultsWithoutChains":
+{
+    text: L( 'generic_vaults_without_chains_text_msg' ) ,
+    height: 50 ,
+    color: "#000" ,
+} ,
+
+// VaultsWithChains row
+"#tableViewAeDESModeFormsSectionThreeMasonryStructureRowVaultsWithChains":
+{
+    hasChild: true ,
+    className: 'section_row' ,
+    color: "#000" ,
+} ,
+
+// VaultsWithChains label
+"#lblAeDESModeFormsSectionThreeMasonryStructureRowVaultsWithChains":
+{
+    text: L( 'generic_vaults_with_chains_text_msg' ) ,
+    height: 50 ,
+    color: "#000" ,
+} ,
+
+// DeformableAttics row
+"#tableViewAeDESModeFormsSectionThreeMasonryStructureRowDeformableAttics":
+{
+    hasChild: true ,
+    className: 'section_row' ,
+    color: "#000" ,
+} ,
+
+// DeformableAttics label
+"#lblAeDESModeFormsSectionThreeMasonryStructureRowDeformableAttics":
+{
+    text: L( 'generic_deformable_attics_text_msg' ) ,
+    height: 50 ,
+    color: "#000" ,
+} ,
+
+// SemiDeformableAttics row
+"#tableViewAeDESModeFormsSectionThreeMasonryStructureRowSemiDeformableAttics":
+{
+    hasChild: true ,
+    className: 'section_row' ,
+    color: "#000" ,
+} ,
+
+// SemiDeformableAttics label
+"#lblAeDESModeFormsSectionThreeMasonryStructureRowSemiDeformableAttics":
+{
+    text: L( 'generic_semi_deformable_attics_text_msg' ) ,
+    height: 50 ,
+    color: "#000" ,
+} ,
+
+// RigidAttics row
+"#tableViewAeDESModeFormsSectionThreeMasonryStructureRowRigidAttics":
+{
+    hasChild: true ,
+    className: 'section_row' ,
+    color: "#000" ,
+} ,
+
+// RigidAttics label
+"#lblAeDESModeFormsSectionThreeMasonryStructureRowRigidAttics":
+{
+    text: L( 'generic_rigid_attics_text_msg' ) ,
+    height: 50 ,
+    color: "#000" ,
+} ,
+
+// Save view
+"#viewAppButtonSave":
+{
+    top: 1000 ,
+    width: 60 ,
+    height: 80
+}
