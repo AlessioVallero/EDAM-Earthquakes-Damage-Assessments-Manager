@@ -1,0 +1,369 @@
+{
+    "types": [
+        {
+            "name": "Modules.URLSession", 
+            "inherits": "Titanium.Module", 
+            "description": "<p>Wrapper to support iOS's NSURLSession class for background downloads.</p>", 
+            "userAgents": [
+                {
+                    "platform": "iphone"
+                }, 
+                {
+                    "platform": "ipad"
+                }
+            ], 
+            "examples": [], 
+            "remarks": [
+                "<p>These APIs are supported on iOS 7 and later.</p>\n<p>The URL session module (<code>com.appcelerator.urlSession</code>) provides the application the ability to\ndownload large content via HTTP while the application is in the background. With this module, you can</p>\n<ol>\n<li>Create a URL session and a background download task.</li>\n<li>Monitor events to check the progress of the download and session.</li>\n<li>Cancel downloads and invalidate sessions.</li>\n</ol>\n<p>URL session events are monitored through the following iOS application-level events:</p>\n<ul>\n<li>Titanium.App.iOS.backgroundtransfer</li>\n<li>Titanium.App.iOS.downloadprogress</li>\n<li>Titanium.App.iOS.downloadcompleted</li>\n<li>Titanium.App.iOS.sessioncompleted</li>\n<li>Titanium.App.iOS.sessioneventscompleted</li>\n</ul>\n<p>These events are monitored as application-level events by using the <code>addEventListener</code> method with the\nTitanium.App.iOS namespace.<br />\n</p>\n<p>For more information on getting started, refer to the\n<a href=\"http://docs.appcelerator.com/titanium/latest/#!/guide/iOS_Background_Services\">iOS Background Services guide</a>.</p>"
+            ], 
+            "properties": [
+                {
+                    "name": "apiName", 
+                    "since": [
+                        {
+                            "name": "Titanium Mobile SDK - iPhone", 
+                            "version": "3.2.0"
+                        }, 
+                        {
+                            "name": "Titanium Mobile SDK - iPad", 
+                            "version": "3.2.0"
+                        }
+                    ], 
+                    "isInternal": false, 
+                    "permission": "read-only", 
+                    "deprecated": false, 
+                    "isInstanceProperty": false, 
+                    "examples": [], 
+                    "userAgents": [
+                        {
+                            "platform": "iphone"
+                        }, 
+                        {
+                            "platform": "ipad"
+                        }
+                    ], 
+                    "type": "String", 
+                    "isClassProperty": true, 
+                    "availability": "always", 
+                    "description": "<p>The name of the API that this proxy corresponds to.</p>"
+                }
+            ], 
+            "functions": [
+                {
+                    "name": "applyProperties", 
+                    "isInternal": false, 
+                    "parameters": [
+                        {
+                            "name": "props", 
+                            "usage": "required", 
+                            "type": "Object", 
+                            "description": "<p>A dictionary of properties to apply.</p>"
+                        }
+                    ], 
+                    "userAgents": [
+                        {
+                            "platform": "iphone"
+                        }, 
+                        {
+                            "platform": "ipad"
+                        }
+                    ], 
+                    "since": [
+                        {
+                            "name": "Titanium Mobile SDK - iPhone", 
+                            "version": "3.2.0"
+                        }, 
+                        {
+                            "name": "Titanium Mobile SDK - iPad", 
+                            "version": "3.2.0"
+                        }
+                    ], 
+                    "isConstructor": false, 
+                    "isClassProperty": true, 
+                    "examples": [], 
+                    "deprecated": false, 
+                    "exceptions": [], 
+                    "references": [], 
+                    "isMethod": true, 
+                    "isInstanceProperty": false, 
+                    "description": "<p>Applies the properties to the proxy.</p>"
+                }, 
+                {
+                    "name": "backgroundDownloadTaskWithURL", 
+                    "isInternal": false, 
+                    "parameters": [
+                        {
+                            "name": "session", 
+                            "usage": "required", 
+                            "type": "Object", 
+                            "description": "<p>URL session object.</p>"
+                        }, 
+                        {
+                            "name": "url", 
+                            "usage": "required", 
+                            "type": "String", 
+                            "description": "<p>URL to download content from.</p>"
+                        }
+                    ], 
+                    "deprecated": false, 
+                    "since": [
+                        {
+                            "name": "Titanium Mobile SDK - iPhone", 
+                            "version": "3.2.0"
+                        }, 
+                        {
+                            "name": "Titanium Mobile SDK - iPad", 
+                            "version": "3.2.0"
+                        }
+                    ], 
+                    "returnTypes": [
+                        {
+                            "type": "String", 
+                            "description": "<p>Task's identifier number.</p>"
+                        }
+                    ], 
+                    "isConstructor": false, 
+                    "isClassProperty": true, 
+                    "examples": [], 
+                    "userAgents": [
+                        {
+                            "platform": "iphone"
+                        }, 
+                        {
+                            "platform": "ipad"
+                        }
+                    ], 
+                    "exceptions": [], 
+                    "references": [], 
+                    "isMethod": true, 
+                    "isInstanceProperty": false, 
+                    "description": "<p>Creates a download task for the specified URL, within the provided session object and saves the\nresults to a file.</p>"
+                }, 
+                {
+                    "name": "createURLSession", 
+                    "isInternal": false, 
+                    "parameters": [
+                        {
+                            "name": "sessionConfiguration", 
+                            "usage": "required", 
+                            "type": "Object", 
+                            "description": "<p>Session configuration object created with the <Modules.URLSession.createURLSessionBackgroundConfiguration></p>"
+                        }
+                    ], 
+                    "deprecated": false, 
+                    "since": [
+                        {
+                            "name": "Titanium Mobile SDK - iPhone", 
+                            "version": "3.2.0"
+                        }, 
+                        {
+                            "name": "Titanium Mobile SDK - iPad", 
+                            "version": "3.2.0"
+                        }
+                    ], 
+                    "returnTypes": [
+                        {
+                            "type": "Object", 
+                            "description": "<p>URL session object.</p>"
+                        }
+                    ], 
+                    "isConstructor": false, 
+                    "isClassProperty": true, 
+                    "examples": [], 
+                    "userAgents": [
+                        {
+                            "platform": "iphone"
+                        }, 
+                        {
+                            "platform": "ipad"
+                        }
+                    ], 
+                    "exceptions": [], 
+                    "references": [], 
+                    "isMethod": true, 
+                    "isInstanceProperty": false, 
+                    "description": "<p>Creates a session with the specified session configuration.</p>"
+                }, 
+                {
+                    "name": "createURLSessionBackgroundConfiguration", 
+                    "isInternal": false, 
+                    "parameters": [
+                        {
+                            "name": "indentifier", 
+                            "usage": "required", 
+                            "type": "String", 
+                            "description": "<p>Arbitrary string used to identify the session in the events.</p>"
+                        }
+                    ], 
+                    "deprecated": false, 
+                    "since": [
+                        {
+                            "name": "Titanium Mobile SDK - iPhone", 
+                            "version": "3.2.0"
+                        }, 
+                        {
+                            "name": "Titanium Mobile SDK - iPad", 
+                            "version": "3.2.0"
+                        }
+                    ], 
+                    "returnTypes": [
+                        {
+                            "type": "Object", 
+                            "description": "<p>Configuration object to pass to the <Modules.URLSession.createURLSession> method.</p>"
+                        }
+                    ], 
+                    "isConstructor": false, 
+                    "isClassProperty": true, 
+                    "examples": [], 
+                    "userAgents": [
+                        {
+                            "platform": "iphone"
+                        }, 
+                        {
+                            "platform": "ipad"
+                        }
+                    ], 
+                    "exceptions": [], 
+                    "references": [], 
+                    "isMethod": true, 
+                    "isInstanceProperty": false, 
+                    "description": "<p>Creates a preconfigured session configuration object that can be used to create a URL session for\nperforming a background download task.</p>"
+                }, 
+                {
+                    "name": "finishTasksAndInvalidate", 
+                    "isInternal": false, 
+                    "parameters": [
+                        {
+                            "name": "session", 
+                            "usage": "required", 
+                            "type": "Object", 
+                            "description": "<p>URL session object.</p>"
+                        }
+                    ], 
+                    "userAgents": [
+                        {
+                            "platform": "iphone"
+                        }, 
+                        {
+                            "platform": "ipad"
+                        }
+                    ], 
+                    "since": [
+                        {
+                            "name": "Titanium Mobile SDK - iPhone", 
+                            "version": "3.2.0"
+                        }, 
+                        {
+                            "name": "Titanium Mobile SDK - iPad", 
+                            "version": "3.2.0"
+                        }
+                    ], 
+                    "isConstructor": false, 
+                    "isClassProperty": true, 
+                    "examples": [], 
+                    "deprecated": false, 
+                    "exceptions": [], 
+                    "references": [], 
+                    "isMethod": true, 
+                    "isInstanceProperty": false, 
+                    "description": "<p>Invalidates the given session object, allowing any outstanding tasks to finish.</p>"
+                }, 
+                {
+                    "name": "getApiName", 
+                    "isInternal": false, 
+                    "userAgents": [
+                        {
+                            "platform": "iphone"
+                        }, 
+                        {
+                            "platform": "ipad"
+                        }
+                    ], 
+                    "since": [
+                        {
+                            "name": "Titanium Mobile SDK - iPhone", 
+                            "version": "3.2.0"
+                        }, 
+                        {
+                            "name": "Titanium Mobile SDK - iPad", 
+                            "version": "3.2.0"
+                        }
+                    ], 
+                    "returnTypes": [
+                        {
+                            "type": "String", 
+                            "description": ""
+                        }
+                    ], 
+                    "isConstructor": false, 
+                    "isClassProperty": true, 
+                    "examples": [], 
+                    "deprecated": false, 
+                    "exceptions": [], 
+                    "references": [], 
+                    "isMethod": true, 
+                    "isInstanceProperty": false, 
+                    "description": "<p>Gets the value of the <a href=\"Modules.URLSession.apiName\">apiName</a> property.</p>"
+                }, 
+                {
+                    "name": "invalidateAndCancel", 
+                    "isInternal": false, 
+                    "parameters": [
+                        {
+                            "name": "session", 
+                            "usage": "required", 
+                            "type": "Object", 
+                            "description": "<p>URL session object.</p>"
+                        }
+                    ], 
+                    "userAgents": [
+                        {
+                            "platform": "iphone"
+                        }, 
+                        {
+                            "platform": "ipad"
+                        }
+                    ], 
+                    "since": [
+                        {
+                            "name": "Titanium Mobile SDK - iPhone", 
+                            "version": "3.2.0"
+                        }, 
+                        {
+                            "name": "Titanium Mobile SDK - iPad", 
+                            "version": "3.2.0"
+                        }
+                    ], 
+                    "isConstructor": false, 
+                    "isClassProperty": true, 
+                    "examples": [], 
+                    "deprecated": false, 
+                    "exceptions": [], 
+                    "references": [], 
+                    "isMethod": true, 
+                    "isInstanceProperty": false, 
+                    "description": "<p>Cancels all outstanding tasks and then invalidates the session object.</p>"
+                }
+            ], 
+            "deprecated": false, 
+            "since": [
+                {
+                    "name": "Titanium Mobile SDK - iPhone", 
+                    "version": "3.2.0"
+                }, 
+                {
+                    "name": "Titanium Mobile SDK - iPad", 
+                    "version": "3.2.0"
+                }
+            ], 
+            "isInternal": false, 
+            "events": []
+        }
+    ], 
+    "aliases": [
+        {
+            "type": "Titanium", 
+            "name": "Ti"
+        }
+    ]
+}

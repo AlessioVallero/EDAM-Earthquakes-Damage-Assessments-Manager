@@ -1,0 +1,281 @@
+<link rel="stylesheet" type="text/css" href="styles.css">
+<div class="apidoc_container apidoc_object">
+
+<div class="page-nav">
+	<ul>
+		<li>
+				Description
+		</li>
+		<li>
+				Examples
+		</li>
+			<li>
+				<a href="#properties">Properties</a>
+			</li>
+			<li>
+				<a href="#methods">Methods</a>
+			</li>
+			<li>
+				<a href="#events">Events</a>
+			</li>
+
+	</ul>
+</div>
+
+
+
+
+<h1 class="namespace">CoreMotionAttitude</h1>
+
+<div class="namespace_type">
+	
+		Object
+</div>
+
+
+<div class="platforms">
+		<span class="iphone" title="iphone"></span>
+		<span class="ipad" title="ipad"></span>
+
+	<div class="clear"></div>
+
+	<span class="since">
+		<table>
+			<tr>
+				<th>Platform</th>
+				<th>Since</th>
+			</tr>
+				<tr>
+					<td class="name">iPhone</td>
+					<td class="description">1.0.0</td>
+				</tr>
+				<tr>
+					<td class="name">iPad</td>
+					<td class="description">1.0.0</td>
+				</tr>
+		</table>
+	</span>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 id="properties">Properties</h2>
+
+
+	
+<div class="properties">
+
+			
+		    
+			
+			
+			
+			
+				<h3 id="pitch">pitch : Number<!-- Will add </h3> later -->
+			
+				<span class="permission_warning">read-only</span>
+				</h3>
+				<div>
+					<p>The pitch of the device, in radians.
+						</p>
+			
+					
+	<h4 id="member_description">Description</h4>
+
+	<div class="description"><p>A pitch is a rotation around a lateral axis that passes through 
+the device from side to side.</p></div>
+
+			
+				</div>
+			
+		    
+			
+			
+			
+			
+				<h3 id="quaternion">quaternion : <a href="CoreMotionQuaternion-object.html"><code>CoreMotionQuaternion</code></a><!-- Will add </h3> later -->
+			
+				<span class="permission_warning">read-only</span>
+				</h3>
+				<div>
+					<p>Returns a quaternion representing the device's attitude.
+						</p>
+			
+					
+	<h4 id="member_description">Description</h4>
+
+	<div class="description"><p>See <a href="CoreMotionQuaternion-object.html"><code>CoreMotionQuaternion</code></a> for further information.</p></div>
+
+			
+				</div>
+			
+		    
+			
+			
+			
+			
+				<h3 id="roll">roll : Number<!-- Will add </h3> later -->
+			
+				<span class="permission_warning">read-only</span>
+				</h3>
+				<div>
+					<p>The roll of the device, in radians.
+						</p>
+			
+					
+	<h4 id="member_description">Description</h4>
+
+	<div class="description"><p>A roll is a rotation around a longitudinal axis that passes 
+through the device from its top to bottom.</p></div>
+
+			
+				</div>
+			
+		    
+			
+			
+			
+			
+				<h3 id="rotationMatrix">rotationMatrix : <a href="CoreMotionRotationMatrix-object.html"><code>CoreMotionRotationMatrix</code></a><!-- Will add </h3> later -->
+			
+				<span class="permission_warning">read-only</span>
+				</h3>
+				<div>
+					<p>Returns a rotation matrix representing the device's attitude.
+						</p>
+			
+					
+	<h4 id="member_description">Description</h4>
+
+	<div class="description"><p>A rotation matrix in linear algebra describes the rotation of a 
+body in three-dimensional Euclidean space.</p></div>
+
+			
+				</div>
+			
+		    
+			
+			
+			
+			
+				<h3 id="yaw">yaw : Number<!-- Will add </h3> later -->
+			
+				<span class="permission_warning">read-only</span>
+				</h3>
+				<div>
+					<p>The yaw of the device, in radians.
+						</p>
+			
+					
+	<h4 id="member_description">Description</h4>
+
+	<div class="description"><p>A yaw is a rotation around an axis that runs vertically through 
+the device. It is perpendicular to the body of the device, with 
+its origin at the center of gravity and directed toward the bottom 
+of the device.</p></div>
+
+			
+				</div>
+	
+</div>
+
+
+
+
+<h2 id="methods">Methods</h2>
+	
+<div class="methods">
+
+			
+		    
+			
+			
+			
+			
+				<h3 id="multiplyByInverseOfAttitude">multiplyByInverseOfAttitude</h3>
+			
+				<div>
+					<p>Yields the change in attitude given a specific attitude.
+						</p>
+			
+					
+	<h4 id="member_description">Description</h4>
+
+	<div class="description"><p>This method multiplies the inverse of the specified <a href="CoreMotionAttitude-object.html"><code>CoreMotionAttitude</code></a> 
+object by the attitude represented by the receiving object. It replaces 
+the receiving instance with the attitude change relative to the object 
+passed in attitude. You should cache the <a href="CoreMotionAttitude-object.html"><code>CoreMotionAttitude</code></a> instance 
+you want to use as a reference and pass that object as the argument to 
+subsequent calls of this method.</p></div>
+
+			
+						
+<div class="apidoc_container apidoc_method">
+<ul>
+	
+	<li>
+		<h4 id="arguments">Parameters</h4>
+		
+<div class="arguments">
+
+		<ul>
+			<li>
+			
+		    
+			
+			
+			
+			
+				<h5>attitude : <a href="CoreMotionAttitude-object.html"><code>CoreMotionAttitude</code></a><!-- Will add </h5> later -->
+			
+				</h5>
+				<div>
+					<p>An object representing the device's attitude at a given moment of measurement.
+						</p>
+			
+					
+
+			
+				</div>
+			</li>
+		</ul>
+	
+</div>
+
+
+	</li>
+
+
+	<li>
+		<h4>Returns</h4>
+		<div class="return_type">
+		        void
+		</div>
+	</li>
+<ul>
+</div>
+
+				</div>
+	
+</div>
+
+
+
+<h2 id="events">Events</h2>
+    This type has no events.
+
+
+
+
+</div>

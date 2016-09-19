@@ -1,0 +1,18 @@
+#
+# this is your module manifest and used by Titanium
+# during compilation, packaging, distribution, etc.
+#
+version: 0.1
+apiversion: 2
+description: This module helps to force phone language only for in that application.
+author: Naga Harish
+license: Specify your license
+copyright: Share Our Ideas
+
+
+# these should not be edited
+name: locale
+moduleid: com.shareourideas.locale
+guid: fd23550c-3b85-40f4-afa9-9c5d5760813e
+platform: iphone
+minsdk: 3.0.0.GA

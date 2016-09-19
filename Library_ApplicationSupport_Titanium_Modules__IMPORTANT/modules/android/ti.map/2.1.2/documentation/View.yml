@@ -1,0 +1,327 @@
+<hr />
+<p>name: Modules.Map.View
+summary: Map view is used for embedding native mapping capabilities as a view in your application.
+description: |
+    With native maps, you can control the mapping location, the type of map, the zoom level 
+    and you can add custom annotations and routes directly to the map. Once the map view is
+    displayed, the user can pan, zoom and tilt the map using the native control gestures.</p>
+<pre><code>Use the &lt;Modules.Map.createView&gt; method to create a map view.
+
+All latitude and longitude values are specified in decimal degrees. Values in degrees,
+minutes and seconds (DMS) must be converted to decimal degrees before being passed to
+the map view.
+
+You can add [Annotation](Modules.Map.Annotation) objects to the map to mark points of
+interest. An annotation has two states: selected and deselected. A deselected annotation
+is marked by a pin image. When selected, the full annotation is displayed, typically
+including a title and an optional subtitle.
+
+You can add [Route](Modules.Map.Route) objects to the map to create paths between
+two or more points of interest.
+</code></pre>
+<p>extends: Titanium.UI.View
+excludes: {
+    events: [ 'singletap', 'doubletap', 'dblclick', 'longclick', 'longpress', 'pinch',
+    'swipe', 'touchstart', 'touchend', 'touchcancel', 'touchmove', 'twofingertap' ]
+}
+since: "3.0.2"
+platforms: [android]
+methods:</p>
+<ul>
+<li>name: addAnnotation
+    summary: Adds a new annotation to the map.
+    parameters:<ul>
+<li>name: annotation
+    summary: a <Modules.Map.Annotation> instance.
+    type: Modules.Map.Annotation</li>
+</ul>
+</li>
+<li>
+<p>name: addAnnotations
+    summary: Adds one or more new annotations to the map.
+    parameters:</p>
+<ul>
+<li>name: annotations
+    summary: |
+        Array of <a href="Modules.Map.Annotation">Annotation</a> objects
+    type: Array<Modules.Map.Annotation></li>
+</ul>
+</li>
+<li>
+<p>name: addRoute
+    summary: Adds a route to the map.
+    parameters:</p>
+<ul>
+<li>name: route
+    summary: Modules.Map.Route
+    type: Modules.Map.Route</li>
+</ul>
+</li>
+<li>
+<p>name: deselectAnnotation
+    summary: |
+        Deselects the specified annotation, so the main annotation is hidden and only
+        a pin image is shown.
+    parameters:</p>
+<ul>
+<li>name: annotation
+    summary: Annotation to deselect, identified by an annotation title or a <Modules.Map.Annotation> reference.
+    type: [String,Modules.Map.Annotation]</li>
+</ul>
+</li>
+<li>
+<p>name: removeAllAnnotations
+    summary: Removes all annotations from the map.</p>
+</li>
+<li>
+<p>name: removeAnnotation
+    summary: Removes an existing annotation from the map.
+    parameters:</p>
+<ul>
+<li>name: annotation
+    summary: Annotation to remove, identified by an annotation title or a <Modules.Map.Annotation> reference.
+    type: [String, Modules.Map.Annotation]</li>
+</ul>
+</li>
+<li>
+<p>name: removeAnnotations
+    summary: Removes one or more existing annotations from the map.
+    description: |
+        Annotations can be identified by title or by a <Modules.Map.Annotation>
+        reference.
+    parameters:</p>
+<ul>
+<li>name: annotations
+    summary: Array of annotations to remove.
+    type: [Array<String>, Array<Modules.Map.Annotation>]</li>
+</ul>
+</li>
+<li>
+<p>name: removeRoute
+    summary: Remove a previously added route. 
+    parameters:</p>
+<ul>
+<li>name: route
+    summary: An instance of <Modules.Map.Route>
+    type: Modules.Map.Route</li>
+</ul>
+</li>
+<li>
+<p>name: selectAnnotation
+    summary: Selects the annotation, showing the full annotation.
+    parameters:</p>
+<ul>
+<li>name: annotation
+    summary: Annotation to show, identified by an annotation title or a <Modules.Map.Annotation> reference.
+    type: [String, Modules.Map.Annotation]</li>
+</ul>
+</li>
+<li>
+<p>name: setMapType
+    summary: Sets the type of map (satellite, normal, or terrain).
+    parameters:</p>
+<ul>
+<li>name: mapType
+    summary: |
+        Map type constant, either <Modules.Map.NORMAL_TYPE>, <Modules.Map.SATELLITE_TYPE>,
+        <Modules.Map.TERRAIN_TYPE> or <Modules.Map.HYBRID_TYPE>.
+    type: Number</li>
+</ul>
+</li>
+</ul>
+<p>events:</p>
+<ul>
+<li>
+<p>name: pinchangedragstate
+    summary: Fired when the user interacts with a draggable annotation.
+    properties:</p>
+<ul>
+<li>
+<p>name: annotation
+    summary: Annotation being dragged.
+    type: Modules.Map.Annotation</p>
+</li>
+<li>
+<p>name: map
+    summary: This map view.
+    type: Modules.Map.View</p>
+</li>
+<li>
+<p>name: title
+    summary: Annotation title.
+    type: String</p>
+</li>
+<li>
+<p>name: newState
+    summary: |
+        New drag state for the annotation, one of
+        <a href="Modules.Map.ANNOTATION_DRAG_STATE_START">ANNOTATION_DRAG_STATE_START</a>,
+        <a href="Modules.Map.ANNOTATION_DRAG_STATE_END">ANNOTATION_DRAG_STATE_END</a>.
+    type: Number
+since: "3.1.0"</p>
+</li>
+</ul>
+</li>
+<li>
+<p>name: click
+    summary: |
+        Fired when the user selects, deselects, or clicks on an annotation.
+    description: |
+        Note that the <code>click</code> event is not fired every time the user clicks on the map.
+        It is fired in two circumstances:</p>
+<pre><code>- If the user clicks on an annotation to select it.
+- The user deselects an annotation.
+</code></pre>
+<p>properties:</p>
+<ul>
+<li>
+<p>name: title
+    summary: Title of the annotation.
+    type: String</p>
+</li>
+<li>
+<p>name: subtitle
+    summary: Subtitle of the annotation.
+    type: String</p>
+</li>
+<li>
+<p>name: map
+    summary: The map view instance.
+    type: Modules.Map.View</p>
+</li>
+<li>
+<p>name: clicksource
+    summary: |
+        If selected, returns the Annotation object.
+        If deselected, returns <code>null</code>.
+    type: Modules.Map.Annotation/String</p>
+</li>
+<li>
+<p>name: annotation
+    summary: Annotation source object.
+    type: Modules.Map.Annotation</p>
+</li>
+<li>
+<p>name: latitude
+    summary: Latitude of the clicked annotation.
+    type: Number</p>
+</li>
+<li>
+<p>name: longitude
+    summary: Longitude of the clicked annotation.
+    type: Number</p>
+</li>
+</ul>
+</li>
+<li>
+<p>name: complete
+    summary: Fired when the map completes loading.</p>
+</li>
+<li>
+<p>name: regionchanged
+    summary: |
+        Fired when the mapping region changes.
+    properties:</p>
+<ul>
+<li>name: longitude
+    summary: Longitude value for the center point of the map, in decimal degrees.
+    type: Number</li>
+<li>name: latitude
+    summary: Latitude value for the center point of the map, in decimal degrees.
+    type: Number</li>
+</ul>
+</li>
+</ul>
+<p>properties:</p>
+<ul>
+<li>
+<p>name: animate
+    summary: Indicates if changes to the mapping region should be animated.
+    description: |
+        Setting this to 'false' will not stop the animation from clicking the My Location button, 
+        since that is native Android behavior. 
+    type: Boolean
+    default: false</p>
+</li>
+<li>
+<p>name: annotations
+    summary: An array of annotations to add to the map.
+    description: |
+        There is no guarantee that the order of elements in the <code>annotations</code> property will be
+        maintained when creating, adding or deleting annotations from the Ti.Map.View object.
+        If the application depends on the annotations being in a set order, it should keep 
+        references to all of the annotations in a separate array.
+    type: Array<Modules.Map.Annotation></p>
+</li>
+<li>
+<p>name: mapType
+    summary: |
+        Map type, either: <Modules.Map.NORMAL_TYPE>, <Modules.Map.SATELLITE_TYPE>, <Modules.Map.TERRAIN_TYPE>
+        or <Modules.Map.HYBRID_TYPE>
+    type: Number
+    default: NORMAL_TYPE</p>
+</li>
+<li>
+<p>name: region
+    summary: |
+        A dictionary specifying the location and zoom level of the map.
+    type: MapRegionType
+    default: latitude 0, longitude 0</p>
+</li>
+<li>
+<p>name: userLocation
+    summary: |
+        Boolean indicating if the user's current device location should be shown on the
+        map.
+    description: |
+        If <code>true</code>, the user's location is marked with a pin, and the My Location button will appear in the top
+        right corner of the screen. 
+    type: Boolean
+    default: false</p>
+</li>
+<li>
+<p>name: enableZoomControls
+    summary: |
+        Enables or disables the built-in zoom controls.
+    description: |
+        If enabled, the zoom controls are a pair of buttons (one for zooming in, one for zooming out) that appear on the screen. 
+        When pressed, they cause the camera to zoom in (or out) by one zoom level. If disabled, the zoom controls are not shown.
+    type: Boolean
+    default: true</p>
+</li>
+<li>
+<p>name: traffic
+    summary: Toggles the traffic layer on or off.
+    description: |
+        Set to <code>true</code> to display the traffic layer or <code>false</code> to hide it.
+        This is subject to the availability of traffic data.
+    type: Boolean
+    default: false</p>
+</li>
+</ul>
+<hr />
+<p>name: MapRegionType
+summary: Simple object representing a map location and zoom level.
+properties:</p>
+<ul>
+<li>
+<p>name: longitude
+    summary: Longitude value for the center point of the map, in decimal degrees.
+    type: Number</p>
+</li>
+<li>
+<p>name: latitude
+    summary: Latitude value for the center point of the map, in decimal degrees.
+    type: Number</p>
+</li>
+<li>
+<p>name: longitudeDelta
+    summary: The amount of east-to-west distance displayed on the map, measured in decimal degrees.
+    type: Number</p>
+</li>
+<li>
+<p>name: latitudeDelta
+    summary: The amount of north-to-south distance displayed on the map, measured in decimal degrees.
+    type: Number</p>
+</li>
+</ul>

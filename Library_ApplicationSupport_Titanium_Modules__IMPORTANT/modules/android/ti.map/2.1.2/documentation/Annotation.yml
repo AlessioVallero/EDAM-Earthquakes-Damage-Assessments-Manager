@@ -1,0 +1,78 @@
+<hr />
+<p>name: Modules.Map.Annotation
+summary: Represents a labeled point of interest on the map that the user can click on.
+description: |
+    The <code>Annotation</code> object gives you low-level control over annotations that can be added to 
+    <a href="Modules.Map.View">map view</a>. An annotation must have its <code>latitude</code> and <code>longitude</code>
+    properties set to appear on a map.</p>
+<pre><code>An annotation has two states: selected and deselected. A deselected annotation
+is marked by a pin image. When the user selects the pin, the full annotation is 
+displayed.
+
+You can specify a custom image for the map pin by setting the
+[image](Modules.Map.Annotation.image) property.
+
+When the user clicks on an annotation, a `click` event is generated. The annotation
+itself does not generate these events. You must add event listeners to the map view instead.
+
+Use the &lt;Modules.Map.createAnnotation&gt; method to create an annotation.
+</code></pre>
+<p>extends: Titanium.Proxy
+since: "3.0.2"
+platforms: [android]</p>
+<p>properties:</p>
+<ul>
+<li>
+<p>name: customView
+    summary: Defines a custom view to be used by the annotation.
+    description: |
+        Must be set during creation. <strong>User interaction is disabled on the view.</strong>
+        No view interaction events (click, touchstart etc) will be fired.
+    type: Titanium.UI.View
+    since: "3.1.0"</p>
+</li>
+<li>
+<p>name: draggable
+    summary: Determines whether the pin can be dragged by the user.
+    description: |
+        When an annotation is draggable, it can be moved by the user by long pressing on the pin.
+    type: Boolean
+    default: false</p>
+</li>
+<li>
+<p>name: image
+    summary: Image to use for the the pin.
+    description: |
+        Must be set during creation. This is ignored if the customView property is set.
+    type: String
+    default: If not specified, a standard map pin image is used.</p>
+</li>
+<li>
+<p>name: latitude 
+    summary: Latitude of the annotation, in decimal degrees.
+    type: Number</p>
+</li>
+<li>
+<p>name: longitude
+    summary: Longitude of the annotation, in decimal degrees.
+    type: Number</p>
+</li>
+<li>
+<p>name: pincolor
+    summary: |
+        Pin color.
+    description: |
+        Pin color is ignored if a custom pin image is specified using <Modules.Map.Annotation.image>.
+    type: Number</p>
+</li>
+<li>
+<p>name: subtitle
+    summary: Secondary title of the annotation view.
+    type: String</p>
+</li>
+<li>
+<p>name: title
+    summary: Primary title of the annotation view.
+    type: String</p>
+</li>
+</ul>

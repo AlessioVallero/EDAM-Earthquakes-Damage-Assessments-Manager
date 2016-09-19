@@ -1,0 +1,19 @@
+#
+# this is your module manifest and used by Titanium
+# during compilation, packaging, distribution, etc.
+#
+version: 0.1B
+apiversion: 2
+architectures: armv7 i386 x86_64 arm64
+description: Change locale helper
+author: Paul Mietz Egli
+license: See included license agreement
+copyright: Copyright (c) 2013 by Paul Mietz Egli
+
+
+# these should not be edited
+name: LocaleHelper
+moduleid: com.obscure.localehelper
+guid: c3519c26-c3d4-4c02-880e-67372893d1f1
+platform: iphone
+minsdk: 3.5.0.GA

@@ -1,0 +1,872 @@
+<link rel="stylesheet" type="text/css" href="styles.css">
+<div class="apidoc_container apidoc_module">
+
+<div class="page-nav">
+	<ul>
+		<li>
+				<a href="#description">Description</a>
+		</li>
+		<li>
+				Examples
+		</li>
+				<li>
+					Objects
+				</li>
+			<li>
+				<a href="#properties">Properties</a>
+			</li>
+			<li>
+				<a href="#methods">Methods</a>
+			</li>
+			<li>
+				<a href="#events">Events</a>
+			</li>
+
+	</ul>
+</div>
+
+
+
+
+<h1 class="namespace">Modules.TouchId</h1>
+
+<div class="namespace_type">
+	
+		Submodule of <a href="Modules-object.html">Modules</a>.
+</div>
+
+
+<div class="platforms">
+		<span class="iphone" title="iphone"></span>
+		<span class="ipad" title="ipad"></span>
+
+	<div class="clear"></div>
+
+	<span class="since">
+		<table>
+			<tr>
+				<th>Platform</th>
+				<th>Since</th>
+			</tr>
+				<tr>
+					<td class="name">iPhone</td>
+					<td class="description">3.4.0</td>
+				</tr>
+				<tr>
+					<td class="name">iPad</td>
+					<td class="description">3.4.0</td>
+				</tr>
+		</table>
+	</span>
+</div>
+
+
+
+
+
+
+	<h2 id="description">Description</h2>
+
+	<div class="summary"><p>Allows a Titanium application to use the iOS Touch ID authentication mechanism.</p></div>
+	<div class="description"><p>Touch ID is a security mechanism that uses a fingerprint to authenticate the user. The
+fingerprint sensor is located in the Home button of the device.  Users can use their fingerprint
+instead of entering their passcode for authentication.</p>
+<h3>Requirements</h3>
+<p>The Touch ID module is available with the Titanium SDK starting with Release 3.4.0.
+This module only works with devices running iOS 8.  You can only test the Touch ID module on a device.</p>
+<p>The device must have a Touch ID sensor in the Home button and Touch ID must be setup in order to use
+the Touch ID authentication mechanism.  You can set up Touch ID in iOS Setup Assistant or by
+tapping <strong>Touch ID &amp; Passcode</strong> from Settings.</p>
+<p>For information on setting up Touch ID, see
+<a href="http://support.apple.com/kb/HT5883">iPhone 5s: Using Touch ID</a>.</p>
+<h3>Getting Started</h3>
+<p>Add the module as a dependency to your application by adding a <strong><code>&lt;module&gt;</code></strong> item to the
+<strong><code>&lt;modules&gt;</code></strong> element of your <code>tiapp.xml</code> file:</p>
+<pre><code>&lt;ti:app&gt;
+  ...
+  &lt;modules&gt;
+    &lt;module platform="iphone"&gt;ti.touchid&lt;/module&gt;
+  &lt;/modules&gt;
+  ...
+&lt;/ti:app&gt;
+</code></pre>
+<p>Use <code>require()</code> to access the module from JavaScript:</p>
+<pre><code>var TouchId = require("ti.touchid");
+</code></pre>
+<p>The <code>TouchId</code> variable is a reference to the module. Make API calls using this reference:</p>
+<pre><code>TouchId.authenticate({
+    reason: "Need to modify personal settings.",
+    callback: authCB
+});
+</code></pre>
+<h3>Sample Application</h3>
+<p>The module contains a sample application in the
+<code>&lt;TITANIUM_SDK_HOME&gt;/modules/iphone/ti.touchid/&lt;VERSION&gt;/example/</code> folder.</p></div>
+
+
+
+
+
+
+
+
+<h2 id="properties">Properties</h2>
+
+
+	
+<div class="properties">
+
+			
+		    
+			
+			
+			
+			
+				<h3 id="ERROR_AUTHENTICATION_FAILED">ERROR_AUTHENTICATION_FAILED : Number<!-- Will add </h3> later -->
+			
+				<span class="permission_warning">read-only</span>
+				</h3>
+				<div>
+					<p>Constant indicating that the authentication was not successful.
+						</p>
+			
+					
+
+			
+				</div>
+			
+		    
+			
+			
+			
+			
+				<h3 id="ERROR_PASSCODE_NOT_SET">ERROR_PASSCODE_NOT_SET : Number<!-- Will add </h3> later -->
+			
+				<span class="permission_warning">read-only</span>
+				</h3>
+				<div>
+					<p>Constant indicating that the passcode is not set for the device.
+						</p>
+			
+					
+
+			
+				</div>
+			
+		    
+			
+			
+			
+			
+				<h3 id="ERROR_SYSTEM_CANCEL">ERROR_SYSTEM_CANCEL : Number<!-- Will add </h3> later -->
+			
+				<span class="permission_warning">read-only</span>
+				</h3>
+				<div>
+					<p>Constant indicating that iOS cancelled authentication, for example, if another
+application enters the foreground.
+						</p>
+			
+					
+
+			
+				</div>
+			
+		    
+			
+			
+			
+			
+				<h3 id="ERROR_TOUCH_ID_NOT_AVAILABLE">ERROR_TOUCH_ID_NOT_AVAILABLE : Number<!-- Will add </h3> later -->
+			
+				<span class="permission_warning">read-only</span>
+				</h3>
+				<div>
+					<p>Constant indicating that Touch ID is not available on the device.
+						</p>
+			
+					
+
+			
+				</div>
+			
+		    
+			
+			
+			
+			
+				<h3 id="ERROR_TOUCH_ID_NOT_ENROLLED">ERROR_TOUCH_ID_NOT_ENROLLED : Number<!-- Will add </h3> later -->
+			
+				<span class="permission_warning">read-only</span>
+				</h3>
+				<div>
+					<p>Constant indicating that Touch ID does not have any enrolled fingerprints.
+						</p>
+			
+					
+
+			
+				</div>
+			
+		    
+			
+			
+			
+			
+				<h3 id="ERROR_USER_CANCEL">ERROR_USER_CANCEL : Number<!-- Will add </h3> later -->
+			
+				<span class="permission_warning">read-only</span>
+				</h3>
+				<div>
+					<p>Constant indicating that the user canceled authentication.
+						</p>
+			
+					
+
+			
+				</div>
+			
+		    
+			
+			
+			
+			
+				<h3 id="ERROR_USER_FALLBACK">ERROR_USER_FALLBACK : Number<!-- Will add </h3> later -->
+			
+				<span class="permission_warning">read-only</span>
+				</h3>
+				<div>
+					<p>Constant indicating that the user tapped the fallback button to enter their passcode.
+						</p>
+			
+					
+
+			
+				</div>
+			
+		    
+			
+			
+			
+			
+				<h3 id="apiName">apiName : String<!-- Will add </h3> later -->
+			
+				<span class="permission_warning">read-only</span>
+				</h3>
+				<div>
+					<p>The name of the API that this proxy corresponds to.
+						</p>
+			
+					
+	<h4 id="member_description">Description</h4>
+
+	<div class="description"><p>The value of this property is the fully qualified name of the API. For example, <a href="http://docs.appcelerator.com/titanium/latest/#!/api/Titanium.UI.Button-object.html">Button</a>
+returns <code>Ti.UI.Button</code>.</p></div>
+
+			
+				</div>
+			
+		    
+			
+			
+			
+			
+				<h3 id="bubbleParent">bubbleParent : Boolean<!-- Will add </h3> later -->
+			
+				</h3>
+				<div>
+					<p>Indicates if the proxy will bubble an event to its parent.
+						</p>
+			
+					
+	<h4 id="member_description">Description</h4>
+
+	<div class="description"><p>Some proxies (most commonly views) have a relationship to other proxies, often
+established by the add() method. For example, for a button added to a window, a
+click event on the button would bubble up to the window. Other common parents are
+table sections to their rows, table views to their sections, and scrollable views
+to their views. Set this property to false to disable the bubbling to the proxy's parent.</p></div>
+
+			
+				</div>
+	
+</div>
+
+
+
+
+<h2 id="methods">Methods</h2>
+	
+<div class="methods">
+
+			
+		    
+			
+			
+			
+			
+				<h3 id="addEventListener">addEventListener</h3>
+			
+				<div>
+					<p>Adds the specified callback as an event listener for the named event.
+						</p>
+			
+					
+
+			
+						
+<div class="apidoc_container apidoc_method">
+<ul>
+	
+	<li>
+		<h4 id="arguments">Parameters</h4>
+		
+<div class="arguments">
+
+		<ul>
+			<li>
+			
+		    
+			
+			
+			
+			
+				<h5>name : String<!-- Will add </h5> later -->
+			
+				</h5>
+				<div>
+					<p>Name of the event.
+						</p>
+			
+					
+
+			
+				</div>
+			</li>
+			<li>
+			
+		    
+			
+			
+			
+			
+				<h5>callback : Callback&lt;<code>Object</code>&gt;<!-- Will add </h5> later -->
+			
+				</h5>
+				<div>
+					<p>Callback function to invoke when the event is fired.
+						</p>
+			
+					
+
+			
+				</div>
+			</li>
+		</ul>
+	
+</div>
+
+
+	</li>
+
+
+	<li>
+		<h4>Returns</h4>
+		<div class="return_type">
+		        void
+		</div>
+	</li>
+<ul>
+</div>
+
+				</div>
+			
+		    
+			
+			
+			
+			
+				<h3 id="applyProperties">applyProperties</h3>
+			
+				<div>
+					<p>Applies the properties to the proxy.
+						</p>
+			
+					
+	<h4 id="member_description">Description</h4>
+
+	<div class="description"><p>Properties are supplied as a dictionary. Each key-value pair in the object is applied to the proxy such that
+myproxy[key] = value.</p></div>
+
+			
+						
+<div class="apidoc_container apidoc_method">
+<ul>
+	
+	<li>
+		<h4 id="arguments">Parameters</h4>
+		
+<div class="arguments">
+
+		<ul>
+			<li>
+			
+		    
+			
+			
+			
+			
+				<h5>props : <a href="http://docs.appcelerator.com/titanium/latest/#!/api/Dictionary-object.html"><code>Dictionary</code></a><!-- Will add </h5> later -->
+			
+				</h5>
+				<div>
+					<p>A dictionary of properties to apply.
+						</p>
+			
+					
+
+			
+				</div>
+			</li>
+		</ul>
+	
+</div>
+
+
+	</li>
+
+
+	<li>
+		<h4>Returns</h4>
+		<div class="return_type">
+		        void
+		</div>
+	</li>
+<ul>
+</div>
+
+				</div>
+			
+		    
+			
+			
+			
+			
+				<h3 id="authenticate">authenticate</h3>
+			
+				<div>
+					<p>Initiates the Touch ID authentication process.
+						</p>
+			
+					
+
+			
+						
+<div class="apidoc_container apidoc_method">
+<ul>
+	
+	<li>
+		<h4 id="arguments">Parameters</h4>
+		
+<div class="arguments">
+
+		<ul>
+			<li>
+			
+		    
+			
+			
+			
+			
+				<h5>params : <a href="http://docs.appcelerator.com/titanium/latest/#!/api/Dictionary-object.html"><code>Dictionary</code></a><!-- Will add </h5> later -->
+			
+				</h5>
+				<div>
+					<p>Dictionary containing two properties:</p>
+<ul>
+<li><code>reason</code> (String): Message displayed in the authentication dialog describing why the
+    application is requesting authentication.</li>
+<li>
+<p><code>callback</code> (Function): Callback function executed after the authentication
+    completes. The callback function is passed a dictionary with three properties:</p>
+<ul>
+<li><code>success</code> (Boolean): Set to true if authentication succeeded.</li>
+<li><code>error</code> (String): System error message.</li>
+<li><code>code</code> (Number): Module <code>ERROR_*</code> constant indicating the reason for the failure.</li>
+</ul>
+</li>
+</ul>
+			
+					
+
+			
+				</div>
+			</li>
+		</ul>
+	
+</div>
+
+
+	</li>
+
+
+	<li>
+		<h4>Returns</h4>
+		<div class="return_type">
+		        void
+		</div>
+	</li>
+<ul>
+</div>
+
+				</div>
+			
+		    
+			
+			
+			
+			
+				<h3 id="deviceCanAuthenticate">deviceCanAuthenticate</h3>
+			
+				<div>
+					<p>Checks to see if device is configured for Touch ID authentication.
+						</p>
+			
+					
+	<h4 id="member_description">Description</h4>
+
+	<div class="description"><p>var TiTouchId = require("ti.touchid");
+var result = TiTouchId.deviceCanAuthenticate();
+if (!result.canAuthenticate) {
+  alert('Message: ' + result.error + '\nCode: ' + result.code);<br />
+  } else {
+    alert('device can authenticate');
+  }</p></div>
+
+			
+						
+<div class="apidoc_container apidoc_method">
+<ul>
+	
+
+
+	<li>
+		<h4>Returns</h4>
+		<div class="return_type">
+		        <a href="DeviceCanAuthenticateResult-object.html"><code>DeviceCanAuthenticateResult</code></a>
+		</div>
+	</li>
+<ul>
+</div>
+
+				</div>
+			
+		    
+			
+			
+			
+			
+				<h3 id="fireEvent">fireEvent</h3>
+			
+				<div>
+					<p>Fires a synthesized event to any registered listeners.
+						</p>
+			
+					
+
+			
+						
+<div class="apidoc_container apidoc_method">
+<ul>
+	
+	<li>
+		<h4 id="arguments">Parameters</h4>
+		
+<div class="arguments">
+
+		<ul>
+			<li>
+			
+		    
+			
+			
+			
+			
+				<h5>name : String<!-- Will add </h5> later -->
+			
+				</h5>
+				<div>
+					<p>Name of the event.
+						</p>
+			
+					
+
+			
+				</div>
+			</li>
+			<li>
+			
+		    
+			
+			
+			
+			
+				<h5>event : <a href="http://docs.appcelerator.com/titanium/latest/#!/api/Dictionary-object.html"><code>Dictionary</code></a><!-- Will add </h5> later -->
+			
+				</h5>
+				<div>
+					<p>A dictionary of keys and values to add to the <a href="http://docs.appcelerator.com/titanium/latest/#!/api/Titanium.Event-object.html"><code>Titanium.Event</code></a> object sent to the listeners.
+						</p>
+			
+					
+
+			
+				</div>
+			</li>
+		</ul>
+	
+</div>
+
+
+	</li>
+
+
+	<li>
+		<h4>Returns</h4>
+		<div class="return_type">
+		        void
+		</div>
+	</li>
+<ul>
+</div>
+
+				</div>
+			
+		    
+			
+			
+			
+			
+				<h3 id="getApiName">getApiName</h3>
+			
+				<div>
+					<p>Gets the value of the <a href="Modules.TouchId-module.html#apiName">apiName</a> property.
+						</p>
+			
+					
+
+			
+						
+<div class="apidoc_container apidoc_method">
+<ul>
+	
+
+
+	<li>
+		<h4>Returns</h4>
+		<div class="return_type">
+		        String
+		</div>
+	</li>
+<ul>
+</div>
+
+				</div>
+			
+		    
+			
+			
+			
+			
+				<h3 id="getBubbleParent">getBubbleParent</h3>
+			
+				<div>
+					<p>Gets the value of the <a href="Modules.TouchId-module.html#bubbleParent">bubbleParent</a> property.
+						</p>
+			
+					
+
+			
+						
+<div class="apidoc_container apidoc_method">
+<ul>
+	
+
+
+	<li>
+		<h4>Returns</h4>
+		<div class="return_type">
+		        Boolean
+		</div>
+	</li>
+<ul>
+</div>
+
+				</div>
+			
+		    
+			
+			
+			
+			
+				<h3 id="removeEventListener">removeEventListener</h3>
+			
+				<div>
+					<p>Removes the specified callback as an event listener for the named event.
+						</p>
+			
+					
+	<h4 id="member_description">Description</h4>
+
+	<div class="description"><p>Multiple listeners can be registered for the same event, so the 
+<code>callback</code> parameter is used to determine which listener to remove. </p>
+<p>When adding a listener, you must save a reference to the callback function
+in order to remove the listener later:</p>
+<pre><code>var listener = function() { Ti.API.info("Event listener called."); }
+window.addEventListener('click', listener);
+</code></pre>
+<p>To remove the listener, pass in a reference to the callback function:</p>
+<pre><code>window.removeEventListener('click', listener);
+</code></pre></div>
+
+			
+						
+<div class="apidoc_container apidoc_method">
+<ul>
+	
+	<li>
+		<h4 id="arguments">Parameters</h4>
+		
+<div class="arguments">
+
+		<ul>
+			<li>
+			
+		    
+			
+			
+			
+			
+				<h5>name : String<!-- Will add </h5> later -->
+			
+				</h5>
+				<div>
+					<p>Name of the event.
+						</p>
+			
+					
+
+			
+				</div>
+			</li>
+			<li>
+			
+		    
+			
+			
+			
+			
+				<h5>callback : Callback&lt;<code>Object</code>&gt;<!-- Will add </h5> later -->
+			
+				</h5>
+				<div>
+					<p>Callback function to remove. Must be the same function passed to <code>addEventListener</code>.
+						</p>
+			
+					
+
+			
+				</div>
+			</li>
+		</ul>
+	
+</div>
+
+
+	</li>
+
+
+	<li>
+		<h4>Returns</h4>
+		<div class="return_type">
+		        void
+		</div>
+	</li>
+<ul>
+</div>
+
+				</div>
+			
+		    
+			
+			
+			
+			
+				<h3 id="setBubbleParent">setBubbleParent</h3>
+			
+				<div>
+					<p>Sets the value of the <a href="Modules.TouchId-module.html#bubbleParent">bubbleParent</a> property.
+						</p>
+			
+					
+
+			
+						
+<div class="apidoc_container apidoc_method">
+<ul>
+	
+	<li>
+		<h4 id="arguments">Parameters</h4>
+		
+<div class="arguments">
+
+		<ul>
+			<li>
+			
+		    
+			
+			
+			
+			
+				<h5>bubbleParent : Boolean<!-- Will add </h5> later -->
+			
+				</h5>
+				<div>
+					<p>New value for the property.
+						</p>
+			
+					
+
+			
+				</div>
+			</li>
+		</ul>
+	
+</div>
+
+
+	</li>
+
+
+	<li>
+		<h4>Returns</h4>
+		<div class="return_type">
+		        void
+		</div>
+	</li>
+<ul>
+</div>
+
+				</div>
+	
+</div>
+
+
+
+<h2 id="events">Events</h2>
+    This type has no events.
+
+
+
+
+</div>

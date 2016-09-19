@@ -1,0 +1,96 @@
+<h1>BenCoding.Securely</h1>
+
+<p>Securely provides building blocks to create secure Titanium apps.</p>
+<p>The following proxy objects allow for you to build a composible cross-platform security layer to meet your various security requirements.</p>
+<h2>Before you start</h2>
+
+<ul>
+<li>These are iOS and Android native modules designed to work with Titanium SDK 3.0.0.GA</li>
+<li>Before using this module you first need to install the package. If you need instructions on how to install a 3rd party module please read this installation guide.</li>
+</ul>
+<h2>Download the compiled release</h2>
+
+<p>Download the platform you wish to use:</p>
+<ul>
+<li><a href="https://github.com/benbahrenburg/Securely/tree/master/iOS/dist">iOS Dist</a></li>
+<li><a href="https://github.com/benbahrenburg/Securely/tree/master/Android/dist">Android Dist</a></li>
+</ul>
+<h2>Building from source?</h2>
+
+<p>If you are building from source you will need to do the following:</p>
+<p>Import the project into Xcode:</p>
+<ul>
+<li>Modify the titanium.xcconfig file with the path to your Titanium installation</li>
+</ul>
+<p>Import the project into Eclipse:</p>
+<ul>
+<li>Update the .classpath</li>
+<li>Update the build properties</li>
+</ul>
+<h2>Setup</h2>
+
+<ul>
+<li>Download the latest release from the releases folder ( or you can build it yourself )</li>
+<li>Install the bencoding.securely module. If you need help here is a "How To" <a href="https://wiki.appcelerator.org/display/guides/Configuring+Apps+to+Use+Modules">guide</a>. </li>
+<li>You can now use the module via the commonJS require method, example shown below.</li>
+</ul>
+<pre><code>
+var securely = require('bencoding.securely');
+</code></pre>
+
+<h2>Creating the Securely Module Object</h2>
+
+<p>Requiring the module into your project</p>
+<pre><code>
+//Require the securely module into your project
+var securely = require('bencoding.securely');
+</code></pre>
+
+<h2>Secure Properties</h2>
+
+<p>The Securely Properties module is used to store values in the KeyChain using the same API as Titanium.App.Properties. </p>
+<p>To learn more about this part of the module, please view the documentation <a href="https://github.com/benbahrenburg/Securely/blob/master/Documentation/properties.md">here</a>.</p>
+<hr />
+<h2>Key Generators</h2>
+
+<p>Securely provides the ability to generator random and derived keys.  These key generators allow you to generate strong passwords for your encryption functions.</p>
+<p>To learn more about this part of the module, please view the documentation <a href="https://github.com/benbahrenburg/Securely/blob/master/Documentation/keymakers.md">here</a>.</p>
+<hr />
+<h2>String Crypo</h2>
+
+<p>Securely provides the ability to encrypt and decrypt JavaScript strings and JSON objects through a variety of algorithms.</p>
+<p>To learn more about this part of the module, please view the documentation <a href="https://github.com/benbahrenburg/Securely/blob/master/Documentation/strings.md">here</a>.</p>
+<hr />
+<h2>File Crypo</h2>
+
+<p>Securely provides the ability to encrypt and decrypt local device files.</p>
+<p>To learn more about this part of the module, please view the documentation <a href="https://github.com/benbahrenburg/Securely/blob/master/Documentation/files.md">here</a>.</p>
+<hr />
+<h2>iOS PDF Locker</h2>
+
+<p>On iOS Securely provides the ability to password protect and unlock PDF documents.</p>
+<p>To learn more about this part of the module, please view the documentation <a href="https://github.com/benbahrenburg/Securely/blob/master/Documentation/pdfs.md">here</a>.</p>
+<hr />
+<h2>Dependent Projects</h2>
+
+<p>Securely uses several wonderful open source projects.  I highly encourage you to check them out using the information below.</p>
+<p>JSONKit </p>
+<p>Project: <a href="http://github.com/johnezang/JSONKit">http://github.com/johnezang/JSONKit</a></p>
+<p>PDKeychainBindingsController</p>
+<p>Project: <a href="https://github.com/carlbrown/PDKeychainBindingsController">https://github.com/carlbrown/PDKeychainBindingsController</a></p>
+<h2>Licensing & Support</h2>
+
+<p>This project is licensed under the OSI approved Apache Public License (version 2). For details please see the license associated with each project.</p>
+<p>Developed by <a href="http://bahrenburgs.com">Ben Bahrenburg</a> available on twitter <a href="http://twitter.com/benCoding">@benCoding</a></p>
+<h2>Learn More</h2>
+
+<h3>Examples</h3>
+
+<p>Please check the module's example folder or <a href="https://github.com/benbahrenburg/Securely/tree/master/iOS/example">github repo</a> for samples on how to use this project.</p>
+<h3>Twitter</h3>
+
+<p>Please consider following the <a href="http://www.twitter.com/benCoding">@benCoding Twitter</a> for updates 
+and more about Titanium.</p>
+<h3>Blog</h3>
+
+<p>For module updates, Titanium tutorials and more please check out my blog at <a href="http://benCoding.com">benCoding.Com</a>.</p>

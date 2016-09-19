@@ -1,0 +1,60 @@
+<h1>Titanium Module for Voice Recognition on Android.</h1>
+<h2>Description</h2>
+<p>Titanium Module for Voice Recognition on Android.</p>
+<p>In nature, we can write Voice Recognition routine by the following blog entry, but
+the code in this entry did not work in Android 2.x and Titanium 2.0.1GA environment.
+This is because "Ti.Android.currentActivity.startActivityForResult" function does not
+call callback function correctly.</p>
+<p>http://www.matthuggins.com/articles/android-voice-recognition-in-appcelerator-titanium</p>
+<p>Using this module, we can get Voice Recognition result correctly on Android 2.x, 3.x, 4.0.3, 4.2<br />
+</p>
+<h2>Requirement</h2>
+<p>Android min-sdk: Android 2.2 (API Level 8)<br />
+Titanium 2.1.2GA or later</p>
+<h2>Supported Architecture</h2>
+<ul>
+<li>ARM (armeabi-v7a)</li>
+<li>Intel x86 (experimental. If you send me a test report, I will highly appriciated)</li>
+</ul>
+<h2>Accessing the voicerecognition Module</h2>
+<p>To access this module from JavaScript, you would do the following:</p>
+<pre><code>var voicerecognition = require("org.mumumu.ti.android.speech");
+</code></pre>
+<p>The voicerecognition variable is a reference to the Module object.<br />
+</p>
+<h2>Usage</h2>
+<p>O) download repository archive from this site.</p>
+<p>A) place dist/org.mumumu.ti.android.speech-android-0.3.zip to your Titanium project root.</p>
+<p>B) add the following setting to tiapp.xml between &lt;ti:app&gt; tag.</p>
+<pre><code>&lt;modules&gt;
+    &lt;module version="0.3"&gt;org.mumumu.ti.android.speech&lt;/module&gt;
+&lt;/modules&gt;
+</code></pre>
+<p>C) Invoke the module code.</p>
+<pre><code>if (Ti.Platform.name == "android") {
+    var speechModule = require('org.mumumu.ti.android.speech');
+    var voiceRecognitionProxy = speechModule.createVoiceRecognition();
+    var callback_func = function (e) {
+        var voice_recognition_enabled = e.voice_enabled;
+        var voice_results = e.voice_results;
+        if (e.voice_canceled) {
+            alert("voice recognition canceled");
+        } else {
+            if (!voice_recognition_enabled) {
+                alert("voice recognition seems to be disabled");
+            } else {
+                alert(voice_results[0]); //  array.
+            }
+        }
+    };
+    voiceRecognitionProxy.voiceRecognition({
+        "android.speech.extra.PROMPT": "please say something",
+        "android.speech.extra.LANGUAGE_MODEL": "free_form",
+        "callback": callback_func
+    });
+}
+</code></pre>
+<h2>Author</h2>
+<p>Yoshinari Takaoka (reversethis -&gt; gro tod umumum ta umumum)</p>
+<h2>License</h2>
+<p>BSD License. See License.txt for details.</p>

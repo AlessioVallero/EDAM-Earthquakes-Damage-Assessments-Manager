@@ -1,0 +1,2348 @@
+<link rel="stylesheet" type="text/css" href="styles.css">
+<div class="apidoc_container apidoc_module">
+
+<div class="page-nav">
+	<ul>
+		<li>
+				<a href="#description">Description</a>
+		</li>
+		<li>
+				Examples
+		</li>
+				<li>
+					Objects
+				</li>
+			<li>
+				<a href="#properties">Properties</a>
+			</li>
+			<li>
+				<a href="#methods">Methods</a>
+			</li>
+			<li>
+				<a href="#events">Events</a>
+			</li>
+
+	</ul>
+</div>
+
+
+
+
+<h1 class="namespace">Modules.CoreMotion</h1>
+
+<div class="namespace_type">
+	
+		Submodule of <a href="Modules-object.html">Modules</a>.
+</div>
+
+
+<div class="platforms">
+		<span class="iphone" title="iphone"></span>
+		<span class="ipad" title="ipad"></span>
+
+	<div class="clear"></div>
+
+	<span class="since">
+		<table>
+			<tr>
+				<th>Platform</th>
+				<th>Since</th>
+			</tr>
+				<tr>
+					<td class="name">iPhone</td>
+					<td class="description">3.3.0</td>
+				</tr>
+				<tr>
+					<td class="name">iPad</td>
+					<td class="description">3.3.0</td>
+				</tr>
+		</table>
+	</span>
+</div>
+
+
+
+
+
+
+	<h2 id="description">Description</h2>
+
+	<div class="summary"><p>Allows Titanium client applications to access Apple's CoreMotion APIs.</p></div>
+	<div class="description"><p>The Core Motion module provides access to Apple's CoreMotion APIs.  The Core Motion module provides support
+for monitoring various hardware sensors on iOS devices, such as the accelerometer, gyroscope, and
+magnetometer.  The Core Motion module allows you to access the metrics provided by these sensors.</p>
+<p>For instruction and examples of using the Core Motion Module, see the
+<a href="http://docs.appcelerator.com/titanium/latest/#!/guide/Core_Motion_Module">Core Motion Module guide</a>.</p>
+<h3>Requirements</h3>
+<p>This module only works with devices running iOS 7.  Not all devices have the same hardware sensors,
+so all features may not be available for all devices.  Be sure to use the API to check the device
+for the existence of a feature.</p>
+<p>You can only test the Core Motion module on a device.  The Core Motion API cannot be tested on the iOS
+simulator.</p>
+<p>Some features may require permission to use "Motion Activity". iOS requires the user's approval to
+use the "Motion Activity" permission. When the application uses the Core Motion API for the first
+time, iOS prompts the user to either approve or deny access to the Core Motion features of the
+device.  The user can change the permission settings with <strong>Settings</strong> &gt; <strong>Privacy</strong>.</p>
+<h3>Getting Started</h3>
+<p>Once you have <a href="#!/guide/Using_a_Module">installed</a> the module and added it as a depedency,
+use <code>require()</code> to access it from JavaScript:</p>
+<pre><code>var CoreMotion = require("ti.coremotion");
+</code></pre>
+<p>The <code>CoreMotion</code> variable is a reference to the Module object.  Use this reference to make
+subsequent calls to the CoreMotion Module API.</p>
+<pre><code>// This code checks to see if the device can gather step counting data
+if (CoreMotion.isStepCountingAvailable()) {
+    // If it can, it starts the step counter and outputs the data to the console
+    CoreMotion.startStepCountingUpdates({stepCounts: 1}, function(e){
+        Ti.API.info(JSON.stringify(e.numberOfSteps));
+    });
+} else {
+    Ti.API.warn('This device does not support counting steps.');
+}
+</code></pre>
+<h3>Sample Application</h3>
+<p>The module ZIP file contains two Core Motion sample applications (<strong>examples/Basic</strong> and
+<strong>examples/DeviceMotion</strong>).</p>
+<h3>Further Reading</h3>
+<ul>
+<li><a href="https://developer.apple.com/library/ios/documentation/CoreMotion/Reference/CoreMotion_Reference/_index.html">iOS Developer Library: Core Motion Framework Reference</a></li>
+<li><a href="https://developer.apple.com/library/ios/documentation/EventHandling/Conceptual/EventHandlingiPhoneOS/motion_event_basics/motion_event_basics.html">iOS Developer Library: Motion Events</a></li>
+</ul></div>
+
+
+
+
+
+
+
+
+<h2 id="properties">Properties</h2>
+
+
+	
+<div class="properties">
+
+			
+		    
+			
+			
+			
+			
+				<h3 id="ATTITUDE_REFERENCE_FRAME_X_ARBITRARY_CORRECTED_Z_VERTICAL">ATTITUDE_REFERENCE_FRAME_X_ARBITRARY_CORRECTED_Z_VERTICAL : Number<!-- Will add </h3> later -->
+			
+				<span class="permission_warning">read-only</span>
+				</h3>
+				<div>
+					<p>Describes the same reference frame as 
+<a href="Modules.CoreMotion-module.html#ATTITUDE_REFERENCE_FRAME_X_ARBITRARY_Z_VERTICAL"><code>Modules.CoreMotion.ATTITUDE_REFERENCE_FRAME_X_ARBITRARY_Z_VERTICAL</code></a> 
+except that the magnetometer, when available and calibrated, is used to 
+improve long-term yaw accuracy. Using this constant instead of 
+<a href="Modules.CoreMotion-module.html#ATTITUDE_REFERENCE_FRAME_X_ARBITRARY_Z_VERTICAL"><code>Modules.CoreMotion.ATTITUDE_REFERENCE_FRAME_X_ARBITRARY_Z_VERTICAL</code></a> 
+results in increased CPU usage.
+						</p>
+			
+					
+
+			
+				</div>
+			
+		    
+			
+			
+			
+			
+				<h3 id="ATTITUDE_REFERENCE_FRAME_X_ARBITRARY_Z_VERTICAL">ATTITUDE_REFERENCE_FRAME_X_ARBITRARY_Z_VERTICAL : Number<!-- Will add </h3> later -->
+			
+				<span class="permission_warning">read-only</span>
+				</h3>
+				<div>
+					<p>Describes a reference frame in which the Z axis is vertical and the X axis points 
+in an arbitrary direction in the horizontal plane.
+						</p>
+			
+					
+
+			
+				</div>
+			
+		    
+			
+			
+			
+			
+				<h3 id="ATTITUDE_REFERENCE_FRAME_X_MAGNETIC_NORTH_Z_VERTICAL">ATTITUDE_REFERENCE_FRAME_X_MAGNETIC_NORTH_Z_VERTICAL : Number<!-- Will add </h3> later -->
+			
+				<span class="permission_warning">read-only</span>
+				</h3>
+				<div>
+					<p>Describes a reference frame in which the Z axis is vertical and the X axis points 
+toward magnetic north. Note that using this reference frame may require device 
+movement to calibrate the magnetometer.
+						</p>
+			
+					
+
+			
+				</div>
+			
+		    
+			
+			
+			
+			
+				<h3 id="ATTITUDE_REFERENCE_FRAME_X_TRUE_NORTH_Z_VERTICAL">ATTITUDE_REFERENCE_FRAME_X_TRUE_NORTH_Z_VERTICAL : Number<!-- Will add </h3> later -->
+			
+				<span class="permission_warning">read-only</span>
+				</h3>
+				<div>
+					<p>Describes a reference frame in which the Z axis is vertical and the X axis points 
+toward true north. Note that using this reference frame may require device movement 
+to calibrate the magnetometer. It also requires the location to be available in order 
+to calculate the difference between magnetic and true north.
+						</p>
+			
+					
+
+			
+				</div>
+			
+		    
+			
+			
+			
+			
+				<h3 id="ERROR_DEVICE_REQUIRES_MOVEMENT">ERROR_DEVICE_REQUIRES_MOVEMENT : Number<!-- Will add </h3> later -->
+			
+				<span class="permission_warning">read-only</span>
+				</h3>
+				<div>
+					<p>The device must move for a sampling of motion data to occur.
+						</p>
+			
+					
+
+			
+				</div>
+			
+		    
+			
+			
+			
+			
+				<h3 id="ERROR_INVALID_PARAMETER">ERROR_INVALID_PARAMETER : Number<!-- Will add </h3> later -->
+			
+				<span class="permission_warning">read-only</span>
+				</h3>
+				<div>
+					<p>An invalid parameter was specified.
+						</p>
+			
+					
+
+			
+				</div>
+			
+		    
+			
+			
+			
+			
+				<h3 id="ERROR_MOTION_ACTIVITY_NOT_AUTHORIZED">ERROR_MOTION_ACTIVITY_NOT_AUTHORIZED : Number<!-- Will add </h3> later -->
+			
+				<span class="permission_warning">read-only</span>
+				</h3>
+				<div>
+					<p>The app is not currently authorized to use motion activity support.
+						</p>
+			
+					
+
+			
+				</div>
+			
+		    
+			
+			
+			
+			
+				<h3 id="ERROR_MOTION_ACTIVITY_NOT_AVAILABLE">ERROR_MOTION_ACTIVITY_NOT_AVAILABLE : Number<!-- Will add </h3> later -->
+			
+				<span class="permission_warning">read-only</span>
+				</h3>
+				<div>
+					<p>Motion activity support is not available on the current device.
+						</p>
+			
+					
+
+			
+				</div>
+			
+		    
+			
+			
+			
+			
+				<h3 id="ERROR_MOTION_ACTIVITY_NOT_ENTITLED">ERROR_MOTION_ACTIVITY_NOT_ENTITLED : Number<!-- Will add </h3> later -->
+			
+				<span class="permission_warning">read-only</span>
+				</h3>
+				<div>
+					<p>The app is missing a required entitlement.
+						</p>
+			
+					
+
+			
+				</div>
+			
+		    
+			
+			
+			
+			
+				<h3 id="ERROR_NULL">ERROR_NULL : Number<!-- Will add </h3> later -->
+			
+				<span class="permission_warning">read-only</span>
+				</h3>
+				<div>
+					<p>No error.
+						</p>
+			
+					
+
+			
+				</div>
+			
+		    
+			
+			
+			
+			
+				<h3 id="ERROR_TRUE_NORTH_NOT_AVAILABLE">ERROR_TRUE_NORTH_NOT_AVAILABLE : Number<!-- Will add </h3> later -->
+			
+				<span class="permission_warning">read-only</span>
+				</h3>
+				<div>
+					<p>True north is not available on this device. This usually indicates that the device's location is not yet available.
+						</p>
+			
+					
+
+			
+				</div>
+			
+		    
+			
+			
+			
+			
+				<h3 id="ERROR_UNKNOWN">ERROR_UNKNOWN : Number<!-- Will add </h3> later -->
+			
+				<span class="permission_warning">read-only</span>
+				</h3>
+				<div>
+					<p>An unknown error occurred.
+						</p>
+			
+					
+
+			
+				</div>
+			
+		    
+			
+			
+			
+			
+				<h3 id="MAGNETIC_FIELD_CALIBRATION_ACCURACY_HIGH">MAGNETIC_FIELD_CALIBRATION_ACCURACY_HIGH : Number<!-- Will add </h3> later -->
+			
+				<span class="permission_warning">read-only</span>
+				</h3>
+				<div>
+					<p>The accuracy of the magnetic field calibration is high.
+						</p>
+			
+					
+
+			
+				</div>
+			
+		    
+			
+			
+			
+			
+				<h3 id="MAGNETIC_FIELD_CALIBRATION_ACCURACY_LOW">MAGNETIC_FIELD_CALIBRATION_ACCURACY_LOW : Number<!-- Will add </h3> later -->
+			
+				<span class="permission_warning">read-only</span>
+				</h3>
+				<div>
+					<p>The accuracy of the magnetic field calibration is low.
+						</p>
+			
+					
+
+			
+				</div>
+			
+		    
+			
+			
+			
+			
+				<h3 id="MAGNETIC_FIELD_CALIBRATION_ACCURACY_MEDIUM">MAGNETIC_FIELD_CALIBRATION_ACCURACY_MEDIUM : Number<!-- Will add </h3> later -->
+			
+				<span class="permission_warning">read-only</span>
+				</h3>
+				<div>
+					<p>The accuracy of the magnetic field calibration is medium.
+						</p>
+			
+					
+
+			
+				</div>
+			
+		    
+			
+			
+			
+			
+				<h3 id="MAGNETIC_FIELD_CALIBRATION_ACCURACY_UNCALIBRATED">MAGNETIC_FIELD_CALIBRATION_ACCURACY_UNCALIBRATED : Number<!-- Will add </h3> later -->
+			
+				<span class="permission_warning">read-only</span>
+				</h3>
+				<div>
+					<p>The magnetic field estimate is not calibrated.
+						</p>
+			
+					
+
+			
+				</div>
+			
+		    
+			
+			
+			
+			
+				<h3 id="MOTION_ACTIVITY_CONFIDENCE_HIGH">MOTION_ACTIVITY_CONFIDENCE_HIGH : Number<!-- Will add </h3> later -->
+			
+				<span class="permission_warning">read-only</span>
+				</h3>
+				<div>
+					<p>Confidence is high.
+						</p>
+			
+					
+
+			
+				</div>
+			
+		    
+			
+			
+			
+			
+				<h3 id="MOTION_ACTIVITY_CONFIDENCE_LOW">MOTION_ACTIVITY_CONFIDENCE_LOW : Number<!-- Will add </h3> later -->
+			
+				<span class="permission_warning">read-only</span>
+				</h3>
+				<div>
+					<p>Confidence is low.
+						</p>
+			
+					
+
+			
+				</div>
+			
+		    
+			
+			
+			
+			
+				<h3 id="MOTION_ACTIVITY_CONFIDENCE_MEDIUM">MOTION_ACTIVITY_CONFIDENCE_MEDIUM : Number<!-- Will add </h3> later -->
+			
+				<span class="permission_warning">read-only</span>
+				</h3>
+				<div>
+					<p>Confidence is good.
+						</p>
+			
+					
+
+			
+				</div>
+			
+		    
+			
+			
+			
+			
+				<h3 id="apiName">apiName : String<!-- Will add </h3> later -->
+			
+				<span class="permission_warning">read-only</span>
+				</h3>
+				<div>
+					<p>The name of the API that this proxy corresponds to.
+						</p>
+			
+					
+	<h4 id="member_description">Description</h4>
+
+	<div class="description"><p>The value of this property is the fully qualified name of the API. For example, <a href="http://docs.appcelerator.com/titanium/latest/#!/api/Titanium.UI.Button-object.html">Button</a>
+returns <code>Ti.UI.Button</code>.</p></div>
+
+			
+				</div>
+	
+</div>
+
+
+
+
+<h2 id="methods">Methods</h2>
+	
+<div class="methods">
+
+			
+		    
+			
+			
+			
+			
+				<h3 id="availableAttitudeReferenceFrames">availableAttitudeReferenceFrames</h3>
+			
+				<div>
+					<p>Returns a bitmask specifying the available attitude reference frames on the device.
+						</p>
+			
+					
+	<h4 id="member_description">Description</h4>
+
+	<div class="description"><p>A bitmask that you can bitwise-AND with the <code>ATTITUDE_REFERENCE</code> constants.</p>
+<p>For example to determine if <code>ATTITUDE_REFERENCE_FRAME_X_MAGNETIC_NORTH_Z_VERTICAL</code> is available on device.</p>
+<pre><code>var frames = CoreMotion.availableAttitudeReferenceFrames();
+if (frames &amp; CoreMotion.ATTITUDE_REFERENCE_FRAME_X_MAGNETIC_NORTH_Z_VERTICAL) {
+    // do something here
+}
+</code></pre></div>
+
+			
+						
+<div class="apidoc_container apidoc_method">
+<ul>
+	
+
+
+	<li>
+		<h4>Returns</h4>
+		<div class="return_type">
+		        Number
+		</div>
+	</li>
+<ul>
+</div>
+
+				</div>
+			
+		    
+			
+			
+			
+			
+				<h3 id="getAccelerometerData">getAccelerometerData</h3>
+			
+				<div>
+					<p>Returns the latest sample of accelerometer data.
+						</p>
+			
+					
+	<h4 id="member_description">Description</h4>
+
+	<div class="description"><p>An app that is receiving accelerometer data after calling 
+<a href="Modules.CoreMotion-module.html#startAccelerometerUpdates"><code>Modules.CoreMotion.startAccelerometerUpdates</code></a> with no callback, needs to periodically
+check the value returned by this method and process the acceleration data.</p></div>
+
+			
+						
+<div class="apidoc_container apidoc_method">
+<ul>
+	
+
+
+	<li>
+		<h4>Returns</h4>
+		<div class="return_type">
+		        <a href="CoreMotionAccelerometerData-object.html"><code>CoreMotionAccelerometerData</code></a>
+		</div>
+	</li>
+<ul>
+</div>
+
+				</div>
+			
+		    
+			
+			
+			
+			
+				<h3 id="getApiName">getApiName</h3>
+			
+				<div>
+					<p>Gets the value of the <a href="Modules.CoreMotion-module.html#apiName">apiName</a> property.
+						</p>
+			
+					
+
+			
+						
+<div class="apidoc_container apidoc_method">
+<ul>
+	
+
+
+	<li>
+		<h4>Returns</h4>
+		<div class="return_type">
+		        String
+		</div>
+	</li>
+<ul>
+</div>
+
+				</div>
+			
+		    
+			
+			
+			
+			
+				<h3 id="getAttitudeReferenceFrame">getAttitudeReferenceFrame</h3>
+			
+				<div>
+					<p>Returns either the reference frame currently being used or the default 
+attitude reference frame.
+						</p>
+			
+					
+	<h4 id="member_description">Description</h4>
+
+	<div class="description"><p>If device motion is active, this property returns the reference frame currently in use. 
+If device motion is not active but has been active since the app was last launched, 
+this property returns the last frame used. If device motion has not been active since 
+the app was last launched, this property returns the default attitude reference frame 
+for the device.
+Possible reference frames include 
+<a href="Modules.CoreMotion-module.html#ATTITUDE_REFERENCE_FRAME_X_ARBITRARY_Z_VERTICAL"><code>Modules.CoreMotion.ATTITUDE_REFERENCE_FRAME_X_ARBITRARY_Z_VERTICAL</code></a>, 
+<a href="Modules.CoreMotion-module.html#ATTITUDE_REFERENCE_FRAME_X_ARBITRARY_CORRECTED_Z_VERTICAL"><code>Modules.CoreMotion.ATTITUDE_REFERENCE_FRAME_X_ARBITRARY_CORRECTED_Z_VERTICAL</code></a>, 
+<a href="Modules.CoreMotion-module.html#ATTITUDE_REFERENCE_FRAME_X_MAGNETIC_NORTH_Z_VERTICAL"><code>Modules.CoreMotion.ATTITUDE_REFERENCE_FRAME_X_MAGNETIC_NORTH_Z_VERTICAL</code></a>, and
+<a href="Modules.CoreMotion-module.html#ATTITUDE_REFERENCE_FRAME_X_TRUE_NORTH_Z_VERTICAL"><code>Modules.CoreMotion.ATTITUDE_REFERENCE_FRAME_X_TRUE_NORTH_Z_VERTICAL</code></a>.</p></div>
+
+			
+						
+<div class="apidoc_container apidoc_method">
+<ul>
+	
+
+
+	<li>
+		<h4>Returns</h4>
+		<div class="return_type">
+		        Number
+		</div>
+	</li>
+<ul>
+</div>
+
+				</div>
+			
+		    
+			
+			
+			
+			
+				<h3 id="getDeviceMotion">getDeviceMotion</h3>
+			
+				<div>
+					<p>Returns the latest sample of device-motion data.
+						</p>
+			
+					
+	<h4 id="member_description">Description</h4>
+
+	<div class="description"><p>An app that is receiving device-motion data after calling 
+<a href="Modules.CoreMotion-module.html#startDeviceMotionUpdatesUsingReferenceFrame"><code>Modules.CoreMotion.startDeviceMotionUpdatesUsingReferenceFrame</code></a> or
+<a href="Modules.CoreMotion-module.html#startDeviceMotionUpdates"><code>Modules.CoreMotion.startDeviceMotionUpdates</code></a> with no callback, need to periodically
+check the value returned by this method and process the device-motion data.</p></div>
+
+			
+						
+<div class="apidoc_container apidoc_method">
+<ul>
+	
+
+
+	<li>
+		<h4>Returns</h4>
+		<div class="return_type">
+		        <a href="CoreMotionDeviceMotionData-object.html"><code>CoreMotionDeviceMotionData</code></a>
+		</div>
+	</li>
+<ul>
+</div>
+
+				</div>
+			
+		    
+			
+			
+			
+			
+				<h3 id="getGyroData">getGyroData</h3>
+			
+				<div>
+					<p>Returns the latest sample of gyroscope data.
+						</p>
+			
+					
+	<h4 id="member_description">Description</h4>
+
+	<div class="description"><p>An app that is receiving gyroscope data after calling 
+<a href="Modules.CoreMotion-module.html#startGyroUpdates"><code>Modules.CoreMotion.startGyroUpdates</code></a> with no callback, needs to periodically
+check the value returned by this method and process the gyroscope data.</p></div>
+
+			
+						
+<div class="apidoc_container apidoc_method">
+<ul>
+	
+
+
+	<li>
+		<h4>Returns</h4>
+		<div class="return_type">
+		        <a href="CoreMotionGyroData-object.html"><code>CoreMotionGyroData</code></a>
+		</div>
+	</li>
+<ul>
+</div>
+
+				</div>
+			
+		    
+			
+			
+			
+			
+				<h3 id="getMagnetometerData">getMagnetometerData</h3>
+			
+				<div>
+					<p>Returns the latest sample of magnetometer data.
+						</p>
+			
+					
+	<h4 id="member_description">Description</h4>
+
+	<div class="description"><p>An app that is receiving magnetometer data after calling 
+<a href="Modules.CoreMotion-module.html#startMagnetometerUpdates"><code>Modules.CoreMotion.startMagnetometerUpdates</code></a> with no callback, needs to periodically
+check the value returned by this method and process the magnetometer data.</p></div>
+
+			
+						
+<div class="apidoc_container apidoc_method">
+<ul>
+	
+
+
+	<li>
+		<h4>Returns</h4>
+		<div class="return_type">
+		        <a href="CoreMotionMagnetometerData-object.html"><code>CoreMotionMagnetometerData</code></a>
+		</div>
+	</li>
+<ul>
+</div>
+
+				</div>
+			
+		    
+			
+			
+			
+			
+				<h3 id="isAccelerometerActive">isAccelerometerActive</h3>
+			
+				<div>
+					<p>Returns a Boolean indicating whether accelerometer updates are currently happening.
+						</p>
+			
+					
+	<h4 id="member_description">Description</h4>
+
+	<div class="description"><p>Indicates whether <a href="Modules.CoreMotion-module.html#startAccelerometerUpdates"><code>Modules.CoreMotion.startAccelerometerUpdates</code></a> has been called since 
+<a href="Modules.CoreMotion-module.html#stopAccelerometerUpdates"><code>Modules.CoreMotion.stopAccelerometerUpdates</code></a>.</p></div>
+
+			
+						
+<div class="apidoc_container apidoc_method">
+<ul>
+	
+
+
+	<li>
+		<h4>Returns</h4>
+		<div class="return_type">
+		        Boolean
+		</div>
+	</li>
+<ul>
+</div>
+
+				</div>
+			
+		    
+			
+			
+			
+			
+				<h3 id="isAccelerometerAvailable">isAccelerometerAvailable</h3>
+			
+				<div>
+					<p>Returns a Boolean indicating whether an accelerometer is available on the device.
+						</p>
+			
+					
+
+			
+						
+<div class="apidoc_container apidoc_method">
+<ul>
+	
+
+
+	<li>
+		<h4>Returns</h4>
+		<div class="return_type">
+		        Boolean
+		</div>
+	</li>
+<ul>
+</div>
+
+				</div>
+			
+		    
+			
+			
+			
+			
+				<h3 id="isActivityAvailable">isActivityAvailable</h3>
+			
+				<div>
+					<p>Returns a Boolean indicating whether motion activity data is available on the current device.
+						</p>
+			
+					
+
+			
+						
+<div class="apidoc_container apidoc_method">
+<ul>
+	
+
+
+	<li>
+		<h4>Returns</h4>
+		<div class="return_type">
+		        Boolean
+		</div>
+	</li>
+<ul>
+</div>
+
+				</div>
+			
+		    
+			
+			
+			
+			
+				<h3 id="isDeviceMotionActive">isDeviceMotionActive</h3>
+			
+				<div>
+					<p>Returns a Boolean value that determines whether the app is receiving updates from the device-motion service.
+						</p>
+			
+					
+	<h4 id="member_description">Description</h4>
+
+	<div class="description"><p>Indicates whether <a href="Modules.CoreMotion-module.html#startDeviceMotionUpdates"><code>Modules.CoreMotion.startDeviceMotionUpdates</code></a> or 
+<a href="Modules.CoreMotion-module.html#startDeviceMotionUpdatesUsingReferenceFrame"><code>Modules.CoreMotion.startDeviceMotionUpdatesUsingReferenceFrame</code></a> has been called since 
+<a href="Modules.CoreMotion-module.html#stopDeviceMotionUpdates"><code>Modules.CoreMotion.stopDeviceMotionUpdates</code></a>.</p></div>
+
+			
+						
+<div class="apidoc_container apidoc_method">
+<ul>
+	
+
+
+	<li>
+		<h4>Returns</h4>
+		<div class="return_type">
+		        Boolean
+		</div>
+	</li>
+<ul>
+</div>
+
+				</div>
+			
+		    
+			
+			
+			
+			
+				<h3 id="isDeviceMotionAvailable">isDeviceMotionAvailable</h3>
+			
+				<div>
+					<p>Returns a Boolean indicating whether device-motion is available on the device.
+						</p>
+			
+					
+
+			
+						
+<div class="apidoc_container apidoc_method">
+<ul>
+	
+
+
+	<li>
+		<h4>Returns</h4>
+		<div class="return_type">
+		        Boolean
+		</div>
+	</li>
+<ul>
+</div>
+
+				</div>
+			
+		    
+			
+			
+			
+			
+				<h3 id="isGyroActive">isGyroActive</h3>
+			
+				<div>
+					<p>Returns a Boolean indicating whether gyroscope updates are currently happening.
+						</p>
+			
+					
+	<h4 id="member_description">Description</h4>
+
+	<div class="description"><p>Indicates whether <a href="Modules.CoreMotion-module.html#startGyroUpdates"><code>Modules.CoreMotion.startGyroUpdates</code></a> has been called since 
+<a href="Modules.CoreMotion-module.html#stopGyroUpdates"><code>Modules.CoreMotion.stopGyroUpdates</code></a>.</p></div>
+
+			
+						
+<div class="apidoc_container apidoc_method">
+<ul>
+	
+
+
+	<li>
+		<h4>Returns</h4>
+		<div class="return_type">
+		        Boolean
+		</div>
+	</li>
+<ul>
+</div>
+
+				</div>
+			
+		    
+			
+			
+			
+			
+				<h3 id="isGyroAvailable">isGyroAvailable</h3>
+			
+				<div>
+					<p>Returns a Boolean indicating whether a gyroscope is available on the device.
+						</p>
+			
+					
+
+			
+						
+<div class="apidoc_container apidoc_method">
+<ul>
+	
+
+
+	<li>
+		<h4>Returns</h4>
+		<div class="return_type">
+		        Boolean
+		</div>
+	</li>
+<ul>
+</div>
+
+				</div>
+			
+		    
+			
+			
+			
+			
+				<h3 id="isMagnetometerActive">isMagnetometerActive</h3>
+			
+				<div>
+					<p>Returns a Boolean indicating whether magnetometer updates are currently happening.
+						</p>
+			
+					
+	<h4 id="member_description">Description</h4>
+
+	<div class="description"><p>Indicates whether <a href="Modules.CoreMotion-module.html#startMagnetometerUpdates"><code>Modules.CoreMotion.startMagnetometerUpdates</code></a> has been called since 
+<a href="Modules.CoreMotion-module.html#stopMagnetometerUpdates"><code>Modules.CoreMotion.stopMagnetometerUpdates</code></a>.</p></div>
+
+			
+						
+<div class="apidoc_container apidoc_method">
+<ul>
+	
+
+
+	<li>
+		<h4>Returns</h4>
+		<div class="return_type">
+		        Boolean
+		</div>
+	</li>
+<ul>
+</div>
+
+				</div>
+			
+		    
+			
+			
+			
+			
+				<h3 id="isMagnetometerAvailable">isMagnetometerAvailable</h3>
+			
+				<div>
+					<p>Returns a Boolean indicating whether a magnetometer is available on the device.
+						</p>
+			
+					
+
+			
+						
+<div class="apidoc_container apidoc_method">
+<ul>
+	
+
+
+	<li>
+		<h4>Returns</h4>
+		<div class="return_type">
+		        Boolean
+		</div>
+	</li>
+<ul>
+</div>
+
+				</div>
+			
+		    
+			
+			
+			
+			
+				<h3 id="isStepCountingAvailable">isStepCountingAvailable</h3>
+			
+				<div>
+					<p>Returns a Boolean indicating whether step-counting support is available on the current device.
+						</p>
+			
+					
+
+			
+						
+<div class="apidoc_container apidoc_method">
+<ul>
+	
+
+
+	<li>
+		<h4>Returns</h4>
+		<div class="return_type">
+		        Boolean
+		</div>
+	</li>
+<ul>
+</div>
+
+				</div>
+			
+		    
+			
+			
+			
+			
+				<h3 id="queryActivity">queryActivity</h3>
+			
+				<div>
+					<p>Gathers and returns historical motion activty data for the specified time period.
+						</p>
+			
+					
+	<h4 id="member_description">Description</h4>
+
+	<div class="description"><p>This method runs asynchronously, returning immediately and delivering the results 
+to the specified callback. The system stores only the last seven days worth of 
+activity data at most. If there are no samples for the specified range of time, 
+an error object with the code <a href="Modules.CoreMotion-module.html#ERROR_UNKNOWN"><code>Modules.CoreMotion.ERROR_UNKNOWN</code></a> is passed to the 
+callback.</p></div>
+
+			
+						
+<div class="apidoc_container apidoc_method">
+<ul>
+	
+	<li>
+		<h4 id="arguments">Parameters</h4>
+		
+<div class="arguments">
+
+		<ul>
+			<li>
+			
+		    
+			
+			
+			
+			
+				<h5>args : <a href="CoreMotionQueryActivityArgs-object.html"><code>CoreMotionQueryActivityArgs</code></a><!-- Will add </h5> later -->
+			
+				</h5>
+				<div>
+					<p>An object of arguments
+						</p>
+			
+					
+
+			
+				</div>
+			</li>
+			<li>
+			
+		    
+			
+			
+			
+			
+				<h5>callback : Callback&lt;<a href="CoreMotionActivityQueryDataWithSuccess-object.html"><code>CoreMotionActivityQueryDataWithSuccess</code></a>&gt;<!-- Will add </h5> later -->
+			
+				</h5>
+				<div>
+					<p>The callback to execute with the results.
+						</p>
+			
+					
+
+			
+				</div>
+			</li>
+		</ul>
+	
+</div>
+
+
+	</li>
+
+
+	<li>
+		<h4>Returns</h4>
+		<div class="return_type">
+		        void
+		</div>
+	</li>
+<ul>
+</div>
+
+				</div>
+			
+		    
+			
+			
+			
+			
+				<h3 id="queryStepCount">queryStepCount</h3>
+			
+				<div>
+					<p>Gathers and returns historical step count data for the specified time period.
+						</p>
+			
+					
+	<h4 id="member_description">Description</h4>
+
+	<div class="description"><p>The system stores only the last seven days worth of step data at most. 
+If there are no samples for the specified range of time, a value of 0 is passed to the callback.</p></div>
+
+			
+						
+<div class="apidoc_container apidoc_method">
+<ul>
+	
+	<li>
+		<h4 id="arguments">Parameters</h4>
+		
+<div class="arguments">
+
+		<ul>
+			<li>
+			
+		    
+			
+			
+			
+			
+				<h5>args : <a href="CoreMotionQueryStepCountArgs-object.html"><code>CoreMotionQueryStepCountArgs</code></a><!-- Will add </h5> later -->
+			
+				</h5>
+				<div>
+					<p>An object of arguments
+						</p>
+			
+					
+
+			
+				</div>
+			</li>
+			<li>
+			
+		    
+			
+			
+			
+			
+				<h5>callback : Callback&lt;<a href="CoreMotionStepCountingQueryDataWithSuccess-object.html"><code>CoreMotionStepCountingQueryDataWithSuccess</code></a>&gt;<!-- Will add </h5> later -->
+			
+				</h5>
+				<div>
+					<p>The callback to execute with the results.
+						</p>
+			
+					
+
+			
+				</div>
+			</li>
+		</ul>
+	
+</div>
+
+
+	</li>
+
+
+	<li>
+		<h4>Returns</h4>
+		<div class="return_type">
+		        void
+		</div>
+	</li>
+<ul>
+</div>
+
+				</div>
+			
+		    
+			
+			
+			
+			
+				<h3 id="setAccelerometerUpdateInterval">setAccelerometerUpdateInterval</h3>
+			
+				<div>
+					<p>The interval in milliseconds, for providing accelerometer updates to the callback.
+						</p>
+			
+					
+
+			
+						
+<div class="apidoc_container apidoc_method">
+<ul>
+	
+	<li>
+		<h4 id="arguments">Parameters</h4>
+		
+<div class="arguments">
+
+		<ul>
+			<li>
+			
+		    
+			
+			
+			
+			
+				<h5>interval : Number<!-- Will add </h5> later -->
+			
+				</h5>
+				<div>
+					<p>The interval in milliseconds
+						</p>
+			
+					
+
+			
+				</div>
+			</li>
+		</ul>
+	
+</div>
+
+
+	</li>
+
+
+	<li>
+		<h4>Returns</h4>
+		<div class="return_type">
+		        void
+		</div>
+	</li>
+<ul>
+</div>
+
+				</div>
+			
+		    
+			
+			
+			
+			
+				<h3 id="setDeviceMotionUpdateInterval">setDeviceMotionUpdateInterval</h3>
+			
+				<div>
+					<p>The interval in milliseconds, for providing device-motion updates to the callback.
+						</p>
+			
+					
+	<h4 id="member_description">Description</h4>
+
+	<div class="description"><p>The system supplies device-motion updates to the callback passed to 
+<a href="Modules.CoreMotion-module.html#startDeviceMotionUpdatesUsingReferenceFrame"><code>Modules.CoreMotion.startDeviceMotionUpdatesUsingReferenceFrame</code></a> or
+<a href="Modules.CoreMotion-module.html#startDeviceMotionUpdates"><code>Modules.CoreMotion.startDeviceMotionUpdates</code></a> at regular intervals 
+determined by the value passed to this method. The interval units 
+are in milliseconds. The value of this property is capped to minimum 
+and maximum values; the maximum value is determined by the maximum 
+frequency supported by the hardware. If your app is sensitive to the 
+intervals of device-motion data, it should always check the timestamps 
+of the delivered device-motion event to determine the true update interval.</p></div>
+
+			
+						
+<div class="apidoc_container apidoc_method">
+<ul>
+	
+	<li>
+		<h4 id="arguments">Parameters</h4>
+		
+<div class="arguments">
+
+		<ul>
+			<li>
+			
+		    
+			
+			
+			
+			
+				<h5>interval : Number<!-- Will add </h5> later -->
+			
+				</h5>
+				<div>
+					<p>The interval in milliseconds
+						</p>
+			
+					
+
+			
+				</div>
+			</li>
+		</ul>
+	
+</div>
+
+
+	</li>
+
+
+	<li>
+		<h4>Returns</h4>
+		<div class="return_type">
+		        void
+		</div>
+	</li>
+<ul>
+</div>
+
+				</div>
+			
+		    
+			
+			
+			
+			
+				<h3 id="setGyroUpdateInterval">setGyroUpdateInterval</h3>
+			
+				<div>
+					<p>The interval in milliseconds, for providing gyroscope updates to the callback.
+						</p>
+			
+					
+
+			
+						
+<div class="apidoc_container apidoc_method">
+<ul>
+	
+	<li>
+		<h4 id="arguments">Parameters</h4>
+		
+<div class="arguments">
+
+		<ul>
+			<li>
+			
+		    
+			
+			
+			
+			
+				<h5>interval : Number<!-- Will add </h5> later -->
+			
+				</h5>
+				<div>
+					<p>The interval in milliseconds
+						</p>
+			
+					
+
+			
+				</div>
+			</li>
+		</ul>
+	
+</div>
+
+
+	</li>
+
+
+	<li>
+		<h4>Returns</h4>
+		<div class="return_type">
+		        void
+		</div>
+	</li>
+<ul>
+</div>
+
+				</div>
+			
+		    
+			
+			
+			
+			
+				<h3 id="setMagnetometerUpdateInterval">setMagnetometerUpdateInterval</h3>
+			
+				<div>
+					<p>The interval in milliseconds, for providing magnetometer updates to the callback.
+						</p>
+			
+					
+
+			
+						
+<div class="apidoc_container apidoc_method">
+<ul>
+	
+	<li>
+		<h4 id="arguments">Parameters</h4>
+		
+<div class="arguments">
+
+		<ul>
+			<li>
+			
+		    
+			
+			
+			
+			
+				<h5>interval : Number<!-- Will add </h5> later -->
+			
+				</h5>
+				<div>
+					<p>The interval in milliseconds
+						</p>
+			
+					
+
+			
+				</div>
+			</li>
+		</ul>
+	
+</div>
+
+
+	</li>
+
+
+	<li>
+		<h4>Returns</h4>
+		<div class="return_type">
+		        void
+		</div>
+	</li>
+<ul>
+</div>
+
+				</div>
+			
+		    
+			
+			
+			
+			
+				<h3 id="setShowsDeviceMovementDisplay">setShowsDeviceMovementDisplay</h3>
+			
+				<div>
+					<p>Controls whether the device-movement display is shown.
+						</p>
+			
+					
+	<h4 id="member_description">Description</h4>
+
+	<div class="description"><p>When a device requires movement (for example, to calibrate the compass), the value of 
+this property indicates if the system's device-movement display should be shown. 
+When a device requires movement, the callback for 
+<a href="Modules.CoreMotion-module.html#setDeviceMotionUpdateInterval"><code>Modules.CoreMotion.setDeviceMotionUpdateInterval</code></a> or 
+<a href="Modules.CoreMotion-module.html#startDeviceMotionUpdatesUsingReferenceFrame"><code>Modules.CoreMotion.startDeviceMotionUpdatesUsingReferenceFrame</code></a> reports 
+the <a href="Modules.CoreMotion-module.html#ERROR_DEVICE_REQUIRES_MOVEMENT"><code>Modules.CoreMotion.ERROR_DEVICE_REQUIRES_MOVEMENT</code></a> error once. By default, 
+this is set to false.</p></div>
+
+			
+						
+<div class="apidoc_container apidoc_method">
+<ul>
+	
+	<li>
+		<h4 id="arguments">Parameters</h4>
+		
+<div class="arguments">
+
+		<ul>
+			<li>
+			
+		    
+			
+			
+			
+			
+				<h5>show : Boolean<!-- Will add </h5> later -->
+			
+				</h5>
+				<div>
+					<p>Boolean indicating if the display should be shown
+						</p>
+			
+					
+
+			
+				</div>
+			</li>
+		</ul>
+	
+</div>
+
+
+	</li>
+
+
+	<li>
+		<h4>Returns</h4>
+		<div class="return_type">
+		        void
+		</div>
+	</li>
+<ul>
+</div>
+
+				</div>
+			
+		    
+			
+			
+			
+			
+				<h3 id="startAccelerometerUpdates">startAccelerometerUpdates</h3>
+			
+				<div>
+					<p>Starts accelerometer updates.
+						</p>
+			
+					
+	<h4 id="member_description">Description</h4>
+
+	<div class="description"><p>If a callback is passed to this method, it will be called whenever there is an update.
+The frequency of these updates can be controlled using the 
+<a href="Modules.CoreMotion-module.html#setAccelerometerUpdateInterval"><code>Modules.CoreMotion.setAccelerometerUpdateInterval</code></a> method.
+If no callback is passed, the accelerometer data can be accessed using the 
+<a href="Modules.CoreMotion-module.html#getAccelerometerData"><code>Modules.CoreMotion.getAccelerometerData</code></a> method.</p></div>
+
+			
+						
+<div class="apidoc_container apidoc_method">
+<ul>
+	
+	<li>
+		<h4 id="arguments">Parameters</h4>
+		
+<div class="arguments">
+
+		<ul>
+			<li>
+			
+		    
+			
+			
+			
+			
+				<h5>callback : Callback&lt;<a href="CoreMotionAccelerometerDataWithSuccess-object.html"><code>CoreMotionAccelerometerDataWithSuccess</code></a>&gt;<!-- Will add </h5> later -->
+			
+					<span class="optional">(optional)</span>
+				</h5>
+				<div>
+					<p>The method to be called when there is an update.
+						</p>
+			
+					
+
+			
+				</div>
+			</li>
+		</ul>
+	
+</div>
+
+
+	</li>
+
+
+	<li>
+		<h4>Returns</h4>
+		<div class="return_type">
+		        void
+		</div>
+	</li>
+<ul>
+</div>
+
+				</div>
+			
+		    
+			
+			
+			
+			
+				<h3 id="startActivityUpdates">startActivityUpdates</h3>
+			
+				<div>
+					<p>Starts the delivery of current motion activity updates to your app.
+						</p>
+			
+					
+	<h4 id="member_description">Description</h4>
+
+	<div class="description"><p>This method initiates the tracking of motion data asynchronously. 
+Upon calling this method, the motion activity manager executes the 
+callback, reporting the current motion in effect for the device. 
+After that, the motion activity manager executes the callback only 
+when the motion data changes.</p>
+<p>The callback is executed on a best effort basis and updates are not 
+delivered while your app is suspended. If updates arrived while your 
+app was suspended, the last update is delivered to your app when it 
+resumes execution. To get all of the updates that occurred while your 
+app was suspended, use the <a href="Modules.CoreMotion-module.html#queryActivity"><code>Modules.CoreMotion.queryActivity</code></a> method.</p>
+<p>Upon starting activity updates, the motion activity manager reports 
+changes to its callback until you call the <a href="Modules.CoreMotion-module.html#stopActivityUpdates"><code>Modules.CoreMotion.stopActivityUpdates</code></a> 
+method. If you call this method again with a new callback, the activity 
+manager stops delivering updates to the old callback and delivers them 
+to the new callback instead.</p></div>
+
+			
+						
+<div class="apidoc_container apidoc_method">
+<ul>
+	
+	<li>
+		<h4 id="arguments">Parameters</h4>
+		
+<div class="arguments">
+
+		<ul>
+			<li>
+			
+		    
+			
+			
+			
+			
+				<h5>callback : Callback&lt;<a href="CoreMotionActivityData-object.html"><code>CoreMotionActivityData</code></a>&gt;<!-- Will add </h5> later -->
+			
+				</h5>
+				<div>
+					<p>The method to be called when there is an update.
+						</p>
+			
+					
+
+			
+				</div>
+			</li>
+		</ul>
+	
+</div>
+
+
+	</li>
+
+
+	<li>
+		<h4>Returns</h4>
+		<div class="return_type">
+		        void
+		</div>
+	</li>
+<ul>
+</div>
+
+				</div>
+			
+		    
+			
+			
+			
+			
+				<h3 id="startDeviceMotionUpdates">startDeviceMotionUpdates</h3>
+			
+				<div>
+					<p>Starts device-motion updates.
+						</p>
+			
+					
+	<h4 id="member_description">Description</h4>
+
+	<div class="description"><p>If a callback is passed to this method, it will be called whenever there is an update.
+The frequency of these updates can be controlled using the 
+<a href="Modules.CoreMotion-module.html#setDeviceMotionUpdateInterval"><code>Modules.CoreMotion.setDeviceMotionUpdateInterval</code></a> method.
+If no callback is passed, the device-motion data can be accessed using the 
+<a href="Modules.CoreMotion-module.html#getDeviceMotion"><code>Modules.CoreMotion.getDeviceMotion</code></a> method.</p></div>
+
+			
+						
+<div class="apidoc_container apidoc_method">
+<ul>
+	
+	<li>
+		<h4 id="arguments">Parameters</h4>
+		
+<div class="arguments">
+
+		<ul>
+			<li>
+			
+		    
+			
+			
+			
+			
+				<h5>callback : Callback&lt;<a href="CoreMotionDeviceMotionDataWithSuccess-object.html"><code>CoreMotionDeviceMotionDataWithSuccess</code></a>&gt;<!-- Will add </h5> later -->
+			
+					<span class="optional">(optional)</span>
+				</h5>
+				<div>
+					<p>The method to be called when there is an update.
+						</p>
+			
+					
+
+			
+				</div>
+			</li>
+		</ul>
+	
+</div>
+
+
+	</li>
+
+
+	<li>
+		<h4>Returns</h4>
+		<div class="return_type">
+		        void
+		</div>
+	</li>
+<ul>
+</div>
+
+				</div>
+			
+		    
+			
+			
+			
+			
+				<h3 id="startDeviceMotionUpdatesUsingReferenceFrame">startDeviceMotionUpdatesUsingReferenceFrame</h3>
+			
+				<div>
+					<p>Starts device-motion updates using a reference frame.
+						</p>
+			
+					
+	<h4 id="member_description">Description</h4>
+
+	<div class="description"><p>If a callback is passed to this method, it will be called whenever there is an update.
+The frequency of these updates can be controlled using the 
+<a href="Modules.CoreMotion-module.html#setDeviceMotionUpdateInterval"><code>Modules.CoreMotion.setDeviceMotionUpdateInterval</code></a> method.
+If no callback is passed, the device-motion data can be accessed using the 
+<a href="Modules.CoreMotion-module.html#getDeviceMotion"><code>Modules.CoreMotion.getDeviceMotion</code></a> method.</p></div>
+
+			
+						
+<div class="apidoc_container apidoc_method">
+<ul>
+	
+	<li>
+		<h4 id="arguments">Parameters</h4>
+		
+<div class="arguments">
+
+		<ul>
+			<li>
+			
+		    
+			
+			
+			
+			
+				<h5>args : <a href="CoreMotionReferenceFrameArgs-object.html"><code>CoreMotionReferenceFrameArgs</code></a><!-- Will add </h5> later -->
+			
+				</h5>
+				<div>
+					<p>The arguments passed to this method
+						</p>
+			
+					
+
+			
+				</div>
+			</li>
+			<li>
+			
+		    
+			
+			
+			
+			
+				<h5>callback : Callback&lt;<a href="CoreMotionDeviceMotionDataWithSuccess-object.html"><code>CoreMotionDeviceMotionDataWithSuccess</code></a>&gt;<!-- Will add </h5> later -->
+			
+					<span class="optional">(optional)</span>
+				</h5>
+				<div>
+					<p>The method to be called when there is an update.
+						</p>
+			
+					
+
+			
+				</div>
+			</li>
+		</ul>
+	
+</div>
+
+
+	</li>
+
+
+	<li>
+		<h4>Returns</h4>
+		<div class="return_type">
+		        void
+		</div>
+	</li>
+<ul>
+</div>
+
+				</div>
+			
+		    
+			
+			
+			
+			
+				<h3 id="startGyroUpdates">startGyroUpdates</h3>
+			
+				<div>
+					<p>Starts gyroscope updates.
+						</p>
+			
+					
+	<h4 id="member_description">Description</h4>
+
+	<div class="description"><p>If a callback is passed to this method, it will be called whenever there is an update.
+The frequency of these updates can be controlled using the
+<a href="Modules.CoreMotion-module.html#setGyroUpdateInterval"><code>Modules.CoreMotion.setGyroUpdateInterval</code></a> method. If no callback is passed,
+the gyroscope data can be accessed using the  <a href="Modules.CoreMotion-module.html#getGyroData"><code>Modules.CoreMotion.getGyroData</code></a>
+method. You must call <a href="Modules.CoreMotion-module.html#stopGyroUpdates"><code>Modules.CoreMotion.stopGyroUpdates</code></a> when you no longer want your app
+to process gyroscope updates.</p></div>
+
+			
+						
+<div class="apidoc_container apidoc_method">
+<ul>
+	
+	<li>
+		<h4 id="arguments">Parameters</h4>
+		
+<div class="arguments">
+
+		<ul>
+			<li>
+			
+		    
+			
+			
+			
+			
+				<h5>callback : Callback&lt;<a href="CoreMotionGyroDataWithSuccess-object.html"><code>CoreMotionGyroDataWithSuccess</code></a>&gt;<!-- Will add </h5> later -->
+			
+					<span class="optional">(optional)</span>
+				</h5>
+				<div>
+					<p>The method to be called when there is an update.
+						</p>
+			
+					
+
+			
+				</div>
+			</li>
+		</ul>
+	
+</div>
+
+
+	</li>
+
+
+	<li>
+		<h4>Returns</h4>
+		<div class="return_type">
+		        void
+		</div>
+	</li>
+<ul>
+</div>
+
+				</div>
+			
+		    
+			
+			
+			
+			
+				<h3 id="startMagnetometerUpdates">startMagnetometerUpdates</h3>
+			
+				<div>
+					<p>Starts magnetometer updates.
+						</p>
+			
+					
+	<h4 id="member_description">Description</h4>
+
+	<div class="description"><p>If a callback is passed to this method, it will be called whenever there is an update.
+The frequency of these updates can be controlled using the 
+<a href="Modules.CoreMotion-module.html#setMagnetometerUpdateInterval"><code>Modules.CoreMotion.setMagnetometerUpdateInterval</code></a> method. If no callback is passed, 
+the magnetometer data can be accessed using the  <a href="Modules.CoreMotion-module.html#getMagnetometerData"><code>Modules.CoreMotion.getMagnetometerData</code></a> 
+method. You must call <a href="Modules.CoreMotion-module.html#stopMagnetometerUpdates"><code>Modules.CoreMotion.stopMagnetometerUpdates</code></a> when you no longer want your app 
+to process magnetometer updates.</p></div>
+
+			
+						
+<div class="apidoc_container apidoc_method">
+<ul>
+	
+	<li>
+		<h4 id="arguments">Parameters</h4>
+		
+<div class="arguments">
+
+		<ul>
+			<li>
+			
+		    
+			
+			
+			
+			
+				<h5>callback : Callback&lt;<a href="CoreMotionMagnetometerDataWithSuccess-object.html"><code>CoreMotionMagnetometerDataWithSuccess</code></a>&gt;<!-- Will add </h5> later -->
+			
+					<span class="optional">(optional)</span>
+				</h5>
+				<div>
+					<p>The method to be called when there is an update.
+						</p>
+			
+					
+
+			
+				</div>
+			</li>
+		</ul>
+	
+</div>
+
+
+	</li>
+
+
+	<li>
+		<h4>Returns</h4>
+		<div class="return_type">
+		        void
+		</div>
+	</li>
+<ul>
+</div>
+
+				</div>
+			
+		    
+			
+			
+			
+			
+				<h3 id="startStepCountingUpdates">startStepCountingUpdates</h3>
+			
+				<div>
+					<p>Starts the delivery of current step-counting data to your app.
+						</p>
+			
+					
+	<h4 id="member_description">Description</h4>
+
+	<div class="description"><p>This method initiates tracking of the user's steps and calls the callback 
+periodically to deliver the results. When you call this method, the step counter 
+resets the current step count value to 0 and begins counting. Each time the step 
+counter records the number of steps in the stepCounts parameter, it executes the 
+specified callback. For example, if stepCounts is 100, it would send updates 
+at 100 steps, 200 steps, 300 steps, and so on. The number of steps reported to your 
+handler is always the total number of steps since you called this method.</p>
+<p>The callback is executed on a best effort basis each time the step count 
+threshold is exceeded. If your app is suspended when the threshold is exceeded, 
+the callback is not executed. When your app resumes, the callback is not executed 
+until the threshold is exceeded again.</p>
+<p>To stop the delivery of step-counting updates, call the 
+<a href="Modules.CoreMotion-module.html#stopStepCountingUpdates"><code>Modules.CoreMotion.stopStepCountingUpdates</code></a> method. </p></div>
+
+			
+						
+<div class="apidoc_container apidoc_method">
+<ul>
+	
+	<li>
+		<h4 id="arguments">Parameters</h4>
+		
+<div class="arguments">
+
+		<ul>
+			<li>
+			
+		    
+			
+			
+			
+			
+				<h5>args : <a href="CoreMotionStartStepCountingArgs-object.html"><code>CoreMotionStartStepCountingArgs</code></a><!-- Will add </h5> later -->
+			
+				</h5>
+				<div>
+					<p>An object of arguments
+						</p>
+			
+					
+
+			
+				</div>
+			</li>
+			<li>
+			
+		    
+			
+			
+			
+			
+				<h5>callback : Callback&lt;<a href="CoreMotionStepCountingDataWithSuccess-object.html"><code>CoreMotionStepCountingDataWithSuccess</code></a>&gt;<!-- Will add </h5> later -->
+			
+				</h5>
+				<div>
+					<p>The callback to execute with the results.
+						</p>
+			
+					
+
+			
+				</div>
+			</li>
+		</ul>
+	
+</div>
+
+
+	</li>
+
+
+	<li>
+		<h4>Returns</h4>
+		<div class="return_type">
+		        void
+		</div>
+	</li>
+<ul>
+</div>
+
+				</div>
+			
+		    
+			
+			
+			
+			
+				<h3 id="stopAccelerometerUpdates">stopAccelerometerUpdates</h3>
+			
+				<div>
+					<p>Stops accelerometer updates.
+						</p>
+			
+					
+
+			
+						
+<div class="apidoc_container apidoc_method">
+<ul>
+	
+
+
+	<li>
+		<h4>Returns</h4>
+		<div class="return_type">
+		        void
+		</div>
+	</li>
+<ul>
+</div>
+
+				</div>
+			
+		    
+			
+			
+			
+			
+				<h3 id="stopActivityUpdates">stopActivityUpdates</h3>
+			
+				<div>
+					<p>Stops the delivery of motion activtiy updates to your app.
+						</p>
+			
+					
+
+			
+						
+<div class="apidoc_container apidoc_method">
+<ul>
+	
+
+
+	<li>
+		<h4>Returns</h4>
+		<div class="return_type">
+		        void
+		</div>
+	</li>
+<ul>
+</div>
+
+				</div>
+			
+		    
+			
+			
+			
+			
+				<h3 id="stopDeviceMotionUpdates">stopDeviceMotionUpdates</h3>
+			
+				<div>
+					<p>Stops device-motion updates.
+						</p>
+			
+					
+
+			
+						
+<div class="apidoc_container apidoc_method">
+<ul>
+	
+
+
+	<li>
+		<h4>Returns</h4>
+		<div class="return_type">
+		        void
+		</div>
+	</li>
+<ul>
+</div>
+
+				</div>
+			
+		    
+			
+			
+			
+			
+				<h3 id="stopGyroUpdates">stopGyroUpdates</h3>
+			
+				<div>
+					<p>Stops gyroscope updates.
+						</p>
+			
+					
+
+			
+						
+<div class="apidoc_container apidoc_method">
+<ul>
+	
+
+
+	<li>
+		<h4>Returns</h4>
+		<div class="return_type">
+		        void
+		</div>
+	</li>
+<ul>
+</div>
+
+				</div>
+			
+		    
+			
+			
+			
+			
+				<h3 id="stopMagnetometerUpdates">stopMagnetometerUpdates</h3>
+			
+				<div>
+					<p>Stops magnetometer updates.
+						</p>
+			
+					
+
+			
+						
+<div class="apidoc_container apidoc_method">
+<ul>
+	
+
+
+	<li>
+		<h4>Returns</h4>
+		<div class="return_type">
+		        void
+		</div>
+	</li>
+<ul>
+</div>
+
+				</div>
+			
+		    
+			
+			
+			
+			
+				<h3 id="stopStepCountingUpdates">stopStepCountingUpdates</h3>
+			
+				<div>
+					<p>Stops the delivery of step-counting updates to your app.
+						</p>
+			
+					
+	<h4 id="member_description">Description</h4>
+
+	<div class="description"><p>Call this method to stop the delivery of updates that you started by calling 
+the <a href="Modules.CoreMotion-module.html#startStepCountingUpdates"><code>Modules.CoreMotion.startStepCountingUpdates</code></a> method. This method does not 
+stop queries started using the <a href="Modules.CoreMotion-module.html#queryStepCount"><code>Modules.CoreMotion.queryStepCount</code></a> method.</p></div>
+
+			
+						
+<div class="apidoc_container apidoc_method">
+<ul>
+	
+
+
+	<li>
+		<h4>Returns</h4>
+		<div class="return_type">
+		        void
+		</div>
+	</li>
+<ul>
+</div>
+
+				</div>
+	
+</div>
+
+
+
+<h2 id="events">Events</h2>
+    This type has no events.
+
+
+
+
+</div>

@@ -1,0 +1,286 @@
+<h1>Ti.iSpeech</h1>
+
+<p>The Ti.iSpeech module(s) allows you to use the iSpeech.org speech APIs within your Titanium app.</p>
+<h2>Before you start</h2>
+
+<ul>
+<li>This is an iOS anative modules designed to work with Titanium SDK 3.1.3.GA</li>
+<li>Before using this module you first need to install the package. If you need instructions on how to install a 3rd party module please read this installation guide.</li>
+</ul>
+<h2>Download the compiled release</h2>
+
+<p>Download the platform you wish to use:</p>
+<ul>
+<li><a href="https://github.com/benbahrenburg/Ti.iSpeech/tree/master/iOS/dist">iOS Dist</a></li>
+</ul>
+<h2>Building from source?</h2>
+
+<p>If you are building from source you will need to do the following:</p>
+<p>Import the project into Xcode:</p>
+<ul>
+<li>Modify the titanium.xcconfig file with the path to your Titanium installation</li>
+</ul>
+<h2>Creating an iSpeech Account</h2>
+
+<p>To use this module, you need an <a href="http://www.ispeech.org">iSpeech.org</a> account with a developer API key.</p>
+<p>Getting started:</p>
+<ul>
+<li>Go to the iSpeech.org developer portal <a href="https://www.ispeech.org/developers">here</a>.</li>
+<li>Register for a developer account</li>
+<li>Create a developer key, you will need this to use the module.</li>
+</ul>
+<h2>Setup</h2>
+
+<ul>
+<li>Download the latest release from the releases folder ( or you can build it yourself )</li>
+<li>Install the ti.ispeech module. If you need help here is a "How To" <a href="https://wiki.appcelerator.org/display/guides/Configuring+Apps+to+Use+Modules">guide</a>. </li>
+<li>You can now use the module via the commonJS require method, example shown below.</li>
+</ul>
+<h2>Installation of supporting files [IMPORTANT]</h2>
+
+<p>Before running your project, you need to copy the platform folder, found {Your Project}/modules/iphone/ti.ispeech/{version}/platform to the {Your Project}/platform folder in your project.  If you don't do this, you will not be able to build your project.</p>
+<h2>Importing the module using require</h2>
+
+<pre><code>
+var ispeech = require('ti.ispeech');
+</code></pre>
+
+<h2>Module Methods</h2>
+
+<p>The following outlines the methods available at the root of the Ti.iSpeech module.</p>
+<h3>setAPIKey</h3>
+
+<p><b>Parameters</b> : String : Required
+The setAPIKey takes one parameter, your API key obtained through the iSpeech.org developer portal.</p>
+<p><b>Example</b>
+<pre><code>
+ispeech.setAPIKey("YOUR_KEY_GOES_HERE");
+</code></pre></p>
+<h3>isAvailable</h3>
+
+<p>The isAvailable method, can be used to determine if audio is available on the device.</p>
+<p><b>Parameters</b>
+None</p>
+<p><b>Example</b>
+<pre><code>
+Ti.API.info("Is Audio available? " + ispeech.isAvailable());
+</code></pre></p>
+<h3>requestPermission</h3>
+
+<p>Starting with iOS 7, you now need to request permission before using the microphone. To do this call the requestPermission method. This will request the permission and return the results.  If permission has already been granted, true/false will be returned to indicate the status of the request.</p>
+<p><b>Parameters</b>
+None</p>
+<p><b>Example</b>
+<pre><code>
+Ti.API.info("Has Microphone permission? " + ispeech.requestPermission());
+</code></pre></p>
+<h2>Module Properties</h2>
+
+<p>The following properties are available from the module. These can be used to config the Recognizer and Dictation proxies.</p>
+<p><b>TYPE_SMS</b> - Optimized for SMS messages.
+<b>TYPE_VOICEMAIL</b> Optimized for handling voicemail
+<b>TYPE_DICTATION</b> Optimized for dictation
+<b>TYPE_MESSAGE</b> - Optimized for message taking
+<b>TYPE_INSTANT_MESSAGE</b> - Optimized for instant messages
+<b>TYPE_TRANSCRIPT</b> - Optimized for taking transcripts
+<b>TYPE_MEMO</b> - Optimized for Memos</p>
+<h2>Recognizer Methods</h2>
+
+<p>The following outlines the methods on the Recognizer proxy object.  This proxy allows you to trigger a callback based on key word commands.</p>
+<h3>isAvailable</h3>
+
+<p>You can also check if audio is available on each proxy as well as the module.</p>
+<p><b>Parameters</b> 
+None</p>
+<p><b>Example</b>
+<pre><code></p>
+<p>var recognize = ispeech.createRecognizer();</p>
+<p>Ti.API.info("Is Audio available? " + recognize.isAvailable());</p>
+<p></code></pre></p>
+<h3>isRecording</h3>
+
+<p>The isRecording method is used to determine if we are already recording what is being said. This avoids duplication of action.</p>
+<p><b>Parameters</b> 
+None</p>
+<p><b>Example</b>
+<pre><code></p>
+<p>var recognize = ispeech.createRecognizer();</p>
+<p>Ti.API.info("Are you already recording? " + recognize.isRecording());</p>
+<p></code></pre></p>
+<h3>start</h3>
+
+<p>The start method is used to start the command recognization process.  While you are speaking the iSpeech.org APIs will look for the keyword commands provided and trigger an event once matched.  For example you can use this method to listen for a user saying  a voice command such as "call Bob".</p>
+<p><b>Parameters</b> : Dictionary : Require
+The start method takes a dictionary with the following elements.</p>
+<p><b>onComplete</b> : Callback : required
+The onComplete callback is triggered on finish, error, cancel, or other completion action.</p>
+<p><b>commands</b> : Dictionary : required
+The commands dictionary defines the key works and phrases you wish to recognize.</p>
+<p><b>silenceDetection</b> : Boolean : optional
+The silenceDetection parameter is true by default. This toggle determines of the recognizer should complete based on silence detection.</p>
+<p><b>locale</b> : String : optional
+The locale used to determine the speakers language.</p>
+<p><b>freeformType</b> : Enum : optional
+The type of text operation you wish to have performed. By default this is set to TYPE_SMS.</p>
+<p><b>model</b> : String : optional
+If you are using a custom model, you can set this value to the model you wish to use.</p>
+<p><b>Example</b>
+The following shows how to recognize when someone asks to call one of the individuals listed below.</p>
+<pre><code>
+
+var recognize = ispeech.createRecognizer();
+
+function recognizeCompleted(e){
+    Ti.API.info(JSON.stringify(e));
+};
+
+recognize.start({
+    onComplete:recognizeCompleted,
+    commands:[
+        {
+            alias:"officers",
+            command:"call %officers%",
+            values:["Mike", "Rocco", "Grant", "Alex","Bob"]
+        }
+    ]
+}); 
+</code></pre>
+
+<h2>Dictation Methods</h2>
+
+<p>The following outlines the methods on the Dictation proxy object.  This proxy allows you record longer messages.</p>
+<h3>isAvailable</h3>
+
+<p>You can also check if audio is available on each proxy as well as the module.</p>
+<p><b>Parameters</b> 
+None</p>
+<p><b>Example</b>
+<pre><code></p>
+<p>var dictate = ispeech.createDictate();</p>
+<p>Ti.API.info("Is Audio available? " + dictate.isAvailable());</p>
+<p></code></pre></p>
+<h3>isRecording</h3>
+
+<p>The isRecording method is used to determine if we are already recording what is being said. This avoids duplication of action.</p>
+<p><b>Parameters</b> 
+None</p>
+<p><b>Example</b>
+<pre><code></p>
+<p>var dictate = ispeech.createDictation();</p>
+<p>Ti.API.info("Are you already recording? " + dictate.isRecording());</p>
+<p></code></pre></p>
+<h3>start</h3>
+
+<p>The start method is used to start the dictation process.  While you are speaking the iSpeech.org APIs will be used to convert your voice into text. For example, this method can be used to record a voice note from a user.</p>
+<p><b>Parameters</b> : Dictionary : Require
+The start method takes a dictionary with the following elements.</p>
+<p><b>onComplete</b> : Callback : required
+The onComplete callback is triggered on finish, error, cancel, or other completion action.</p>
+<p><b>silenceDetection</b> : Boolean : optional
+The silenceDetection parameter is true by default. This toggle determines of the recognizer should complete based on silence detection.</p>
+<p><b>locale</b> : String : optional
+The locale used to determine the speakers language.</p>
+<p><b>freeformType</b> : Enum : optional
+The type of text operation you wish to have performed. By default this is set to TYPE_DICTATION.</p>
+<p><b>model</b> : String : optional
+If you are using a custom model, you can set this value to the model you wish to use.</p>
+<p><b>Example</b>
+The following shows how to recognize when someone asks to call one of the individuals listed below.</p>
+<pre><code>
+
+var dictate = ispeech.createDictate();
+
+function dictateCompleted(e){
+    Ti.API.info(JSON.stringify(e));
+};
+
+dictate.start({
+    onComplete:dictateCompleted
+});
+
+</code></pre>
+
+<h2>Speak Methods</h2>
+
+<p>The following outlines the methods on the Speak proxy object.  This allows you to speak sentences or phrases.</p>
+<h3>isAvailable</h3>
+
+<p>You can also check if audio is available on each proxy as well as the module.</p>
+<p><b>Parameters</b> 
+None</p>
+<p><b>Example</b>
+<pre><code></p>
+<p>var speak = ispeech.createSpeak();</p>
+<p>Ti.API.info("Is Audio available? " + speak.isAvailable());</p>
+<p></code></pre></p>
+<h3>isSpeaking</h3>
+
+<p>The isSpeaking method is used to determine if we are already speaking. This avoids duplication of action.</p>
+<p><b>Parameters</b> 
+None</p>
+<p><b>Example</b>
+<pre><code></p>
+<p>var speak = ispeech.createSpeak();</p>
+<p>Ti.API.info("Are you already speaking? " + speak.isSpeaking());</p>
+<p></code></pre></p>
+<h3>start</h3>
+
+<p>The start method is used to start speaking a phrase using the iSpeech.org API.</p>
+<p><b>Parameters</b> : Dictionary : Require
+The start method takes a dictionary with the following elements.</p>
+<p><b>text</b> : String : required
+The text which should be spoken.</p>
+<p><b>onComplete</b> : Callback : required
+The onComplete callback is triggered on finish, error, cancel, or other completion action.</p>
+<p><b>voice</b> : String : optional
+The voice parameter allows you to provide a custom voice.  If this is not provided, the default voice will be used.</p>
+<p><b>speed</b> : Int : optional
+The speed parameter allows you to adjust the speed the speech is read.</p>
+<p><b>bitrate</b> : Int : optional
+The bitrate parameter allows you to adjust the bitrate used.</p>
+<p><b>resume</b> : Boolean : optional
+The resume parameter allows you to indicate if iSpeech should resume after being interrupted. By default this is false.</p>
+<p><b>Example</b>
+The following shows how to recognize when someone asks to call one of the individuals listed below.</p>
+<pre><code>
+
+var speak = ispeech.createSpeak();
+
+function onSpeakFinished(e){
+    Ti.API.info(JSON.stringify(e));
+};
+
+speak.start({
+    onComplete:onSpeakFinished,
+    text:"Hello world"
+});
+
+</code></pre>
+
+<h2>Learn More</h2>
+
+<h3>Examples</h3>
+
+<p>Please check the module's example folder or </p>
+<ul>
+<li><a href="https://github.com/benbahrenburg/Ti.iSpeech/tree/master/iOS/example">iOS</a> </li>
+</ul>
+<p>for samples on how to use this project.</p>
+<h3>Twitter</h3>
+
+<p>Please consider following the <a href="http://www.twitter.com/benCoding">@benCoding Twitter</a> for updates 
+and more about Titanium.</p>
+<h3>Blog</h3>
+
+<p>For module updates, Titanium tutorials and more please check out my blog at <a href="http://benCoding.com">benCoding.Com</a>.</p>
+<h2>Legal Stuff</h2>
+
+<p>Appcelerator is a registered trademark of Appcelerator, Inc. Appcelerator Titanium is a trademark of Appcelerator, Inc.</p>
+<p>iSpeech is a registered trademark of iSpeech, Inc.</p>
+<h2>License</h2>
+
+<p>Ti.iSpeech is available under the MIT license.</p>
+<p>Copyright 2013 Benjamin Bahrenburg.</p>
+<p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</p>
+<p>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</p>
+<p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>

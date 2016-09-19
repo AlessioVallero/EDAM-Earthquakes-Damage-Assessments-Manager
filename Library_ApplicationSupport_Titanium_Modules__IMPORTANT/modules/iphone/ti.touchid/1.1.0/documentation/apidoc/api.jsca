@@ -1,0 +1,798 @@
+{
+    "types": [
+        {
+            "name": "DeviceCanAuthenticateResult", 
+            "inherits": "Object", 
+            "description": "<p>Dictionary containing results for <ti.touchid.deviceCanAuthenticate>.</p>", 
+            "userAgents": [
+                {
+                    "platform": "iphone"
+                }, 
+                {
+                    "platform": "ipad"
+                }
+            ], 
+            "examples": [], 
+            "remarks": [], 
+            "properties": [
+                {
+                    "name": "canAuthenticate", 
+                    "since": [
+                        {
+                            "name": "Titanium Mobile SDK - iPhone", 
+                            "version": "1.0.1"
+                        }, 
+                        {
+                            "name": "Titanium Mobile SDK - iPad", 
+                            "version": "1.0.1"
+                        }
+                    ], 
+                    "isInternal": false, 
+                    "permission": "read-write", 
+                    "deprecated": false, 
+                    "isInstanceProperty": false, 
+                    "examples": [], 
+                    "userAgents": [
+                        {
+                            "platform": "iphone"
+                        }, 
+                        {
+                            "platform": "ipad"
+                        }
+                    ], 
+                    "type": "Boolean", 
+                    "isClassProperty": true, 
+                    "availability": "always", 
+                    "description": "<p>Set to true if device is configured for touch ID authentication.</p>"
+                }, 
+                {
+                    "name": "code", 
+                    "since": [
+                        {
+                            "name": "Titanium Mobile SDK - iPhone", 
+                            "version": "1.0.1"
+                        }, 
+                        {
+                            "name": "Titanium Mobile SDK - iPad", 
+                            "version": "1.0.1"
+                        }
+                    ], 
+                    "isInternal": false, 
+                    "permission": "read-write", 
+                    "deprecated": false, 
+                    "isInstanceProperty": false, 
+                    "examples": [], 
+                    "userAgents": [
+                        {
+                            "platform": "iphone"
+                        }, 
+                        {
+                            "platform": "ipad"
+                        }
+                    ], 
+                    "type": "Number", 
+                    "isClassProperty": true, 
+                    "availability": "always", 
+                    "description": "<p>Module <code>ERROR_*</code> constant indicating the reason for the failure if any.</p>"
+                }, 
+                {
+                    "name": "error", 
+                    "since": [
+                        {
+                            "name": "Titanium Mobile SDK - iPhone", 
+                            "version": "1.0.1"
+                        }, 
+                        {
+                            "name": "Titanium Mobile SDK - iPad", 
+                            "version": "1.0.1"
+                        }
+                    ], 
+                    "isInternal": false, 
+                    "permission": "read-write", 
+                    "deprecated": false, 
+                    "isInstanceProperty": false, 
+                    "examples": [], 
+                    "userAgents": [
+                        {
+                            "platform": "iphone"
+                        }, 
+                        {
+                            "platform": "ipad"
+                        }
+                    ], 
+                    "type": "String", 
+                    "isClassProperty": true, 
+                    "availability": "always", 
+                    "description": "<p>System error message if any.</p>"
+                }
+            ], 
+            "functions": [], 
+            "deprecated": false, 
+            "since": [
+                {
+                    "name": "Titanium Mobile SDK - iPhone", 
+                    "version": "1.0.1"
+                }, 
+                {
+                    "name": "Titanium Mobile SDK - iPad", 
+                    "version": "1.0.1"
+                }
+            ], 
+            "isInternal": false, 
+            "events": []
+        }, 
+        {
+            "name": "Modules.TouchId", 
+            "inherits": "Titanium.Module", 
+            "description": "<p>Allows a Titanium application to use the iOS Touch ID authentication mechanism.</p>", 
+            "userAgents": [
+                {
+                    "platform": "iphone"
+                }, 
+                {
+                    "platform": "ipad"
+                }
+            ], 
+            "examples": [], 
+            "remarks": [
+                "<p>Touch ID is a security mechanism that uses a fingerprint to authenticate the user. The\nfingerprint sensor is located in the Home button of the device.  Users can use their fingerprint\ninstead of entering their passcode for authentication.</p>\n<h3>Requirements</h3>\n<p>The Touch ID module is available with the Titanium SDK starting with Release 3.4.0.\nThis module only works with devices running iOS 8.  You can only test the Touch ID module on a device.</p>\n<p>The device must have a Touch ID sensor in the Home button and Touch ID must be setup in order to use\nthe Touch ID authentication mechanism.  You can set up Touch ID in iOS Setup Assistant or by\ntapping <strong>Touch ID &amp; Passcode</strong> from Settings.</p>\n<p>For information on setting up Touch ID, see\n<a href=\"http://support.apple.com/kb/HT5883\">iPhone 5s: Using Touch ID</a>.</p>\n<h3>Getting Started</h3>\n<p>Add the module as a dependency to your application by adding a <strong><code>&lt;module&gt;</code></strong> item to the\n<strong><code>&lt;modules&gt;</code></strong> element of your <code>tiapp.xml</code> file:</p>\n<pre><code>&lt;ti:app&gt;\n  ...\n  &lt;modules&gt;\n    &lt;module platform=\"iphone\"&gt;ti.touchid&lt;/module&gt;\n  &lt;/modules&gt;\n  ...\n&lt;/ti:app&gt;\n</code></pre>\n<p>Use <code>require()</code> to access the module from JavaScript:</p>\n<pre><code>var TouchId = require(\"ti.touchid\");\n</code></pre>\n<p>The <code>TouchId</code> variable is a reference to the module. Make API calls using this reference:</p>\n<pre><code>TouchId.authenticate({\n    reason: \"Need to modify personal settings.\",\n    callback: authCB\n});\n</code></pre>\n<h3>Sample Application</h3>\n<p>The module contains a sample application in the\n<code>&lt;TITANIUM_SDK_HOME&gt;/modules/iphone/ti.touchid/&lt;VERSION&gt;/example/</code> folder.</p>"
+            ], 
+            "properties": [
+                {
+                    "name": "ERROR_AUTHENTICATION_FAILED", 
+                    "since": [
+                        {
+                            "name": "Titanium Mobile SDK - iPhone", 
+                            "version": "3.4.0"
+                        }, 
+                        {
+                            "name": "Titanium Mobile SDK - iPad", 
+                            "version": "3.4.0"
+                        }
+                    ], 
+                    "isInternal": false, 
+                    "permission": "read-only", 
+                    "deprecated": false, 
+                    "isInstanceProperty": false, 
+                    "examples": [], 
+                    "userAgents": [
+                        {
+                            "platform": "iphone"
+                        }, 
+                        {
+                            "platform": "ipad"
+                        }
+                    ], 
+                    "type": "Number", 
+                    "isClassProperty": true, 
+                    "availability": "always", 
+                    "description": "<p>Constant indicating that the authentication was not successful.</p>"
+                }, 
+                {
+                    "name": "ERROR_PASSCODE_NOT_SET", 
+                    "since": [
+                        {
+                            "name": "Titanium Mobile SDK - iPhone", 
+                            "version": "3.4.0"
+                        }, 
+                        {
+                            "name": "Titanium Mobile SDK - iPad", 
+                            "version": "3.4.0"
+                        }
+                    ], 
+                    "isInternal": false, 
+                    "permission": "read-only", 
+                    "deprecated": false, 
+                    "isInstanceProperty": false, 
+                    "examples": [], 
+                    "userAgents": [
+                        {
+                            "platform": "iphone"
+                        }, 
+                        {
+                            "platform": "ipad"
+                        }
+                    ], 
+                    "type": "Number", 
+                    "isClassProperty": true, 
+                    "availability": "always", 
+                    "description": "<p>Constant indicating that the passcode is not set for the device.</p>"
+                }, 
+                {
+                    "name": "ERROR_SYSTEM_CANCEL", 
+                    "since": [
+                        {
+                            "name": "Titanium Mobile SDK - iPhone", 
+                            "version": "3.4.0"
+                        }, 
+                        {
+                            "name": "Titanium Mobile SDK - iPad", 
+                            "version": "3.4.0"
+                        }
+                    ], 
+                    "isInternal": false, 
+                    "permission": "read-only", 
+                    "deprecated": false, 
+                    "isInstanceProperty": false, 
+                    "examples": [], 
+                    "userAgents": [
+                        {
+                            "platform": "iphone"
+                        }, 
+                        {
+                            "platform": "ipad"
+                        }
+                    ], 
+                    "type": "Number", 
+                    "isClassProperty": true, 
+                    "availability": "always", 
+                    "description": "<p>Constant indicating that iOS cancelled authentication, for example, if another\napplication enters the foreground.</p>"
+                }, 
+                {
+                    "name": "ERROR_TOUCH_ID_NOT_AVAILABLE", 
+                    "since": [
+                        {
+                            "name": "Titanium Mobile SDK - iPhone", 
+                            "version": "3.4.0"
+                        }, 
+                        {
+                            "name": "Titanium Mobile SDK - iPad", 
+                            "version": "3.4.0"
+                        }
+                    ], 
+                    "isInternal": false, 
+                    "permission": "read-only", 
+                    "deprecated": false, 
+                    "isInstanceProperty": false, 
+                    "examples": [], 
+                    "userAgents": [
+                        {
+                            "platform": "iphone"
+                        }, 
+                        {
+                            "platform": "ipad"
+                        }
+                    ], 
+                    "type": "Number", 
+                    "isClassProperty": true, 
+                    "availability": "always", 
+                    "description": "<p>Constant indicating that Touch ID is not available on the device.</p>"
+                }, 
+                {
+                    "name": "ERROR_TOUCH_ID_NOT_ENROLLED", 
+                    "since": [
+                        {
+                            "name": "Titanium Mobile SDK - iPhone", 
+                            "version": "3.4.0"
+                        }, 
+                        {
+                            "name": "Titanium Mobile SDK - iPad", 
+                            "version": "3.4.0"
+                        }
+                    ], 
+                    "isInternal": false, 
+                    "permission": "read-only", 
+                    "deprecated": false, 
+                    "isInstanceProperty": false, 
+                    "examples": [], 
+                    "userAgents": [
+                        {
+                            "platform": "iphone"
+                        }, 
+                        {
+                            "platform": "ipad"
+                        }
+                    ], 
+                    "type": "Number", 
+                    "isClassProperty": true, 
+                    "availability": "always", 
+                    "description": "<p>Constant indicating that Touch ID does not have any enrolled fingerprints.</p>"
+                }, 
+                {
+                    "name": "ERROR_USER_CANCEL", 
+                    "since": [
+                        {
+                            "name": "Titanium Mobile SDK - iPhone", 
+                            "version": "3.4.0"
+                        }, 
+                        {
+                            "name": "Titanium Mobile SDK - iPad", 
+                            "version": "3.4.0"
+                        }
+                    ], 
+                    "isInternal": false, 
+                    "permission": "read-only", 
+                    "deprecated": false, 
+                    "isInstanceProperty": false, 
+                    "examples": [], 
+                    "userAgents": [
+                        {
+                            "platform": "iphone"
+                        }, 
+                        {
+                            "platform": "ipad"
+                        }
+                    ], 
+                    "type": "Number", 
+                    "isClassProperty": true, 
+                    "availability": "always", 
+                    "description": "<p>Constant indicating that the user canceled authentication.</p>"
+                }, 
+                {
+                    "name": "ERROR_USER_FALLBACK", 
+                    "since": [
+                        {
+                            "name": "Titanium Mobile SDK - iPhone", 
+                            "version": "3.4.0"
+                        }, 
+                        {
+                            "name": "Titanium Mobile SDK - iPad", 
+                            "version": "3.4.0"
+                        }
+                    ], 
+                    "isInternal": false, 
+                    "permission": "read-only", 
+                    "deprecated": false, 
+                    "isInstanceProperty": false, 
+                    "examples": [], 
+                    "userAgents": [
+                        {
+                            "platform": "iphone"
+                        }, 
+                        {
+                            "platform": "ipad"
+                        }
+                    ], 
+                    "type": "Number", 
+                    "isClassProperty": true, 
+                    "availability": "always", 
+                    "description": "<p>Constant indicating that the user tapped the fallback button to enter their passcode.</p>"
+                }, 
+                {
+                    "name": "apiName", 
+                    "since": [
+                        {
+                            "name": "Titanium Mobile SDK - iPhone", 
+                            "version": "3.4.0"
+                        }, 
+                        {
+                            "name": "Titanium Mobile SDK - iPad", 
+                            "version": "3.4.0"
+                        }
+                    ], 
+                    "isInternal": false, 
+                    "permission": "read-only", 
+                    "deprecated": false, 
+                    "isInstanceProperty": false, 
+                    "examples": [], 
+                    "userAgents": [
+                        {
+                            "platform": "iphone"
+                        }, 
+                        {
+                            "platform": "ipad"
+                        }
+                    ], 
+                    "type": "String", 
+                    "isClassProperty": true, 
+                    "availability": "always", 
+                    "description": "<p>The name of the API that this proxy corresponds to.</p>"
+                }, 
+                {
+                    "name": "bubbleParent", 
+                    "since": [
+                        {
+                            "name": "Titanium Mobile SDK - iPhone", 
+                            "version": "3.4.0"
+                        }, 
+                        {
+                            "name": "Titanium Mobile SDK - iPad", 
+                            "version": "3.4.0"
+                        }
+                    ], 
+                    "isInternal": false, 
+                    "permission": "read-write", 
+                    "deprecated": false, 
+                    "isInstanceProperty": false, 
+                    "examples": [], 
+                    "userAgents": [
+                        {
+                            "platform": "iphone"
+                        }, 
+                        {
+                            "platform": "ipad"
+                        }
+                    ], 
+                    "type": "Boolean", 
+                    "isClassProperty": true, 
+                    "availability": "always", 
+                    "description": "<p>Indicates if the proxy will bubble an event to its parent.</p>"
+                }
+            ], 
+            "functions": [
+                {
+                    "name": "addEventListener", 
+                    "isInternal": false, 
+                    "parameters": [
+                        {
+                            "name": "name", 
+                            "usage": "required", 
+                            "type": "String", 
+                            "description": "<p>Name of the event.</p>"
+                        }, 
+                        {
+                            "name": "callback", 
+                            "usage": "required", 
+                            "type": "Function", 
+                            "description": "<p>Callback function to invoke when the event is fired.</p>"
+                        }
+                    ], 
+                    "userAgents": [
+                        {
+                            "platform": "iphone"
+                        }, 
+                        {
+                            "platform": "ipad"
+                        }
+                    ], 
+                    "since": [
+                        {
+                            "name": "Titanium Mobile SDK - iPhone", 
+                            "version": "3.4.0"
+                        }, 
+                        {
+                            "name": "Titanium Mobile SDK - iPad", 
+                            "version": "3.4.0"
+                        }
+                    ], 
+                    "isConstructor": false, 
+                    "isClassProperty": true, 
+                    "examples": [], 
+                    "deprecated": false, 
+                    "exceptions": [], 
+                    "references": [], 
+                    "isMethod": true, 
+                    "isInstanceProperty": false, 
+                    "description": "<p>Adds the specified callback as an event listener for the named event.</p>"
+                }, 
+                {
+                    "name": "applyProperties", 
+                    "isInternal": false, 
+                    "parameters": [
+                        {
+                            "name": "props", 
+                            "usage": "required", 
+                            "type": "Object", 
+                            "description": "<p>A dictionary of properties to apply.</p>"
+                        }
+                    ], 
+                    "userAgents": [
+                        {
+                            "platform": "iphone"
+                        }, 
+                        {
+                            "platform": "ipad"
+                        }
+                    ], 
+                    "since": [
+                        {
+                            "name": "Titanium Mobile SDK - iPhone", 
+                            "version": "3.4.0"
+                        }, 
+                        {
+                            "name": "Titanium Mobile SDK - iPad", 
+                            "version": "3.4.0"
+                        }
+                    ], 
+                    "isConstructor": false, 
+                    "isClassProperty": true, 
+                    "examples": [], 
+                    "deprecated": false, 
+                    "exceptions": [], 
+                    "references": [], 
+                    "isMethod": true, 
+                    "isInstanceProperty": false, 
+                    "description": "<p>Applies the properties to the proxy.</p>"
+                }, 
+                {
+                    "name": "authenticate", 
+                    "isInternal": false, 
+                    "parameters": [
+                        {
+                            "name": "params", 
+                            "usage": "required", 
+                            "type": "Object", 
+                            "description": "<p>Dictionary containing two properties:</p>\n<ul>\n<li><code>reason</code> (String): Message displayed in the authentication dialog describing why the\n    application is requesting authentication.</li>\n<li>\n<p><code>callback</code> (Function): Callback function executed after the authentication\n    completes. The callback function is passed a dictionary with three properties:</p>\n<ul>\n<li><code>success</code> (Boolean): Set to true if authentication succeeded.</li>\n<li><code>error</code> (String): System error message.</li>\n<li><code>code</code> (Number): Module <code>ERROR_*</code> constant indicating the reason for the failure.</li>\n</ul>\n</li>\n</ul>"
+                        }
+                    ], 
+                    "userAgents": [
+                        {
+                            "platform": "iphone"
+                        }, 
+                        {
+                            "platform": "ipad"
+                        }
+                    ], 
+                    "since": [
+                        {
+                            "name": "Titanium Mobile SDK - iPhone", 
+                            "version": "3.4.0"
+                        }, 
+                        {
+                            "name": "Titanium Mobile SDK - iPad", 
+                            "version": "3.4.0"
+                        }
+                    ], 
+                    "isConstructor": false, 
+                    "isClassProperty": true, 
+                    "examples": [], 
+                    "deprecated": false, 
+                    "exceptions": [], 
+                    "references": [], 
+                    "isMethod": true, 
+                    "isInstanceProperty": false, 
+                    "description": "<p>Initiates the Touch ID authentication process.</p>"
+                }, 
+                {
+                    "name": "deviceCanAuthenticate", 
+                    "isInternal": false, 
+                    "userAgents": [
+                        {
+                            "platform": "iphone"
+                        }, 
+                        {
+                            "platform": "ipad"
+                        }
+                    ], 
+                    "since": [
+                        {
+                            "name": "Titanium Mobile SDK - iPhone", 
+                            "version": "3.4.0"
+                        }, 
+                        {
+                            "name": "Titanium Mobile SDK - iPad", 
+                            "version": "3.4.0"
+                        }
+                    ], 
+                    "returnTypes": [
+                        {
+                            "type": "DeviceCanAuthenticateResult", 
+                            "description": ""
+                        }
+                    ], 
+                    "isConstructor": false, 
+                    "isClassProperty": true, 
+                    "examples": [], 
+                    "deprecated": false, 
+                    "exceptions": [], 
+                    "references": [], 
+                    "isMethod": true, 
+                    "isInstanceProperty": false, 
+                    "description": "<p>Checks to see if device is configured for Touch ID authentication.</p>"
+                }, 
+                {
+                    "name": "fireEvent", 
+                    "isInternal": false, 
+                    "parameters": [
+                        {
+                            "name": "name", 
+                            "usage": "required", 
+                            "type": "String", 
+                            "description": "<p>Name of the event.</p>"
+                        }, 
+                        {
+                            "name": "event", 
+                            "usage": "required", 
+                            "type": "Object", 
+                            "description": "<p>A dictionary of keys and values to add to the Titanium.Event object sent to the listeners.</p>"
+                        }
+                    ], 
+                    "userAgents": [
+                        {
+                            "platform": "iphone"
+                        }, 
+                        {
+                            "platform": "ipad"
+                        }
+                    ], 
+                    "since": [
+                        {
+                            "name": "Titanium Mobile SDK - iPhone", 
+                            "version": "3.4.0"
+                        }, 
+                        {
+                            "name": "Titanium Mobile SDK - iPad", 
+                            "version": "3.4.0"
+                        }
+                    ], 
+                    "isConstructor": false, 
+                    "isClassProperty": true, 
+                    "examples": [], 
+                    "deprecated": false, 
+                    "exceptions": [], 
+                    "references": [], 
+                    "isMethod": true, 
+                    "isInstanceProperty": false, 
+                    "description": "<p>Fires a synthesized event to any registered listeners.</p>"
+                }, 
+                {
+                    "name": "getApiName", 
+                    "isInternal": false, 
+                    "userAgents": [
+                        {
+                            "platform": "iphone"
+                        }, 
+                        {
+                            "platform": "ipad"
+                        }
+                    ], 
+                    "since": [
+                        {
+                            "name": "Titanium Mobile SDK - iPhone", 
+                            "version": "3.4.0"
+                        }, 
+                        {
+                            "name": "Titanium Mobile SDK - iPad", 
+                            "version": "3.4.0"
+                        }
+                    ], 
+                    "returnTypes": [
+                        {
+                            "type": "String", 
+                            "description": ""
+                        }
+                    ], 
+                    "isConstructor": false, 
+                    "isClassProperty": true, 
+                    "examples": [], 
+                    "deprecated": false, 
+                    "exceptions": [], 
+                    "references": [], 
+                    "isMethod": true, 
+                    "isInstanceProperty": false, 
+                    "description": "<p>Gets the value of the <a href=\"Modules.TouchId.apiName\">apiName</a> property.</p>"
+                }, 
+                {
+                    "name": "getBubbleParent", 
+                    "isInternal": false, 
+                    "userAgents": [
+                        {
+                            "platform": "iphone"
+                        }, 
+                        {
+                            "platform": "ipad"
+                        }
+                    ], 
+                    "since": [
+                        {
+                            "name": "Titanium Mobile SDK - iPhone", 
+                            "version": "3.4.0"
+                        }, 
+                        {
+                            "name": "Titanium Mobile SDK - iPad", 
+                            "version": "3.4.0"
+                        }
+                    ], 
+                    "returnTypes": [
+                        {
+                            "type": "Boolean", 
+                            "description": ""
+                        }
+                    ], 
+                    "isConstructor": false, 
+                    "isClassProperty": true, 
+                    "examples": [], 
+                    "deprecated": false, 
+                    "exceptions": [], 
+                    "references": [], 
+                    "isMethod": true, 
+                    "isInstanceProperty": false, 
+                    "description": "<p>Gets the value of the <a href=\"Modules.TouchId.bubbleParent\">bubbleParent</a> property.</p>"
+                }, 
+                {
+                    "name": "removeEventListener", 
+                    "isInternal": false, 
+                    "parameters": [
+                        {
+                            "name": "name", 
+                            "usage": "required", 
+                            "type": "String", 
+                            "description": "<p>Name of the event.</p>"
+                        }, 
+                        {
+                            "name": "callback", 
+                            "usage": "required", 
+                            "type": "Function", 
+                            "description": "<p>Callback function to remove. Must be the same function passed to <code>addEventListener</code>.</p>"
+                        }
+                    ], 
+                    "userAgents": [
+                        {
+                            "platform": "iphone"
+                        }, 
+                        {
+                            "platform": "ipad"
+                        }
+                    ], 
+                    "since": [
+                        {
+                            "name": "Titanium Mobile SDK - iPhone", 
+                            "version": "3.4.0"
+                        }, 
+                        {
+                            "name": "Titanium Mobile SDK - iPad", 
+                            "version": "3.4.0"
+                        }
+                    ], 
+                    "isConstructor": false, 
+                    "isClassProperty": true, 
+                    "examples": [], 
+                    "deprecated": false, 
+                    "exceptions": [], 
+                    "references": [], 
+                    "isMethod": true, 
+                    "isInstanceProperty": false, 
+                    "description": "<p>Removes the specified callback as an event listener for the named event.</p>"
+                }, 
+                {
+                    "name": "setBubbleParent", 
+                    "isInternal": false, 
+                    "parameters": [
+                        {
+                            "name": "bubbleParent", 
+                            "usage": "required", 
+                            "type": "Boolean", 
+                            "description": "<p>New value for the property.</p>"
+                        }
+                    ], 
+                    "userAgents": [
+                        {
+                            "platform": "iphone"
+                        }, 
+                        {
+                            "platform": "ipad"
+                        }
+                    ], 
+                    "since": [
+                        {
+                            "name": "Titanium Mobile SDK - iPhone", 
+                            "version": "3.4.0"
+                        }, 
+                        {
+                            "name": "Titanium Mobile SDK - iPad", 
+                            "version": "3.4.0"
+                        }
+                    ], 
+                    "isConstructor": false, 
+                    "isClassProperty": true, 
+                    "examples": [], 
+                    "deprecated": false, 
+                    "exceptions": [], 
+                    "references": [], 
+                    "isMethod": true, 
+                    "isInstanceProperty": false, 
+                    "description": "<p>Sets the value of the <a href=\"Modules.TouchId.bubbleParent\">bubbleParent</a> property.</p>"
+                }
+            ], 
+            "deprecated": false, 
+            "since": [
+                {
+                    "name": "Titanium Mobile SDK - iPhone", 
+                    "version": "3.4.0"
+                }, 
+                {
+                    "name": "Titanium Mobile SDK - iPad", 
+                    "version": "3.4.0"
+                }
+            ], 
+            "isInternal": false, 
+            "events": []
+        }
+    ], 
+    "aliases": [
+        {
+            "type": "Titanium", 
+            "name": "Ti"
+        }
+    ]
+}

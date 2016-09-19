@@ -1,0 +1,600 @@
+<link rel="stylesheet" type="text/css" href="styles.css">
+<div class="apidoc_container apidoc_module">
+
+<div class="page-nav">
+	<ul>
+		<li>
+				<a href="#description">Description</a>
+		</li>
+		<li>
+				Examples
+		</li>
+				<li>
+					Objects
+				</li>
+			<li>
+				<a href="#properties">Properties</a>
+			</li>
+			<li>
+				<a href="#methods">Methods</a>
+			</li>
+			<li>
+				<a href="#events">Events</a>
+			</li>
+
+	</ul>
+</div>
+
+
+
+
+<h1 class="namespace">Modules.URLSession</h1>
+
+<div class="namespace_type">
+	
+		Submodule of <a href="Modules-object.html">Modules</a>.
+</div>
+
+
+<div class="platforms">
+		<span class="iphone" title="iphone"></span>
+		<span class="ipad" title="ipad"></span>
+
+	<div class="clear"></div>
+
+	<span class="since">
+		<table>
+			<tr>
+				<th>Platform</th>
+				<th>Since</th>
+			</tr>
+				<tr>
+					<td class="name">iPhone</td>
+					<td class="description">3.2.0</td>
+				</tr>
+				<tr>
+					<td class="name">iPad</td>
+					<td class="description">3.2.0</td>
+				</tr>
+		</table>
+	</span>
+</div>
+
+
+
+
+
+
+	<h2 id="description">Description</h2>
+
+	<div class="summary"><p>Wrapper to support iOS's NSURLSession class for background downloads.</p></div>
+	<div class="description"><p>These APIs are supported on iOS 7 and later.</p>
+<p>The URL session module (<code>com.appcelerator.urlSession</code>) provides the application the ability to
+download large content via HTTP while the application is in the background. With this module, you can</p>
+<ol>
+<li>Create a URL session and a background download task.</li>
+<li>Monitor events to check the progress of the download and session.</li>
+<li>Cancel downloads and invalidate sessions.</li>
+</ol>
+<p>URL session events are monitored through the following iOS application-level events:</p>
+<ul>
+<li><a href="Titanium.App.iOS.backgroundtransfer-event.html"><code>Titanium.App.iOS.backgroundtransfer</code></a></li>
+<li><a href="Titanium.App.iOS.downloadprogress-event.html"><code>Titanium.App.iOS.downloadprogress</code></a></li>
+<li><a href="Titanium.App.iOS.downloadcompleted-event.html"><code>Titanium.App.iOS.downloadcompleted</code></a></li>
+<li><a href="Titanium.App.iOS.sessioncompleted-event.html"><code>Titanium.App.iOS.sessioncompleted</code></a></li>
+<li><a href="Titanium.App.iOS.sessioneventscompleted-event.html"><code>Titanium.App.iOS.sessioneventscompleted</code></a></li>
+</ul>
+<p>These events are monitored as application-level events by using the <code>addEventListener</code> method with the
+Titanium.App.iOS namespace.<br />
+</p>
+<p>For more information on getting started, refer to the
+<a href="http://docs.appcelerator.com/titanium/latest/#!/guide/iOS_Background_Services">iOS Background Services guide</a>.</p></div>
+
+
+
+
+
+
+
+
+<h2 id="properties">Properties</h2>
+
+
+	
+<div class="properties">
+
+			
+		    
+			
+			
+			
+			
+				<h3 id="apiName">apiName : String<!-- Will add </h3> later -->
+			
+				<span class="permission_warning">read-only</span>
+				</h3>
+				<div>
+					<p>The name of the API that this proxy corresponds to.
+						</p>
+			
+					
+	<h4 id="member_description">Description</h4>
+
+	<div class="description"><p>The value of this property is the fully qualified name of the API. For example, <a href="http://docs.appcelerator.com/titanium/latest/#!/api/Titanium.UI.Button-object.html">Button</a>
+returns <code>Ti.UI.Button</code>.</p></div>
+
+			
+				</div>
+	
+</div>
+
+
+
+
+<h2 id="methods">Methods</h2>
+	
+<div class="methods">
+
+			
+		    
+			
+			
+			
+			
+				<h3 id="applyProperties">applyProperties</h3>
+			
+				<div>
+					<p>Applies the properties to the proxy.
+						</p>
+			
+					
+	<h4 id="member_description">Description</h4>
+
+	<div class="description"><p>Properties are supplied as a dictionary. Each key-value pair in the object is applied to the proxy such that
+myproxy[key] = value.</p></div>
+
+			
+						
+<div class="apidoc_container apidoc_method">
+<ul>
+	
+	<li>
+		<h4 id="arguments">Parameters</h4>
+		
+<div class="arguments">
+
+		<ul>
+			<li>
+			
+		    
+			
+			
+			
+			
+				<h5>props : <a href="http://docs.appcelerator.com/titanium/latest/#!/api/Dictionary-object.html"><code>Dictionary</code></a><!-- Will add </h5> later -->
+			
+				</h5>
+				<div>
+					<p>A dictionary of properties to apply.
+						</p>
+			
+					
+
+			
+				</div>
+			</li>
+		</ul>
+	
+</div>
+
+
+	</li>
+
+
+	<li>
+		<h4>Returns</h4>
+		<div class="return_type">
+		        void
+		</div>
+	</li>
+<ul>
+</div>
+
+				</div>
+			
+		    
+			
+			
+			
+			
+				<h3 id="backgroundDownloadTaskWithURL">backgroundDownloadTaskWithURL</h3>
+			
+				<div>
+					<p>Creates a download task for the specified URL, within the provided session object and saves the
+results to a file.
+						</p>
+			
+					
+	<h4 id="member_description">Description</h4>
+
+	<div class="description"><p>Once this function is called, the download starts automatically. The progress of
+the download can be monitored by listening to the <code>downloadprogress</code>, <code>downloadcompleted</code>,
+<code>sessioneventscompleted</code> and <code>sessioncompleted</code> events.</p></div>
+
+			
+						
+<div class="apidoc_container apidoc_method">
+<ul>
+	
+	<li>
+		<h4 id="arguments">Parameters</h4>
+		
+<div class="arguments">
+
+		<ul>
+			<li>
+			
+		    
+			
+			
+			
+			
+				<h5>session : Object<!-- Will add </h5> later -->
+			
+				</h5>
+				<div>
+					<p>URL session object.
+						</p>
+			
+					
+
+			
+				</div>
+			</li>
+			<li>
+			
+		    
+			
+			
+			
+			
+				<h5>url : String<!-- Will add </h5> later -->
+			
+				</h5>
+				<div>
+					<p>URL to download content from.
+						</p>
+			
+					
+
+			
+				</div>
+			</li>
+		</ul>
+	
+</div>
+
+
+	</li>
+
+
+	<li>
+		<h4>Returns</h4>
+		<div class="return_type">
+		        String
+		</div>
+	</li>
+<ul>
+</div>
+
+				</div>
+			
+		    
+			
+			
+			
+			
+				<h3 id="createURLSession">createURLSession</h3>
+			
+				<div>
+					<p>Creates a session with the specified session configuration.
+						</p>
+			
+					
+	<h4 id="member_description">Description</h4>
+
+	<div class="description"><p>If the session configuration was created with the identifier of a existing session,
+then this function would return the pre-existing session.</p>
+<p>The session object keeps a strong reference until your app explicitly invalidates the
+session. If you do not invalidate the session by calling the <code>invalidateAndCancel</code> or
+ <code>finishTasksAndInvalidate</code> method, your app leaks memory.</p></div>
+
+			
+						
+<div class="apidoc_container apidoc_method">
+<ul>
+	
+	<li>
+		<h4 id="arguments">Parameters</h4>
+		
+<div class="arguments">
+
+		<ul>
+			<li>
+			
+		    
+			
+			
+			
+			
+				<h5>sessionConfiguration : Object<!-- Will add </h5> later -->
+			
+				</h5>
+				<div>
+					<p>Session configuration object created with the <a href="Modules.URLSession-module.html#createURLSessionBackgroundConfiguration"><code>Modules.URLSession.createURLSessionBackgroundConfiguration</code></a>
+						</p>
+			
+					
+
+			
+				</div>
+			</li>
+		</ul>
+	
+</div>
+
+
+	</li>
+
+
+	<li>
+		<h4>Returns</h4>
+		<div class="return_type">
+		        Object
+		</div>
+	</li>
+<ul>
+</div>
+
+				</div>
+			
+		    
+			
+			
+			
+			
+				<h3 id="createURLSessionBackgroundConfiguration">createURLSessionBackgroundConfiguration</h3>
+			
+				<div>
+					<p>Creates a preconfigured session configuration object that can be used to create a URL session for
+performing a background download task.
+						</p>
+			
+					
+
+			
+						
+<div class="apidoc_container apidoc_method">
+<ul>
+	
+	<li>
+		<h4 id="arguments">Parameters</h4>
+		
+<div class="arguments">
+
+		<ul>
+			<li>
+			
+		    
+			
+			
+			
+			
+				<h5>indentifier : String<!-- Will add </h5> later -->
+			
+				</h5>
+				<div>
+					<p>Arbitrary string used to identify the session in the events.
+						</p>
+			
+					
+
+			
+				</div>
+			</li>
+		</ul>
+	
+</div>
+
+
+	</li>
+
+
+	<li>
+		<h4>Returns</h4>
+		<div class="return_type">
+		        Object
+		</div>
+	</li>
+<ul>
+</div>
+
+				</div>
+			
+		    
+			
+			
+			
+			
+				<h3 id="finishTasksAndInvalidate">finishTasksAndInvalidate</h3>
+			
+				<div>
+					<p>Invalidates the given session object, allowing any outstanding tasks to finish.
+						</p>
+			
+					
+	<h4 id="member_description">Description</h4>
+
+	<div class="description"><p>This method returns immediately without waiting for tasks to finish. Once a session is invalidated,
+new tasks cannot be created in the session, but existing tasks continue until completion. Once
+invalidated, references to the events and callback objects are broken. Session objects cannot be
+reused. To cancel all outstanding tasks, call <code>invalidateAndCancel</code> instead.</p></div>
+
+			
+						
+<div class="apidoc_container apidoc_method">
+<ul>
+	
+	<li>
+		<h4 id="arguments">Parameters</h4>
+		
+<div class="arguments">
+
+		<ul>
+			<li>
+			
+		    
+			
+			
+			
+			
+				<h5>session : Object<!-- Will add </h5> later -->
+			
+				</h5>
+				<div>
+					<p>URL session object.
+						</p>
+			
+					
+
+			
+				</div>
+			</li>
+		</ul>
+	
+</div>
+
+
+	</li>
+
+
+	<li>
+		<h4>Returns</h4>
+		<div class="return_type">
+		        void
+		</div>
+	</li>
+<ul>
+</div>
+
+				</div>
+			
+		    
+			
+			
+			
+			
+				<h3 id="getApiName">getApiName</h3>
+			
+				<div>
+					<p>Gets the value of the <a href="Modules.URLSession-module.html#apiName">apiName</a> property.
+						</p>
+			
+					
+
+			
+						
+<div class="apidoc_container apidoc_method">
+<ul>
+	
+
+
+	<li>
+		<h4>Returns</h4>
+		<div class="return_type">
+		        String
+		</div>
+	</li>
+<ul>
+</div>
+
+				</div>
+			
+		    
+			
+			
+			
+			
+				<h3 id="invalidateAndCancel">invalidateAndCancel</h3>
+			
+				<div>
+					<p>Cancels all outstanding tasks and then invalidates the session object.
+						</p>
+			
+					
+	<h4 id="member_description">Description</h4>
+
+	<div class="description"><p>Once invalidated, references to the events and callback objects are broken. Session objects cannot
+be reused. To allow outstanding tasks to run until completion, call
+<code>finishTasksAndInvalidate</code> instead.</p></div>
+
+			
+						
+<div class="apidoc_container apidoc_method">
+<ul>
+	
+	<li>
+		<h4 id="arguments">Parameters</h4>
+		
+<div class="arguments">
+
+		<ul>
+			<li>
+			
+		    
+			
+			
+			
+			
+				<h5>session : Object<!-- Will add </h5> later -->
+			
+				</h5>
+				<div>
+					<p>URL session object.
+						</p>
+			
+					
+
+			
+				</div>
+			</li>
+		</ul>
+	
+</div>
+
+
+	</li>
+
+
+	<li>
+		<h4>Returns</h4>
+		<div class="return_type">
+		        void
+		</div>
+	</li>
+<ul>
+</div>
+
+				</div>
+	
+</div>
+
+
+
+<h2 id="events">Events</h2>
+    This type has no events.
+
+
+
+
+</div>
