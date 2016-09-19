@@ -41,7 +41,7 @@ function OnBtnDone_Click( e )
         var alertDialog = Titanium.UI.createAlertDialog(
         {
             title: L( 'draft_save_title' ) ,
-            message: L( 'draft_is_done_confirm_msg' ) ,             
+            message: L( 'draft_is_done_confirm_msg' ) ,
             buttonNames: [ L( 'generic_yes_msg' ) , L( 'generic_no_msg' ) ] ,
             cancel: 1
         } ) ;
@@ -54,7 +54,7 @@ function OnBtnDone_Click( e )
                     var bRet = false ;
                     // Clicked "YES"
                     // Getting the image from the PaintView (if it's empty, we don't save)
-                    var image_to_save = $.draft_paint_widget.get_current_image( current_type == "Detailed_ATC20_Sketch" ) ;
+                    var image_to_save = $.draft_paint_widget.get_current_image( current_type == "Detailed_ATC20_Sketch" || current_type == "AeDES_SectionOne_Sketch" ) ;
                     if( image_to_save )
                     {
                         // Since the Blob object sometimes cause strange effect on a TableGalleryView, we'll write the image in a temporary folder and use the nativePath
@@ -71,6 +71,11 @@ function OnBtnDone_Click( e )
                         {
                             Alloy.Globals.ATC20ModeDetailedEvaluation["SKETCH_PATH"] = newFile.getNativePath() ;
                             Alloy.Globals.ATC20ModeDetailedEvaluation["SKETCH_MODIFIED"] = "Y" ; // Yes
+                        }
+                        else if( current_type == "AeDES_SectionOne_Sketch" )
+                        {
+                            Alloy.Globals.AeDESModeSectionOne["MAP_AGGREGATE_PATH"] = newFile.getNativePath() ;
+                            Alloy.Globals.AeDESModeSectionOne["MAP_AGGREGATE_MODIFIED"] = "Y" ; // Yes
                         }
                         else
                         {
@@ -122,11 +127,11 @@ function OnBtnDone_Click( e )
             else if( e.index == 1 )
             {
                 // Clicked "NO"
-            }   
+            }
         } ) ;
 
         // Show alert message for saving
-        alertDialog.show() ; 
+        alertDialog.show() ;
     }
     catch( exception )
     {

@@ -3,6 +3,8 @@
         <ScrollView id="scrollViewSectionThreeMasonryStructures">
             <Label id="lblAeDESModeFormsSectionThreeHorizontalMasonryStructures" />
             <Label id="lblAeDESModeFormsSectionThreeHorizontalMasonryStructuresFatherTitle" />
+            <Label id="lblAeDESModeFormsSectionThreeHorizontalMasonryStructuresType1Description" />
+            <Label id="lblAeDESModeFormsSectionThreeHorizontalMasonryStructuresType2Description" />
             <View id="viewAppCheckBoxAeDESModeFormsSectionThreeMasonryStructuresNotIdentified">
                 <Widget id="widgetAppCheckBoxAeDESModeFormsSectionThreeMasonryStructuresNotIdentified" src="com.diseg.AppCheckBox" />
             </View>

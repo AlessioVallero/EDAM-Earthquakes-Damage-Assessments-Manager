@@ -21,14 +21,14 @@
     backgroundSelectedImage: '/images/logout_pressed.png' ,
     backgroundDisabledImage: '/images/logout_disabled.png' ,
     width: 100 ,
-    height: 30
+    height: 40
 } ,
 
 // Label Welcome
 "#lblWelcome":
 {
     color: "#000" ,
-	top: 45 ,
+	  top: 55 ,
     left: 5 ,
     font:
     {
@@ -49,28 +49,28 @@
     backgroundSelectedImage: '/images/export_csv_pressed.png' ,
     backgroundDisabledImage: '/images/export_csv_disabled.png' ,
     width: 100 ,
-    height: 30
+    height: 40
 } ,
 
-// Edit inspector data view 
+// Edit inspector data view
 "#viewAppButtonEID":
 {
-    top: 70 ,
+    top: 80 ,
     left: '2%' ,
     width: '30%'
 } ,
 
-// Add view 
+// Add view
 "#viewAppButtonAdd":
 {
-    top: 70 ,
+    top: 80 ,
     width: '30%'
 } ,
 
-// Server Synch view 
+// Server Synch view
 "#viewAppButtonServerSynch":
 {
-    top: 70 ,
+    top: 80 ,
     right: '2%' ,
     width: '30%'
 } ,
@@ -78,7 +78,7 @@
 // Table view with Forms
 "#tableViewATC20ModeForms":
 {
-    top: 185 ,
+    top: 195 ,
     backgroundColor: '#ffffff' ,
     height: Ti.UI.SIZE ,
     width: Ti.UI.FILL
@@ -122,24 +122,8 @@
     height: 34
 } ,
 
-// Activity Indicator iOS
-"#activity_indicator[platform=ios]":
-{
-    color: '#000' ,
-    font:
-    {
-        fontFamily: 'Helvetica Neue' ,
-        fontSize: 11 ,
-        fontWeight: 'bold'
-    } ,
-    style: Ti.UI.iPhone.ActivityIndicatorStyle.DARK ,
-    width: Ti.UI.SIZE ,
-    height: Ti.UI.SIZE ,
-    zIndex: 1
-} ,
-
-// Activity Indicator Android-mobileweb
-"#activity_indicator[platform=android,mobileweb]":
+// Activity Indicator
+"#activity_indicator":
 {
     color: '#000' ,
     font:
@@ -149,21 +133,6 @@
         fontWeight: 'bold'
     } ,
     style: Ti.UI.ActivityIndicatorStyle.DARK ,
-    width: Ti.UI.SIZE ,
-    height: Ti.UI.SIZE ,
-    zIndex: 1
-} ,
-
-// Activity Indicator BlackBerry
-"#activity_indicator[platform=blackberry]":
-{
-    color: '#000' ,
-    font:
-    {
-        fontFamily: 'Helvetica Neue' ,
-        fontSize: 11 ,
-        fontWeight: 'bold'
-    } ,
     width: Ti.UI.SIZE ,
     height: Ti.UI.SIZE ,
     zIndex: 1

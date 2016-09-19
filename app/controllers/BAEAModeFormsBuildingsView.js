@@ -80,7 +80,7 @@ function OnTableViewBAEAModeFormsBuildingsPhoto_Click( e )
                 {
                     title: L( 'baea_photo_selection_title' ) ,
                     cancel: 4 ,
-                    options: [ L( 'baea_photo_new_photo_msg' ) , L( 'baea_photo_import_photo_msg' ) , L( 'baea_photo_new_sketch_msg' ) , L( 'baea_photo_view_photos_msg' ) , L( 'generic_cancel_btn_title' ) ] ,
+                    options: [ L( 'generic_photo_new_photo_msg' ) , L( 'generic_photo_import_photo_msg' ) , L( 'generic_photo_new_sketch_msg' ) , L( 'generic_photo_view_photos_msg' ) , L( 'generic_cancel_btn_title' ) ] ,
                     selectedIndex: 1
                 } ) ;
                 optionDialog.addEventListener( 'click' , function( e )
@@ -190,7 +190,7 @@ function OnTableViewBAEAModeFormsBuildingsPhoto_Click( e )
 
                             if( Alloy.Globals.BAEAModeBuildings &&
                                 Alloy.Globals.BAEAModeBuildings[current_global_ar_index] &&
-                                Alloy.Globals.BAEAModeBuildings[current_global_ar_index].PHOTOS && 
+                                Alloy.Globals.BAEAModeBuildings[current_global_ar_index].PHOTOS &&
                                 Alloy.Globals.BAEAModeBuildings[current_global_ar_index].PHOTOS.length > 0 )
                             {
                                 media_array["PERMANENT"] = Alloy.Globals.BAEAModeBuildings[current_global_ar_index].PHOTOS ;
@@ -223,7 +223,7 @@ function OnTableViewBAEAModeFormsBuildingsPhoto_Click( e )
 
                 if( Alloy.Globals.BAEAModeBuildings &&
                     Alloy.Globals.BAEAModeBuildings[current_global_ar_index] &&
-                    Alloy.Globals.BAEAModeBuildings[current_global_ar_index].PHOTOS && 
+                    Alloy.Globals.BAEAModeBuildings[current_global_ar_index].PHOTOS &&
                     Alloy.Globals.BAEAModeBuildings[current_global_ar_index].PHOTOS.length > 0 )
                 {
                     media_array["PERMANENT"] = Alloy.Globals.BAEAModeBuildings[current_global_ar_index].PHOTOS ;
@@ -558,16 +558,16 @@ try
     $.widgetAppTextFieldBAEAModeFormsBuildingsSiteName.init( L( 'generic_site_name_txt_hint' ) ) ;
     $.widgetAppTextFieldBAEAModeFormsBuildingsSiteName.enabled( view_enabled ) ;
 
-    $.widgetAppTextFieldBAEAModeFormsBuildingsLatitude.init( L( 'generic_latitude_txt_hint' ) , null , Titanium.UI.KEYBOARD_NUMBERS_PUNCTUATION ) ;
+    $.widgetAppTextFieldBAEAModeFormsBuildingsLatitude.init( L( 'generic_latitude_txt_hint' ) , null , Titanium.UI.KEYBOARD_TYPE_NUMBERS_PUNCTUATION ) ;
     $.widgetAppTextFieldBAEAModeFormsBuildingsLatitude.enabled( view_enabled ) ;
 
-    $.widgetAppTextFieldBAEAModeFormsBuildingsLongitude.init( L( 'generic_longitude_txt_hint' ) , null , Titanium.UI.KEYBOARD_NUMBERS_PUNCTUATION ) ;
+    $.widgetAppTextFieldBAEAModeFormsBuildingsLongitude.init( L( 'generic_longitude_txt_hint' ) , null , Titanium.UI.KEYBOARD_TYPE_NUMBERS_PUNCTUATION ) ;
     $.widgetAppTextFieldBAEAModeFormsBuildingsLongitude.enabled( view_enabled ) ;
 
     $.widgetAppTextFieldBAEAModeFormsBuildingsAddress.init( L( 'generic_address_txt_hint' ) ) ;
     $.widgetAppTextFieldBAEAModeFormsBuildingsAddress.enabled( view_enabled ) ;
 
-    $.widgetAppTextFieldBAEAModeFormsBuildingsStories.init( L( 'generic_stories_txt_hint' ) , null , Titanium.UI.KEYBOARD_NUMBER_PAD ) ;
+    $.widgetAppTextFieldBAEAModeFormsBuildingsStories.init( L( 'generic_stories_txt_hint' ) , null , Titanium.UI.KEYBOARD_TYPE_NUMBER_PAD ) ;
     $.widgetAppTextFieldBAEAModeFormsBuildingsStories.enabled( view_enabled ) ;
 
     $.widgetAppTextFieldBAEAModeFormsBuildingsNotes.init( L( 'generic_notes_txt_hint' ) ) ;

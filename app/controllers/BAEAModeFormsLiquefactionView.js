@@ -80,7 +80,7 @@ function OnTableViewBAEAModeFormsLiquefactionPhoto_Click( e )
                 {
                     title: L( 'baea_photo_selection_title' ) ,
                     cancel: 4 ,
-                    options: [ L( 'baea_photo_new_photo_msg' ) , L( 'baea_photo_import_photo_msg' ) , L( 'baea_photo_new_sketch_msg' ) , L( 'baea_photo_view_photos_msg' ) , L( 'generic_cancel_btn_title' ) ] ,
+                    options: [ L( 'generic_photo_new_photo_msg' ) , L( 'generic_photo_import_photo_msg' ) , L( 'generic_photo_new_sketch_msg' ) , L( 'generic_photo_view_photos_msg' ) , L( 'generic_cancel_btn_title' ) ] ,
                     selectedIndex: 1
                 } ) ;
                 optionDialog.addEventListener( 'click' , function( e )
@@ -190,7 +190,7 @@ function OnTableViewBAEAModeFormsLiquefactionPhoto_Click( e )
 
                             if( Alloy.Globals.BAEAModeLiquefaction &&
                                 Alloy.Globals.BAEAModeLiquefaction[current_global_ar_index] &&
-                                Alloy.Globals.BAEAModeLiquefaction[current_global_ar_index].PHOTOS && 
+                                Alloy.Globals.BAEAModeLiquefaction[current_global_ar_index].PHOTOS &&
                                 Alloy.Globals.BAEAModeLiquefaction[current_global_ar_index].PHOTOS.length > 0 )
                             {
                                 media_array["PERMANENT"] = Alloy.Globals.BAEAModeLiquefaction[current_global_ar_index].PHOTOS ;
@@ -223,7 +223,7 @@ function OnTableViewBAEAModeFormsLiquefactionPhoto_Click( e )
 
                 if( Alloy.Globals.BAEAModeLiquefaction &&
                     Alloy.Globals.BAEAModeLiquefaction[current_global_ar_index] &&
-                    Alloy.Globals.BAEAModeLiquefaction[current_global_ar_index].PHOTOS && 
+                    Alloy.Globals.BAEAModeLiquefaction[current_global_ar_index].PHOTOS &&
                     Alloy.Globals.BAEAModeLiquefaction[current_global_ar_index].PHOTOS.length > 0 )
                 {
                     media_array["PERMANENT"] = Alloy.Globals.BAEAModeLiquefaction[current_global_ar_index].PHOTOS ;
@@ -547,19 +547,19 @@ try
     $.widgetAppTextFieldBAEAModeFormsLiquefactionSiteName.init( L( 'generic_site_name_txt_hint' ) ) ;
     $.widgetAppTextFieldBAEAModeFormsLiquefactionSiteName.enabled( view_enabled ) ;
 
-    $.widgetAppTextFieldBAEAModeFormsLiquefactionLatitude.init( L( 'generic_latitude_txt_hint' ) , null , Titanium.UI.KEYBOARD_NUMBERS_PUNCTUATION ) ;
+    $.widgetAppTextFieldBAEAModeFormsLiquefactionLatitude.init( L( 'generic_latitude_txt_hint' ) , null , Titanium.UI.KEYBOARD_TYPE_NUMBERS_PUNCTUATION ) ;
     $.widgetAppTextFieldBAEAModeFormsLiquefactionLatitude.enabled( view_enabled ) ;
 
-    $.widgetAppTextFieldBAEAModeFormsLiquefactionLongitude.init( L( 'generic_longitude_txt_hint' ) , null , Titanium.UI.KEYBOARD_NUMBERS_PUNCTUATION ) ;
+    $.widgetAppTextFieldBAEAModeFormsLiquefactionLongitude.init( L( 'generic_longitude_txt_hint' ) , null , Titanium.UI.KEYBOARD_TYPE_NUMBERS_PUNCTUATION ) ;
     $.widgetAppTextFieldBAEAModeFormsLiquefactionLongitude.enabled( view_enabled ) ;
 
     $.widgetAppTextFieldBAEAModeFormsLiquefactionAddress.init( L( 'generic_address_txt_hint' ) ) ;
     $.widgetAppTextFieldBAEAModeFormsLiquefactionAddress.enabled( view_enabled ) ;
 
-    $.widgetAppTextFieldBAEAModeFormsLiquefactionHorizontal.init( L( 'generic_horizontal_txt_hint' ) , null , Titanium.UI.KEYBOARD_NUMBER_PAD ) ;
+    $.widgetAppTextFieldBAEAModeFormsLiquefactionHorizontal.init( L( 'generic_horizontal_txt_hint' ) , null , Titanium.UI.KEYBOARD_TYPE_NUMBER_PAD ) ;
     $.widgetAppTextFieldBAEAModeFormsLiquefactionHorizontal.enabled( view_enabled ) ;
 
-    $.widgetAppTextFieldBAEAModeFormsLiquefactionVertical.init( L( 'generic_vertical_txt_hint' ) , null , Titanium.UI.KEYBOARD_NUMBER_PAD ) ;
+    $.widgetAppTextFieldBAEAModeFormsLiquefactionVertical.init( L( 'generic_vertical_txt_hint' ) , null , Titanium.UI.KEYBOARD_TYPE_NUMBER_PAD ) ;
     $.widgetAppTextFieldBAEAModeFormsLiquefactionVertical.enabled( view_enabled ) ;
 
     $.widgetAppTextFieldBAEAModeFormsLiquefactionNotes.init( L( 'generic_notes_txt_hint' ) ) ;

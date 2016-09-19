@@ -1,5 +1,5 @@
 function ContentsUploader()
-{   
+{
     /**
     * Given an array of URLs make several http calls to upload them.
     *
@@ -46,7 +46,7 @@ function ContentsUploader()
                         callBack_UploadOneContentFinished( upload_result ) ;
                     }
                 }
-        
+
                 if( queueIndex < uploadQueue.length )
                 {
                     var loader = Titanium.Network.createHTTPClient() ;
@@ -93,7 +93,7 @@ function ContentsUploader()
                         }
                     };
                     loader.timeout = Alloy.Globals.ServerSynchTimeoutMillisecs ;
-                
+
                     loader.open( 'POST' , currentQueueElem.url ) ;
                     loader.send( currentQueueElem.content ) ;
 

@@ -19,10 +19,42 @@
     scrollType: "vertical"
 } ,
 
+// Form id view
+"#viewAppTextFieldAeDESModeFormsDetailsFormId":
+{
+    top: 10 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// SurveyIdentifies label
+"#lblAeDESModeFormsDetailsSurveyIdentifies":
+{
+    text: L( 'generic_survey_identifies_text_msg' ) ,
+    top: 80 ,
+    width: 290 ,
+    height: 18 ,
+    font:
+    {
+        fontFamily: 'Arial' ,
+        fontWeight: 'bold' ,
+        fontSize: '12'
+    } ,
+    color: '#000'
+} ,
+
+// Team view
+"#viewAppTextFieldAeDESModeFormsDetailsTeam":
+{
+    top: 110 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
 // Form no view
 "#viewAppTextFieldAeDESModeFormsDetailsFormNo":
 {
-    top: 10 ,
+    top: 180 ,
     height: 50 ,
     width: Ti.UI.FILL
 } ,
@@ -30,7 +62,7 @@
 // Date view iOS
 "#viewDate[platform=ios]":
 {
-    top: 80 ,
+    top: 250 ,
     left: 0 ,
     right: 10 ,
     height: 200
@@ -39,7 +71,7 @@
 // Date view Android
 "#viewDate":
 {
-    top: 80 ,
+    top: 250 ,
     left: 0 ,
     right: 10 ,
     height: 100
@@ -82,10 +114,265 @@
     useSpinner: true
 } ,
 
+// BuildingIdentifies label iOS
+"#lblAeDESModeFormsDetailsBuildingIdentifies[platform=ios]":
+{
+    text: L( 'generic_building_identifies_text_msg' ) ,
+    top: 460 ,
+    width: 290 ,
+    height: 18 ,
+    font:
+    {
+        fontFamily: 'Arial' ,
+        fontWeight: 'bold' ,
+        fontSize: '12'
+    } ,
+    color: '#000'
+} ,
+
+// BuildingIdentifies label Android
+"#lblAeDESModeFormsDetailsBuildingIdentifies":
+{
+    text: L( 'generic_building_identifies_text_msg' ) ,
+    top: 360 ,
+    width: 290 ,
+    height: 18 ,
+    font:
+    {
+        fontFamily: 'Arial' ,
+        fontWeight: 'bold' ,
+        fontSize: '12'
+    } ,
+    color: '#000'
+} ,
+
+// Istat Reg view iOS
+"#viewAppTextFieldAeDESModeFormsDetailsIstatReg[platform=ios]":
+{
+    top: 490 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// Istat Reg view Android
+"#viewAppTextFieldAeDESModeFormsDetailsIstatReg":
+{
+    top: 390 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// Istat Prov view iOS
+"#viewAppTextFieldAeDESModeFormsDetailsIstatProv[platform=ios]":
+{
+    top: 560 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// Istat Prov view Android
+"#viewAppTextFieldAeDESModeFormsDetailsIstatProv":
+{
+    top: 460 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// Istat Public view iOS
+"#viewAppTextFieldAeDESModeFormsDetailsIstatPublic[platform=ios]":
+{
+    top: 630 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// Istat Public view Android
+"#viewAppTextFieldAeDESModeFormsDetailsIstatPublic":
+{
+    top: 530 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// Aggregate N view iOS
+"#viewAppTextFieldAeDESModeFormsDetailsAggregateN[platform=ios]":
+{
+    top: 700 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// Aggregate N view Android
+"#viewAppTextFieldAeDESModeFormsDetailsAggregateN":
+{
+    top: 600 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// Building N view iOS
+"#viewAppTextFieldAeDESModeFormsDetailsBuildingN[platform=ios]":
+{
+    top: 770 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// Building N view Android
+"#viewAppTextFieldAeDESModeFormsDetailsBuildingN":
+{
+    top: 670 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// IstatPlaceCode view iOS
+"#viewAppTextFieldAeDESModeFormsDetailsIstatPlaceCode[platform=ios]":
+{
+    top: 840 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// IstatPlaceCode view Android
+"#viewAppTextFieldAeDESModeFormsDetailsIstatPlaceCode":
+{
+    top: 740 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// Paper type view iOS
+"#viewAppTextFieldAeDESModeFormsDetailsPaperType[platform=ios]":
+{
+    top: 910 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// Paper type view Android
+"#viewAppTextFieldAeDESModeFormsDetailsPaperType":
+{
+    top: 810 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// Paper N view iOS
+"#viewAppTextFieldAeDESModeFormsDetailsPaperN[platform=ios]":
+{
+    top: 980 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// Paper N view Android
+"#viewAppTextFieldAeDESModeFormsDetailsPaperN":
+{
+    top: 880 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// IstatCensusSection view iOS
+"#viewAppTextFieldAeDESModeFormsDetailsIstatCensusSection[platform=ios]":
+{
+    top: 1050 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// IstatCensusSection view Android
+"#viewAppTextFieldAeDESModeFormsDetailsIstatCensusSection":
+{
+    top: 950 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// Cadastral data view iOS
+"#lblAeDESModeFormsDetailsCadastralData[platform=ios]":
+{
+    text: L( 'generic_cadastral_data_text_msg' ) ,
+    top: 1120 ,
+    width: 290 ,
+    height: 18 ,
+    font:
+    {
+        fontFamily: 'Arial' ,
+        fontWeight: 'bold' ,
+        fontSize: '12'
+    } ,
+    color: '#000'
+} ,
+
+// Cadastral data view Android
+"#lblAeDESModeFormsDetailsCadastralData":
+{
+  text: L( 'generic_cadastral_data_text_msg' ) ,
+  top: 1020 ,
+  width: 290 ,
+  height: 18 ,
+  font:
+  {
+      fontFamily: 'Arial' ,
+      fontWeight: 'bold' ,
+      fontSize: '12'
+  } ,
+  color: '#000'
+} ,
+
+"#viewAppTextFieldAeDESModeFormsDetailsSheet[platform=ios]":
+{
+    top: 1150 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// Sheet view Android
+"#viewAppTextFieldAeDESModeFormsDetailsSheet":
+{
+    top: 1050 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// Attachment view iOS
+"#viewAppTextFieldAeDESModeFormsDetailsAttachment[platform=ios]":
+{
+    top: 1220 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// Attachment view Android
+"#viewAppTextFieldAeDESModeFormsDetailsAttachment":
+{
+    top: 1120 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// Particles view iOS
+"#viewAppTextFieldAeDESModeFormsDetailsParticles[platform=ios]":
+{
+    top: 1290 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// Particles view Android
+"#viewAppTextFieldAeDESModeFormsDetailsParticles":
+{
+    top: 1190 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
 // Save view iOS
 "#viewAppButtonSave[platform=ios]":
 {
-    top: 290 ,
+    top: 1360 ,
     width: 60 ,
     height: 80 ,
 } ,
@@ -93,7 +380,7 @@
 // Save view Android
 "#viewAppButtonSave":
 {
-    top: 190 ,
+    top: 1260 ,
     width: 60 ,
     height: 80 ,
 }

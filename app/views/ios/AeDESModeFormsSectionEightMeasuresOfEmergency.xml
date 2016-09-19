@@ -14,6 +14,9 @@
                 <View id="viewAppCheckBoxAeDESModeFormsSectionEightMeasuresOfEmergencyExtended">
                     <Widget id="widgetAppCheckBoxAeDESModeFormsSectionEightMeasuresOfEmergencyExtended" src="com.diseg.AppCheckBox" />
                 </View>
+                <View id="viewAppTextFieldAeDESModeFormsSectionEightMeasuresOfEmergencyDescription">
+                    <Widget id="widgetAppTextFieldAeDESModeFormsSectionEightMeasuresOfEmergencyDescription" src="com.diseg.AppTextField" />
+                </View>
             </ScrollView>
         </Window>
     </NavigationWindow>

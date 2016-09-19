@@ -39,7 +39,7 @@
 {
     top: 30 ,
     backgroundColor: '#ffffff' ,
-    height: 180 ,
+    height: 270 ,
     width: Ti.UI.FILL
 } ,
 
@@ -75,10 +75,26 @@
     color: "#000" ,
 } ,
 
+// CollapsesByIncumbentSlopes row
+"#tableViewAeDESModeFormsSectionSixExternalDangerRowCollapsesByIncumbentSlopes":
+{
+    hasChild: true ,
+    className: 'section_row' ,
+    color: "#000" ,
+} ,
+
+// CollapsesByIncumbentSlopes label
+"#lblAeDESModeFormsSectionSixExternalDangerRowCollapsesByIncumbentSlopes":
+{
+    text: L( 'generic_collapses_by_incumbent_slopes_text_msg' ) ,
+    height: 90 ,
+    color: "#000" ,
+} ,
+
 // Save view
 "#viewAppButtonSave":
 {
-    top: 220 ,
+    top: 310 ,
     width: 60 ,
     height: 80
 }

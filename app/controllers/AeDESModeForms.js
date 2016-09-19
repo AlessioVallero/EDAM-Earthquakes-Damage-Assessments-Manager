@@ -95,7 +95,7 @@ function OnBtnLogout_Click( e )
                 loader.validatesSecureCertificate = false ;
 
                 // Runs the function when the data is ready for us to process
-                loader.onload = function() 
+                loader.onload = function()
                 {
                     EndAsyncBusyAction( $.activity_indicator , controls ) ;
 
@@ -170,7 +170,7 @@ function OnTableViewForms_Click( e )
                             var alertDialogDeleteForm = Titanium.UI.createAlertDialog(
                             {
                                 title: L( 'generic_delete_form_title' ) ,
-                                message: L( 'delete_form_msg' ) ,             
+                                message: L( 'delete_form_msg' ) ,
                                 buttonNames: [ L( 'generic_yes_msg' ) , L( 'generic_no_msg' ) ] ,
                                 cancel: 1
                             } ) ;
@@ -247,6 +247,18 @@ function OnTableViewForms_Click( e )
                                     if( recoverSectionOne.length > 0 )
                                     {
                                         var model = recoverSectionOne.at( 0 ) ;
+
+                                        // Deleting the sketch, if necessary
+                                        if( model["MAP_AGGREGATE_PATH"] )
+                                        {
+                                            var file = Alloy.Globals.getFileForRead( model["MAP_AGGREGATE_PATH"] ) ;
+                                            if( file )
+                                            {
+                                                // The sketch will be dropped
+                                                file.deleteFile() ;
+                                            }
+                                        }
+
                                         recoverSectionOne.remove( model ) ;
                                         model.destroy() ;
                                     }
@@ -440,7 +452,7 @@ function OnBtnServerSynch()
                     loader.validatesSecureCertificate = false ;
 
                     // Runs the function when the data is ready for us to process
-                    loader.onload = function() 
+                    loader.onload = function()
                     {
                         EndAsyncBusyAction( $.activity_indicator , controls , EndAsyncBusyAction_CallBack ) ;
 
@@ -534,8 +546,22 @@ function ServerSynch( need_authentication )
                             // The Form ID
                             ID: form_id ,
                             // Details
+                            TEAM: details.get( "TEAM" ) ,
+                            FORM_ID: details.get( "FORM_ID" ) ,
                             FORM_NO: details.get( "FORM_NO" ) ,
-                            DATE: details.get( "DATE" )
+                            DATE: details.get( "DATE" ) ,
+                            ISTAT_REG: details.get( "ISTAT_REG" ) ,
+                            ISTAT_PROV: details.get( "ISTAT_PROV" ) ,
+                            ISTAT_PUBLIC: details.get( "ISTAT_PUBLIC" ) ,
+                            AGGREGATE_N: details.get( "AGGREGATE_N" ) ,
+                            BUILDING_N: details.get( "BUILDING_N" ) ,
+                            ISTAT_PLACE_CODE: details.get( "ISTAT_PLACE_CODE" ) ,
+                            PAPER_TYPE: details.get( "PAPER_TYPE" ) ,
+                            PAPER_N: details.get( "PAPER_N" ) ,
+                            ISTAT_CENSUS_SECTION: details.get( "ISTAT_CENSUS_SECTION" ) ,
+                            SHEET: details.get( "SHEET" ) ,
+                            ATTACHMENT: details.get( "ATTACHMENT" ) ,
+                            PARTICLES: details.get( "PARTICLES" )
                         } ;
 
                         // Recover SECTION ONE
@@ -561,6 +587,10 @@ function ServerSynch( need_authentication )
                         if( recoverSectionOne.length > 0 )
                         {
                             var sectionOne = recoverSectionOne.at( 0 ) ;
+                            params["COORDINATES_TYPE"] = sectionOne.get( "COORDINATES_TYPE" ) ,
+                            params["OTHER_COORDINATES_TYPE"] = sectionOne.get( "OTHER_COORDINATES_TYPE" ) ,
+                            params["TIMEZONE"] = sectionOne.get( "TIMEZONE" ) ,
+                            params["DATUM"] = sectionOne.get( "DATUM" ) ,
                             params["LATITUDE"] = sectionOne.get( "LATITUDE" ) ;
                             params["LONGITUDE"] = sectionOne.get( "LONGITUDE" ) ;
                             params["ALTITUDE"] = sectionOne.get( "ALTITUDE" ) ;
@@ -568,10 +598,26 @@ function ServerSynch( need_authentication )
                             params["MUNICIPALITY"] = sectionOne.get( "MUNICIPALITY" ) ;
                             params["PLACE"] = sectionOne.get( "PLACE" ) ;
                             params["ADDRESS"] = sectionOne.get( "ADDRESS" ) ;
+                            params["LOCATION_TYPE"] = sectionOne.get( "LOCATION_TYPE" ) ;
+                            params["LOCATION_DETAILS"] = sectionOne.get( "LOCATION_DETAILS" ) ;
                             params["CIVIC_NO"] = sectionOne.get( "CIVIC_NO" ) ;
                             params["BUILDING_POSITION"] = sectionOne.get( "BUILDING_POSITION" ) ;
                             params["B_NAME_OR_OWNER"] = sectionOne.get( "B_NAME_OR_OWNER" ) ;
                             params["CODE_OF_USE"] = sectionOne.get( "CODE_OF_USE" ) ;
+
+                            var map_aggregate_image_content = "" ;
+                            var map_aggregate_path = sectionOne.get( "MAP_AGGREGATE_PATH" ) ;
+                            if( map_aggregate_path )
+                            {
+                                // If the sketch is not modified, the path must be build
+                                var mapAggregateFile = Alloy.Globals.getFileForRead( map_aggregate_path ) ;
+
+                                if( mapAggregateFile )
+                                {
+                                    map_aggregate_image_content = mapAggregateFile.read() ;
+                                }
+                            }
+                            params["MAP_AGGREGATE_IMAGE"] = map_aggregate_image_content ;
                         }
 
                         // Process SECTION TWO
@@ -594,7 +640,8 @@ function ServerSynch( need_authentication )
                             params["UNIT_OF_USE_TOURISM"] = sectionTwo.get( "UNIT_OF_USE_TOURISM" ) ;
                             params["UTILIZATION"] = sectionTwo.get( "UTILIZATION" ) ;
                             params["OCCUPANTS"] = sectionTwo.get( "OCCUPANTS" ) ;
-                            params["PROPERTY"] = sectionTwo.get( "PROPERTY" ) ;
+                            params["PUBLIC_PROPERTY"] = sectionTwo.get( "PUBLIC_PROPERTY" ) ;
+                            params["PRIVATE_PROPERTY"] = sectionTwo.get( "PRIVATE_PROPERTY" ) ;
                         }
 
                         // Process SECTION THREE
@@ -610,6 +657,7 @@ function ServerSynch( need_authentication )
                             params["REINFORCED_CONCRETE_FRAMES"] = sectionThree.get( "REINFORCED_CONCRETE_FRAMES" ) ;
                             params["REINFORCED_CONCRETE_WALLS"] = sectionThree.get( "REINFORCED_CONCRETE_WALLS" ) ;
                             params["STEEL_FRAMES"] = sectionThree.get( "STEEL_FRAMES" ) ;
+                            params["WOOD_FRAMES_WALLS"] = sectionThree.get( "WOOD_FRAMES_WALLS" ) ;
                             params["MASONRY_STRUCTURES"] = sectionThree.get( "MASONRY_STRUCTURES" ) ;
                         }
 
@@ -640,7 +688,6 @@ function ServerSynch( need_authentication )
                         {
                             var sectionSeven = recoverSectionSeven.at( 0 ) ;
                             params["MORPHOLOGY_SITE"] = sectionSeven.get( "MORPHOLOGY_SITE" ) ;
-                            params["SLOPES_LOOMING"] = sectionSeven.get( "SLOPES_LOOMING" ) ;
                             params["SUBSOIL"] = sectionSeven.get( "SUBSOIL" ) ;
                         }
 
@@ -656,9 +703,12 @@ function ServerSynch( need_authentication )
                             params["HOUSING_UNITS_UNINHABITABLE"] = sectionEight.get( "HOUSING_UNITS_UNINHABITABLE" ) ;
                             params["FAMILIES_EVACUATED"] = sectionEight.get( "FAMILIES_EVACUATED" ) ;
                             params["EVACUEES_N"] = sectionEight.get( "EVACUEES_N" ) ;
+                            params["DEEPENING_MOTIVATIONS_AND_TYPE"] = sectionEight.get( "DEEPENING_MOTIVATIONS_AND_TYPE" ) ;
                             params["ACCURACY_VISIT"] = sectionEight.get( "ACCURACY_VISIT" ) ;
                             params["OTHER"] = sectionEight.get( "OTHER" ) ;
                             params["EIGHT_MEASURES_OF_EMERGENCY"] = sectionEight.get( "MEASURES_OF_EMERGENCY" ) ;
+                            params["OTHER_1"] = sectionEight.get( "OTHER_1" ) ;
+                            params["OTHER_2"] = sectionEight.get( "OTHER_2" ) ;
                         }
 
                         // Process SECTION NINE
@@ -748,7 +798,7 @@ function ServerSynch( need_authentication )
                         var alertDialog = Titanium.UI.createAlertDialog(
                         {
                             title: L( 'generic_missing_media_contents_title' ) ,
-                            message: L( 'missing_media_contents_msg' ) ,             
+                            message: L( 'missing_media_contents_msg' ) ,
                             buttonNames: [ L( 'generic_yes_msg' ) , L( 'generic_no_msg' ) ] ,
                             cancel: 1
                         } ) ;
@@ -921,6 +971,16 @@ function ManageUploadQueueServerSync()
                     }
                     break ;
 
+                    case "InsertMapAggregateSketchFailed":
+                    {
+                        failedToUploadContents.push(
+                        {
+                            content_id: e.content_id ,
+                            error_msg: L( 'generic_insert_map_aggregate_sketch_failed_err_msg' )
+                        }) ;
+                    }
+                    break ;
+
                     case "UnexpectedError":
                     {
                         failedToUploadContents.push(
@@ -958,7 +1018,7 @@ function ManageUploadQueueServerSync()
                 var alertDialog = Titanium.UI.createAlertDialog(
                 {
                     title: L( 'generic_content_upload_error_title' ) ,
-                    message: message ,             
+                    message: message ,
                     buttonNames: [ L( 'generic_yes_msg' ) , L( 'generic_no_msg' ) ] ,
                     cancel: 1
                 } ) ;

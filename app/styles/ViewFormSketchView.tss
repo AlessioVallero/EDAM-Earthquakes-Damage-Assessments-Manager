@@ -1,0 +1,17 @@
+// View form sketch window
+"#viewFormSketchViewWindow":
+{
+    title: L( 'view_form_sketch_view_title' ) ,
+    backgroundColor: '#ffffcc'
+} ,
+
+// Back button iOS (to papers general section view)
+"#btn_ios_back":
+{
+    title: L( 'generic_back_btn_title' )
+} ,
+
+"#image_view_form_sketch":
+{
+    defaultImage: "/images/img_not_found.png"
+}

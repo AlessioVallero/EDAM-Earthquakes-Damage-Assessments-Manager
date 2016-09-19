@@ -1,0 +1,9 @@
+<resources>
+    <string name="NSLocationWhenInUseUsageDescription">Geolocalización precisa</string>
+    <string name="NSLocationAlwaysUsageDescription">Geolocalización precisa</string>
+    <string name="NSLocationUsageDescription">Geolocalización precisa</string>
+    <string name="NSSpeechRecognitionUsageDescription">Reconocimiento de voz</string>
+    <string name="NSMicrophoneUsageDescription">Reconocimiento de voz</string>
+    <string name="NSPhotoLibraryUsageDescription">Importación/Exportación de fotos en relación con una tarjeta</string>
+    <string name="NSAppleMusicUsageDescription">Importación/Exportación de video en relación con una tarjeta</string>
+</resources>

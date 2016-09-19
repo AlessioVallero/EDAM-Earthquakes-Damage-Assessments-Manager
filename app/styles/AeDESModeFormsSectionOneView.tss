@@ -35,6 +35,38 @@
     right: 10
 } ,
 
+// Coordinates type view
+"#viewAppComboBoxAeDESModeFormsSectionOneCoordinatesType":
+{
+    top: 140 ,
+    height: 50 ,
+    right: 10
+} ,
+
+// Coordinates type other view
+"#viewAppTextFieldAeDESModeFormsSectionOneCoordinatesTypeOther":
+{
+    top: 210 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// Timezone view
+"#viewAppComboBoxAeDESModeFormsSectionOneTimezone":
+{
+    top: 280 ,
+    height: 50 ,
+    right: 10
+} ,
+
+// Datum view
+"#viewAppComboBoxAeDESModeFormsSectionOneDatum":
+{
+    top: 350 ,
+    height: 50 ,
+    right: 10
+} ,
+
 // Load coordinates button
 "#btnAeDESModeFormsSectionOneLoadPosition":
 {
@@ -42,7 +74,7 @@
     backgroundImage: '/images/app_button_normal.png' ,
     backgroundSelectedImage: '/images/app_button_pressed.png' ,
     backgroundDisabledImage: '/images/app_button_disabled.png' ,
-    top: 140 ,
+    top: 420 ,
     height: 50 ,
     left: 10 ,
     right: 10 ,
@@ -59,7 +91,7 @@
 // Latitude view
 "#viewAppTextFieldAeDESModeFormsSectionOneLatitude":
 {
-    top: 210 ,
+    top: 490 ,
     height: 50 ,
     width: Ti.UI.FILL
 } ,
@@ -67,7 +99,7 @@
 // Longitude view
 "#viewAppTextFieldAeDESModeFormsSectionOneLongitude":
 {
-    top: 280 ,
+    top: 560 ,
     height: 50 ,
     width: Ti.UI.FILL
 } ,
@@ -75,7 +107,7 @@
 // Altitude view
 "#viewAppTextFieldAeDESModeFormsSectionOneAltitude":
 {
-    top: 350 ,
+    top: 630 ,
     height: 50 ,
     width: Ti.UI.FILL
 } ,
@@ -83,7 +115,7 @@
 // Province view
 "#viewAppTextFieldAeDESModeFormsSectionOneProvince":
 {
-    top: 420 ,
+    top: 700 ,
     height: 50 ,
     width: Ti.UI.FILL
 } ,
@@ -91,7 +123,7 @@
 // Municipality view
 "#viewAppTextFieldAeDESModeFormsSectionOneMunicipality":
 {
-    top: 490 ,
+    top: 770 ,
     height: 50 ,
     width: Ti.UI.FILL
 } ,
@@ -99,7 +131,7 @@
 // Place view
 "#viewAppTextFieldAeDESModeFormsSectionOnePlace":
 {
-    top: 560 ,
+    top: 840 ,
     height: 50 ,
     width: Ti.UI.FILL
 } ,
@@ -107,7 +139,23 @@
 // Address view
 "#viewAppTextFieldAeDESModeFormsSectionOneAddress":
 {
-    top: 630 ,
+    top: 910 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// Location type view
+"#viewAppComboBoxAeDESModeFormsSectionOneLocationType":
+{
+    top: 980 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
+// Location details view
+"#viewAppTextFieldAeDESModeFormsSectionOneLocationDetails":
+{
+    top: 1050 ,
     height: 50 ,
     width: Ti.UI.FILL
 } ,
@@ -115,7 +163,7 @@
 // Civic no view
 "#viewAppTextFieldAeDESModeFormsSectionOneCivicNo":
 {
-    top: 700 ,
+    top: 1120 ,
     height: 50 ,
     width: Ti.UI.FILL
 } ,
@@ -123,36 +171,38 @@
 // Building name or owner view
 "#viewAppTextFieldAeDESModeFormsSectionOneBuildingNameOrOwner":
 {
-    top: 770 ,
+    top: 1190 ,
     height: 50 ,
     width: Ti.UI.FILL
+} ,
+
+// Table view with the Map Aggregate
+"#tableViewAeDESModeFormsSectionOneMapAggregatePhoto":
+{
+    top: 1260 ,
+    backgroundColor: '#ffffff' ,
+    width: Ti.UI.FILL ,
+    height: 50
+}
+
+// Label map aggregate table view row
+"#lblSectionOneMapAggregatePhoto":
+{
+    text: L( 'generic_map_aggregate_title' ) ,
+    height: 50 ,
+    width: 200 ,
+    color: "#000"
 } ,
 
 // Save view
 "#viewAppButtonSave":
 {
-    top: 840 ,
+    top: 1330 ,
     width: 60 ,
     height: 80
 }
 
-// Activity Indicator iOS
-"#activity_indicator[platform=ios]":
-{
-    color: '#000' ,
-    font:
-    {
-        fontFamily: 'Helvetica Neue' ,
-        fontSize: 11 ,
-        fontWeight: 'bold'
-    } ,
-    style: Ti.UI.iPhone.ActivityIndicatorStyle.DARK ,
-    width: Ti.UI.SIZE ,
-    height: Ti.UI.SIZE ,
-    zIndex: 1
-} ,
-
-// Activity Indicator Android
+// Activity Indicator
 "#activity_indicator":
 {
     color: '#000' ,

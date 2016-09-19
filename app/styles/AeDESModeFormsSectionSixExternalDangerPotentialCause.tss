@@ -39,7 +39,7 @@
 {
     top: 30 ,
     width: 290 ,
-    height: 18 ,
+    height: 36 ,
     font:
     {
         fontFamily: 'Arial' ,
@@ -52,7 +52,7 @@
 // DangerOfBuilding view
 "#viewAppCheckBoxAeDESModeFormsSectionSixPotentialCauseDangerOfBuilding":
 {
-    top: 60 ,
+    top: 90 ,
     height: 50 ,
     width: 290
 } ,
@@ -60,7 +60,7 @@
 // DangerOfAccessRoad view
 "#viewAppCheckBoxAeDESModeFormsSectionSixPotentialCauseDangerOfAccessRoad":
 {
-    top: 130 ,
+    top: 160 ,
     height: 50 ,
     width: 290
 } ,
@@ -68,7 +68,7 @@
 // DangerOfInland view
 "#viewAppCheckBoxAeDESModeFormsSectionSixPotentialCauseDangerOfInland":
 {
-    top: 200 ,
+    top: 230 ,
     height: 50 ,
     width: 290
 } ,
@@ -76,7 +76,7 @@
 // DenialOfAccess view
 "#viewAppCheckBoxAeDESModeFormsSectionSixPotentialCauseMeasuresOfEmergencyDenialOfAccess":
 {
-    top: 270 ,
+    top: 300 ,
     height: 80 ,
     width: 290
 } ,
@@ -84,7 +84,7 @@
 // StepsProtection view
 "#viewAppCheckBoxAeDESModeFormsSectionSixPotentialCauseMeasuresOfEmergencyStepsProtection":
 {
-    top: 340 ,
+    top: 370 ,
     height: 80 ,
     width: 290
 }

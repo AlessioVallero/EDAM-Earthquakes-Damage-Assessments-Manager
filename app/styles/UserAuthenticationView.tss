@@ -136,23 +136,7 @@
     width: 60
 } ,
 
-// Activity Indicator iOS
-"#activity_indicator_login[platform=ios]":
-{
-    color: '#000' ,
-    font:
-    {
-        fontFamily: 'Helvetica Neue' ,
-        fontSize: 11 ,
-        fontWeight: 'bold'
-    } ,
-    style: Ti.UI.iPhone.ActivityIndicatorStyle.DARK ,
-    width: Ti.UI.SIZE ,
-    height: Ti.UI.SIZE ,
-    zIndex: 1
-} ,
-
-// Activity Indicator Android
+// Activity Indicator Login
 "#activity_indicator_login":
 {
     color: '#000' ,
@@ -168,24 +152,8 @@
     zIndex: 1
 } ,
 
-// Activity Indicator iOS
-"#activity_indicator[platform=ios]":
-{
-    color: '#000' ,
-    font:
-    {
-        fontFamily: 'Helvetica Neue' ,
-        fontSize: 11 ,
-        fontWeight: 'bold'
-    } ,
-    style: Ti.UI.iPhone.ActivityIndicatorStyle.DARK ,
-    width: Ti.UI.SIZE ,
-    height: Ti.UI.SIZE ,
-    zIndex: 1
-} ,
-
-// Activity Indicator Android-mobileweb
-"#activity_indicator[platform=android,mobileweb]":
+// Activity Indicator Register
+"#activity_indicator_register":
 {
     color: '#000' ,
     font:
@@ -195,21 +163,6 @@
         fontWeight: 'bold'
     } ,
     style: Ti.UI.ActivityIndicatorStyle.DARK ,
-    width: Ti.UI.SIZE ,
-    height: Ti.UI.SIZE ,
-    zIndex: 1
-} ,
-
-// Activity Indicator BlackBerry
-"#activity_indicator[platform=blackberry]":
-{
-    color: '#000' ,
-    font:
-    {
-        fontFamily: 'Helvetica Neue' ,
-        fontSize: 11 ,
-        fontWeight: 'bold'
-    } ,
     width: Ti.UI.SIZE ,
     height: Ti.UI.SIZE ,
     zIndex: 1

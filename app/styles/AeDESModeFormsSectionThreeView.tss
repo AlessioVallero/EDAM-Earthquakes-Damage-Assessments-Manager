@@ -107,11 +107,19 @@
     width: 290
 } ,
 
+// WoodFramesWalls view
+"#viewAppCheckBoxAeDESModeFormsSectionThreeWoodFramesWalls":
+{
+    top: 660 ,
+    height: 50 ,
+    width: 290
+} ,
+
 // VerticalMasonryStructures label
 "#lblAeDESModeFormsSectionThreeVerticalMasonryStructures":
 {
     text: L( 'generic_vertical_masonry_structures_text_msg' ) ,
-    top: 660 ,
+    top: 730 ,
     width: 290 ,
     height: 18 ,
     font:
@@ -126,7 +134,7 @@
 // Table view with Masonry structures
 "#tableViewAeDESModeFormsSectionThreeMasonryStructure":
 {
-    top: 690 ,
+    top: 760 ,
     backgroundColor: '#ffffff' ,
     height: 300 ,
     width: Ti.UI.FILL
@@ -231,7 +239,7 @@
 // Save view
 "#viewAppButtonSave":
 {
-    top: 1000 ,
+    top: 1070 ,
     width: 60 ,
     height: 80
 }

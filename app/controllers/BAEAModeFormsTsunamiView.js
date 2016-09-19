@@ -80,7 +80,7 @@ function OnTableViewBAEAModeFormsTsunamiPhoto_Click( e )
                 {
                     title: L( 'baea_photo_selection_title' ) ,
                     cancel: 4 ,
-                    options: [ L( 'baea_photo_new_photo_msg' ) , L( 'baea_photo_import_photo_msg' ) , L( 'baea_photo_new_sketch_msg' ) , L( 'baea_photo_view_photos_msg' ) , L( 'generic_cancel_btn_title' ) ] ,
+                    options: [ L( 'generic_photo_new_photo_msg' ) , L( 'generic_photo_import_photo_msg' ) , L( 'generic_photo_new_sketch_msg' ) , L( 'generic_photo_view_photos_msg' ) , L( 'generic_cancel_btn_title' ) ] ,
                     selectedIndex: 1
                 } ) ;
                 optionDialog.addEventListener( 'click' , function( e )
@@ -190,7 +190,7 @@ function OnTableViewBAEAModeFormsTsunamiPhoto_Click( e )
 
                             if( Alloy.Globals.BAEAModeTsunami &&
                                 Alloy.Globals.BAEAModeTsunami[current_global_ar_index] &&
-                                Alloy.Globals.BAEAModeTsunami[current_global_ar_index].PHOTOS && 
+                                Alloy.Globals.BAEAModeTsunami[current_global_ar_index].PHOTOS &&
                                 Alloy.Globals.BAEAModeTsunami[current_global_ar_index].PHOTOS.length > 0 )
                             {
                                 media_array["PERMANENT"] = Alloy.Globals.BAEAModeTsunami[current_global_ar_index].PHOTOS ;
@@ -223,7 +223,7 @@ function OnTableViewBAEAModeFormsTsunamiPhoto_Click( e )
 
                 if( Alloy.Globals.BAEAModeTsunami &&
                     Alloy.Globals.BAEAModeTsunami[current_global_ar_index] &&
-                    Alloy.Globals.BAEAModeTsunami[current_global_ar_index].PHOTOS && 
+                    Alloy.Globals.BAEAModeTsunami[current_global_ar_index].PHOTOS &&
                     Alloy.Globals.BAEAModeTsunami[current_global_ar_index].PHOTOS.length > 0 )
                 {
                     media_array["PERMANENT"] = Alloy.Globals.BAEAModeTsunami[current_global_ar_index].PHOTOS ;
@@ -505,25 +505,25 @@ try
     $.widgetAppTextFieldBAEAModeFormsTsunamiSiteName.init( L( 'generic_site_name_txt_hint' ) ) ;
     $.widgetAppTextFieldBAEAModeFormsTsunamiSiteName.enabled( view_enabled ) ;
 
-    $.widgetAppTextFieldBAEAModeFormsTsunamiLatitude.init( L( 'generic_latitude_txt_hint' ) , null , Titanium.UI.KEYBOARD_NUMBERS_PUNCTUATION ) ;
+    $.widgetAppTextFieldBAEAModeFormsTsunamiLatitude.init( L( 'generic_latitude_txt_hint' ) , null , Titanium.UI.KEYBOARD_TYPE_NUMBERS_PUNCTUATION ) ;
     $.widgetAppTextFieldBAEAModeFormsTsunamiLatitude.enabled( view_enabled ) ;
 
-    $.widgetAppTextFieldBAEAModeFormsTsunamiLongitude.init( L( 'generic_longitude_txt_hint' ) , null , Titanium.UI.KEYBOARD_NUMBERS_PUNCTUATION ) ;
+    $.widgetAppTextFieldBAEAModeFormsTsunamiLongitude.init( L( 'generic_longitude_txt_hint' ) , null , Titanium.UI.KEYBOARD_TYPE_NUMBERS_PUNCTUATION ) ;
     $.widgetAppTextFieldBAEAModeFormsTsunamiLongitude.enabled( view_enabled ) ;
 
     $.widgetAppTextFieldBAEAModeFormsTsunamiAddress.init( L( 'generic_address_txt_hint' ) ) ;
     $.widgetAppTextFieldBAEAModeFormsTsunamiAddress.enabled( view_enabled ) ;
 
-    $.widgetAppTextFieldBAEAModeFormsTsunamiInundation.init( L( 'generic_inundation_txt_hint' ) , null , Titanium.UI.KEYBOARD_NUMBERS_PUNCTUATION ) ;
+    $.widgetAppTextFieldBAEAModeFormsTsunamiInundation.init( L( 'generic_inundation_txt_hint' ) , null , Titanium.UI.KEYBOARD_TYPE_NUMBERS_PUNCTUATION ) ;
     $.widgetAppTextFieldBAEAModeFormsTsunamiInundation.enabled( view_enabled ) ;
 
-    $.widgetAppTextFieldBAEAModeFormsTsunamiWaveHeight.init( L( 'generic_wave_height_txt_hint' ) , null , Titanium.UI.KEYBOARD_NUMBERS_PUNCTUATION ) ;
+    $.widgetAppTextFieldBAEAModeFormsTsunamiWaveHeight.init( L( 'generic_wave_height_txt_hint' ) , null , Titanium.UI.KEYBOARD_TYPE_NUMBERS_PUNCTUATION ) ;
     $.widgetAppTextFieldBAEAModeFormsTsunamiWaveHeight.enabled( view_enabled ) ;
 
-    $.widgetAppTextFieldBAEAModeFormsTsunamiPeakToTrough.init( L( 'generic_peak_to_trough_txt_hint' ) , null , Titanium.UI.KEYBOARD_NUMBERS_PUNCTUATION ) ;
+    $.widgetAppTextFieldBAEAModeFormsTsunamiPeakToTrough.init( L( 'generic_peak_to_trough_txt_hint' ) , null , Titanium.UI.KEYBOARD_TYPE_NUMBERS_PUNCTUATION ) ;
     $.widgetAppTextFieldBAEAModeFormsTsunamiPeakToTrough.enabled( view_enabled ) ;
 
-    $.widgetAppTextFieldBAEAModeFormsTsunamiWaveCycle.init( L( 'generic_wave_cycle_txt_hint' ) , null , Titanium.UI.KEYBOARD_NUMBERS_PUNCTUATION ) ;
+    $.widgetAppTextFieldBAEAModeFormsTsunamiWaveCycle.init( L( 'generic_wave_cycle_txt_hint' ) , null , Titanium.UI.KEYBOARD_TYPE_NUMBERS_PUNCTUATION ) ;
     $.widgetAppTextFieldBAEAModeFormsTsunamiWaveCycle.enabled( view_enabled ) ;
 
     $.widgetAppTextFieldBAEAModeFormsTsunamiDamage.init( L( 'generic_damage_txt_hint' ) ) ;

@@ -56,17 +56,7 @@ function OnBtnNext_Click( e )
 {
     try
     {
-        var picture = null ;
-        // iOS devices need the entire Image object,
-        // Android devices only the media part
-        if( OS_IOS )
-        {
-            picture = $.viewMainContainer.toImage() ;
-        }
-        else
-        {
-            picture = $.viewMainContainer.toImage().media ;
-        }
+        var picture = $.viewMainContainer.toImage() ;
 
         // Since the Blob object sometimes cause strange effect on a TableGalleryView, we'll write the image in a temporary folder and use the nativePath
         // The files in the temporary folder may not persist when the application is shut down and restarted.

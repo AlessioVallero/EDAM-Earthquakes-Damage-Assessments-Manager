@@ -346,7 +346,7 @@ function LoadDetailedEvaluationData()
             // If current_form_id is -1, then we are here on adding new, so we create a default array
             CreateDefaultDetailedEvaluationArray() ;
         }
-    }    
+    }
 }
 
 // Detailed evaluation opening
@@ -414,7 +414,7 @@ function LoadRapidEvaluationData()
             // If current_form_id is -1, then we are here on adding new, so we create a default array
             CreateDefaultRapidEvaluationArray() ;
         }
-    }    
+    }
 }
 
 // Rapid evaluation opening
@@ -678,13 +678,13 @@ function handleMenuClick( _event )
                         OpenInspection() ;
                     }
                     break ;
-        
+
                     case 1:
                     {
                         OpenBuildingDescription() ;
                     }
                     break ;
-        
+
                     case 2:
                     {
                         if( current_atc20_type == "0" )
@@ -697,7 +697,7 @@ function handleMenuClick( _event )
                         }
                     }
                     break ;
-        
+
                     case 3:
                     {
                         if( current_atc20_type == "0" )
@@ -745,7 +745,7 @@ function Save( title , message , callbackFnt )
         var alertDialog = Titanium.UI.createAlertDialog(
         {
             title: L( title ) ,
-            message: L( message ) ,             
+            message: L( message ) ,
             buttonNames: [ L( 'generic_yes_msg' ) , L( 'generic_no_msg' ) ] ,
             cancel: 1
         } ) ;
@@ -788,7 +788,7 @@ function SaveInternal()
         {
             bCanClickOnTableView = false ;
             bIsWorkInProgress = true ;
-    
+
             var bError = false ;
 
             var user = "" ;
@@ -1373,7 +1373,7 @@ function SaveInternal()
                             else
                             {
                                 bError = true ;
-            
+
                                 Alloy.Globals.AlertUserAndLogAsync( L( "image_saving_error_msg" ) ) ;
                             }
                         }
@@ -1387,10 +1387,10 @@ function SaveInternal()
                         break ;
                     }
                 }
-    
+
                 if( !bError )
                 {
-                    // This saving also avoid problem regarding the images association 
+                    // This saving also avoid problem regarding the images association
                     Alloy.Globals.CurrentPicsPath = null ;
                 }
             }
@@ -1469,7 +1469,7 @@ function SaveInternal()
                             else
                             {
                                 bError = true ;
-            
+
                                 Alloy.Globals.AlertUserAndLogAsync( L( "video_saving_error_msg" ) ) ;
                             }
                         }
@@ -1486,7 +1486,7 @@ function SaveInternal()
 
                 if( !bError )
                 {
-                    // This saving also avoid problem regarding the videos association 
+                    // This saving also avoid problem regarding the videos association
                     Alloy.Globals.CurrentVideosPath = null ;
                 }
             }
@@ -1498,9 +1498,9 @@ function SaveInternal()
             else
             {
                 Ti.API.info( '\nEND' ) ;
-    
+
                 Ti.App.fireEvent( "atc20_mode:save" ) ;
-    
+
                 bRet = true ;
             }
         }
@@ -1524,7 +1524,7 @@ function OnBtnBuildingDamageAssessments_Click( e )
     try
     {
         var ATC20ModeUtils = require( '/ATC20ModeUtils' ) ;
-        
+
         var media_array = ATC20ModeUtils.CreateMediaArray( current_form_id , true , true ) ;
 
         if( media_array && media_array.length > 0 )
@@ -1583,7 +1583,7 @@ function OnBtnSend_Click( e )
                 loader.validatesSecureCertificate = false ;
 
                 // Runs the function when the data is ready for us to process
-                loader.onload = function() 
+                loader.onload = function()
                 {
                     if( this.responseText && this.responseText.substring( 0 , 6 ) != "ERROR_" )
                     {
@@ -1742,7 +1742,7 @@ function OnBtnSend_Click( e )
                     Alloy.Globals.AlertUserAndLogAsync( L( 'generic_exception_msg' ) + e.error ) ;
                 } ;
                 loader.timeout = Alloy.Globals.SendFormTimeoutMillisecs ;
-                
+
                 var params =
                 {
                     // Key
@@ -1782,7 +1782,7 @@ function OnBtnSend_Click( e )
                     OTHER_EVALUATION_RECOMMENDED: Alloy.Globals.ATC20ModeFurtherActions["OTHER_EVALUATION_RECOMMENDED"] ,
                     OTHER_RECOMMENDATIONS: Alloy.Globals.ATC20ModeFurtherActions["OTHER_RECOMMENDATIONS"] ,
                     COMMENTS: Alloy.Globals.ATC20ModeFurtherActions["COMMENTS"]
-                } ; 
+                } ;
 
                 // NZ ATC-20 have a sign and an images count too
                 if( current_mode == "NZ" )
@@ -1792,10 +1792,14 @@ function OnBtnSend_Click( e )
                     {
                         var personalData = Alloy.Collections.ATC20ModePD.at( 0 ) ;
 
-                        var file = Alloy.Globals.getFileForRead( personalData.get( "SIGN_PATH" ) ) ;
-                        if( file )
+                        var filePath = personalData.get( "SIGN_PATH" ) ;
+                        if( filePath )
                         {
-                            tpd_sign_image = file.read() ;
+                            var file = Alloy.Globals.getFileForRead( filePath ) ;
+                            if( file )
+                            {
+                                tpd_sign_image = file.read() ;
+                            }
                         }
                     }
 
@@ -1937,7 +1941,7 @@ function OnBtnMakeVideo_Click( e )
     var alertDialog = Titanium.UI.createAlertDialog(
     {
         title: L( 'generic_need_gps_title' ) ,
-        message: L( 'vid_need_gps_confirm_msg' ) ,             
+        message: L( 'vid_need_gps_confirm_msg' ) ,
         buttonNames: [ L( 'generic_yes_msg' ) , L( 'generic_no_msg' ) ] ,
         cancel: 1
     } ) ;
@@ -2044,7 +2048,7 @@ function OnBtnMakeMedia_Click( e )
     var alertDialog = Titanium.UI.createAlertDialog(
     {
         title: L( 'generic_need_gps_title' ) ,
-        message: message ,             
+        message: message ,
         buttonNames: [ L( 'generic_yes_msg' ) , L( 'generic_no_msg' ) ] ,
         cancel: 1
     } ) ;
@@ -2103,6 +2107,8 @@ function OnBtnMakeMedia_Click( e )
                     }
                     else
                     {
+                        EndAsyncBusyAction( $.activity_indicator , controls , EndAsyncBusyAction_CallBack ) ;
+
                         alert( L( 'generic_user_not_authorized_to_ask_localization' ) ) ;
                     }
                 }
@@ -2274,9 +2280,9 @@ function OnBtnMakeDraft_Click( e )
 
             // Controller creation for the Next View
             Alloy.Globals.createAndOpenControllerExt( 'DraftPaintView' , { type: "ATC20" } ) ;
-    
+
             bRet = true ;
-    
+
             return bRet ;
         } ) ;
     }

@@ -1,5 +1,5 @@
 "#popover": {
-	width: Ti.UI.SIZE, 
+	width: Ti.UI.SIZE,
     height: Ti.UI.SIZE
 },
 "#pickerview": {
@@ -11,21 +11,21 @@
     top: 0,
     left: 0,
     width: Ti.UI.FILL,
-    height: 45, 
+    height: 45,
 	barColor : '#26688b' // Putty
 },
-"#cancel": { 
-	top: 5, 
-	left: 5, 
-	width: Ti.UI.SIZE, 
-	height: 35 
+"#cancel": {
+	top: 5,
+	left: 5,
+	width: Ti.UI.SIZE,
+	height: 35
 },
-"#done": { 
-	top: 5, 
-	right: 5, 
-	width: Ti.UI.SIZE, 
-	height: 35, 
-	systemButton: Ti.UI.iPhone.SystemButton.DONE 
+"#done": {
+	top: 5,
+	right: 5,
+	width: Ti.UI.SIZE,
+	height: 35,
+	systemButton: Ti.UI.iOS.SystemButton.DONE
 },
 "#pickerPopoverWrapper": {
     top: 45,
@@ -34,10 +34,5 @@
 	height: 215
 },
 "#picker": {
-	top: 0,
-	left: 0,
-	width: Ti.UI.FILL,
-	height: 215,
-	selectionIndicator: true,
-	type: Ti.UI.PICKER_TYPE_PLAIN
+	top: 0
 }

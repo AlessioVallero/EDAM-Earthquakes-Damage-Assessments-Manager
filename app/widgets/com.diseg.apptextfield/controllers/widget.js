@@ -20,7 +20,7 @@ $.init = function( text_msg , on_textfield_change , keyboardType , length_limit 
             $.txtAppTextField.setKeyboardType( keyboardType ) ;
             switch( keyboardType )
             {
-                case Titanium.UI.KEYBOARD_NUMBER_PAD:
+                case Titanium.UI.KEYBOARD_TYPE_NUMBER_PAD:
                 {
                     // For the number keyboard, we also check that only numbers are inserted
                     $.txtAppTextField.addEventListener( 'change' , function( e )
@@ -37,7 +37,7 @@ $.init = function( text_msg , on_textfield_change , keyboardType , length_limit 
                 }
                 break ;
 
-                case Titanium.UI.KEYBOARD_NUMBERS_PUNCTUATION:
+                case Titanium.UI.KEYBOARD_TYPE_NUMBERS_PUNCTUATION:
                 {
                     // For the number keyboard, we also check that only numbers and punctuation are inserted
                     $.txtAppTextField.addEventListener( 'change' , function( e )
@@ -232,7 +232,7 @@ function OnBtnSpeechRecognition_Click( e )
                                 }
                             }
                         }
-                    } ) ;	
+                    } ) ;
                 }
             }
             else

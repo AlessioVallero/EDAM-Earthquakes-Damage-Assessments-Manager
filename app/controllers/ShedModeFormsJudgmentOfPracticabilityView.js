@@ -220,15 +220,15 @@ try
     }
 
     // Init app textfields
-    $.widgetAppTextFieldShedModeFormsJudgmentOfPracticabilityHousingUnitsUninhabitable.init( L( 'generic_housing_units_uninhabitable_txt_hint' ) , OnHousingUnitsUninhabitable_Change , Titanium.UI.KEYBOARD_NUMBER_PAD ) ;
+    $.widgetAppTextFieldShedModeFormsJudgmentOfPracticabilityHousingUnitsUninhabitable.init( L( 'generic_housing_units_uninhabitable_txt_hint' ) , OnHousingUnitsUninhabitable_Change , Titanium.UI.KEYBOARD_TYPE_NUMBER_PAD ) ;
     $.widgetAppTextFieldShedModeFormsJudgmentOfPracticabilityHousingUnitsUninhabitable.enabled( view_enabled ) ;
     $.widgetAppTextFieldShedModeFormsJudgmentOfPracticabilityHousingUnitsUninhabitable.set_text_value( Alloy.Globals.ShedModeJudgmentOfPracticability["HOUSING_UNITS_UNINHABITABLE"] ) ;
 
-    $.widgetAppTextFieldShedModeFormsJudgmentOfPracticabilityFamiliesEvacuated.init( L( 'generic_families_evacuated_txt_hint' ) , OnFamiliesEvacuated_Change , Titanium.UI.KEYBOARD_NUMBER_PAD ) ;
+    $.widgetAppTextFieldShedModeFormsJudgmentOfPracticabilityFamiliesEvacuated.init( L( 'generic_families_evacuated_txt_hint' ) , OnFamiliesEvacuated_Change , Titanium.UI.KEYBOARD_TYPE_NUMBER_PAD ) ;
     $.widgetAppTextFieldShedModeFormsJudgmentOfPracticabilityFamiliesEvacuated.enabled( view_enabled ) ;
     $.widgetAppTextFieldShedModeFormsJudgmentOfPracticabilityFamiliesEvacuated.set_text_value( Alloy.Globals.ShedModeJudgmentOfPracticability["FAMILIES_EVACUATED"] ) ;
 
-    $.widgetAppTextFieldShedModeFormsJudgmentOfPracticabilityEvacueesN.init( L( 'generic_evacuees_n_txt_hint' ) , OnEvacueesN_Change , Titanium.UI.KEYBOARD_NUMBER_PAD ) ;
+    $.widgetAppTextFieldShedModeFormsJudgmentOfPracticabilityEvacueesN.init( L( 'generic_evacuees_n_txt_hint' ) , OnEvacueesN_Change , Titanium.UI.KEYBOARD_TYPE_NUMBER_PAD ) ;
     $.widgetAppTextFieldShedModeFormsJudgmentOfPracticabilityEvacueesN.enabled( view_enabled ) ;
     $.widgetAppTextFieldShedModeFormsJudgmentOfPracticabilityEvacueesN.set_text_value( Alloy.Globals.ShedModeJudgmentOfPracticability["EVACUEES_N"] ) ;
 

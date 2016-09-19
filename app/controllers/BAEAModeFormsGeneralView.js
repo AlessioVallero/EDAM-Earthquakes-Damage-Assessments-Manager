@@ -80,7 +80,7 @@ function OnTableViewBAEAModeFormsGeneralPhoto_Click( e )
                 {
                     title: L( 'baea_photo_selection_title' ) ,
                     cancel: 4 ,
-                    options: [ L( 'baea_photo_new_photo_msg' ) , L( 'baea_photo_import_photo_msg' ) , L( 'baea_photo_new_sketch_msg' ) , L( 'baea_photo_view_photos_msg' ) , L( 'generic_cancel_btn_title' ) ] ,
+                    options: [ L( 'generic_photo_new_photo_msg' ) , L( 'generic_photo_import_photo_msg' ) , L( 'generic_photo_new_sketch_msg' ) , L( 'generic_photo_view_photos_msg' ) , L( 'generic_cancel_btn_title' ) ] ,
                     selectedIndex: 1
                 } ) ;
                 optionDialog.addEventListener( 'click' , function( e )
@@ -190,7 +190,7 @@ function OnTableViewBAEAModeFormsGeneralPhoto_Click( e )
 
                             if( Alloy.Globals.BAEAModeGeneral &&
                                 Alloy.Globals.BAEAModeGeneral[current_global_ar_index] &&
-                                Alloy.Globals.BAEAModeGeneral[current_global_ar_index].PHOTOS && 
+                                Alloy.Globals.BAEAModeGeneral[current_global_ar_index].PHOTOS &&
                                 Alloy.Globals.BAEAModeGeneral[current_global_ar_index].PHOTOS.length > 0 )
                             {
                                 media_array["PERMANENT"] = Alloy.Globals.BAEAModeGeneral[current_global_ar_index].PHOTOS ;
@@ -223,7 +223,7 @@ function OnTableViewBAEAModeFormsGeneralPhoto_Click( e )
 
                 if( Alloy.Globals.BAEAModeGeneral &&
                     Alloy.Globals.BAEAModeGeneral[current_global_ar_index] &&
-                    Alloy.Globals.BAEAModeGeneral[current_global_ar_index].PHOTOS && 
+                    Alloy.Globals.BAEAModeGeneral[current_global_ar_index].PHOTOS &&
                     Alloy.Globals.BAEAModeGeneral[current_global_ar_index].PHOTOS.length > 0 )
                 {
                     media_array["PERMANENT"] = Alloy.Globals.BAEAModeGeneral[current_global_ar_index].PHOTOS ;
@@ -495,10 +495,10 @@ try
     $.widgetAppTextFieldBAEAModeFormsGeneralSiteName.init( L( 'generic_site_name_txt_hint' ) ) ;
     $.widgetAppTextFieldBAEAModeFormsGeneralSiteName.enabled( view_enabled ) ;
 
-    $.widgetAppTextFieldBAEAModeFormsGeneralLatitude.init( L( 'generic_latitude_txt_hint' ) , null , Titanium.UI.KEYBOARD_NUMBERS_PUNCTUATION ) ;
+    $.widgetAppTextFieldBAEAModeFormsGeneralLatitude.init( L( 'generic_latitude_txt_hint' ) , null , Titanium.UI.KEYBOARD_TYPE_NUMBERS_PUNCTUATION ) ;
     $.widgetAppTextFieldBAEAModeFormsGeneralLatitude.enabled( view_enabled ) ;
 
-    $.widgetAppTextFieldBAEAModeFormsGeneralLongitude.init( L( 'generic_longitude_txt_hint' ) , null , Titanium.UI.KEYBOARD_NUMBERS_PUNCTUATION ) ;
+    $.widgetAppTextFieldBAEAModeFormsGeneralLongitude.init( L( 'generic_longitude_txt_hint' ) , null , Titanium.UI.KEYBOARD_TYPE_NUMBERS_PUNCTUATION ) ;
     $.widgetAppTextFieldBAEAModeFormsGeneralLongitude.enabled( view_enabled ) ;
 
     $.widgetAppTextFieldBAEAModeFormsGeneralAddress.init( L( 'generic_address_txt_hint' ) ) ;

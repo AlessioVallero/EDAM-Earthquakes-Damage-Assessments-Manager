@@ -3,6 +3,12 @@ exports.definition = {
 	config: {
         columns: {
             "FORM_ID": "integer PRIMARY KEY" ,
+						"LOCATION_TYPE": "TEXT" ,
+						"LOCATION_DETAILS": "TEXT" ,
+						"COORDINATES_TYPE": "TEXT" ,
+						"OTHER_COORDINATES_TYPE": "TEXT" ,
+						"TIMEZONE": "TEXT" ,
+						"DATUM": "TEXT" ,
             "LATITUDE": "TEXT" ,
             "LONGITUDE": "TEXT" ,
             "ALTITUDE": "TEXT" ,
@@ -13,7 +19,8 @@ exports.definition = {
             "CIVIC_NO": "TEXT" ,
             "BUILDING_POSITION": "TEXT" ,
             "B_NAME_OR_OWNER": "TEXT" ,
-            "CODE_OF_USE": "TEXT"
+            "CODE_OF_USE": "TEXT" ,
+						"MAP_AGGREGATE_PATH": "TEXT"
         },
 		adapter: {
 			type: "sql",

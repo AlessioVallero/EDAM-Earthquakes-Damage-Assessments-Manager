@@ -101,8 +101,22 @@ function CreateDefaultDetailsArray()
     var default_form_no = current_date.getFullYear().toFixed( 0 ) ;
     Alloy.Globals.AeDESModeDetails =
     {
-        "FORM_NO": default_form_no ,  // ToString of the current datetime
-        "DATE": current_time.toString() // Now
+        "TEAM": "" ,                      // Empty string
+        "FORM_ID": "" ,                   // Empty string
+        "FORM_NO": default_form_no ,      // ToString of the current datetime
+        "DATE": current_time.toString() , // Now
+        "ISTAT_REG": "" ,                 // Empty string
+        "ISTAT_PROV": "" ,                // Empty string
+        "ISTAT_PUBLIC": "" ,              // Empty string
+        "AGGREGATE_N": "" ,               // Empty string
+        "BUILDING_N": "" ,                // Empty string
+        "ISTAT_PLACE_CODE": "" ,          // Empty string
+        "PAPER_TYPE": "" ,                // Empty string
+        "PAPER_N": "" ,                   // Empty string
+        "ISTAT_CENSUS_SECTION": "" ,      // Empty string
+        "SHEET": "" ,                     // Empty string
+        "ATTACHMENT": "" ,                // Empty string
+        "PARTICLES": ""                   // Empty string
     } ;
 }
 
@@ -126,8 +140,22 @@ function LoadDetailsData()
                 var detailsData = recoverDetails.at( 0 ) ;
                 Alloy.Globals.AeDESModeDetails =
                 {
+                    "TEAM": detailsData.get( "TEAM" ) ,
+                    "FORM_ID": detailsData.get( "FORM_ID" ) ,
                     "FORM_NO": detailsData.get( "FORM_NO" ) ,
-                    "DATE": detailsData.get( "DATE" )
+                    "DATE": detailsData.get( "DATE" ) ,
+                    "ISTAT_REG": detailsData.get( "ISTAT_REG" ) ,
+                    "ISTAT_PROV": detailsData.get( "ISTAT_PROV" ) ,
+                    "ISTAT_PUBLIC": detailsData.get( "ISTAT_PUBLIC" ) ,
+                    "AGGREGATE_N": detailsData.get( "AGGREGATE_N" ) ,
+                    "BUILDING_N": detailsData.get( "BUILDING_N" ) ,
+                    "ISTAT_PLACE_CODE": detailsData.get( "ISTAT_PLACE_CODE" ) ,
+                    "PAPER_TYPE": detailsData.get( "PAPER_TYPE" ) ,
+                    "PAPER_N": detailsData.get( "PAPER_N" ) ,
+                    "ISTAT_CENSUS_SECTION": detailsData.get( "ISTAT_CENSUS_SECTION" ) ,
+                    "SHEET": detailsData.get( "SHEET" ) ,
+                    "ATTACHMENT": detailsData.get( "ATTACHMENT" ) ,
+                    "PARTICLES": detailsData.get( "PARTICLES" )
                 } ;
             }
             else
@@ -165,17 +193,25 @@ function CreateDefaultSectionOneArray()
 {
     Alloy.Globals.AeDESModeSectionOne =
     {
-        "LATITUDE": "" ,           // Empty
-        "LONGITUDE": "" ,          // Empty
-        "ALTITUDE": "" ,           // Empty
-        "PROVINCE": "" ,           // Empty
-        "MUNICIPALITY": "" ,       // Empty
-        "PLACE": "" ,              // Empty
-        "ADDRESS": "" ,            // Empty
-        "CIVIC_NO": "" ,           // Empty
-        "BUILDING_POSITION": "0" , // Isolated
-        "B_NAME_OR_OWNER": "" ,    // Empty
-        "CODE_OF_USE": "0"         // Private housing facilities
+        "COORDINATES_TYPE": "0" ,      // Not selected
+        "OTHER_COORDINATES_TYPE": "" , // Empty
+        "TIMEZONE": "0" ,              // Not selected
+        "DATUM": "0" ,                 // Not selected
+        "LATITUDE": "" ,               // Empty
+        "LONGITUDE": "" ,              // Empty
+        "ALTITUDE": "" ,               // Empty
+        "PROVINCE": "" ,               // Empty
+        "MUNICIPALITY": "" ,           // Empty
+        "PLACE": "" ,                  // Empty
+        "ADDRESS": "" ,                // Empty
+        "LOCATION_TYPE": "0" ,         // Not selected
+        "LOCATION_DETAILS": "" ,       // Empty
+        "CIVIC_NO": "" ,               // Empty
+        "BUILDING_POSITION": "0" ,     // Isolated
+        "B_NAME_OR_OWNER": "" ,        // Empty
+        "CODE_OF_USE": "0" ,           // Private housing facilities
+        "MAP_AGGREGATE_PATH": "" ,     // Empty
+        "MAP_AGGREGATE_MODIFIED": "N"  // No (is not on the DB)
     } ;
 }
 
@@ -199,6 +235,10 @@ function LoadSectionOneData()
                 var sectionOneData = recoverSectionOne.at( 0 ) ;
                 Alloy.Globals.AeDESModeSectionOne =
                 {
+                    "COORDINATES_TYPE": sectionOneData.get( "COORDINATES_TYPE" ) ,
+                    "OTHER_COORDINATES_TYPE": sectionOneData.get( "OTHER_COORDINATES_TYPE" ) ,
+                    "TIMEZONE": sectionOneData.get( "TIMEZONE" ) ,
+                    "DATUM": sectionOneData.get( "DATUM" ) ,
                     "LATITUDE": sectionOneData.get( "LATITUDE" ) ,
                     "LONGITUDE": sectionOneData.get( "LONGITUDE" ) ,
                     "ALTITUDE": sectionOneData.get( "ALTITUDE" ) ,
@@ -206,11 +246,32 @@ function LoadSectionOneData()
                     "MUNICIPALITY": sectionOneData.get( "MUNICIPALITY" ) ,
                     "PLACE": sectionOneData.get( "PLACE" ) ,
                     "ADDRESS": sectionOneData.get( "ADDRESS" ) ,
+                    "LOCATION_TYPE": sectionOneData.get( "LOCATION_TYPE" ) ,
+                    "LOCATION_DETAILS": sectionOneData.get( "LOCATION_DETAILS" ) ,
                     "CIVIC_NO": sectionOneData.get( "CIVIC_NO" ) ,
                     "BUILDING_POSITION": sectionOneData.get( "BUILDING_POSITION" ) ,
                     "B_NAME_OR_OWNER": sectionOneData.get( "B_NAME_OR_OWNER" ) ,
                     "CODE_OF_USE": sectionOneData.get( "CODE_OF_USE" )
                 } ;
+
+                var mapAggregatePath = sectionOneData.get( "MAP_AGGREGATE_PATH" ) ;
+                // If a map aggregate exists, we need the native path on the AeDESModeSectionOne array
+                if( mapAggregatePath )
+                {
+                    var mapAggregateFile = Alloy.Globals.getFileForRead( mapAggregatePath ) ;
+                    if( mapAggregateFile )
+                    {
+                        Alloy.Globals.AeDESModeSectionOne["MAP_AGGREGATE_PATH"] = mapAggregateFile.getNativePath() ;
+                    }
+                    else
+                    {
+                        Alloy.Globals.AlertUserAndLogAsync( L( "sketch_get_error_msg" ) ) ;
+                    }
+                }
+                else
+                {
+                    Alloy.Globals.AeDESModeSectionOne["MAP_AGGREGATE_PATH"] = "" ;
+                }
             }
             else
             {
@@ -263,7 +324,8 @@ function CreateDefaultSectionTwoArray()
         "UNIT_OF_USE_TOURISM": "" ,         // Empty
         "UTILIZATION": "0" ,                // >65%
         "OCCUPANTS": "" ,                   // Empty
-        "PROPERTY": "0"                     // Private
+        "PUBLIC_PROPERTY": "0" ,            // 0%
+        "PRIVATE_PROPERTY": "100"           // 100%
     } ;
 }
 
@@ -303,7 +365,8 @@ function LoadSectionTwoData()
                     "UNIT_OF_USE_TOURISM": sectionTwoData.get( "UNIT_OF_USE_TOURISM" ) ,
                     "UTILIZATION": sectionTwoData.get( "UTILIZATION" ) ,
                     "OCCUPANTS": sectionTwoData.get( "OCCUPANTS" ) ,
-                    "PROPERTY": sectionTwoData.get( "PROPERTY" )
+                    "PUBLIC_PROPERTY": sectionTwoData.get( "PUBLIC_PROPERTY" ) ,
+                    "PRIVATE_PROPERTY": sectionTwoData.get( "PRIVATE_PROPERTY" )
                 } ;
             }
             else
@@ -317,7 +380,7 @@ function LoadSectionTwoData()
             // If current_form_id is -1, then we are here on adding new, so we create a default array
             CreateDefaultSectionTwoArray() ;
         }
-    }    
+    }
 }
 
 // Section two opening
@@ -350,6 +413,7 @@ function CreateDefaultSectionThreeArray()
         "REINFORCED_CONCRETE_FRAMES": "0" ,                    // false
         "REINFORCED_CONCRETE_WALLS": "0" ,                     // false
         "STEEL_FRAMES": "0" ,                                  // false
+        "WOOD_FRAMES_WALLS": "0" ,                             // false
         "MASONRY_STRUCTURES": "000000000000000000000000000000" // all false
     } ;
 }
@@ -383,6 +447,7 @@ function LoadSectionThreeData()
                     "REINFORCED_CONCRETE_FRAMES": sectionThreeData.get( "REINFORCED_CONCRETE_FRAMES" ) ,
                     "REINFORCED_CONCRETE_WALLS": sectionThreeData.get( "REINFORCED_CONCRETE_WALLS" ) ,
                     "STEEL_FRAMES": sectionThreeData.get( "STEEL_FRAMES" ) ,
+                    "WOOD_FRAMES_WALLS": sectionThreeData.get( "WOOD_FRAMES_WALLS" ) ,
                     "MASONRY_STRUCTURES": sectionThreeData.get( "MASONRY_STRUCTURES" )
                 } ;
             }
@@ -397,7 +462,7 @@ function LoadSectionThreeData()
             // If current_form_id is -1, then we are here on adding new, so we create a default array
             CreateDefaultSectionThreeArray() ;
         }
-    }    
+    }
 }
 
 // Section three opening
@@ -422,7 +487,7 @@ function CreateDefaultSectionFourArray()
     Alloy.Globals.AeDESModeSectionFour =
     {
         "DAMAGES": "000000000000000000" ,                         // all false
-        "MEASURES_OF_EMERGENCY": "0000000000000000000000000" // all false
+        "MEASURES_OF_EMERGENCY": "000000000000000000000000000000" // all false
     } ;
 }
 
@@ -461,7 +526,7 @@ function LoadSectionFourData()
             // If current_form_id is -1, then we are here on adding new, so we create a default array
             CreateDefaultSectionFourArray() ;
         }
-    }    
+    }
 }
 
 // Section four opening
@@ -523,7 +588,7 @@ function LoadSectionFiveData()
             // If current_form_id is -1, then we are here on adding new, so we create a default array
             CreateDefaultSectionFiveArray() ;
         }
-    }    
+    }
 }
 
 // Section five opening
@@ -547,7 +612,7 @@ function CreateDefaultSectionSixArray()
 {
     Alloy.Globals.AeDESModeSectionSix =
     {
-        "POTENTIAL_CAUSES": "0000000000" // all false
+        "POTENTIAL_CAUSES": "000000000000000" // all false
     } ;
 }
 
@@ -585,7 +650,7 @@ function LoadSectionSixData()
             // If current_form_id is -1, then we are here on adding new, so we create a default array
             CreateDefaultSectionSixArray() ;
         }
-    }    
+    }
 }
 
 // Section six opening
@@ -610,7 +675,6 @@ function CreateDefaultSectionSevenArray()
     Alloy.Globals.AeDESModeSectionSeven =
     {
         "MORPHOLOGY_SITE": "0" , // Plain
-        "SLOPES_LOOMING": "0" ,  // Absent
         "SUBSOIL": "0"           // Absent
     } ;
 }
@@ -636,7 +700,6 @@ function LoadSectionSevenData()
                 Alloy.Globals.AeDESModeSectionSeven =
                 {
                     "MORPHOLOGY_SITE": sectionSevenData.get( "MORPHOLOGY_SITE" ) ,
-                    "SLOPES_LOOMING": sectionSevenData.get( "SLOPES_LOOMING" ) ,
                     "SUBSOIL": sectionSevenData.get( "SUBSOIL" )
                 } ;
             }
@@ -651,7 +714,7 @@ function LoadSectionSevenData()
             // If current_form_id is -1, then we are here on adding new, so we create a default array
             CreateDefaultSectionSevenArray() ;
         }
-    }    
+    }
 }
 
 // Section seven opening
@@ -675,17 +738,20 @@ function CreateDefaultSectionEightArray()
 {
     Alloy.Globals.AeDESModeSectionEight =
     {
-        "STRUCTURAL": "0" ,                             // Low
-        "NOT_STRUCTURAL": "0" ,                         // Low
-        "EXTERNAL": "0" ,                               // Low
-        "GEOTECHNICAL": "0" ,                           // Low
-        "OUTCOME_PRACTICABILITY": "0" ,                 // Accessible
-        "HOUSING_UNITS_UNINHABITABLE": "" ,             // Empty
-        "FAMILIES_EVACUATED": "" ,                      // Empty
-        "EVACUEES_N": "" ,                              // Empty
-        "ACCURACY_VISIT": "0" ,                         // Complete (>2/3)
-        "OTHER": "" ,                                   // Empty
-        "MEASURES_OF_EMERGENCY": "00000000000000000000" // all false
+        "STRUCTURAL": "0" ,                                   // Low
+        "NOT_STRUCTURAL": "0" ,                               // Low
+        "EXTERNAL": "0" ,                                     // Low
+        "GEOTECHNICAL": "0" ,                                 // Low
+        "OUTCOME_PRACTICABILITY": "0" ,                       // Accessible
+        "HOUSING_UNITS_UNINHABITABLE": "" ,                   // Empty
+        "FAMILIES_EVACUATED": "" ,                            // Empty
+        "EVACUEES_N": "" ,                                    // Empty
+        "DEEPENING_MOTIVATIONS_AND_TYPE": "" ,                // Empty
+        "ACCURACY_VISIT": "0" ,                               // Complete (>2/3)
+        "OTHER": "" ,                                         // Empty
+        "MEASURES_OF_EMERGENCY": "000000000000000000000000" , // all false
+        "OTHER_1": "" ,                                       // Empty
+        "OTHER_2": ""                                         // Empty
     } ;
 }
 
@@ -717,9 +783,12 @@ function LoadSectionEightData()
                     "HOUSING_UNITS_UNINHABITABLE": sectionEightData.get( "HOUSING_UNITS_UNINHABITABLE" ) ,
                     "FAMILIES_EVACUATED": sectionEightData.get( "FAMILIES_EVACUATED" ) ,
                     "EVACUEES_N": sectionEightData.get( "EVACUEES_N" ) ,
+                    "DEEPENING_MOTIVATIONS_AND_TYPE": sectionEightData.get( "DEEPENING_MOTIVATIONS_AND_TYPE" ) ,
                     "ACCURACY_VISIT": sectionEightData.get( "ACCURACY_VISIT" ) ,
                     "OTHER": sectionEightData.get( "OTHER" ) ,
-                    "MEASURES_OF_EMERGENCY": sectionEightData.get( "MEASURES_OF_EMERGENCY" )
+                    "MEASURES_OF_EMERGENCY": sectionEightData.get( "MEASURES_OF_EMERGENCY" ) ,
+                    "OTHER_1": sectionEightData.get( "OTHER_1" ) ,
+                    "OTHER_2": sectionEightData.get( "OTHER_2" )
                 } ;
             }
             else
@@ -733,7 +802,7 @@ function LoadSectionEightData()
             // If current_form_id is -1, then we are here on adding new, so we create a default array
             CreateDefaultSectionEightArray() ;
         }
-    }    
+    }
 }
 
 // Section eight opening
@@ -797,7 +866,7 @@ function LoadSectionNineData()
             // If current_form_id is -1, then we are here on adding new, so we create a default array
             CreateDefaultSectionNineArray() ;
         }
-    }    
+    }
 }
 
 // Section nine opening
@@ -842,19 +911,19 @@ function handleMenuClick( _event )
                         OpenDetails() ;
                     }
                     break ;
-        
+
                     case 1:
                     {
                         OpenSectionOne() ;
                     }
                     break ;
-        
+
                     case 2:
                     {
                         OpenSectionTwo() ;
                     }
                     break ;
-        
+
                     case 3:
                     {
                         OpenSectionThree() ;
@@ -925,7 +994,7 @@ function Save( title , message , callbackFnt )
         var alertDialog = Titanium.UI.createAlertDialog(
         {
             title: L( title ) ,
-            message: L( message ) ,             
+            message: L( message ) ,
             buttonNames: [ L( 'generic_yes_msg' ) , L( 'generic_no_msg' ) ] ,
             cancel: 1
         } ) ;
@@ -968,7 +1037,7 @@ function SaveInternal()
         {
             bCanClickOnTableView = false ;
             bIsWorkInProgress = true ;
-  
+
             var bError = false ;
 
             var user = "" ;
@@ -995,14 +1064,28 @@ function SaveInternal()
                     {
                         // A default one will be used
                         var current_date = new Date() ;
-                    
+
                         Alloy.Globals.AeDESModeDetails["FORM_NO"] = current_date.getFullYear().toFixed( 0 ) ;
                     }
-    
+
                     var detailsModel = Alloy.createModel( "AeDESForms" ,
                     {
+                        TEAM: Alloy.Globals.AeDESModeDetails["TEAM"] ,
+                        FORM_ID: Alloy.Globals.AeDESModeDetails["FORM_ID"] ,
                         FORM_NO: Alloy.Globals.AeDESModeDetails["FORM_NO"] ,
                         DATE: Alloy.Globals.AeDESModeDetails["DATE"] ,
+                        ISTAT_REG: Alloy.Globals.AeDESModeDetails["ISTAT_REG"] ,
+                        ISTAT_PROV: Alloy.Globals.AeDESModeDetails["ISTAT_PROV"] ,
+                        ISTAT_PUBLIC: Alloy.Globals.AeDESModeDetails["ISTAT_PUBLIC"] ,
+                        AGGREGATE_N: Alloy.Globals.AeDESModeDetails["AGGREGATE_N"] ,
+                        BUILDING_N: Alloy.Globals.AeDESModeDetails["BUILDING_N"] ,
+                        ISTAT_PLACE_CODE: Alloy.Globals.AeDESModeDetails["ISTAT_PLACE_CODE"] ,
+                        PAPER_TYPE: Alloy.Globals.AeDESModeDetails["PAPER_TYPE"] ,
+                        PAPER_N: Alloy.Globals.AeDESModeDetails["PAPER_N"] ,
+                        ISTAT_CENSUS_SECTION: Alloy.Globals.AeDESModeDetails["ISTAT_CENSUS_SECTION"] ,
+                        SHEET: Alloy.Globals.AeDESModeDetails["SHEET"] ,
+                        ATTACHMENT: Alloy.Globals.AeDESModeDetails["ATTACHMENT"] ,
+                        PARTICLES: Alloy.Globals.AeDESModeDetails["PARTICLES"] ,
                         USER: user ,
                         SYNCHRONIZED: "0"
                     } ) ;
@@ -1014,12 +1097,26 @@ function SaveInternal()
                     // A default form_no will be used
                     var current_date = new Date() ;
                     var current_time = current_date.getTime() ;
-                
+
                     var default_form_no = current_date.getFullYear().toFixed( 0 ) ;
                     var detailsModel = Alloy.createModel( "AeDESForms" ,
                     {
+                        TEAM: "" ,
+                        FORM_ID: "" ,
                         FORM_NO: default_form_no ,
                         DATE: current_time.toString() ,
+                        ISTAT_REG: "" ,
+                        ISTAT_PROV: "" ,
+                        ISTAT_PUBLIC: "" ,
+                        AGGREGATE_N: "" ,
+                        BUILDING_N: "" ,
+                        ISTAT_PLACE_CODE: "" ,
+                        PAPER_TYPE: "" ,
+                        PAPER_N: "" ,
+                        ISTAT_CENSUS_SECTION: "" ,
+                        SHEET: "" ,
+                        ATTACHMENT: "" ,
+                        PARTICLES: "" ,
                         USER: user ,
                         SYNCHRONIZED: "0"
                     } ) ;
@@ -1041,7 +1138,7 @@ function SaveInternal()
                     {
                         // A default one will be used
                         var current_date = new Date() ;
-                    
+
                         Alloy.Globals.AeDESModeDetails["FORM_NO"] = current_date.getFullYear().toFixed( 0 ) ;
                     }
 
@@ -1057,8 +1154,22 @@ function SaveInternal()
                         var currentDetails = recoverDetails.at( 0 ) ;
                         currentDetails.set(
                         {
+                            TEAM: Alloy.Globals.AeDESModeDetails["TEAM"] ,
+                            FORM_ID: Alloy.Globals.AeDESModeDetails["FORM_ID"] ,
                             FORM_NO: Alloy.Globals.AeDESModeDetails["FORM_NO"] ,
                             DATE: Alloy.Globals.AeDESModeDetails["DATE"] ,
+                            ISTAT_REG: Alloy.Globals.AeDESModeDetails["ISTAT_REG"] ,
+                            ISTAT_PROV: Alloy.Globals.AeDESModeDetails["ISTAT_PROV"] ,
+                            ISTAT_PUBLIC: Alloy.Globals.AeDESModeDetails["ISTAT_PUBLIC"] ,
+                            AGGREGATE_N: Alloy.Globals.AeDESModeDetails["AGGREGATE_N"] ,
+                            BUILDING_N: Alloy.Globals.AeDESModeDetails["BUILDING_N"] ,
+                            ISTAT_PLACE_CODE: Alloy.Globals.AeDESModeDetails["ISTAT_PLACE_CODE"] ,
+                            PAPER_TYPE: Alloy.Globals.AeDESModeDetails["PAPER_TYPE"] ,
+                            PAPER_N: Alloy.Globals.AeDESModeDetails["PAPER_N"] ,
+                            ISTAT_CENSUS_SECTION: Alloy.Globals.AeDESModeDetails["ISTAT_CENSUS_SECTION"] ,
+                            SHEET: Alloy.Globals.AeDESModeDetails["SHEET"] ,
+                            ATTACHMENT: Alloy.Globals.AeDESModeDetails["ATTACHMENT"] ,
+                            PARTICLES: Alloy.Globals.AeDESModeDetails["PARTICLES"] ,
                             USER: user ,
                             SYNCHRONIZED: "0"
                         } ) ;
@@ -1089,7 +1200,7 @@ function SaveInternal()
                     }
                 }
             }
-    
+
             // If the form_id was empty, we have to fill it with the generated one
             if( current_form_id == - 1 )
             {
@@ -1108,11 +1219,12 @@ function SaveInternal()
                 Ti.API.info( '\nNEW_ID: ' + current_form_id ) ;
             }
 
+            var current_time = new Date().toISOString().replace( /(-)|(\.)|(:)/g , "" ) ;
             // If the array isn't null or empty, we have the details of the Section one
             if( Alloy.Globals.AeDESModeSectionOne && _.size( Alloy.Globals.AeDESModeSectionOne ) > 0 )
             {
                 Ti.API.info( '\nSectionOne:\n' ) ;
-    
+
                 var recoverSectionOne = Alloy.createCollection( 'AeDESFormsSectionOne' ) ;
                 recoverSectionOne.fetch(
                 {
@@ -1121,42 +1233,141 @@ function SaveInternal()
                 if( recoverSectionOne.length > 0 )
                 {
                     var currentSectionOne = recoverSectionOne.at( 0 ) ;
-                    currentSectionOne.set(
+
+                    var sketch_path = currentSectionOne.get( "MAP_AGGREGATE_PATH" ) ;
+                    if( Alloy.Globals.AeDESModeSectionOne["MAP_AGGREGATE_MODIFIED"] &&
+                        Alloy.Globals.AeDESModeSectionOne["MAP_AGGREGATE_MODIFIED"] == "Y" )
                     {
-                        LATITUDE: Alloy.Globals.AeDESModeSectionOne["LATITUDE"] ,
-                        LONGITUDE: Alloy.Globals.AeDESModeSectionOne["LONGITUDE"] ,
-                        ALTITUDE: Alloy.Globals.AeDESModeSectionOne["ALTITUDE"] ,
-                        PROVINCE: Alloy.Globals.AeDESModeSectionOne["PROVINCE"] ,
-                        MUNICIPALITY: Alloy.Globals.AeDESModeSectionOne["MUNICIPALITY"] ,
-                        PLACE: Alloy.Globals.AeDESModeSectionOne["PLACE"] ,
-                        ADDRESS: Alloy.Globals.AeDESModeSectionOne["ADDRESS"] ,
-                        CIVIC_NO: Alloy.Globals.AeDESModeSectionOne["CIVIC_NO"] ,
-                        BUILDING_POSITION: Alloy.Globals.AeDESModeSectionOne["BUILDING_POSITION"] ,
-                        B_NAME_OR_OWNER: Alloy.Globals.AeDESModeSectionOne["B_NAME_OR_OWNER"] ,
-                        CODE_OF_USE: Alloy.Globals.AeDESModeSectionOne["CODE_OF_USE"]
-                    } ) ;
-                    currentSectionOne.save() ;
-                    currentSectionOne = null ;
+                        if( sketch_path )
+                        {
+                            var file = Alloy.Globals.getFileForWrite( sketch_path ) ;
+                            if( file.exists() )
+                            {
+                                // Delete old sketch if it exists
+                                file.deleteFile() ;
+                            }
+
+                            if( Alloy.Globals.AeDESModeSectionOne["MAP_AGGREGATE_PATH"] )
+                            {
+                            }
+                            else
+                            {
+                                sketch_path = "" ;
+                                file = null ;
+                            }
+                        }
+                        else
+                        {
+                            if( Alloy.Globals.AeDESModeSectionOne["MAP_AGGREGATE_PATH"] )
+                            {
+                                sketch_path = current_time + "_" + "_sketch.png" ;
+                                var file = Alloy.Globals.getFileForWrite( sketch_path ) ;
+                            }
+                            else
+                            {
+                                var file = null ;
+                            }
+                        }
+
+                        if( file )
+                        {
+                            var fromFile = Ti.Filesystem.getFile( Alloy.Globals.AeDESModeSectionOne["MAP_AGGREGATE_PATH"] ) ;
+                            if( file.write( fromFile.read() ) )
+                            {
+                                Alloy.Globals.AeDESModeSectionOne["MAP_AGGREGATE_MODIFIED"] = "N" ;
+                            }
+                            else
+                            {
+                                bError = true ;
+
+                                Alloy.Globals.AlertUserAndLogAsync( L( "sketch_saving_error_msg" ) ) ;
+                            }
+
+                            // To avoid memory leaks
+                            file = null ;
+                        }
+                    }
+
+                    if( !bError )
+                    {
+                        currentSectionOne.set(
+                        {
+                            COORDINATES_TYPE: Alloy.Globals.AeDESModeSectionOne["COORDINATES_TYPE"] ,
+                            OTHER_COORDINATES_TYPE: Alloy.Globals.AeDESModeSectionOne["OTHER_COORDINATES_TYPE"] ,
+                            TIMEZONE: Alloy.Globals.AeDESModeSectionOne["TIMEZONE"] ,
+                            DATUM: Alloy.Globals.AeDESModeSectionOne["DATUM"] ,
+                            LATITUDE: Alloy.Globals.AeDESModeSectionOne["LATITUDE"] ,
+                            LONGITUDE: Alloy.Globals.AeDESModeSectionOne["LONGITUDE"] ,
+                            ALTITUDE: Alloy.Globals.AeDESModeSectionOne["ALTITUDE"] ,
+                            PROVINCE: Alloy.Globals.AeDESModeSectionOne["PROVINCE"] ,
+                            MUNICIPALITY: Alloy.Globals.AeDESModeSectionOne["MUNICIPALITY"] ,
+                            PLACE: Alloy.Globals.AeDESModeSectionOne["PLACE"] ,
+                            ADDRESS: Alloy.Globals.AeDESModeSectionOne["ADDRESS"] ,
+                            LOCATION_TYPE: Alloy.Globals.AeDESModeSectionOne["LOCATION_TYPE"] ,
+                            LOCATION_DETAILS: Alloy.Globals.AeDESModeSectionOne["LOCATION_DETAILS"] ,
+                            CIVIC_NO: Alloy.Globals.AeDESModeSectionOne["CIVIC_NO"] ,
+                            BUILDING_POSITION: Alloy.Globals.AeDESModeSectionOne["BUILDING_POSITION"] ,
+                            B_NAME_OR_OWNER: Alloy.Globals.AeDESModeSectionOne["B_NAME_OR_OWNER"] ,
+                            CODE_OF_USE: Alloy.Globals.AeDESModeSectionOne["CODE_OF_USE"] ,
+                            MAP_AGGREGATE_PATH: sketch_path ,
+                        } ) ;
+                        currentSectionOne.save() ;
+                        currentSectionOne = null ;
+                    }
                 }
                 else
                 {
-                    var sectionOneModel = Alloy.createModel( "AeDESFormsSectionOne" ,
+                    var sketch_path = "" ;
+                    if( Alloy.Globals.AeDESModeSectionOne["MAP_AGGREGATE_PATH"] )
                     {
-                        FORM_ID: current_form_id ,
-                        LATITUDE: Alloy.Globals.AeDESModeSectionOne["LATITUDE"] ,
-                        LONGITUDE: Alloy.Globals.AeDESModeSectionOne["LONGITUDE"] ,
-                        ALTITUDE: Alloy.Globals.AeDESModeSectionOne["ALTITUDE"] ,
-                        PROVINCE: Alloy.Globals.AeDESModeSectionOne["PROVINCE"] ,
-                        MUNICIPALITY: Alloy.Globals.AeDESModeSectionOne["MUNICIPALITY"] ,
-                        PLACE: Alloy.Globals.AeDESModeSectionOne["PLACE"] ,
-                        ADDRESS: Alloy.Globals.AeDESModeSectionOne["ADDRESS"] ,
-                        CIVIC_NO: Alloy.Globals.AeDESModeSectionOne["CIVIC_NO"] ,
-                        BUILDING_POSITION: Alloy.Globals.AeDESModeSectionOne["BUILDING_POSITION"] ,
-                        B_NAME_OR_OWNER: Alloy.Globals.AeDESModeSectionOne["B_NAME_OR_OWNER"] ,
-                        CODE_OF_USE: Alloy.Globals.AeDESModeSectionOne["CODE_OF_USE"]
-                    } ) ;
-                    sectionOneModel.save() ;
-                    sectionOneModel = null ;
+                        sketch_path = current_time + "_" + "_sketch.png" ;
+
+                        var file = Alloy.Globals.getFileForWrite( sketch_path ) ;
+                        if( file.exists() )
+                        {
+                            // Delete old file if it exists
+                            file.deleteFile() ;
+                        }
+
+                        var fromFile = Ti.Filesystem.getFile( Alloy.Globals.AeDESModeSectionOne["MAP_AGGREGATE_PATH"] ) ;
+                        if( !file.write( fromFile.read() ) )
+                        {
+                            bError = true ;
+
+                            Alloy.Globals.AlertUserAndLogAsync( L( "sketch_saving_error_msg" ) ) ;
+                        }
+
+                        // To avoid memory leaks
+                        file = null ;
+                    }
+
+                    if( !bError )
+                    {
+                        var sectionOneModel = Alloy.createModel( "AeDESFormsSectionOne" ,
+                        {
+                            FORM_ID: current_form_id ,
+                            COORDINATES_TYPE: Alloy.Globals.AeDESModeSectionOne["COORDINATES_TYPE"] ,
+                            OTHER_COORDINATES_TYPE: Alloy.Globals.AeDESModeSectionOne["OTHER_COORDINATES_TYPE"] ,
+                            TIMEZONE: Alloy.Globals.AeDESModeSectionOne["TIMEZONE"] ,
+                            DATUM: Alloy.Globals.AeDESModeSectionOne["DATUM"] ,
+                            LATITUDE: Alloy.Globals.AeDESModeSectionOne["LATITUDE"] ,
+                            LONGITUDE: Alloy.Globals.AeDESModeSectionOne["LONGITUDE"] ,
+                            ALTITUDE: Alloy.Globals.AeDESModeSectionOne["ALTITUDE"] ,
+                            PROVINCE: Alloy.Globals.AeDESModeSectionOne["PROVINCE"] ,
+                            MUNICIPALITY: Alloy.Globals.AeDESModeSectionOne["MUNICIPALITY"] ,
+                            PLACE: Alloy.Globals.AeDESModeSectionOne["PLACE"] ,
+                            ADDRESS: Alloy.Globals.AeDESModeSectionOne["ADDRESS"] ,
+                            LOCATION_TYPE: Alloy.Globals.AeDESModeSectionOne["LOCATION_TYPE"] ,
+                            LOCATION_DETAILS: Alloy.Globals.AeDESModeSectionOne["LOCATION_DETAILS"] ,
+                            CIVIC_NO: Alloy.Globals.AeDESModeSectionOne["CIVIC_NO"] ,
+                            BUILDING_POSITION: Alloy.Globals.AeDESModeSectionOne["BUILDING_POSITION"] ,
+                            B_NAME_OR_OWNER: Alloy.Globals.AeDESModeSectionOne["B_NAME_OR_OWNER"] ,
+                            CODE_OF_USE: Alloy.Globals.AeDESModeSectionOne["CODE_OF_USE"] ,
+                            MAP_AGGREGATE_PATH: sketch_path
+                        } ) ;
+                        sectionOneModel.save() ;
+                        sectionOneModel = null ;
+                    }
                 }
             }
 
@@ -1191,7 +1402,8 @@ function SaveInternal()
                         UNIT_OF_USE_TOURISM: Alloy.Globals.AeDESModeSectionTwo["UNIT_OF_USE_TOURISM"] ,
                         UTILIZATION: Alloy.Globals.AeDESModeSectionTwo["UTILIZATION"] ,
                         OCCUPANTS: Alloy.Globals.AeDESModeSectionTwo["OCCUPANTS"] ,
-                        PROPERTY: Alloy.Globals.AeDESModeSectionTwo["PROPERTY"]
+                        PUBLIC_PROPERTY: Alloy.Globals.AeDESModeSectionTwo["PUBLIC_PROPERTY"] ,
+                        PRIVATE_PROPERTY: Alloy.Globals.AeDESModeSectionTwo["PRIVATE_PROPERTY"]
                     } ) ;
                     currentSectionTwo.save() ;
                     currentSectionTwo = null ;
@@ -1217,7 +1429,8 @@ function SaveInternal()
                         UNIT_OF_USE_TOURISM: Alloy.Globals.AeDESModeSectionTwo["UNIT_OF_USE_TOURISM"] ,
                         UTILIZATION: Alloy.Globals.AeDESModeSectionTwo["UTILIZATION"] ,
                         OCCUPANTS: Alloy.Globals.AeDESModeSectionTwo["OCCUPANTS"] ,
-                        PROPERTY: Alloy.Globals.AeDESModeSectionTwo["PROPERTY"]
+                        PUBLIC_PROPERTY: Alloy.Globals.AeDESModeSectionTwo["PUBLIC_PROPERTY"] ,
+                        PRIVATE_PROPERTY: Alloy.Globals.AeDESModeSectionTwo["PRIVATE_PROPERTY"]
                     } ) ;
                     sectionTwoModel.save() ;
                     sectionTwoModel = null ;
@@ -1248,6 +1461,7 @@ function SaveInternal()
                         REINFORCED_CONCRETE_FRAMES: Alloy.Globals.AeDESModeSectionThree["REINFORCED_CONCRETE_FRAMES"] ,
                         REINFORCED_CONCRETE_WALLS: Alloy.Globals.AeDESModeSectionThree["REINFORCED_CONCRETE_WALLS"] ,
                         STEEL_FRAMES: Alloy.Globals.AeDESModeSectionThree["STEEL_FRAMES"] ,
+                        WOOD_FRAMES_WALLS: Alloy.Globals.AeDESModeSectionThree["WOOD_FRAMES_WALLS"] ,
                         MASONRY_STRUCTURES: Alloy.Globals.AeDESModeSectionThree["MASONRY_STRUCTURES"]
                     } ) ;
                     currentSectionThree.save() ;
@@ -1388,7 +1602,6 @@ function SaveInternal()
                     currentSectionSeven.set(
                     {
                         MORPHOLOGY_SITE: Alloy.Globals.AeDESModeSectionSeven["MORPHOLOGY_SITE"] ,
-                        SLOPES_LOOMING: Alloy.Globals.AeDESModeSectionSeven["SLOPES_LOOMING"] ,
                         SUBSOIL: Alloy.Globals.AeDESModeSectionSeven["SUBSOIL"]
                     } ) ;
                     currentSectionSeven.save() ;
@@ -1400,7 +1613,6 @@ function SaveInternal()
                     {
                         FORM_ID: current_form_id ,
                         MORPHOLOGY_SITE: Alloy.Globals.AeDESModeSectionSeven["MORPHOLOGY_SITE"] ,
-                        SLOPES_LOOMING: Alloy.Globals.AeDESModeSectionSeven["SLOPES_LOOMING"] ,
                         SUBSOIL: Alloy.Globals.AeDESModeSectionSeven["SUBSOIL"]
                     } ) ;
                     sectionSevenModel.save() ;
@@ -1431,9 +1643,12 @@ function SaveInternal()
                         HOUSING_UNITS_UNINHABITABLE: Alloy.Globals.AeDESModeSectionEight["HOUSING_UNITS_UNINHABITABLE"] ,
                         FAMILIES_EVACUATED: Alloy.Globals.AeDESModeSectionEight["FAMILIES_EVACUATED"] ,
                         EVACUEES_N: Alloy.Globals.AeDESModeSectionEight["EVACUEES_N"] ,
+                        DEEPENING_MOTIVATIONS_AND_TYPE: Alloy.Globals.AeDESModeSectionEight["DEEPENING_MOTIVATIONS_AND_TYPE"] ,
                         ACCURACY_VISIT: Alloy.Globals.AeDESModeSectionEight["ACCURACY_VISIT"] ,
                         OTHER: Alloy.Globals.AeDESModeSectionEight["OTHER"] ,
-                        MEASURES_OF_EMERGENCY: Alloy.Globals.AeDESModeSectionEight["MEASURES_OF_EMERGENCY"]
+                        MEASURES_OF_EMERGENCY: Alloy.Globals.AeDESModeSectionEight["MEASURES_OF_EMERGENCY"] ,
+                        OTHER_1: Alloy.Globals.AeDESModeSectionEight["OTHER_1"] ,
+                        OTHER_2: Alloy.Globals.AeDESModeSectionEight["OTHER_2"]
                     } ) ;
                     currentSectionEight.save() ;
                     currentSectionEight = null ;
@@ -1451,9 +1666,12 @@ function SaveInternal()
                         HOUSING_UNITS_UNINHABITABLE: Alloy.Globals.AeDESModeSectionEight["HOUSING_UNITS_UNINHABITABLE"] ,
                         FAMILIES_EVACUATED: Alloy.Globals.AeDESModeSectionEight["FAMILIES_EVACUATED"] ,
                         EVACUEES_N: Alloy.Globals.AeDESModeSectionEight["EVACUEES_N"] ,
+                        DEEPENING_MOTIVATIONS_AND_TYPE: Alloy.Globals.AeDESModeSectionEight["DEEPENING_MOTIVATIONS_AND_TYPE"] ,
                         ACCURACY_VISIT: Alloy.Globals.AeDESModeSectionEight["ACCURACY_VISIT"] ,
                         OTHER: Alloy.Globals.AeDESModeSectionEight["OTHER"] ,
-                        MEASURES_OF_EMERGENCY: Alloy.Globals.AeDESModeSectionEight["MEASURES_OF_EMERGENCY"]
+                        MEASURES_OF_EMERGENCY: Alloy.Globals.AeDESModeSectionEight["MEASURES_OF_EMERGENCY"] ,
+                        OTHER_1: Alloy.Globals.AeDESModeSectionEight["OTHER_1"] ,
+                        OTHER_2: Alloy.Globals.AeDESModeSectionEight["OTHER_2"]
                     } ) ;
                     sectionEightModel.save() ;
                     sectionEightModel = null ;
@@ -1494,7 +1712,6 @@ function SaveInternal()
                 }
             }
 
-            var current_time = new Date().toISOString().replace( /(-)|(\.)|(:)/g , "" ) ;
             // If the array isn't null or empty, we have some images
             if( Alloy.Globals.CurrentPicsPath && Alloy.Globals.CurrentPicsPath.length > 0 )
             {
@@ -1568,11 +1785,11 @@ function SaveInternal()
                             else
                             {
                                 bError = true ;
-            
+
                                 Alloy.Globals.AlertUserAndLogAsync( L( "image_saving_error_msg" ) ) ;
                             }
                         }
-                        
+
                         // To avoid memory leaks
                         file = null ;
                     }
@@ -1582,10 +1799,10 @@ function SaveInternal()
                         break ;
                     }
                 }
-    
+
                 if( !bError )
                 {
-                    // This saving also avoid problem regarding the images association 
+                    // This saving also avoid problem regarding the images association
                     Alloy.Globals.CurrentPicsPath = null ;
                 }
             }
@@ -1664,24 +1881,24 @@ function SaveInternal()
                             else
                             {
                                 bError = true ;
-            
+
                                 Alloy.Globals.AlertUserAndLogAsync( L( "video_saving_error_msg" ) ) ;
                             }
                         }
-        
+
                         // To avoid memory leaks
                         file = null ;
                     }
-    
+
                     if( bError )
                     {
                         break ;
                     }
                 }
-    
+
                 if( !bError )
                 {
-                    // This saving also avoid problem regarding the videos association 
+                    // This saving also avoid problem regarding the videos association
                     Alloy.Globals.CurrentVideosPath = null ;
                 }
             }
@@ -1694,7 +1911,7 @@ function SaveInternal()
             {
                 // Commit the transaction
                 Ti.API.info( 'COMMIT.\nEND' ) ;
-    
+
                 Ti.App.fireEvent( "aedes_mode:save" ) ;
 
                 bRet = true ;
@@ -1720,7 +1937,7 @@ function OnBtnBuildingDamageAssessments_Click( e )
     try
     {
         var AeDESModeUtils = require( '/AeDESModeUtils' ) ;
-        
+
         var media_array = AeDESModeUtils.CreateMediaArray( current_form_id , true , true ) ;
 
         if( media_array && media_array.length > 0 )
@@ -1776,7 +1993,7 @@ function OnBtnSend_Click( e )
                 loader.validatesSecureCertificate = false ;
 
                 // Runs the function when the data is ready for us to process
-                loader.onload = function() 
+                loader.onload = function()
                 {
                     if( this.responseText && this.responseText.substring( 0 , 6 ) != "ERROR_" )
                     {
@@ -1796,7 +2013,7 @@ function OnBtnSend_Click( e )
                             var zipname = "AeDESForm.zip" ;
                         }
 
-                        // The file will be stored in the temporary directory 
+                        // The file will be stored in the temporary directory
                         var file = Titanium.Filesystem.getFile( Titanium.Filesystem.getTempDirectory() , filename ) ;
 
                         if( file.exists() )
@@ -1869,10 +2086,14 @@ function OnBtnSend_Click( e )
                             case 1:
                             {
                                 tpd_name_1 = personalData.get( "NAME" ) ;
-                                var file = Alloy.Globals.getFileForRead( personalData.get( "SIGN_PATH" ) ) ;
-                                if( file )
+                                var filePath = personalData.get( "SIGN_PATH" ) ;
+                                if( filePath )
                                 {
-                                    tpd_sign_1_image = file.read() ;
+                                    var file = Alloy.Globals.getFileForRead( filePath ) ;
+                                    if( file )
+                                    {
+                                        tpd_sign_1_image = file.read() ;
+                                    }
                                 }
                             }
                             break ;
@@ -1880,10 +2101,14 @@ function OnBtnSend_Click( e )
                             case 2:
                             {
                                 tpd_name_2 = personalData.get( "NAME" ) ;
-                                var file = Alloy.Globals.getFileForRead( personalData.get( "SIGN_PATH" ) ) ;
-                                if( file )
+                                var filePath = personalData.get( "SIGN_PATH" ) ;
+                                if( filePath )
                                 {
-                                    tpd_sign_2_image = file.read() ;
+                                    var file = Alloy.Globals.getFileForRead( filePath ) ;
+                                    if( file )
+                                    {
+                                        tpd_sign_2_image = file.read() ;
+                                    }
                                 }
                             }
                             break ;
@@ -1891,10 +2116,14 @@ function OnBtnSend_Click( e )
                             case 3:
                             {
                                 tpd_name_3 = personalData.get( "NAME" ) ;
-                                var file = Alloy.Globals.getFileForRead( personalData.get( "SIGN_PATH" ) ) ;
-                                if( file )
+                                var filePath = personalData.get( "SIGN_PATH" ) ;
+                                if( filePath )
                                 {
-                                    tpd_sign_3_image = file.read() ;
+                                    var file = Alloy.Globals.getFileForRead( filePath ) ;
+                                    if( file )
+                                    {
+                                        tpd_sign_3_image = file.read() ;
+                                    }
                                 }
                             }
                             break ;
@@ -1915,10 +2144,28 @@ function OnBtnSend_Click( e )
                     TPD_SIGN_3_IMAGE: tpd_sign_3_image ,
 
                     // Details
+                    TEAM: Alloy.Globals.AeDESModeDetails["TEAM"] ,
+                    FORM_ID: Alloy.Globals.AeDESModeDetails["FORM_ID"] ,
                     FORM_NO: Alloy.Globals.AeDESModeDetails["FORM_NO"] ,
                     DATE: Alloy.Globals.AeDESModeDetails["DATE"] ,
+                    ISTAT_REG: Alloy.Globals.AeDESModeDetails["ISTAT_REG"] ,
+                    ISTAT_PROV: Alloy.Globals.AeDESModeDetails["ISTAT_PROV"] ,
+                    ISTAT_PUBLIC: Alloy.Globals.AeDESModeDetails["ISTAT_PUBLIC"] ,
+                    AGGREGATE_N: Alloy.Globals.AeDESModeDetails["AGGREGATE_N"] ,
+                    BUILDING_N: Alloy.Globals.AeDESModeDetails["BUILDING_N"] ,
+                    ISTAT_PLACE_CODE: Alloy.Globals.AeDESModeDetails["ISTAT_PLACE_CODE"] ,
+                    PAPER_TYPE: Alloy.Globals.AeDESModeDetails["PAPER_TYPE"] ,
+                    PAPER_N: Alloy.Globals.AeDESModeDetails["PAPER_N"] ,
+                    ISTAT_CENSUS_SECTION: Alloy.Globals.AeDESModeDetails["ISTAT_CENSUS_SECTION"] ,
+                    SHEET: Alloy.Globals.AeDESModeDetails["SHEET"] ,
+                    ATTACHMENT: Alloy.Globals.AeDESModeDetails["ATTACHMENT"] ,
+                    PARTICLES: Alloy.Globals.AeDESModeDetails["PARTICLES"] ,
 
                     // Section one
+                    COORDINATES_TYPE: Alloy.Globals.AeDESModeSectionOne["COORDINATES_TYPE"] ,
+                    OTHER_COORDINATES_TYPE: Alloy.Globals.AeDESModeSectionOne["OTHER_COORDINATES_TYPE"] ,
+                    TIMEZONE: Alloy.Globals.AeDESModeSectionOne["TIMEZONE"] ,
+                    DATUM: Alloy.Globals.AeDESModeSectionOne["DATUM"] ,
                     LATITUDE: Alloy.Globals.AeDESModeSectionOne["LATITUDE"] ,
                     LONGITUDE: Alloy.Globals.AeDESModeSectionOne["LONGITUDE"] ,
                     ALTITUDE: Alloy.Globals.AeDESModeSectionOne["ALTITUDE"] ,
@@ -1926,6 +2173,8 @@ function OnBtnSend_Click( e )
                     MUNICIPALITY: Alloy.Globals.AeDESModeSectionOne["MUNICIPALITY"] ,
                     PLACE: Alloy.Globals.AeDESModeSectionOne["PLACE"] ,
                     ADDRESS: Alloy.Globals.AeDESModeSectionOne["ADDRESS"] ,
+                    LOCATION_TYPE: Alloy.Globals.AeDESModeSectionOne["LOCATION_TYPE"] ,
+                    LOCATION_DETAILS: Alloy.Globals.AeDESModeSectionOne["LOCATION_DETAILS"] ,
                     CIVIC_NO: Alloy.Globals.AeDESModeSectionOne["CIVIC_NO"] ,
                     BUILDING_POSITION: Alloy.Globals.AeDESModeSectionOne["BUILDING_POSITION"] ,
                     B_NAME_OR_OWNER: Alloy.Globals.AeDESModeSectionOne["B_NAME_OR_OWNER"] ,
@@ -1948,7 +2197,8 @@ function OnBtnSend_Click( e )
                     UNIT_OF_USE_TOURISM: Alloy.Globals.AeDESModeSectionTwo["UNIT_OF_USE_TOURISM"] ,
                     UTILIZATION: Alloy.Globals.AeDESModeSectionTwo["UTILIZATION"] ,
                     OCCUPANTS: Alloy.Globals.AeDESModeSectionTwo["OCCUPANTS"] ,
-                    PROPERTY: Alloy.Globals.AeDESModeSectionTwo["PROPERTY"] ,
+                    PUBLIC_PROPERTY: Alloy.Globals.AeDESModeSectionTwo["PUBLIC_PROPERTY"] ,
+                    PRIVATE_PROPERTY: Alloy.Globals.AeDESModeSectionTwo["PRIVATE_PROPERTY"] ,
 
                     // Section three
                     COVERAGE: Alloy.Globals.AeDESModeSectionThree["COVERAGE"] ,
@@ -1960,6 +2210,7 @@ function OnBtnSend_Click( e )
                     REINFORCED_CONCRETE_FRAMES: Alloy.Globals.AeDESModeSectionThree["REINFORCED_CONCRETE_FRAMES"] ,
                     REINFORCED_CONCRETE_WALLS: Alloy.Globals.AeDESModeSectionThree["REINFORCED_CONCRETE_WALLS"] ,
                     STEEL_FRAMES: Alloy.Globals.AeDESModeSectionThree["STEEL_FRAMES"] ,
+                    WOOD_FRAMES_WALLS: Alloy.Globals.AeDESModeSectionThree["WOOD_FRAMES_WALLS"] ,
                     MASONRY_STRUCTURES: Alloy.Globals.AeDESModeSectionThree["MASONRY_STRUCTURES"] ,
 
                     // Section four
@@ -1974,7 +2225,6 @@ function OnBtnSend_Click( e )
 
                     // Section seven
                     MORPHOLOGY_SITE: Alloy.Globals.AeDESModeSectionSeven["MORPHOLOGY_SITE"] ,
-                    SLOPES_LOOMING: Alloy.Globals.AeDESModeSectionSeven["SLOPES_LOOMING"] ,
                     SUBSOIL: Alloy.Globals.AeDESModeSectionSeven["SUBSOIL"] ,
 
                     // Section eight
@@ -1986,14 +2236,28 @@ function OnBtnSend_Click( e )
                     HOUSING_UNITS_UNINHABITABLE: Alloy.Globals.AeDESModeSectionEight["HOUSING_UNITS_UNINHABITABLE"] ,
                     FAMILIES_EVACUATED: Alloy.Globals.AeDESModeSectionEight["FAMILIES_EVACUATED"] ,
                     EVACUEES_N: Alloy.Globals.AeDESModeSectionEight["EVACUEES_N"] ,
+                    DEEPENING_MOTIVATIONS_AND_TYPE: Alloy.Globals.AeDESModeSectionEight["DEEPENING_MOTIVATIONS_AND_TYPE"] ,
                     ACCURACY_VISIT: Alloy.Globals.AeDESModeSectionEight["ACCURACY_VISIT"] ,
                     OTHER: Alloy.Globals.AeDESModeSectionEight["OTHER"] ,
                     EIGHT_MEASURES_OF_EMERGENCY: Alloy.Globals.AeDESModeSectionEight["MEASURES_OF_EMERGENCY"] ,
+                    OTHER_1: Alloy.Globals.AeDESModeSectionEight["OTHER_1"] ,
+                    OTHER_2: Alloy.Globals.AeDESModeSectionEight["OTHER_2"] ,
 
                     // Section nine
                     TOPIC: Alloy.Globals.AeDESModeSectionNine["TOPIC"] ,
                     OTHER_COMMENTS: Alloy.Globals.AeDESModeSectionNine["OTHER_COMMENTS"]
-                } ; 
+                } ;
+
+                var map_aggregate_image_content = "" ;
+                if( Alloy.Globals.AeDESModeSectionOne["MAP_AGGREGATE_PATH"] )
+                {
+                    var mapAggregateFile = Titanium.Filesystem.getFile( Alloy.Globals.AeDESModeSectionOne["MAP_AGGREGATE_PATH"] ) ;
+                    if( mapAggregateFile )
+                    {
+                        map_aggregate_image_content = mapAggregateFile.read() ;
+                    }
+                }
+                params["MAP_AGGREGATE_IMAGE"] = map_aggregate_image_content ;
 
                 loader.open( "POST" , "https://www.edam.resiltronics.org/ManipulatePDF/AeDESMode_ManipulatePDF.php" ) ;
 
@@ -2065,7 +2329,7 @@ function OnBtnMakeVideo_Click( e )
     var alertDialog = Titanium.UI.createAlertDialog(
     {
         title: L( 'generic_need_gps_title' ) ,
-        message: L( 'vid_need_gps_confirm_msg' ) ,             
+        message: L( 'vid_need_gps_confirm_msg' ) ,
         buttonNames: [ L( 'generic_yes_msg' ) , L( 'generic_no_msg' ) ] ,
         cancel: 1
     } ) ;
@@ -2136,7 +2400,7 @@ function OnBtnMakeVideo_Click( e )
 
                     bRet = true ;
                 }
-        
+
                 return bRet ;
             } , EndAsyncBusyAction_CallBack ) ;
         }
@@ -2172,7 +2436,7 @@ function OnBtnMakeMedia_Click( e )
     var alertDialog = Titanium.UI.createAlertDialog(
     {
         title: L( 'generic_need_gps_title' ) ,
-        message: message ,             
+        message: message ,
         buttonNames: [ L( 'generic_yes_msg' ) , L( 'generic_no_msg' ) ] ,
         cancel: 1
     } ) ;
@@ -2231,6 +2495,8 @@ function OnBtnMakeMedia_Click( e )
                     }
                     else
                     {
+                        EndAsyncBusyAction( $.activity_indicator , controls , EndAsyncBusyAction_CallBack ) ;
+
                         alert( L( 'generic_user_not_authorized_to_ask_localization' ) ) ;
                     }
                 }
@@ -2403,9 +2669,9 @@ function OnBtnMakeDraft_Click( e )
 
             // Controller creation for the Next View
             Alloy.Globals.createAndOpenControllerExt( 'DraftPaintView' , { type: "AeDES" } ) ;
-    
+
             bRet = true ;
-    
+
             return bRet ;
         } ) ;
     }

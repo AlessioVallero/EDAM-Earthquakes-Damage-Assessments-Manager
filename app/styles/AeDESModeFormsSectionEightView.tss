@@ -83,10 +83,18 @@
     width: Ti.UI.FILL
 } ,
 
+// DeepeningMotivationsAndType view
+"#viewAppTextFieldAeDESModeFormsSectionEightDeepeningMotivationsAndType":
+{
+    top: 560 ,
+    height: 50 ,
+    width: Ti.UI.FILL
+} ,
+
 // AccuracyVisit view
 "#viewAppComboBoxAeDESModeFormsSectionEightAccuracyVisit":
 {
-    top: 560 ,
+    top: 630 ,
     height: 50 ,
     width: Ti.UI.FILL
 } ,
@@ -94,7 +102,7 @@
 // Other view
 "#viewAppTextFieldAeDESModeFormsSectionEightOther":
 {
-    top: 630 ,
+    top: 700 ,
     height: 50 ,
     width: Ti.UI.FILL
 } ,
@@ -103,7 +111,7 @@
 "#lblAeDESModeFormsSectionEightMeasuresOfEmergency":
 {
     text: L( 'generic_measures_of_emergency_text_msg' ) ,
-    top: 700 ,
+    top: 770 ,
     width: 290 ,
     height: 18 ,
     font:
@@ -118,9 +126,9 @@
 // Table view with MeasuresOfEmergency
 "#tableViewAeDESModeFormsSectionEightMeasuresOfEmergency":
 {
-    top: 730 ,
+    top: 800 ,
     backgroundColor: '#ffffff' ,
-    height: 300 ,
+    height: 600 ,
     width: Ti.UI.FILL
 } ,
 
@@ -284,10 +292,42 @@
     color: "#000" ,
 } ,
 
+// Other 1 row
+"#tableViewAeDESModeFormsSectionEightMeasuresOfEmergencyRowOther1":
+{
+    hasChild: true ,
+    className: 'section_row' ,
+    color: "#000" ,
+} ,
+
+// Other 1 label
+"#lblAeDESModeFormsSectionEightMeasuresOfEmergencyRowOther1":
+{
+    text: L( 'generic_other_1_text_msg' ) ,
+    height: 50 ,
+    color: "#000" ,
+} ,
+
+// Other 2 row
+"#tableViewAeDESModeFormsSectionEightMeasuresOfEmergencyRowOther2":
+{
+    hasChild: true ,
+    className: 'section_row' ,
+    color: "#000" ,
+} ,
+
+// Other 2 label
+"#lblAeDESModeFormsSectionEightMeasuresOfEmergencyRowOther2":
+{
+    text: L( 'generic_other_2_text_msg' ) ,
+    height: 50 ,
+    color: "#000" ,
+} ,
+
 // Save view
 "#viewAppButtonSave":
 {
-    top: 1040 ,
+    top: 1410 ,
     width: 60 ,
     height: 80
 }

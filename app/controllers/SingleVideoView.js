@@ -412,11 +412,11 @@ try
     RefreshHeadingSelectedIndex( current_heading ) ;
     // Init app textfields
     $.widgetAppTextFieldLatitude.set_text_value( current_latitude ) ;
-    $.widgetAppTextFieldLatitude.init( L( 'generic_latitude_txt_hint' ) , OnLatitude_Change , Titanium.UI.KEYBOARD_NUMBERS_PUNCTUATION ) ;
+    $.widgetAppTextFieldLatitude.init( L( 'generic_latitude_txt_hint' ) , OnLatitude_Change , Titanium.UI.KEYBOARD_TYPE_NUMBERS_PUNCTUATION ) ;
     $.widgetAppTextFieldLatitude.enabled( view_enabled ) ;
 
     $.widgetAppTextFieldLongitude.set_text_value( current_longitude ) ;
-    $.widgetAppTextFieldLongitude.init( L( 'generic_longitude_txt_hint' ) , OnLongitude_Change , Titanium.UI.KEYBOARD_NUMBERS_PUNCTUATION ) ;
+    $.widgetAppTextFieldLongitude.init( L( 'generic_longitude_txt_hint' ) , OnLongitude_Change , Titanium.UI.KEYBOARD_TYPE_NUMBERS_PUNCTUATION ) ;
     $.widgetAppTextFieldLongitude.enabled( view_enabled ) ;
 
     $.widgetAppTextFieldAddress.set_text_value( current_address ) ;
@@ -424,11 +424,11 @@ try
     $.widgetAppTextFieldAddress.enabled( view_enabled ) ;
 
     $.widgetAppTextFieldDamagesLevel.set_text_value( current_damages_level ) ;
-    $.widgetAppTextFieldDamagesLevel.init( L( 'generic_damages_level_txt_hint' ) , OnDamagesLevel_Change , Titanium.UI.KEYBOARD_NUMBER_PAD , 2 , false , "5" ) ;
+    $.widgetAppTextFieldDamagesLevel.init( L( 'generic_damages_level_txt_hint' ) , OnDamagesLevel_Change , Titanium.UI.KEYBOARD_TYPE_NUMBER_PAD , 2 , false , "5" ) ;
     $.widgetAppTextFieldDamagesLevel.enabled( view_enabled ) ;
 
     $.widgetAppTextFieldDamagesArea.set_text_value( current_damages_area ) ;
-    $.widgetAppTextFieldDamagesArea.init( L( 'generic_damages_area_txt_hint' ) , OnDamagesArea_Change , Titanium.UI.KEYBOARD_NUMBER_PAD , 3 ) ;
+    $.widgetAppTextFieldDamagesArea.init( L( 'generic_damages_area_txt_hint' ) , OnDamagesArea_Change , Titanium.UI.KEYBOARD_TYPE_NUMBER_PAD , 3 ) ;
     $.widgetAppTextFieldDamagesArea.enabled( view_enabled ) ;
 
     $.widgetAppTextFieldComment.set_text_value( current_comment ) ;

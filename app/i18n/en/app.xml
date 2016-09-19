@@ -1,0 +1,9 @@
+<resources>
+    <string name="NSLocationWhenInUseUsageDescription">Precise geolocation</string>
+    <string name="NSLocationAlwaysUsageDescription">Precise geolocation</string>
+    <string name="NSLocationUsageDescription">Precise geolocation</string>
+    <string name="NSSpeechRecognitionUsageDescription">Speech recognition</string>
+    <string name="NSMicrophoneUsageDescription">Speech recognition</string>
+    <string name="NSPhotoLibraryUsageDescription">Import/Export pictures related to a form</string>
+    <string name="NSAppleMusicUsageDescription">Import/Export videos related to a form</string>
+</resources>

@@ -1,0 +1,5 @@
+<Alloy>
+    <Window id="viewFormSketchViewWindow">
+        <ImageView id="image_view_form_sketch" />
+    </Window>
+</Alloy>

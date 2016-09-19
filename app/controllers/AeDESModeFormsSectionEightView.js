@@ -63,31 +63,50 @@ function OnOutcomePracticability_Change( e )
 // HousingUnitsUninhabitable textfield change event handler
 function OnHousingUnitsUninhabitable_Change( e , type )
 {
-    Alloy.Globals.AeDESModeSectionEight["HOUSING_UNITS_UNINHABITABLE"] = e.id ;
+    Alloy.Globals.AeDESModeSectionEight["HOUSING_UNITS_UNINHABITABLE"] = $.widgetAppTextFieldAeDESModeFormsSectionEightHousingUnitsUninhabitable.get_text_value() ;
 }
 
 // FamiliesEvacuated textfield change event handler
 function OnFamiliesEvacuated_Change( e , type )
 {
-    Alloy.Globals.AeDESModeSectionEight["FAMILIES_EVACUATED"] = e.id ;
+    Alloy.Globals.AeDESModeSectionEight["FAMILIES_EVACUATED"] = $.widgetAppTextFieldAeDESModeFormsSectionEightFamiliesEvacuated.get_text_value() ;
 }
 
 // EvacueesN textfield change event handler
 function OnEvacueesN_Change( e , type )
 {
-    Alloy.Globals.AeDESModeSectionEight["EVACUEES_N"] = e.id ;
+    Alloy.Globals.AeDESModeSectionEight["EVACUEES_N"] = $.widgetAppTextFieldAeDESModeFormsSectionEightEvacueesN.get_text_value() ;
+}
+
+// DeepeningMotivationsAndType textfield change event handler
+function OnDeepeningMotivationsAndType_Change( e , type )
+{
+    Alloy.Globals.AeDESModeSectionEight["DEEPENING_MOTIVATIONS_AND_TYPE"] = $.widgetAppTextFieldAeDESModeFormsSectionEightDeepeningMotivationsAndType.get_text_value() ;
 }
 
 // AccuracyVisit picker event handler
 function OnAccuracyVisit_Change( e , type )
 {
     Alloy.Globals.AeDESModeSectionEight["ACCURACY_VISIT"] = e.id ;
+    // If the selected item is not "Other" the OtherName will be set to empty
+    if( e.id != 7 )
+    {
+        $.widgetAppTextFieldAeDESModeFormsSectionEightOther.set_text_value( "" ) ;
+        Alloy.Globals.AeDESModeSectionEight["OTHER"] = "" ;
+    }
 }
 
 // Other textfield change event handler
 function OnOther_Change( e , type )
 {
-    Alloy.Globals.AeDESModeSectionEight["OTHER"] = e.id ;
+    var newOtherValue = $.widgetAppTextFieldAeDESModeFormsSectionEightOther.get_text_value() ;
+    Alloy.Globals.AeDESModeSectionEight["OTHER"] = newOtherValue ;
+    // If the value is not empty, we must also set the selected item of the TypeOfConstruction picker to "Other"
+    if( newOtherValue )
+    {
+        $.widgetAppComboBoxAeDESModeFormsSectionEightAccuracyVisit.set_selected_index( "7" ) ;
+        Alloy.Globals.AeDESModeSectionEight["ACCURACY_VISIT"] = "7" ;
+    }
 }
 
 // Table view MeasuresOfEmergency click event handler
@@ -188,7 +207,7 @@ try
         1: { title: L( 'generic_geotechnical_low_with_measures' ) } ,
         2: { title: L( 'generic_geotechnical_high' ) }
     } ;
-    
+
     $.widgetAppComboBoxAeDESModeFormsSectionEightGeotechnical.init( L( 'generic_geotechnical_text_msg' ) , geotechnicalValues , OnGeotechnical_Change , null , geotechnicalParentView ) ;
     $.widgetAppComboBoxAeDESModeFormsSectionEightGeotechnical.enabled( view_enabled ) ;
 
@@ -234,19 +253,23 @@ try
     }
 
     // Init app textfields
-    $.widgetAppTextFieldAeDESModeFormsSectionEightHousingUnitsUninhabitable.init( L( 'generic_housing_units_uninhabitable_txt_hint' ) , OnHousingUnitsUninhabitable_Change , Titanium.UI.KEYBOARD_NUMBER_PAD ) ;
+    $.widgetAppTextFieldAeDESModeFormsSectionEightHousingUnitsUninhabitable.init( L( 'generic_housing_units_uninhabitable_txt_hint' ) , OnHousingUnitsUninhabitable_Change , Titanium.UI.KEYBOARD_TYPE_NUMBER_PAD , 3 ) ;
     $.widgetAppTextFieldAeDESModeFormsSectionEightHousingUnitsUninhabitable.enabled( view_enabled ) ;
     $.widgetAppTextFieldAeDESModeFormsSectionEightHousingUnitsUninhabitable.set_text_value( Alloy.Globals.AeDESModeSectionEight["HOUSING_UNITS_UNINHABITABLE"] ) ;
 
-    $.widgetAppTextFieldAeDESModeFormsSectionEightFamiliesEvacuated.init( L( 'generic_families_evacuated_txt_hint' ) , OnFamiliesEvacuated_Change , Titanium.UI.KEYBOARD_NUMBER_PAD ) ;
+    $.widgetAppTextFieldAeDESModeFormsSectionEightFamiliesEvacuated.init( L( 'generic_families_evacuated_txt_hint' ) , OnFamiliesEvacuated_Change , Titanium.UI.KEYBOARD_TYPE_NUMBER_PAD , 3 ) ;
     $.widgetAppTextFieldAeDESModeFormsSectionEightFamiliesEvacuated.enabled( view_enabled ) ;
     $.widgetAppTextFieldAeDESModeFormsSectionEightFamiliesEvacuated.set_text_value( Alloy.Globals.AeDESModeSectionEight["FAMILIES_EVACUATED"] ) ;
 
-    $.widgetAppTextFieldAeDESModeFormsSectionEightEvacueesN.init( L( 'generic_evacuees_n_txt_hint' ) , OnEvacueesN_Change , Titanium.UI.KEYBOARD_NUMBER_PAD ) ;
+    $.widgetAppTextFieldAeDESModeFormsSectionEightEvacueesN.init( L( 'generic_evacuees_n_txt_hint' ) , OnEvacueesN_Change , Titanium.UI.KEYBOARD_TYPE_NUMBER_PAD , 4 ) ;
     $.widgetAppTextFieldAeDESModeFormsSectionEightEvacueesN.enabled( view_enabled ) ;
     $.widgetAppTextFieldAeDESModeFormsSectionEightEvacueesN.set_text_value( Alloy.Globals.AeDESModeSectionEight["EVACUEES_N"] ) ;
 
-    $.widgetAppTextFieldAeDESModeFormsSectionEightOther.init( L( 'generic_other_txt_hint' ) , OnOther_Change ) ;
+    $.widgetAppTextFieldAeDESModeFormsSectionEightDeepeningMotivationsAndType.init( L( 'generic_deepening_motivations_and_type_txt_hint' ) , OnDeepeningMotivationsAndType_Change , null , 37 ) ;
+    $.widgetAppTextFieldAeDESModeFormsSectionEightDeepeningMotivationsAndType.enabled( view_enabled ) ;
+    $.widgetAppTextFieldAeDESModeFormsSectionEightDeepeningMotivationsAndType.set_text_value( Alloy.Globals.AeDESModeSectionEight["DEEPENING_MOTIVATIONS_AND_TYPE"] ) ;
+
+    $.widgetAppTextFieldAeDESModeFormsSectionEightOther.init( L( 'generic_other_txt_hint' ) , OnOther_Change , null , 52 ) ;
     $.widgetAppTextFieldAeDESModeFormsSectionEightOther.enabled( view_enabled ) ;
     $.widgetAppTextFieldAeDESModeFormsSectionEightOther.set_text_value( Alloy.Globals.AeDESModeSectionEight["OTHER"] ) ;
     // Init app buttons
@@ -258,6 +281,7 @@ try
         $.widgetAppTextFieldAeDESModeFormsSectionEightHousingUnitsUninhabitable.get_text_field() ,
         $.widgetAppTextFieldAeDESModeFormsSectionEightFamiliesEvacuated.get_text_field() ,
         $.widgetAppTextFieldAeDESModeFormsSectionEightEvacueesN.get_text_field() ,
+        $.widgetAppTextFieldAeDESModeFormsSectionEightDeepeningMotivationsAndType.get_text_field() ,
         $.widgetAppTextFieldAeDESModeFormsSectionEightOther.get_text_field()
     ] ) ;
 

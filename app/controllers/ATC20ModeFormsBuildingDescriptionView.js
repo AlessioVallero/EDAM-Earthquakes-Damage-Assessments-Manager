@@ -29,13 +29,13 @@ function OnAndroidBackButton_Click( e )
         Back() ;
     }
 }
- 
+
 // Back button click event handler
 function OnBtnBack_Click( e )
 {
     Back() ;
 }
- 
+
 // Back function
 function Back()
 {
@@ -74,7 +74,7 @@ function OnBtnLoadAddress_Click( e )
             BeginAsyncBusyAction( $.activity_indicator , controls , function()
             {
                 bIsWorkInProgress = true ;
- 
+
                 // If we can ask for localization on this device
                 if( Alloy.Globals.isLocationAuthorized() )
                 {
@@ -82,12 +82,12 @@ function OnBtnLoadAddress_Click( e )
                     timeout = setTimeout( function()
                     {
                         timeout = null ;
- 
+
                         EndAsyncBusyAction( $.activity_indicator , controls , EndAsyncBusyAction_CallBack ) ;
- 
+
                         alert( L( 'geolocation_timeout_occurred_err_msg' ) ) ;
                     } , Alloy.Globals.GeolocationRequestTimeoutMillisecs ) ;
- 
+
                     Alloy.Globals.getLocation(
                     {
                         success: UpdateAddress
@@ -96,7 +96,7 @@ function OnBtnLoadAddress_Click( e )
                 else
                 {
                     EndAsyncBusyAction( $.activity_indicator , controls , EndAsyncBusyAction_CallBack ) ;
- 
+
                     alert( L( 'generic_user_not_authorized_to_ask_localization' ) ) ;
                 }
             } , EndAsyncBusyAction_CallBack ) ;
@@ -107,17 +107,17 @@ function OnBtnLoadAddress_Click( e )
         Alloy.Globals.AlertUserAndLogAsync( L( 'generic_exception_msg' ) + exception.message ) ;
     }
 }
- 
+
 // Callback for EndAsyncBusyAction
 function EndAsyncBusyAction_CallBack()
 {
     bIsWorkInProgress = false ;
- 
+
     if( timeout !== null )
     {
         // Clear a previous timeout, if exist
         clearTimeout( timeout ) ;
- 
+
         timeout = null ;
     }
 }
@@ -134,7 +134,7 @@ function UpdateAddress( e )
 
     Alloy.Globals.reverseGeocode( e.coords.latitude , e.coords.longitude , OnGeoreserve_Done ) ;
 }
- 
+
 // Function to callback when georeserve is done
 function OnGeoreserve_Done( formattedAnswer )
 {
@@ -245,7 +245,7 @@ function OnTypeOfConstruction_Change( e )
 {
     Alloy.Globals.ATC20ModeBuildingDescription["TYPE_OF_CONSTRUCTION"] = e.id ;
     // If the selected item is not "Other" the OtherName will be set to empty
-    if( e.id != 14 )
+    if( e.id != 7 )
     {
         $.widgetAppTextFieldATC20ModeFormsBuildingDescriptionTypeOfConstructionOtherName.set_text_value( "" ) ;
         Alloy.Globals.ATC20ModeBuildingDescription["OTHER_TYPE_OF_CONSTRUCTION"] = "" ;
@@ -260,8 +260,8 @@ function OnTypeOfConstructionOtherName_Change( e , type )
     // If the value is not empty, we must also set the selected item of the TypeOfConstruction picker to "Other"
     if( newOtherNameValue )
     {
-        $.widgetAppComboBoxATC20ModeFormsBuildingDescriptionTypeOfConstruction.set_selected_index( "14" ) ;
-        Alloy.Globals.ATC20ModeBuildingDescription["TYPE_OF_CONSTRUCTION"] = "14" ;
+        $.widgetAppComboBoxATC20ModeFormsBuildingDescriptionTypeOfConstruction.set_selected_index( "7" ) ;
+        Alloy.Globals.ATC20ModeBuildingDescription["TYPE_OF_CONSTRUCTION"] = "7" ;
     }
 }
 
@@ -270,7 +270,7 @@ function OnPrimaryOccupancy_Change( e )
 {
     Alloy.Globals.ATC20ModeBuildingDescription["PRIMARY_OCCUPANCY"] = e.id ;
     // If the selected item is not "Other" the OtherName must be empty
-    if( e.id != 8 )
+    if( e.id != 10 )
     {
         $.widgetAppTextFieldATC20ModeFormsBuildingDescriptionPrimaryOccupancyOtherName.set_text_value( "" ) ;
         Alloy.Globals.ATC20ModeBuildingDescription["OTHER_PRIMARY_OCCUPANCY"] = "" ;
@@ -285,8 +285,8 @@ function OnPrimaryOccupancyOtherName_Change( e , type )
     // If the value is not empty, we must also set the selected item of the PrimaryOccupancy picker to "Other"
     if( newOtherNameValue )
     {
-        $.widgetAppComboBoxATC20ModeFormsBuildingDescriptionPrimaryOccupancy.set_selected_index( "8" ) ;
-        Alloy.Globals.ATC20ModeBuildingDescription["PRIMARY_OCCUPANCY"] = "8" ;
+        $.widgetAppComboBoxATC20ModeFormsBuildingDescriptionPrimaryOccupancy.set_selected_index( "10" ) ;
+        Alloy.Globals.ATC20ModeBuildingDescription["PRIMARY_OCCUPANCY"] = "10" ;
     }
 }
 
@@ -463,11 +463,11 @@ try
         $.widgetAppTextFieldATC20ModeFormsBuildingDescriptionAddress.enabled( view_enabled ) ;
         $.widgetAppTextFieldATC20ModeFormsBuildingDescriptionAddress.set_text_value( Alloy.Globals.ATC20ModeBuildingDescription["ADDRESS"] ) ;
 
-        $.widgetAppTextFieldATC20ModeFormsBuildingDescriptionApproxFootprintArea.init( approx_footprint_area_msg , OnApproxFootprintArea_Change , Titanium.UI.KEYBOARD_NUMBER_PAD ) ;
+        $.widgetAppTextFieldATC20ModeFormsBuildingDescriptionApproxFootprintArea.init( approx_footprint_area_msg , OnApproxFootprintArea_Change , Titanium.UI.KEYBOARD_TYPE_NUMBER_PAD ) ;
         $.widgetAppTextFieldATC20ModeFormsBuildingDescriptionApproxFootprintArea.enabled( view_enabled ) ;
         $.widgetAppTextFieldATC20ModeFormsBuildingDescriptionApproxFootprintArea.set_text_value( Alloy.Globals.ATC20ModeBuildingDescription["APPROX_FT_AREA"] ) ;
 
-        $.widgetAppTextFieldATC20ModeFormsBuildingDescriptionNumberOfResidentialUnitsNotHabitable.init( L( 'generic_residential_units_not_habitable_txt_hint' ) , OnNumberOfResidentialUnitsNotHabitable_Change , Titanium.UI.KEYBOARD_NUMBER_PAD ) ;
+        $.widgetAppTextFieldATC20ModeFormsBuildingDescriptionNumberOfResidentialUnitsNotHabitable.init( L( 'generic_residential_units_not_habitable_txt_hint' ) , OnNumberOfResidentialUnitsNotHabitable_Change , Titanium.UI.KEYBOARD_TYPE_NUMBER_PAD ) ;
         $.widgetAppTextFieldATC20ModeFormsBuildingDescriptionNumberOfResidentialUnitsNotHabitable.enabled( view_enabled ) ;
         $.widgetAppTextFieldATC20ModeFormsBuildingDescriptionNumberOfResidentialUnitsNotHabitable.set_label_height( 80 ) ;
         $.widgetAppTextFieldATC20ModeFormsBuildingDescriptionNumberOfResidentialUnitsNotHabitable.set_text_value( Alloy.Globals.ATC20ModeBuildingDescription["RESIDENTIAL_UNITS_UNINHABITABLE"] ) ;
@@ -514,11 +514,11 @@ try
         $.widgetAppTextFieldATC20ModeFormsBuildingDescriptionAlsoKnownAs.enabled( view_enabled ) ;
         $.widgetAppTextFieldATC20ModeFormsBuildingDescriptionAlsoKnownAs.set_text_value( Alloy.Globals.ATC20ModeBuildingDescription["ALSO_KNOWN_AS"] ) ;
 
-        $.widgetAppTextFieldATC20ModeFormsBuildingDescriptionLot.init( L( 'generic_lot_txt_hint' ) , OnLot_Change , Titanium.UI.KEYBOARD_NUMBER_PAD ) ;
+        $.widgetAppTextFieldATC20ModeFormsBuildingDescriptionLot.init( L( 'generic_lot_txt_hint' ) , OnLot_Change , Titanium.UI.KEYBOARD_TYPE_NUMBER_PAD ) ;
         $.widgetAppTextFieldATC20ModeFormsBuildingDescriptionLot.enabled( view_enabled ) ;
         $.widgetAppTextFieldATC20ModeFormsBuildingDescriptionLot.set_text_value( Alloy.Globals.ATC20ModeBuildingDescription["LOT"] ) ;
 
-        $.widgetAppTextFieldATC20ModeFormsBuildingDescriptionDP.init( L( 'generic_dp_txt_hint' ) , OnDP_Change , Titanium.UI.KEYBOARD_NUMBER_PAD ) ;
+        $.widgetAppTextFieldATC20ModeFormsBuildingDescriptionDP.init( L( 'generic_dp_txt_hint' ) , OnDP_Change , Titanium.UI.KEYBOARD_TYPE_NUMBER_PAD ) ;
         $.widgetAppTextFieldATC20ModeFormsBuildingDescriptionDP.enabled( view_enabled ) ;
         $.widgetAppTextFieldATC20ModeFormsBuildingDescriptionDP.set_text_value( Alloy.Globals.ATC20ModeBuildingDescription["DP"] ) ;
 
@@ -534,7 +534,7 @@ try
         $.widgetAppTextFieldATC20ModeFormsBuildingDescriptionAddress.enabled( view_enabled ) ;
         $.widgetAppTextFieldATC20ModeFormsBuildingDescriptionAddress.set_text_value( Alloy.Globals.ATC20ModeBuildingDescription["ADDRESS"] ) ;
 
-        $.widgetAppTextFieldATC20ModeFormsBuildingDescriptionApproxFootprintArea.init( approx_footprint_area_msg , OnApproxFootprintArea_Change , Titanium.UI.KEYBOARD_NUMBER_PAD ) ;
+        $.widgetAppTextFieldATC20ModeFormsBuildingDescriptionApproxFootprintArea.init( approx_footprint_area_msg , OnApproxFootprintArea_Change , Titanium.UI.KEYBOARD_TYPE_NUMBER_PAD ) ;
         $.widgetAppTextFieldATC20ModeFormsBuildingDescriptionApproxFootprintArea.enabled( view_enabled ) ;
         $.widgetAppTextFieldATC20ModeFormsBuildingDescriptionApproxFootprintArea.set_text_value( Alloy.Globals.ATC20ModeBuildingDescription["APPROX_FT_AREA"] ) ;
 
@@ -557,19 +557,19 @@ try
         ] ) ;
     }
 
-    $.widgetAppTextFieldATC20ModeFormsBuildingDescriptionBuildingContactPhone.init( L( 'generic_building_contact_phone_txt_hint' ) , OnBuildingContactPhone_Change , Titanium.UI.KEYBOARD_NUMBERS_PUNCTUATION ) ;
+    $.widgetAppTextFieldATC20ModeFormsBuildingDescriptionBuildingContactPhone.init( L( 'generic_building_contact_phone_txt_hint' ) , OnBuildingContactPhone_Change , Titanium.UI.KEYBOARD_TYPE_NUMBERS_PUNCTUATION ) ;
     $.widgetAppTextFieldATC20ModeFormsBuildingDescriptionBuildingContactPhone.enabled( view_enabled ) ;
     $.widgetAppTextFieldATC20ModeFormsBuildingDescriptionBuildingContactPhone.set_text_value( Alloy.Globals.ATC20ModeBuildingDescription["BUILDING_CONTACT"] ) ;
 
-    $.widgetAppTextFieldATC20ModeFormsBuildingDescriptionNumberOfStoriesAboveTheGround.init( L( 'generic_number_of_stories_above_the_ground_txt_hint' ) , OnNumberOfStoriesAboveTheGround_Change , Titanium.UI.KEYBOARD_NUMBER_PAD ) ;
+    $.widgetAppTextFieldATC20ModeFormsBuildingDescriptionNumberOfStoriesAboveTheGround.init( L( 'generic_number_of_stories_above_the_ground_txt_hint' ) , OnNumberOfStoriesAboveTheGround_Change , Titanium.UI.KEYBOARD_TYPE_NUMBER_PAD ) ;
     $.widgetAppTextFieldATC20ModeFormsBuildingDescriptionNumberOfStoriesAboveTheGround.enabled( view_enabled ) ;
     $.widgetAppTextFieldATC20ModeFormsBuildingDescriptionNumberOfStoriesAboveTheGround.set_text_value( Alloy.Globals.ATC20ModeBuildingDescription["NOT_UNDERGROUND_PLANS_NO"] ) ;
 
-    $.widgetAppTextFieldATC20ModeFormsBuildingDescriptionNumberOfStoriesBelowTheGround.init( L( 'generic_number_of_stories_below_the_ground_txt_hint' ) , OnNumberOfStoriesBelowTheGround_Change , Titanium.UI.KEYBOARD_NUMBER_PAD ) ;
+    $.widgetAppTextFieldATC20ModeFormsBuildingDescriptionNumberOfStoriesBelowTheGround.init( L( 'generic_number_of_stories_below_the_ground_txt_hint' ) , OnNumberOfStoriesBelowTheGround_Change , Titanium.UI.KEYBOARD_TYPE_NUMBER_PAD ) ;
     $.widgetAppTextFieldATC20ModeFormsBuildingDescriptionNumberOfStoriesBelowTheGround.enabled( view_enabled ) ;
     $.widgetAppTextFieldATC20ModeFormsBuildingDescriptionNumberOfStoriesBelowTheGround.set_text_value( Alloy.Globals.ATC20ModeBuildingDescription["UNDERGROUND_PLANS_NO"] ) ;
 
-    $.widgetAppTextFieldATC20ModeFormsBuildingDescriptionNumberOfResidentialUnits.init( L( 'generic_residential_units_txt_hint' ) , OnNumberOfResidentialUnits_Change , Titanium.UI.KEYBOARD_NUMBER_PAD ) ;
+    $.widgetAppTextFieldATC20ModeFormsBuildingDescriptionNumberOfResidentialUnits.init( L( 'generic_residential_units_txt_hint' ) , OnNumberOfResidentialUnits_Change , Titanium.UI.KEYBOARD_TYPE_NUMBER_PAD ) ;
     $.widgetAppTextFieldATC20ModeFormsBuildingDescriptionNumberOfResidentialUnits.enabled( view_enabled ) ;
     $.widgetAppTextFieldATC20ModeFormsBuildingDescriptionNumberOfResidentialUnits.set_text_value( Alloy.Globals.ATC20ModeBuildingDescription["RESIDENTIAL_UNITS"] ) ;
 

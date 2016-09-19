@@ -59,7 +59,7 @@ function OnBtnLogin_Click( e )
                 loader.validatesSecureCertificate = false ;
 
                 // Runs the function when the data is ready for us to process
-                loader.onload = function() 
+                loader.onload = function()
                 {
                     EndAsyncBusyAction( $.activity_indicator_login , controls ) ;
 
@@ -172,7 +172,7 @@ function OnBtnRegister_Click( e )
                 loader.validatesSecureCertificate = false ;
 
                 // Runs the function when the data is ready for us to process
-                loader.onload = function() 
+                loader.onload = function()
                 {
                     EndAsyncBusyAction( $.activity_indicator_register , controls ) ;
 

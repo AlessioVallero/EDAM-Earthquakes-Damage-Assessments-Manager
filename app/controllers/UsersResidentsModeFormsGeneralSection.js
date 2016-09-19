@@ -281,7 +281,7 @@ function LoadBuildingCharacteristicsData()
             // If current_form_id is -1, then we are here on adding new, so we create a default array
             CreateDefaultBuildingCharacteristicsArray() ;
         }
-    }    
+    }
 }
 
 // Building characteristics opening
@@ -394,19 +394,19 @@ function handleMenuClick( _event )
                         OpenDetails() ;
                     }
                     break ;
-        
+
                     case 1:
                     {
                         OpenBuildingPosition() ;
                     }
                     break ;
-        
+
                     case 2:
                     {
                         OpenBuildingCharacteristics() ;
                     }
                     break ;
-        
+
                     case 3:
                     {
                         OpenInfrastructure() ;
@@ -441,7 +441,7 @@ function Save( title , message , callbackFnt )
         var alertDialog = Titanium.UI.createAlertDialog(
         {
             title: L( title ) ,
-            message: L( message ) ,             
+            message: L( message ) ,
             buttonNames: [ L( 'generic_yes_msg' ) , L( 'generic_no_msg' ) ] ,
             cancel: 1
         } ) ;
@@ -484,7 +484,7 @@ function SaveInternal()
         {
             bCanClickOnTableView = false ;
             bIsWorkInProgress = true ;
-    
+
             var bError = false ;
 
             var user = "" ;
@@ -495,7 +495,7 @@ function SaveInternal()
             // Details
             // If the form id is equal -1, this is a new Form
             if( current_form_id == -1 )
-            {   
+            {
                 // If the array isn't null or empty, we have also some details
                 // Otherwise we insert empty values
                 if( Alloy.Globals.UsersResidentsModeDetails && _.size( Alloy.Globals.UsersResidentsModeDetails ) > 0 )
@@ -508,7 +508,7 @@ function SaveInternal()
                     {
                         // A default one will be used
                         var current_date = new Date() ;
-                    
+
                         Alloy.Globals.UsersResidentsModeDetails["FORM_NO"] = current_date.getFullYear().toFixed( 0 ) ;
                     }
 
@@ -554,7 +554,7 @@ function SaveInternal()
                     {
                         // A default one will be used
                         var current_date = new Date() ;
-                    
+
                         Alloy.Globals.UsersResidentsModeDetails["FORM_NO"] = current_date.getFullYear().toFixed( 0 ) ;
                     }
 
@@ -618,12 +618,12 @@ function SaveInternal()
 
                 Ti.API.info( '\nNEW_ID: ' + current_form_id ) ;
             }
-    
+
             // If the array isn't null or empty, we have the details of the Building position
             if( Alloy.Globals.UsersResidentsModeBuildingPosition && _.size( Alloy.Globals.UsersResidentsModeBuildingPosition ) > 0 )
             {
                 Ti.API.info( '\nBuildingPosition:\n' ) ;
-    
+
                 var recoverBuildingPosition = Alloy.createCollection( 'UsersResidentsFormsBuildingsPositions' ) ;
                 recoverBuildingPosition.fetch(
                 {
@@ -666,7 +666,7 @@ function SaveInternal()
                     buildingPositionModel = null ;
                 }
             }
-    
+
             // If the array isn't null or empty, we have the details of the Building characteristics
             if( Alloy.Globals.UsersResidentsModeBuildingCharacteristics && _.size( Alloy.Globals.UsersResidentsModeBuildingCharacteristics ) > 0 )
             {
@@ -704,7 +704,7 @@ function SaveInternal()
                     buildingCharacteristicsModel = null ;
                 }
             }
-    
+
             // If the array isn't null or empty, we have the details of the Infrastructure
             if( Alloy.Globals.UsersResidentsModeInfrastructure && _.size( Alloy.Globals.UsersResidentsModeInfrastructure ) > 0 )
             {
@@ -817,11 +817,11 @@ function SaveInternal()
                             else
                             {
                                 bError = true ;
-            
+
                                 Alloy.Globals.AlertUserAndLogAsync( L( "image_saving_error_msg" ) ) ;
                             }
                         }
-                        
+
                         // To avoid memory leaks
                         file = null ;
                     }
@@ -831,10 +831,10 @@ function SaveInternal()
                         break ;
                     }
                 }
-    
+
                 if( !bError )
                 {
-                    // This saving also avoid problem regarding the images association 
+                    // This saving also avoid problem regarding the images association
                     Alloy.Globals.CurrentPicsPath = null ;
                 }
             }
@@ -913,24 +913,24 @@ function SaveInternal()
                             else
                             {
                                 bError = true ;
-            
+
                                 Alloy.Globals.AlertUserAndLogAsync( L( "video_saving_error_msg" ) ) ;
                             }
                         }
-        
+
                         // To avoid memory leaks
                         file = null ;
                     }
-    
+
                     if( bError )
                     {
                         break ;
                     }
                 }
-    
+
                 if( !bError )
                 {
-                    // This saving also avoid problem regarding the videos association 
+                    // This saving also avoid problem regarding the videos association
                     Alloy.Globals.CurrentVideosPath = null ;
                 }
             }
@@ -942,9 +942,9 @@ function SaveInternal()
             else
             {
                 Ti.API.info( '\nEND' ) ;
-    
+
                 Ti.App.fireEvent( "users_residents_mode:save" ) ;
-    
+
                 bRet = true ;
             }
         }
@@ -968,7 +968,7 @@ function OnBtnBuildingDamageAssessments_Click( e )
     try
     {
         var UsersResidentsModeUtils = require( '/UsersResidentsModeUtils' ) ;
-        
+
         var media_array = UsersResidentsModeUtils.CreateMediaArray( current_form_id , true , true ) ;
 
         if( media_array && media_array.length > 0 )
@@ -989,7 +989,7 @@ function OnBtnBuildingDamageAssessments_Click( e )
     }
 }
 
-// Send button click event handler
+//  button click event handler
 function OnBtnSend_Click( e )
 {
     try
@@ -1018,7 +1018,7 @@ function OnBtnSend_Click( e )
                 loader.validatesSecureCertificate = false ;
 
                 // Runs the function when the data is ready for us to process
-                loader.onload = function() 
+                loader.onload = function()
                 {
                     if( this.responseText && this.responseText.substring( 0 , 6 ) != "ERROR_" )
                     {
@@ -1100,10 +1100,14 @@ function OnBtnSend_Click( e )
                     tpd_cell_number = personalData.get( "CELL_NUMBER" ) ;
                     tpd_age = personalData.get( "AGE" ) ;
                     tpd_job = personalData.get( "JOB" ) ;
-                    var file = Alloy.Globals.getFileForRead( personalData.get( "SIGN_PATH" ) ) ;
-                    if( file )
+                    var filePath = personalData.get( "SIGN_PATH" ) ;
+                    if( filePath )
                     {
-                        tpd_sign_image = file.read() ;
+                        var file = Alloy.Globals.getFileForRead( filePath ) ;
+                        if( file )
+                        {
+                            tpd_sign_image = file.read() ;
+                        }
                     }
                 }
 
@@ -1147,7 +1151,7 @@ function OnBtnSend_Click( e )
                     WATER_LEAKS: Alloy.Globals.UsersResidentsModeInfrastructure["WATER_LEAKS"] ,
                     GAS_LEAKS: Alloy.Globals.UsersResidentsModeInfrastructure["GAS_LEAKS"] ,
                     ELECTRIC_CURRENT_OPERATION: Alloy.Globals.UsersResidentsModeInfrastructure["ELECTRIC_CURRENT_OPERATION"]
-                } ; 
+                } ;
 
                 loader.open( "POST" , "https://www.edam.resiltronics.org/ManipulatePDF/UsersResidentsMode_ManipulatePDF.php" ) ;
 
@@ -1219,7 +1223,7 @@ function OnBtnMakeVideo_Click( e )
     var alertDialog = Titanium.UI.createAlertDialog(
     {
         title: L( 'generic_need_gps_title' ) ,
-        message: L( 'vid_need_gps_confirm_msg' ) ,             
+        message: L( 'vid_need_gps_confirm_msg' ) ,
         buttonNames: [ L( 'generic_yes_msg' ) , L( 'generic_no_msg' ) ] ,
         cancel: 1
     } ) ;
@@ -1290,7 +1294,7 @@ function OnBtnMakeVideo_Click( e )
 
                     bRet = true ;
                 }
-        
+
                 return bRet ;
             } , EndAsyncBusyAction_CallBack ) ;
         }
@@ -1326,7 +1330,7 @@ function OnBtnMakeMedia_Click( e )
     var alertDialog = Titanium.UI.createAlertDialog(
     {
         title: L( 'generic_need_gps_title' ) ,
-        message: message ,             
+        message: message ,
         buttonNames: [ L( 'generic_yes_msg' ) , L( 'generic_no_msg' ) ] ,
         cancel: 1
     } ) ;
@@ -1385,6 +1389,8 @@ function OnBtnMakeMedia_Click( e )
                     }
                     else
                     {
+                        EndAsyncBusyAction( $.activity_indicator , controls , EndAsyncBusyAction_CallBack ) ;
+
                         alert( L( 'generic_user_not_authorized_to_ask_localization' ) ) ;
                     }
                 }
@@ -1556,9 +1562,9 @@ function OnBtnMakeDraft_Click( e )
 
             // Controller creation for the Next View
             Alloy.Globals.createAndOpenControllerExt( 'DraftPaintView' , { type: "UsersResidents" } ) ;
-    
+
             bRet = true ;
-    
+
             return bRet ;
         } ) ;
     }

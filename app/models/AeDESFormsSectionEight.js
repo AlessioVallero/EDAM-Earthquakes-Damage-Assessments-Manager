@@ -11,9 +11,12 @@ exports.definition = {
             "HOUSING_UNITS_UNINHABITABLE": "TEXT" ,
             "FAMILIES_EVACUATED": "TEXT" ,
             "EVACUEES_N": "TEXT" ,
+						"DEEPENING_MOTIVATIONS_AND_TYPE": "TEXT" ,
             "ACCURACY_VISIT": "TEXT" ,
             "OTHER": "TEXT" ,
-            "MEASURES_OF_EMERGENCY": "TEXT"
+            "MEASURES_OF_EMERGENCY": "TEXT" ,
+						"OTHER_1": "TEXT" ,
+						"OTHER_2": "TEXT"
         },
 		adapter: {
 			type: "sql",

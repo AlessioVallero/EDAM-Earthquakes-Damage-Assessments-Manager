@@ -52,11 +52,11 @@ try
 {
     // Init controls
     // Init app textfields
-    $.widgetAppTextFieldAeDESModeFormsSectionNineTopic.init( L( 'generic_topic_txt_hint' ) , OnTopic_Change ) ;
+    $.widgetAppTextFieldAeDESModeFormsSectionNineTopic.init( L( 'generic_topic_txt_hint' ) , OnTopic_Change , null , 117 ) ;
     $.widgetAppTextFieldAeDESModeFormsSectionNineTopic.set_text_value( Alloy.Globals.AeDESModeSectionNine["TOPIC"] ) ;
     $.widgetAppTextFieldAeDESModeFormsSectionNineTopic.enabled( view_enabled ) ;
     // Init app textareas
-    $.widgetAppTextAreaAeDESModeFormsSectionNineOtherComments.init( L( 'generic_other_comments_txt_hint' ) , OnOtherComments_Change ) ;
+    $.widgetAppTextAreaAeDESModeFormsSectionNineOtherComments.init( L( 'generic_other_comments_txt_hint' ) , OnOtherComments_Change , null , 870 ) ;
     $.widgetAppTextAreaAeDESModeFormsSectionNineOtherComments.set_text_value( Alloy.Globals.AeDESModeSectionNine["OTHER_COMMENTS"] ) ;
     $.widgetAppTextAreaAeDESModeFormsSectionNineOtherComments.enabled( view_enabled ) ;
     // Init app buttons

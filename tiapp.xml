@@ -1,24 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ti:app xmlns:ti="http://ti.appcelerator.org">
-    <property name="acs-oauth-secret-production" type="string">nZQBPT8nnPlBh14D3nHm4kHBGR1uW24c</property>
-    <property name="acs-oauth-key-production" type="string">W7zG5v8fjqzBnwIjxaU0jBgE0rS030Lh</property>
-    <property name="acs-api-key-production" type="string">2EJ9pR1u7E8qFvSw41oNGLREsnrzZJK8</property>
-    <property name="acs-oauth-secret-development" type="string">c1BE2EBJcTMsbklAeW2CADS6eZCysiCB</property>
-    <property name="acs-oauth-key-development" type="string">MQmQ9AykY9EeSLaNK99ULOzDJY4CBte5</property>
-    <property name="acs-api-key-development" type="string">CjUa4RYwdEPhBsbTXPsEcF3c6GASdKxC</property>
-    <id>com.diseg.EarthquakesDamageAssessmentsManager</id>
-    <name>EDAM Earthquakes Damage Assessments Manager</name>
-    <version>2.1.2</version>
-    <publisher>alessio_vallero</publisher>
-    <url>http://www.diseg.polito.it</url>
-    <description>An easy (and fast) way to manage damage assessments in case of earthquakes.</description>
-    <copyright>2014 by DISEG-Politecnico di Torino</copyright>
-    <icon>earthquakes_damage_assessments_manager.png</icon>
-    <fullscreen>false</fullscreen>
-    <navbar-hidden>false</navbar-hidden>
-    <analytics>true</analytics>
-    <guid>9cafc78c-feb3-492a-bf4a-61516e1ffc0e</guid>
-    <property name="ti.ui.defaultunit" type="string">dip</property>
+       <id>com.diseg.EarthquakesDamageAssessmentsManager</id>
+       <name>EDAM Earthquakes Damage Assessments Manager</name>
+       <version>2.5.0</version>
+	<publisher>alessio_vallero</publisher>
+	<url>http://www.diseg.polito.it</url>
+	<description>An easy (and fast) way to manage damage assessments in case of earthquakes.</description>
+	<copyright>2014 by DISEG-Politecnico di Torino</copyright>
+	<icon>earthquakes_damage_assessments_manager.png</icon>
+	<fullscreen>false</fullscreen>
+	<navbar-hidden>false</navbar-hidden>
+	<analytics>true</analytics>
+	<guid>192ce461-4934-4070-975c-e84d6f74ef84</guid>
+	<property name="ti.ui.defaultunit" type="string">dp</property>
+	<property name="run-on-main-thread" type="bool">true</property>
     <ios>
         <orientations device="iphone">
             <orientation>Ti.UI.PORTRAIT</orientation>
@@ -34,6 +29,10 @@
         </orientations>
         <plist>
             <dict>
+                <key>CFBundleShortVersionString</key>
+                <string>2.5.0</string>
+                <key>CFBundleVersion</key>
+                <string>2.5.0.3</string>
                 <key>UISupportedInterfaceOrientations~iphone</key>
                 <array>
                     <string>UIInterfaceOrientationPortrait</string>
@@ -62,14 +61,29 @@
                 <string>Precise geolocation</string>
                 <key>NSLocationUsageDescription</key>
                 <string>Precise geolocation</string>
+                <key>NSSpeechRecognitionUsageDescription</key>
+                <string>Speech recognition</string>
+                <key>NSMicrophoneUsageDescription</key>
+                <string>Speech recognition</string>
+                <key>NSPhotoLibraryUsageDescription</key>
+                <string>Import/Export pictures related to a form</string>
+                <key>NSAppleMusicUsageDescription</key>
+                <string>Import/Export videos related to a form</string>
+                <key>NSAppTransportSecurity</key>
+                <dict>
+                    <!--Include to allow all connections (DANGER)-->
+                    <key>NSAllowsArbitraryLoads</key>
+                    <true/>
+                </dict>
             </dict>
         </plist>
+        <enable-launch-screen-storyboard>false</enable-launch-screen-storyboard>
     </ios>
     <android xmlns:android="http://schemas.android.com/apk/res/android">
-        <manifest android:versionCode="24" android:versionName="2.1.2">
+        <manifest android:versionCode="26" android:versionName="2.5.0">
             <supports-screens android:largeScreens="true"
                 android:normalScreens="true" android:smallScreens="true" android:xlargeScreens="true"/>
-            <uses-sdk android:minSdkVersion="11" android:targetSdkVersion="19"/>
+            <uses-sdk android:minSdkVersion="14" android:targetSdkVersion="23"/>
             <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
             <uses-permission android:name="android.permission.CAMERA"/>
             <uses-permission android:name="android.permission.FLASHLIGHT"/>
@@ -100,7 +114,7 @@
         <module platform="android" version="2.0.3">ti.compression</module>
         <module platform="iphone" version="1.53.B">bencoding.securely</module>
         <module platform="android" version="1.52.B">bencoding.securely</module>
-        <module platform="iphone" version="0.2B">ti.ispeech</module>
+        <module platform="iphone" version="0.4B">ti.ispeech</module>
         <module platform="android" version="0.3">org.mumumu.ti.android.speech</module>
         <module platform="iphone">ti.map</module>
         <module platform="android">ti.map</module>
@@ -108,15 +122,14 @@
         <module platform="iphone" version="0.1B">com.obscure.localehelper</module>
         <module platform="android" version="0.1">com.shareourideas.locale</module>
     </modules>
-    <deployment-targets>
-        <target device="android">true</target>
-        <target device="blackberry">false</target>
-        <target device="ipad">true</target>
-        <target device="iphone">true</target>
-        <target device="mobileweb">false</target>
-        <target device="tizen">false</target>
-    </deployment-targets>
-    <sdk-version>3.5.1.GA</sdk-version>
+	<deployment-targets>
+		<target device="android">true</target>
+		<target device="ipad">true</target>
+		<target device="iphone">true</target>
+		<target device="mobileweb"> false </target>
+		<target device="windows">false</target>
+	</deployment-targets>
+	<sdk-version>5.5.1.v20160917045014</sdk-version>
     <plugins>
         <plugin version="1.0">ti.alloy</plugin>
     </plugins>

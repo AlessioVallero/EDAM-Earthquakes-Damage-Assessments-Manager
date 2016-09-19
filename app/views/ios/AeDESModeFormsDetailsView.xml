@@ -6,6 +6,13 @@
             </LeftNavButton>
 
             <ScrollView id="scrollViewFormsDetails">
+                <View id="viewAppTextFieldAeDESModeFormsDetailsFormId">
+                    <Widget id="widgetAppTextFieldAeDESModeFormsDetailsFormId" src="com.diseg.AppTextField" />
+                </View>
+                <Label id="lblAeDESModeFormsDetailsSurveyIdentifies" />
+                <View id="viewAppTextFieldAeDESModeFormsDetailsTeam">
+                    <Widget id="widgetAppTextFieldAeDESModeFormsDetailsTeam" src="com.diseg.AppTextField" />
+                </View>
                 <View id="viewAppTextFieldAeDESModeFormsDetailsFormNo">
                     <Widget id="widgetAppTextFieldAeDESModeFormsDetailsFormNo" src="com.diseg.AppTextField" />
                 </View>
@@ -13,6 +20,44 @@
                     <Label id="lblDate" />
                     <View id="viewDisabler" />
                     <Picker id="datePickerDate" onChange="OnDate_Change" />
+                </View>
+                <Label id="lblAeDESModeFormsDetailsBuildingIdentifies" />
+                <View id="viewAppTextFieldAeDESModeFormsDetailsIstatReg">
+                    <Widget id="widgetAppTextFieldAeDESModeFormsDetailsIstatReg" src="com.diseg.AppTextField" />
+                </View>
+                <View id="viewAppTextFieldAeDESModeFormsDetailsIstatProv">
+                    <Widget id="widgetAppTextFieldAeDESModeFormsDetailsIstatProv" src="com.diseg.AppTextField" />
+                </View>
+                <View id="viewAppTextFieldAeDESModeFormsDetailsIstatPublic">
+                    <Widget id="widgetAppTextFieldAeDESModeFormsDetailsIstatPublic" src="com.diseg.AppTextField" />
+                </View>
+                <View id="viewAppTextFieldAeDESModeFormsDetailsAggregateN">
+                    <Widget id="widgetAppTextFieldAeDESModeFormsDetailsAggregateN" src="com.diseg.AppTextField" />
+                </View>
+                <View id="viewAppTextFieldAeDESModeFormsDetailsBuildingN">
+                    <Widget id="widgetAppTextFieldAeDESModeFormsDetailsBuildingN" src="com.diseg.AppTextField" />
+                </View>
+                <View id="viewAppTextFieldAeDESModeFormsDetailsIstatPlaceCode">
+                    <Widget id="widgetAppTextFieldAeDESModeFormsDetailsIstatPlaceCode" src="com.diseg.AppTextField" />
+                </View>
+                <View id="viewAppTextFieldAeDESModeFormsDetailsPaperType">
+                    <Widget id="widgetAppTextFieldAeDESModeFormsDetailsPaperType" src="com.diseg.AppTextField" />
+                </View>
+                <View id="viewAppTextFieldAeDESModeFormsDetailsPaperN">
+                    <Widget id="widgetAppTextFieldAeDESModeFormsDetailsPaperN" src="com.diseg.AppTextField" />
+                </View>
+                <View id="viewAppTextFieldAeDESModeFormsDetailsIstatCensusSection">
+                    <Widget id="widgetAppTextFieldAeDESModeFormsDetailsIstatCensusSection" src="com.diseg.AppTextField" />
+                </View>
+                <Label id="lblAeDESModeFormsDetailsCadastralData" />
+                <View id="viewAppTextFieldAeDESModeFormsDetailsSheet">
+                    <Widget id="widgetAppTextFieldAeDESModeFormsDetailsSheet" src="com.diseg.AppTextField" />
+                </View>
+                <View id="viewAppTextFieldAeDESModeFormsDetailsAttachment">
+                    <Widget id="widgetAppTextFieldAeDESModeFormsDetailsAttachment" src="com.diseg.AppTextField" />
+                </View>
+                <View id="viewAppTextFieldAeDESModeFormsDetailsParticles">
+                    <Widget id="widgetAppTextFieldAeDESModeFormsDetailsParticles" src="com.diseg.AppTextField" />
                 </View>
                 <View id="viewAppButtonSave">
                     <Widget id="widgetAppButtonSave" src="com.diseg.AppButton" />

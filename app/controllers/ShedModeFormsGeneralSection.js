@@ -280,7 +280,7 @@ function LoadShedCharacteristicsData()
             // If current_form_id is -1, then we are here on adding new, so we create a default array
             CreateDefaultShedCharacteristicsArray() ;
         }
-    }    
+    }
 }
 
 // Building characteristics opening
@@ -609,19 +609,19 @@ function handleMenuClick( _event )
                         OpenDetails() ;
                     }
                     break ;
-        
+
                     case 1:
                     {
                         OpenShedPosition() ;
                     }
                     break ;
-        
+
                     case 2:
                     {
                         OpenShedCharacteristics() ;
                     }
                     break ;
-        
+
                     case 3:
                     {
                         OpenInfrastructure() ;
@@ -674,7 +674,7 @@ function Save( title , message , callbackFnt )
         var alertDialog = Titanium.UI.createAlertDialog(
         {
             title: L( title ) ,
-            message: L( message ) ,             
+            message: L( message ) ,
             buttonNames: [ L( 'generic_yes_msg' ) , L( 'generic_no_msg' ) ] ,
             cancel: 1
         } ) ;
@@ -732,7 +732,7 @@ function SaveInternal()
             {
                 Ti.API.info( '\n\nDetails:' ) ;
                 queryDetails = "INSERT INTO ShedForms( FORM_NO, DATE, USER, SYNCHRONIZED ) VALUES( " ;
-    
+
                 // If the array isn't null or empty, we have also some details
                 // Otherwise we insert empty values
                 if( Alloy.Globals.ShedModeDetails && _.size( Alloy.Globals.ShedModeDetails ) > 0 )
@@ -745,7 +745,7 @@ function SaveInternal()
                     {
                         // A default one will be used
                         var current_date = new Date() ;
-                    
+
                         Alloy.Globals.ShedModeDetails["FORM_NO"] = current_date.getFullYear().toFixed( 0 ) ;
                     }
 
@@ -764,7 +764,7 @@ function SaveInternal()
                     // A default form_no will be used
                     var current_date = new Date() ;
                     var current_time = current_date.getTime() ;
-                
+
                     var default_form_no = current_date.getFullYear().toFixed( 0 ) ;
                     var detailsModel = Alloy.createModel( "ShedForms" ,
                     {
@@ -791,7 +791,7 @@ function SaveInternal()
                     {
                         // A default one will be used
                         var current_date = new Date() ;
-                    
+
                         Alloy.Globals.ShedModeDetails["FORM_NO"] = current_date.getFullYear().toFixed( 0 ) ;
                     }
 
@@ -837,7 +837,7 @@ function SaveInternal()
                     }
                 }
             }
-    
+
             // If the form_id was empty, we have to fill it with the generated one
             if( current_form_id == - 1 )
             {
@@ -855,12 +855,12 @@ function SaveInternal()
 
                 Ti.API.info( '\nNEW_ID: ' + current_form_id ) ;
             }
-    
+
             // If the array isn't null or empty, we have the details of the Shed position
             if( Alloy.Globals.ShedModeShedPosition && _.size( Alloy.Globals.ShedModeShedPosition ) > 0 )
             {
                 Ti.API.info( '\nShedPosition:\n' ) ;
-    
+
                 var recoverShedPosition = Alloy.createCollection( 'ShedFormsShedsPositions' ) ;
                 recoverShedPosition.fetch(
                 {
@@ -901,7 +901,7 @@ function SaveInternal()
                     shedPositionModel = null ;
                 }
             }
-    
+
             // If the array isn't null or empty, we have the details of the Shed characteristics
             if( Alloy.Globals.ShedModeShedCharacteristics && _.size( Alloy.Globals.ShedModeShedCharacteristics ) > 0 )
             {
@@ -937,7 +937,7 @@ function SaveInternal()
                     shedCharacteristicsModel = null ;
                 }
             }
-    
+
             // If the array isn't null or empty, we have the details of the Infrastructure
             if( Alloy.Globals.ShedModeInfrastructure && _.size( Alloy.Globals.ShedModeInfrastructure ) > 0 )
             {
@@ -1176,11 +1176,11 @@ function SaveInternal()
                             else
                             {
                                 bError = true ;
-            
+
                                 Alloy.Globals.AlertUserAndLogAsync( L( "image_saving_error_msg" ) ) ;
                             }
                         }
-                        
+
                         // To avoid memory leaks
                         file = null ;
                     }
@@ -1193,7 +1193,7 @@ function SaveInternal()
 
                 if( !bError )
                 {
-                    // This saving also avoid problem regarding the images association 
+                    // This saving also avoid problem regarding the images association
                     Alloy.Globals.CurrentPicsPath = null ;
                 }
             }
@@ -1272,24 +1272,24 @@ function SaveInternal()
                             else
                             {
                                 bError = true ;
-            
+
                                 Alloy.Globals.AlertUserAndLogAsync( L( "video_saving_error_msg" ) ) ;
                             }
                         }
-        
+
                         // To avoid memory leaks
                         file = null ;
                     }
-    
+
                     if( bError )
                     {
                         break ;
                     }
                 }
-    
+
                 if( !bError )
                 {
-                    // This saving also avoid problem regarding the videos association 
+                    // This saving also avoid problem regarding the videos association
                     Alloy.Globals.CurrentVideosPath = null ;
                 }
             }
@@ -1302,9 +1302,9 @@ function SaveInternal()
             {
                 // Commit the transaction
                 Ti.API.info( 'COMMIT.\nEND' ) ;
-    
+
                 Ti.App.fireEvent( "shed_mode:save" ) ;
-    
+
                 bRet = true ;
             }
         }
@@ -1328,7 +1328,7 @@ function OnShedDamageAssessments_Click( e )
     try
     {
         var ShedModeUtils = require( '/ShedModeUtils' ) ;
-        
+
         var media_array = ShedModeUtils.CreateMediaArray( current_form_id , true , true ) ;
 
         if( media_array && media_array.length > 0 )
@@ -1381,7 +1381,7 @@ function OnBtnSend_Click( e )
                 loader.validatesSecureCertificate = false ;
 
                 // Runs the function when the data is ready for us to process
-                loader.onload = function() 
+                loader.onload = function()
                 {
                     if( this.responseText && this.responseText.substring( 0 , 6 ) != "ERROR_" )
                     {
@@ -1401,7 +1401,7 @@ function OnBtnSend_Click( e )
                             var zipname = "ShedForm.zip" ;
                         }
 
-                        // The file will be stored in the temporary directory 
+                        // The file will be stored in the temporary directory
                         var file = Titanium.Filesystem.getFile( Titanium.Filesystem.getTempDirectory() , filename ) ;
 
                         if( file.exists() )
@@ -1462,10 +1462,14 @@ function OnBtnSend_Click( e )
                             case 1:
                             {
                                 spd_name_1 = personalData.get( "NAME" ) ;
-                                var file = Alloy.Globals.getFileForRead( personalData.get( "SIGN_PATH" ) ) ;
-                                if( file )
+                                var filePath = personalData.get( "SIGN_PATH" ) ;
+                                if( filePath )
                                 {
-                                    spd_sign_1_image = file.read() ;
+                                    var file = Alloy.Globals.getFileForRead( filePath ) ;
+                                    if( file )
+                                    {
+                                        spd_sign_1_image = file.read() ;
+                                    }
                                 }
                             }
                             break ;
@@ -1473,10 +1477,14 @@ function OnBtnSend_Click( e )
                             case 2:
                             {
                                 spd_name_2 = personalData.get( "NAME" ) ;
-                                var file = Alloy.Globals.getFileForRead( personalData.get( "SIGN_PATH" ) ) ;
-                                if( file )
+                                var filePath = personalData.get( "SIGN_PATH" ) ;
+                                if( filePath )
                                 {
-                                    spd_sign_2_image = file.read() ;
+                                    var file = Alloy.Globals.getFileForRead( filePath ) ;
+                                    if( file )
+                                    {
+                                        spd_sign_2_image = file.read() ;
+                                    }
                                 }
                             }
                             break ;
@@ -1484,10 +1492,14 @@ function OnBtnSend_Click( e )
                             case 3:
                             {
                                 spd_name_3 = personalData.get( "NAME" ) ;
-                                var file = Alloy.Globals.getFileForRead( personalData.get( "SIGN_PATH" ) ) ;
-                                if( file )
+                                var filePath = personalData.get( "SIGN_PATH" ) ;
+                                if( filePath )
                                 {
-                                    spd_sign_3_image = file.read() ;
+                                    var file = Alloy.Globals.getFileForRead( filePath ) ;
+                                    if( file )
+                                    {
+                                        spd_sign_3_image = file.read() ;
+                                    }
                                 }
                             }
                             break ;
@@ -1555,7 +1567,7 @@ function OnBtnSend_Click( e )
                     // Other comments
                     TOPIC: Alloy.Globals.ShedModeOtherComments["TOPIC"] ,
                     OTHER_COMMENTS: Alloy.Globals.ShedModeOtherComments["OTHER_COMMENTS"]
-                } ; 
+                } ;
 
                 loader.open( "POST" , "https://www.edam.resiltronics.org/ManipulatePDF/ShedMode_ManipulatePDF.php" ) ;
 
@@ -1627,7 +1639,7 @@ function OnBtnMakeVideo_Click( e )
     var alertDialog = Titanium.UI.createAlertDialog(
     {
         title: L( 'generic_need_gps_title' ) ,
-        message: L( 'vid_need_gps_confirm_msg' ) ,             
+        message: L( 'vid_need_gps_confirm_msg' ) ,
         buttonNames: [ L( 'generic_yes_msg' ) , L( 'generic_no_msg' ) ] ,
         cancel: 1
     } ) ;
@@ -1698,7 +1710,7 @@ function OnBtnMakeVideo_Click( e )
 
                     bRet = true ;
                 }
-        
+
                 return bRet ;
             } , EndAsyncBusyAction_CallBack ) ;
         }
@@ -1734,7 +1746,7 @@ function OnBtnMakeMedia_Click( e )
     var alertDialog = Titanium.UI.createAlertDialog(
     {
         title: L( 'generic_need_gps_title' ) ,
-        message: message ,             
+        message: message ,
         buttonNames: [ L( 'generic_yes_msg' ) , L( 'generic_no_msg' ) ] ,
         cancel: 1
     } ) ;
@@ -1793,6 +1805,8 @@ function OnBtnMakeMedia_Click( e )
                     }
                     else
                     {
+                        EndAsyncBusyAction( $.activity_indicator , controls , EndAsyncBusyAction_CallBack ) ;
+
                         alert( L( 'generic_user_not_authorized_to_ask_localization' ) ) ;
                     }
                 }
@@ -1964,9 +1978,9 @@ function OnBtnMakeDraft_Click( e )
 
             // Controller creation for the Next View
             Alloy.Globals.createAndOpenControllerExt( 'DraftPaintView' , { type: "Shed" } ) ;
-    
+
             bRet = true ;
-    
+
             return bRet ;
         } ) ;
     }

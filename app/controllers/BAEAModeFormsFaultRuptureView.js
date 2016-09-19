@@ -82,7 +82,7 @@ function OnTableViewBAEAModeFormsFaultRupturePhoto_Click( e )
                 {
                     title: L( 'baea_photo_selection_title' ) ,
                     cancel: 4 ,
-                    options: [ L( 'baea_photo_new_photo_msg' ) , L( 'baea_photo_import_photo_msg' ) , L( 'baea_photo_new_sketch_msg' ) , L( 'baea_photo_view_photos_msg' ) , L( 'generic_cancel_btn_title' ) ] ,
+                    options: [ L( 'generic_photo_new_photo_msg' ) , L( 'generic_photo_import_photo_msg' ) , L( 'generic_photo_new_sketch_msg' ) , L( 'generic_photo_view_photos_msg' ) , L( 'generic_cancel_btn_title' ) ] ,
                     selectedIndex: 1
                 } ) ;
                 optionDialog.addEventListener( 'click' , function( e )
@@ -192,7 +192,7 @@ function OnTableViewBAEAModeFormsFaultRupturePhoto_Click( e )
 
                             if( Alloy.Globals.BAEAModeFaultRupture &&
                                 Alloy.Globals.BAEAModeFaultRupture[current_global_ar_index] &&
-                                Alloy.Globals.BAEAModeFaultRupture[current_global_ar_index].PHOTOS && 
+                                Alloy.Globals.BAEAModeFaultRupture[current_global_ar_index].PHOTOS &&
                                 Alloy.Globals.BAEAModeFaultRupture[current_global_ar_index].PHOTOS.length > 0 )
                             {
                                 media_array["PERMANENT"] = Alloy.Globals.BAEAModeFaultRupture[current_global_ar_index].PHOTOS ;
@@ -224,7 +224,7 @@ function OnTableViewBAEAModeFormsFaultRupturePhoto_Click( e )
 
                 if( Alloy.Globals.BAEAModeFaultRupture &&
                     Alloy.Globals.BAEAModeFaultRupture[current_global_ar_index] &&
-                    Alloy.Globals.BAEAModeFaultRupture[current_global_ar_index].PHOTOS && 
+                    Alloy.Globals.BAEAModeFaultRupture[current_global_ar_index].PHOTOS &&
                     Alloy.Globals.BAEAModeFaultRupture[current_global_ar_index].PHOTOS.length > 0 )
                 {
                     media_array["PERMANENT"] = Alloy.Globals.BAEAModeFaultRupture[current_global_ar_index].PHOTOS ;
@@ -429,7 +429,7 @@ function OnTableViewBAEAModeFormsFaultRuptureOffsetFeatureType_Click( e )
 
             // Controller creation for the Next View (inited in BAEA Mode)
             Alloy.Globals.createAndOpenControllerExt( 'BAEAModeFormsFaultRuptureOffsetFeatureTypeView' , { offset_feature_type: current_offset_feature_type , is_synchronized: current_is_synchronized } ) ;
-        
+
             bRet = true ;
 
             return bRet ;
@@ -557,22 +557,22 @@ try
     $.widgetAppTextFieldBAEAModeFormsFaultRuptureSiteName.init( L( 'generic_site_name_txt_hint' ) ) ;
     $.widgetAppTextFieldBAEAModeFormsFaultRuptureSiteName.enabled( view_enabled ) ;
 
-    $.widgetAppTextFieldBAEAModeFormsFaultRuptureLatitude.init( L( 'generic_latitude_txt_hint' ) , null , Titanium.UI.KEYBOARD_NUMBERS_PUNCTUATION ) ;
+    $.widgetAppTextFieldBAEAModeFormsFaultRuptureLatitude.init( L( 'generic_latitude_txt_hint' ) , null , Titanium.UI.KEYBOARD_TYPE_NUMBERS_PUNCTUATION ) ;
     $.widgetAppTextFieldBAEAModeFormsFaultRuptureLatitude.enabled( view_enabled ) ;
 
-    $.widgetAppTextFieldBAEAModeFormsFaultRuptureLongitude.init( L( 'generic_longitude_txt_hint' ) , null , Titanium.UI.KEYBOARD_NUMBERS_PUNCTUATION ) ;
+    $.widgetAppTextFieldBAEAModeFormsFaultRuptureLongitude.init( L( 'generic_longitude_txt_hint' ) , null , Titanium.UI.KEYBOARD_TYPE_NUMBERS_PUNCTUATION ) ;
     $.widgetAppTextFieldBAEAModeFormsFaultRuptureLongitude.enabled( view_enabled ) ;
 
     $.widgetAppTextFieldBAEAModeFormsFaultRuptureAddress.init( L( 'generic_address_txt_hint' ) ) ;
     $.widgetAppTextFieldBAEAModeFormsFaultRuptureAddress.enabled( view_enabled ) ;
 
-    $.widgetAppTextFieldBAEAModeFormsFaultRuptureSlipAzimuth.init( L( 'generic_slip_azimuth_txt_hint' ) , null , Titanium.UI.KEYBOARD_NUMBER_PAD ) ;
+    $.widgetAppTextFieldBAEAModeFormsFaultRuptureSlipAzimuth.init( L( 'generic_slip_azimuth_txt_hint' ) , null , Titanium.UI.KEYBOARD_TYPE_NUMBER_PAD ) ;
     $.widgetAppTextFieldBAEAModeFormsFaultRuptureSlipAzimuth.enabled( view_enabled ) ;
 
-    $.widgetAppTextFieldBAEAModeFormsFaultRupturePlunge.init( L( 'generic_plunge_txt_hint' ) , null , Titanium.UI.KEYBOARD_NUMBER_PAD ) ;
+    $.widgetAppTextFieldBAEAModeFormsFaultRupturePlunge.init( L( 'generic_plunge_txt_hint' ) , null , Titanium.UI.KEYBOARD_TYPE_NUMBER_PAD ) ;
     $.widgetAppTextFieldBAEAModeFormsFaultRupturePlunge.enabled( view_enabled ) ;
 
-    $.widgetAppTextFieldBAEAModeFormsFaultRuptureSlipLength.init( L( 'generic_slip_length_txt_hint' ) , null , Titanium.UI.KEYBOARD_NUMBER_PAD ) ;
+    $.widgetAppTextFieldBAEAModeFormsFaultRuptureSlipLength.init( L( 'generic_slip_length_txt_hint' ) , null , Titanium.UI.KEYBOARD_TYPE_NUMBER_PAD ) ;
     $.widgetAppTextFieldBAEAModeFormsFaultRuptureSlipLength.enabled( view_enabled ) ;
 
     $.widgetAppTextFieldBAEAModeFormsFaultRuptureNotes.init( L( 'generic_notes_txt_hint' ) ) ;

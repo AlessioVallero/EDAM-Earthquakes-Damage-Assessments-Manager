@@ -22,8 +22,11 @@
             <View id="viewAppComboBoxAeDESModeFormsSectionTwoUtilization">
                 <Widget id="widgetAppComboBoxAeDESModeFormsSectionTwoUtilization" src="com.diseg.AppComboBox" />
             </View>
-            <View id="viewAppComboBoxAeDESModeFormsSectionTwoProperty">
-                <Widget id="widgetAppComboBoxAeDESModeFormsSectionTwoProperty" src="com.diseg.AppComboBox" />
+            <View id="viewAppTextFieldAeDESModeFormsSectionTwoPublicProperty">
+                <Widget id="widgetAppTextFieldAeDESModeFormsSectionTwoPublicProperty" src="com.diseg.AppTextField" />
+            </View>
+            <View id="viewAppTextFieldAeDESModeFormsSectionTwoPrivateProperty">
+                <Widget id="widgetAppTextFieldAeDESModeFormsSectionTwoPrivateProperty" src="com.diseg.AppTextField" />
             </View>
             <View id="viewAppTextFieldAeDESModeFormsSectionTwoUnitOfUseHousing">
                 <Widget id="widgetAppTextFieldAeDESModeFormsSectionTwoUnitOfUseHousing" src="com.diseg.AppTextField" />

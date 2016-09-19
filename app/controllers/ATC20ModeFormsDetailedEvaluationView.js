@@ -101,7 +101,7 @@ function OnTableViewATC20ModeFormsDetailedEvaluation_Click( e )
 
                                 case 1:
                                 {
-                                    Alloy.Globals.createAndOpenControllerExt( 'ViewDetailedEvaluationSketchView' , { image: Alloy.Globals.ATC20ModeDetailedEvaluation["SKETCH_PATH"] } ) ;
+                                    Alloy.Globals.createAndOpenControllerExt( 'ViewFormSketchView' , { image: Alloy.Globals.ATC20ModeDetailedEvaluation["SKETCH_PATH"] } ) ;
                                 }
                                 break ;
 
@@ -120,7 +120,7 @@ function OnTableViewATC20ModeFormsDetailedEvaluation_Click( e )
                     else
                     {
                         // The form is synchronized, the only possibility is to see the existing sketch
-                        Alloy.Globals.createAndOpenControllerExt( 'ViewDetailedEvaluationSketchView' , { image: Alloy.Globals.ATC20ModeDetailedEvaluation["SKETCH_PATH"] } ) ;
+                        Alloy.Globals.createAndOpenControllerExt( 'ViewFormSketchView' , { image: Alloy.Globals.ATC20ModeDetailedEvaluation["SKETCH_PATH"] } ) ;
                     }
                 }
                 else

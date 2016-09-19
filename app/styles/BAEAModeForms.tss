@@ -21,14 +21,14 @@
     backgroundSelectedImage: '/images/logout_pressed.png' ,
     backgroundDisabledImage: '/images/logout_disabled.png' ,
     width: 100 ,
-    height: 30
+    height: 40
 } ,
 
 // Label Welcome
 "#lblWelcome":
 {
     color: "#000" ,
-	top: 45 ,
+	  top: 55 ,
     left: 5 ,
     font:
     {
@@ -39,27 +39,27 @@
     textAlign: 'left'
 } ,
 
-// View Features view 
+// View Features view
 "#viewAppButtonViewFeatures":
 {
-    top: 70 ,
+    top: 80 ,
     left: 20 ,
     width: 60 ,
     height: 102
 } ,
 
-// Add view 
+// Add view
 "#viewAppButtonAdd":
 {
-    top: 70 ,
+    top: 80 ,
     width: 60 ,
     height: 102
 } ,
 
-// Server Synch view 
+// Server Synch view
 "#viewAppButtonServerSynch":
 {
-    top: 70 ,
+    top: 80 ,
     right: 20 ,
     width: 60 ,
     height: 102
@@ -68,7 +68,7 @@
 // Table view with Forms
 "#tableViewBAEAModeForms":
 {
-    top: 185 ,
+    top: 195 ,
     backgroundColor: '#ffffff' ,
     height: Ti.UI.SIZE ,
     width: Ti.UI.FILL
@@ -104,24 +104,8 @@
     height: 34
 } ,
 
-// Activity Indicator iOS
-"#activity_indicator[platform=ios]":
-{
-    color: '#000' ,
-    font:
-    {
-        fontFamily: 'Helvetica Neue' ,
-        fontSize: 11 ,
-        fontWeight: 'bold'
-    } ,
-    style: Ti.UI.iPhone.ActivityIndicatorStyle.DARK ,
-    width: Ti.UI.SIZE ,
-    height: Ti.UI.SIZE ,
-    zIndex: 1
-} ,
-
-// Activity Indicator Android-mobileweb
-"#activity_indicator[platform=android,mobileweb]":
+// Activity Indicator
+"#activity_indicator":
 {
     color: '#000' ,
     font:
@@ -131,21 +115,6 @@
         fontWeight: 'bold'
     } ,
     style: Ti.UI.ActivityIndicatorStyle.DARK ,
-    width: Ti.UI.SIZE ,
-    height: Ti.UI.SIZE ,
-    zIndex: 1
-} ,
-
-// Activity Indicator BlackBerry
-"#activity_indicator[platform=blackberry]":
-{
-    color: '#000' ,
-    font:
-    {
-        fontFamily: 'Helvetica Neue' ,
-        fontSize: 11 ,
-        fontWeight: 'bold'
-    } ,
     width: Ti.UI.SIZE ,
     height: Ti.UI.SIZE ,
     zIndex: 1

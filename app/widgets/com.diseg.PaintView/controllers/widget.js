@@ -35,16 +35,7 @@ $.get_current_image = function( need_transparent_background )
         $.paint_view.setBackgroundColor( oldBackgroundColor ) ;
     }
 
-    // iOS devices need the entire Image object,
-    // Android devices only the media part
-    if( OS_IOS )
-    {
-        return ret_image ;
-    }
-    else
-    {
-        return ret_image.media ;
-    }
+    return ret_image ;
 } ;
 
 // Setting the stroke color to red

@@ -1,0 +1,19 @@
+var exec = require('child_process').execSync ;
+
+task("pre:compile", function(event, logger) {
+	logger.info('building project at ' + event.dir.project);
+});
+
+task("post:compile", function(event, logger) {
+  var dest1 = event.dir.project + "\'/build/iphone/build/Products/Debug-iphoneos/EDAM Earthquakes Damage Assessments Manager.app\'" ;
+  var dest2 = event.dir.project + "\'/build/iphone/build/Products/Debug-iphonesimulator/EDAM Earthquakes Damage Assessments Manager.app\'" ;
+  var dest3 = event.dir.project + "\'/build/iphone/build/Products/Release-iphoneos/EDAM Earthquakes Damage Assessments Manager.app\'" ;
+  var dest4 = event.dir.project + "\'/build/iphone/build/Products/Release-iphonesimulator/EDAM Earthquakes Damage Assessments Manager.app\'" ;
+
+  exec( 'mkdir -p ' + dest1 + ' && cp -R ' + event.dir.home + '/platform/ios/iSpeechSDK.bundle ' + dest1 ) ;
+  exec( 'mkdir -p ' + dest2 + ' && cp -R ' + event.dir.home + '/platform/ios/iSpeechSDK.bundle ' + dest2 ) ;
+  exec( 'mkdir -p ' + dest3 + ' && cp -R ' + event.dir.home + '/platform/ios/iSpeechSDK.bundle ' + dest3 ) ;
+  exec( 'mkdir -p ' + dest4 + ' && cp -R ' + event.dir.home + '/platform/ios/iSpeechSDK.bundle ' + dest4 ) ;
+
+	logger.info('compile finished!');
+});

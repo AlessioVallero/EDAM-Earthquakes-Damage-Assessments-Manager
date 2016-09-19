@@ -19,7 +19,7 @@
     height: 88
 } ,
 
-// View sign view 
+// View sign view
 "#viewAppButtonViewSign":
 {
     top: 0 ,
@@ -28,7 +28,7 @@
     height: 88
 } ,
 
-// Create sign view 
+// Create sign view
 "#viewAppButtonCreateSign":
 {
     top: 0 ,
@@ -41,7 +41,7 @@
 "#scrollView_fields":
 {
     top: 124 ,
-    scrollType: "vertical" 
+    scrollType: "vertical"
 } ,
 
 // Name view
@@ -82,31 +82,15 @@
     title: L( 'generic_save_btn_title' )
 } ,
 
-// Save view 
+// Save view
 "#viewAppButtonSave":
 {
     top: 280 ,
     width: 72
 } ,
 
-// Activity Indicator iOS
-"#activity_indicator[platform=ios]":
-{
-    color: '#000' ,
-    font:
-    {
-        fontFamily: 'Helvetica Neue' ,
-        fontSize: 11 ,
-        fontWeight: 'bold'
-    } ,
-    style: Ti.UI.iPhone.ActivityIndicatorStyle.DARK ,
-    width: Ti.UI.SIZE ,
-    height: Ti.UI.SIZE ,
-    zIndex: 1
-} ,
-
-// Activity Indicator Android-mobileweb
-"#activity_indicator[platform=android,mobileweb]":
+// Activity Indicator
+"#activity_indicator":
 {
     color: '#000' ,
     font:
@@ -116,21 +100,6 @@
         fontWeight: 'bold'
     } ,
     style: Ti.UI.ActivityIndicatorStyle.DARK ,
-    width: Ti.UI.SIZE ,
-    height: Ti.UI.SIZE ,
-    zIndex: 1
-} ,
-
-// Activity Indicator BlackBerry
-"#activity_indicator[platform=blackberry]":
-{
-    color: '#000' ,
-    font:
-    {
-        fontFamily: 'Helvetica Neue' ,
-        fontSize: 11 ,
-        fontWeight: 'bold'
-    } ,
     width: Ti.UI.SIZE ,
     height: Ti.UI.SIZE ,
     zIndex: 1

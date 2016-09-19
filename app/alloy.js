@@ -278,7 +278,7 @@ Alloy.Globals.ATC20ExportCSVTimeoutMillisecs = 180000 ;     // 3 minutes
 /////////////////////////////////////////////////////////////////////////////
 
 Alloy.Globals.CreateAndOpenControllerDebounceWaitPeriodMillisecs = 500 ; // Half of a second
-Alloy.Globals.ShareMyPositionLoopPeriodMillisecs = 180000 ;              // 3 minutes
+Alloy.Globals.ShareMyPositionLoopPeriodMillisecs = 60000 ;               // 1 minute
 
 // Function to save the sessionId with the securely properties
 // INPUT: the new sessionId
@@ -792,7 +792,7 @@ Alloy.Globals.tableExists = function( dbObj , table )
 
         rs.close() ;
     }
- 
+
     return bRet ;
 } ;
 
@@ -813,7 +813,7 @@ Alloy.Globals.isLocationAuthorized = function()
     if( OS_IOS )
     {
         var authorization = Titanium.Geolocation.locationServicesAuthorization ;
-    
+
         if( authorization == Titanium.Geolocation.AUTHORIZATION_DENIED )
         {
             // User has decided to not allow this use of location
@@ -998,7 +998,7 @@ Alloy.Globals.reverseGeocode = function( latitude , longitude , callback )
     var addrReq = Titanium.Network.createHTTPClient() ;
     addrReq.open( "GET" , addrUrl ) ;
     addrReq.send( null ) ;
-      
+
     addrReq.onload = function()
     {
         var response = JSON.parse( this.responseText ) ;
@@ -1164,6 +1164,16 @@ Alloy.Globals.formatReverseGeocodingAnswer = function( response )
 // OUTPUT: none
 Alloy.Globals.UseCamera = function( heading , latitude , longitude , address )
 {
+    var mediaTypes = null ;
+    if( OS_IOS )
+    {
+        mediaTypes = [Ti.Media.MEDIA_TYPE_PHOTO,Ti.Media.MEDIA_TYPE_VIDEO] ;
+    }
+    else
+    {
+        mediaTypes = [Ti.Media.MEDIA_TYPE_PHOTO] ;
+    }
+
     Titanium.Media.showCamera(
     {
         success: function( event )
@@ -1245,7 +1255,7 @@ Alloy.Globals.UseCamera = function( heading , latitude , longitude , address )
             alertDialog.show() ;
         },
         saveToPhotoGallery: false ,
-        mediaTypes: [Ti.Media.MEDIA_TYPE_VIDEO, Ti.Media.MEDIA_TYPE_PHOTO]
+        mediaTypes: mediaTypes
     } ) ;
 } ;
 
@@ -1379,6 +1389,7 @@ function ShareMyPosition()
 }
 
 // To update current position of the user
+ShareMyPosition() ;
 var intervalShareMyPosition = setInterval( ShareMyPosition , Alloy.Globals.ShareMyPositionLoopPeriodMillisecs ) ;
 
 function UpdateBackgroundPosition( e )
@@ -1399,7 +1410,7 @@ function UpdateBackgroundPosition( e )
         loader.validatesSecureCertificate = false ;
 
         // Runs the function when the data is ready for us to process
-        loader.onload = function() 
+        loader.onload = function()
         {
             var error_occurred = false ;
 
@@ -1628,7 +1639,7 @@ if( typeof dbVersion == 'undefined' || dbVersion == null )
                 // Drop and creation of the tables
                 myDb.execute( 'DROP TABLE IF EXISTS UsersResidentsForms;' ) ;
                 myDb.execute( 'CREATE TABLE IF NOT EXISTS UsersResidentsForms( ID integer PRIMARY KEY AUTOINCREMENT , FORM_NO TEXT , DATE TEXT , USER TEXT , SYNCHRONIZED TEXT );' ) ;
-                
+
                 for( var i = 0 ; i < data.length ; i++ )
                 {
                     var currentData = data[i] ;

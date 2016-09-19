@@ -8,5 +8,5 @@ backgroundColor: "#000"
 top: "0dp",
 backgroundColor: "#111",
 separatorColor: "#222",
-separatorStyle: Ti.UI.iPhone.TableViewSeparatorStyle.SINGLE_LINE
+separatorStyle: Ti.UI.TABLE_VIEW_SEPARATOR_STYLE_SINGLE_LINE
 }

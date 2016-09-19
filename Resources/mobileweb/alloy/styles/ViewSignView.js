@@ -1,1 +1,0 @@
-module.exports = [{"isId":true,"priority":100000.108,"key":"viewSignViewWindow","style":{title:L('view_sign_view_title'),backgroundColor:"#ffffcc",}},{"isId":true,"priority":100000.1081,"key":"btn_ios_back","style":{title:L('generic_back_btn_title'),}},{"isId":true,"priority":100000.1082,"key":"image_view_sign","style":{defaultImage:"/images/img_not_found.png",}}];

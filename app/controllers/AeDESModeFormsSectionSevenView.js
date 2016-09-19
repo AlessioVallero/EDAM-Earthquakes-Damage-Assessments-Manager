@@ -36,12 +36,6 @@ function OnMorphologySite_Change( e )
     Alloy.Globals.AeDESModeSectionSeven["MORPHOLOGY_SITE"] = e.id ;
 }
 
-// SlopesLooming picker event handler
-function OnSlopesLooming_Change( e )
-{
-    Alloy.Globals.AeDESModeSectionSeven["SLOPES_LOOMING"] = e.id ;
-}
-
 // Subsoil picker event handler
 function OnSubsoil_Change( e )
 {
@@ -58,7 +52,6 @@ try
 {
     // Init controls
     var morphologySiteParentView = null ;
-    var slopesLoomingParentView = null ;
     var subsoilParentView = null ;
     // On iOS devices the parentView must be the mainView because is used a new Window to show the picker.
     // so if we use the container of the Widget, the new Window will appear compressed inside the container
@@ -66,14 +59,12 @@ try
     {
         var mainView = $.getView() ;
         morphologySiteParentView = mainView ;
-        slopesLoomingParentView = mainView ;
         subsoilParentView = mainView ;
     }
     else
     {
         morphologySiteParentView = $.viewAppComboBoxAeDESModeFormsSectionSevenMorphologySite ;
-        slopesLoomingParentView = $.viewAppComboBoxAeDESModeFormsSectionSevenSlopesLooming ;
-        subsoilParentView = $.viewAppComboBoxAeDESModeFormsSectionSevenSubsoil ;
+        subsoilParentView = $.viewAppComboBoxAeDESModeFormsSectionSevenSubsoilFailures ;
     }
     // Init app comboboxes
     var morphologySite =
@@ -91,21 +82,6 @@ try
         $.widgetAppComboBoxAeDESModeFormsSectionSevenMorphologySite.set_selected_index( Alloy.Globals.AeDESModeSectionSeven["MORPHOLOGY_SITE"] ) ;
     }
 
-    var slopesLoomingValues =
-    {
-        0: { title: L( 'generic_slopes_looming_absent' ) } ,
-        1: { title: L( 'generic_slopes_looming_generated_by_the_earthquake' ) } ,
-        2: { title: L( 'generic_slopes_looming_exacerbated_by_the_earthquake' ) } ,
-        3: { title: L( 'generic_slopes_looming_pre_existing' ) }
-    } ;
-    $.widgetAppComboBoxAeDESModeFormsSectionSevenSlopesLooming.init( L( 'generic_slopes_looming_text_msg' ) , slopesLoomingValues , OnSlopesLooming_Change , null , slopesLoomingParentView ) ;
-    $.widgetAppComboBoxAeDESModeFormsSectionSevenSlopesLooming.enabled( view_enabled ) ;
-
-    if( Alloy.Globals.AeDESModeSectionSeven["SLOPES_LOOMING"] )
-    {
-        $.widgetAppComboBoxAeDESModeFormsSectionSevenSlopesLooming.set_selected_index( Alloy.Globals.AeDESModeSectionSeven["SLOPES_LOOMING"] ) ;
-    }
-
     var subsoilValues =
     {
         0: { title: L( 'generic_subsoil_absent' ) } ,
@@ -113,12 +89,12 @@ try
         2: { title: L( 'generic_subsoil_exacerbated_by_the_earthquake' ) } ,
         3: { title: L( 'generic_subsoil_pre_existing' ) }
     } ;
-    $.widgetAppComboBoxAeDESModeFormsSectionSevenSubsoil.init( L( 'generic_subsoil_text_msg' ) , subsoilValues , OnSubsoil_Change , null , subsoilParentView ) ;
-    $.widgetAppComboBoxAeDESModeFormsSectionSevenSubsoil.enabled( view_enabled ) ;
+    $.widgetAppComboBoxAeDESModeFormsSectionSevenSubsoilFailures.init( L( 'generic_subsoil_text_msg' ) , subsoilValues , OnSubsoil_Change , null , subsoilParentView ) ;
+    $.widgetAppComboBoxAeDESModeFormsSectionSevenSubsoilFailures.enabled( view_enabled ) ;
 
     if( Alloy.Globals.AeDESModeSectionSeven["SUBSOIL"] )
     {
-        $.widgetAppComboBoxAeDESModeFormsSectionSevenSubsoil.set_selected_index( Alloy.Globals.AeDESModeSectionSeven["SUBSOIL"] ) ;
+        $.widgetAppComboBoxAeDESModeFormsSectionSevenSubsoilFailures.set_selected_index( Alloy.Globals.AeDESModeSectionSeven["SUBSOIL"] ) ;
     }
     // Init app buttons
     $.widgetAppButtonSave.init( '/images/save_normal.png' , '/images/save_pressed.png' , '/images/save_disabled.png' , L( 'generic_save_btn_title' ) , OnBtnSave_Click ) ;

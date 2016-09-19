@@ -251,15 +251,15 @@ try
     }
     $.btnUsersResidentsModeFormsBuildingPositionLoadPosition.enabled = view_enabled ;
     // Init app textfields
-    $.widgetAppTextFieldUsersResidentsModeFormsBuildingPositionLatitude.init( L( 'generic_latitude_txt_hint' ) , OnLatitude_Change , Titanium.UI.KEYBOARD_NUMBERS_PUNCTUATION ) ;
+    $.widgetAppTextFieldUsersResidentsModeFormsBuildingPositionLatitude.init( L( 'generic_latitude_txt_hint' ) , OnLatitude_Change , Titanium.UI.KEYBOARD_TYPE_NUMBERS_PUNCTUATION ) ;
     $.widgetAppTextFieldUsersResidentsModeFormsBuildingPositionLatitude.set_text_value( Alloy.Globals.UsersResidentsModeBuildingPosition["LATITUDE"] ) ;
     $.widgetAppTextFieldUsersResidentsModeFormsBuildingPositionLatitude.enabled( view_enabled ) ;
 
-    $.widgetAppTextFieldUsersResidentsModeFormsBuildingPositionLongitude.init( L( 'generic_longitude_txt_hint' ) , OnLongitude_Change , Titanium.UI.KEYBOARD_NUMBERS_PUNCTUATION ) ;
+    $.widgetAppTextFieldUsersResidentsModeFormsBuildingPositionLongitude.init( L( 'generic_longitude_txt_hint' ) , OnLongitude_Change , Titanium.UI.KEYBOARD_TYPE_NUMBERS_PUNCTUATION ) ;
     $.widgetAppTextFieldUsersResidentsModeFormsBuildingPositionLongitude.set_text_value( Alloy.Globals.UsersResidentsModeBuildingPosition["LONGITUDE"] ) ;
     $.widgetAppTextFieldUsersResidentsModeFormsBuildingPositionLongitude.enabled( view_enabled ) ;
 
-    $.widgetAppTextFieldUsersResidentsModeFormsBuildingPositionAltitude.init( L( 'generic_altitude_txt_hint' ) , OnAltitude_Change , Titanium.UI.KEYBOARD_NUMBERS_PUNCTUATION ) ;
+    $.widgetAppTextFieldUsersResidentsModeFormsBuildingPositionAltitude.init( L( 'generic_altitude_txt_hint' ) , OnAltitude_Change , Titanium.UI.KEYBOARD_TYPE_NUMBERS_PUNCTUATION ) ;
     $.widgetAppTextFieldUsersResidentsModeFormsBuildingPositionAltitude.set_text_value( Alloy.Globals.UsersResidentsModeBuildingPosition["ALTITUDE"] ) ;
     $.widgetAppTextFieldUsersResidentsModeFormsBuildingPositionAltitude.enabled( view_enabled ) ;
 
@@ -279,7 +279,7 @@ try
     $.widgetAppTextFieldUsersResidentsModeFormsBuildingPositionAddress.set_text_value( Alloy.Globals.UsersResidentsModeBuildingPosition["ADDRESS"] ) ;
     $.widgetAppTextFieldUsersResidentsModeFormsBuildingPositionAddress.enabled( view_enabled ) ;
 
-    $.widgetAppTextFieldUsersResidentsModeFormsBuildingPositionCivicNo.init( L( 'generic_civicno_txt_hint' ) , OnCivicNo_Change , Titanium.UI.KEYBOARD_NUMBER_PAD ) ;
+    $.widgetAppTextFieldUsersResidentsModeFormsBuildingPositionCivicNo.init( L( 'generic_civicno_txt_hint' ) , OnCivicNo_Change , Titanium.UI.KEYBOARD_TYPE_NUMBER_PAD ) ;
     $.widgetAppTextFieldUsersResidentsModeFormsBuildingPositionCivicNo.set_text_value( Alloy.Globals.UsersResidentsModeBuildingPosition["CIVIC_NO"] ) ;
     $.widgetAppTextFieldUsersResidentsModeFormsBuildingPositionCivicNo.enabled( view_enabled ) ;
     // Init app buttons

@@ -45,6 +45,9 @@
                     <TableViewRow id="tableViewAeDESModeFormsSectionFourMeasuresOfEmergencyRowInfillPartitions">
                         <Label id="lblAeDESModeFormsSectionFourMeasuresOfEmergencyRowInfillPartitions" />
                     </TableViewRow>
+                    <TableViewRow id="tableViewAeDESModeFormsSectionFourMeasuresOfEmergencyRowPreExistingDamage">
+                        <Label id="lblAeDESModeFormsSectionFourMeasuresOfEmergencyRowPreExistingDamage" />
+                    </TableViewRow>
                 </TableView>
                 <View id="viewAppButtonSave">
                     <Widget id="widgetAppButtonSave" src="com.diseg.AppButton" />

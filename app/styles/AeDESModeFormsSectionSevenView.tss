@@ -27,42 +27,10 @@
     width: Ti.UI.FILL
 } ,
 
-// FailuresActualOrFeared label
-"#lblAeDESModeFormsSectionSevenFailuresActualOrFeared":
+// Subsoil view
+"#viewAppComboBoxAeDESModeFormsSectionSevenSubsoilFailures":
 {
-    text: L( 'generic_failures_actual_or_feared_text_msg' ) ,
     top: 70 ,
-    width: 290 ,
-    height: 18 ,
-    font:
-    {
-        fontFamily: 'Arial' ,
-        fontWeight: 'bold' ,
-        fontSize: '12'
-    } ,
-    color: '#000'
-} ,
-
-// SlopesLooming view
-"#viewAppComboBoxAeDESModeFormsSectionSevenSlopesLooming":
-{
-    top: 100 ,
-    height: 50 ,
-    width: Ti.UI.FILL
-} ,
-
-// Subsoil view
-"#viewAppComboBoxAeDESModeFormsSectionSevenSubsoil[platform=ios]":
-{
-    top: 170 ,
-    height: 50 ,
-    width: Ti.UI.FILL
-} ,
-
-// Subsoil view
-"#viewAppComboBoxAeDESModeFormsSectionSevenSubsoil":
-{
-    top: 170 ,
     height: 50 ,
     width: Ti.UI.FILL
 } ,
@@ -70,7 +38,7 @@
 // Save view
 "#viewAppButtonSave":
 {
-    top: 240 ,
+    top: 140 ,
     width: 60 ,
     height: 80 ,
     bottom: 130

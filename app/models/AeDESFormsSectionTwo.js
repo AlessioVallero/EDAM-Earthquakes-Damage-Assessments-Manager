@@ -19,7 +19,8 @@ exports.definition = {
             "UNIT_OF_USE_TOURISM": "TEXT" ,
             "UTILIZATION": "TEXT" ,
             "OCCUPANTS": "TEXT" ,
-            "PROPERTY": "TEXT"
+            "PUBLIC_PROPERTY": "TEXT" ,
+						"PRIVATE_PROPERTY": "TEXT"
         },
 		adapter: {
 			type: "sql",

@@ -1,0 +1,11 @@
+<Alloy>
+    <NavigationWindow id="navigationWindowViewFormSketchView">
+        <Window id="viewFormSketchViewWindow">
+            <LeftNavButton>
+                <Button id="btn_ios_back" onClick="OnBtnBack_Click" />
+            </LeftNavButton>
+
+            <ImageView id="image_view_form_sketch" />
+        </Window>
+    </NavigationWindow>
+</Alloy>

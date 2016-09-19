@@ -25,6 +25,9 @@
             <View id="viewAppTextFieldAeDESModeFormsSectionEightEvacueesN">
                 <Widget id="widgetAppTextFieldAeDESModeFormsSectionEightEvacueesN" src="com.diseg.AppTextField" />
             </View>
+            <View id="viewAppTextFieldAeDESModeFormsSectionEightDeepeningMotivationsAndType">
+                <Widget id="widgetAppTextFieldAeDESModeFormsSectionEightDeepeningMotivationsAndType" src="com.diseg.AppTextField" />
+            </View>
             <View id="viewAppComboBoxAeDESModeFormsSectionEightAccuracyVisit">
                 <Widget id="widgetAppComboBoxAeDESModeFormsSectionEightAccuracyVisit" src="com.diseg.AppComboBox" />
             </View>
@@ -62,6 +65,12 @@
                 </TableViewRow>
                 <TableViewRow id="tableViewAeDESModeFormsSectionEightMeasuresOfEmergencyRowRepairsOfPlantNetworks">
                     <Label id="lblAeDESModeFormsSectionEightMeasuresOfEmergencyRowRepairsOfPlantNetworks" />
+                </TableViewRow>
+                <TableViewRow id="tableViewAeDESModeFormsSectionEightMeasuresOfEmergencyRowOther1">
+                    <Label id="lblAeDESModeFormsSectionEightMeasuresOfEmergencyRowOther1" />
+                </TableViewRow>
+                <TableViewRow id="tableViewAeDESModeFormsSectionEightMeasuresOfEmergencyRowOther2">
+                    <Label id="lblAeDESModeFormsSectionEightMeasuresOfEmergencyRowOther2" />
                 </TableViewRow>
             </TableView>
             <View id="viewAppButtonSave">

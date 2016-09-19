@@ -49,10 +49,44 @@
     color: '#000'
 } ,
 
+// Type 1 description label
+"#lblAeDESModeFormsSectionThreeHorizontalMasonryStructuresType1Description":
+{
+    text: L( 'generic_masonry_structures_type_1_description_text_msg' ) ,
+    top: 60 ,
+    width: 290 ,
+    height: 36 ,
+    font:
+    {
+        fontFamily: 'Arial' ,
+        fontWeight: 'bold' ,
+        fontSize: '12'
+    } ,
+    wordWrap: true ,
+    color: '#000'
+} ,
+
+// Type 2 description label
+"#lblAeDESModeFormsSectionThreeHorizontalMasonryStructuresType2Description":
+{
+    text: L( 'generic_masonry_structures_type_2_description_text_msg' ) ,
+    top: 108 ,
+    width: 290 ,
+    height: 36 ,
+    font:
+    {
+        fontFamily: 'Arial' ,
+        fontWeight: 'bold' ,
+        fontSize: '12'
+    } ,
+    wordWrap: true ,
+    color: '#000'
+} ,
+
 // NotIdentified view
 "#viewAppCheckBoxAeDESModeFormsSectionThreeMasonryStructuresNotIdentified":
 {
-    top: 60 ,
+    top: 156 ,
     height: 50 ,
     width: 290
 } ,
@@ -60,7 +94,7 @@
 // TypeOneWithoutChains view
 "#viewAppCheckBoxAeDESModeFormsSectionThreeMasonryStructuresTypeOneWithoutChains":
 {
-    top: 130 ,
+    top: 226 ,
     height: 50 ,
     width: 290
 } ,
@@ -68,7 +102,7 @@
 // TypeOneWithChains view
 "#viewAppCheckBoxAeDESModeFormsSectionThreeMasonryStructuresTypeOneWithChains":
 {
-    top: 200 ,
+    top: 296 ,
     height: 50 ,
     width: 290
 } ,
@@ -76,7 +110,7 @@
 // TypeTwoWithoutChains view
 "#viewAppCheckBoxAeDESModeFormsSectionThreeMasonryStructuresTypeTwoWithoutChains":
 {
-    top: 270 ,
+    top: 366 ,
     height: 50 ,
     width: 290
 } ,
@@ -84,7 +118,7 @@
 // TypeTwoWithChains view
 "#viewAppCheckBoxAeDESModeFormsSectionThreeMasonryStructuresTypeTwoWithChains":
 {
-    top: 340 ,
+    top: 436 ,
     height: 50 ,
     width: 290
 }

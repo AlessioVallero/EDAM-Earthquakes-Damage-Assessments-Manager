@@ -1,58 +1,54 @@
 <Alloy>
     <TabGroup id="tabUserAuthentication">
         <Tab id="tabLogin">
-            <NavigationWindow id="navigationWindowLogin">
-                <Window id="loginWindow">
-                    <LeftNavButton>
-                        <Button id="btn_login_ios_back" onClick="OnBtnBack_Click" />
-                    </LeftNavButton>
-                    <ActivityIndicator id="activity_indicator_login" />
-                    <ScrollView id="scrollViewLogin">
-                        <View id="viewAppTextFieldLoginUsername">
-                            <Widget id="widgetAppTextFieldLoginUsername" src="com.diseg.AppTextField" />
-                        </View>
-                        <View id="viewAppTextFieldLoginPassword">
-                            <Widget id="widgetAppTextFieldLoginPassword" src="com.diseg.AppTextField" />
-                        </View>
-                        <View id="viewAppButtonLogin">
-                            <Widget id="widgetAppButtonLogin" src="com.diseg.AppButton" />
-                        </View>
-                    </ScrollView>
-                </Window>
-            </NavigationWindow>
+            <Window id="loginWindow">
+                <LeftNavButton>
+                    <Button id="btn_login_ios_back" onClick="OnBtnBack_Click" />
+                </LeftNavButton>
+                <ActivityIndicator id="activity_indicator_login" />
+                <ScrollView id="scrollViewLogin">
+                    <View id="viewAppTextFieldLoginUsername">
+                        <Widget id="widgetAppTextFieldLoginUsername" src="com.diseg.AppTextField" />
+                    </View>
+                    <View id="viewAppTextFieldLoginPassword">
+                        <Widget id="widgetAppTextFieldLoginPassword" src="com.diseg.AppTextField" />
+                    </View>
+                    <View id="viewAppButtonLogin">
+                        <Widget id="widgetAppButtonLogin" src="com.diseg.AppButton" />
+                    </View>
+                </ScrollView>
+            </Window>
         </Tab>
         <Tab id="tabRegister">
-            <NavigationWindow id="navigationWindowRegister">
-                <Window id="registerWindow">
-                    <LeftNavButton>
-                        <Button id="btn_register_ios_back" onClick="OnBtnBack_Click" />
-                    </LeftNavButton>
-                    <ActivityIndicator id="activity_indicator_register" />
-                    <ScrollView id="scrollViewRegister">
-                        <View id="viewAppTextFieldRegisterUsername">
-                            <Widget id="widgetAppTextFieldRegisterUsername" src="com.diseg.AppTextField" />
-                        </View>
-                        <View id="viewAppTextFieldRegisterPassword">
-                            <Widget id="widgetAppTextFieldRegisterPassword" src="com.diseg.AppTextField" />
-                        </View>
-                        <View id="viewAppTextFieldRegisterPasswordConfirm">
-                            <Widget id="widgetAppTextFieldRegisterPasswordConfirm" src="com.diseg.AppTextField" />
-                        </View>
-                        <View id="viewAppTextFieldRegisterName">
-                            <Widget id="widgetAppTextFieldRegisterName" src="com.diseg.AppTextField" />
-                        </View>
-                        <View id="viewAppTextFieldRegisterGroup">
-                            <Widget id="widgetAppTextFieldRegisterGroup" src="com.diseg.AppTextField" />
-                        </View>
-                        <View id="viewAppTextFieldRegisterEmail">
-                            <Widget id="widgetAppTextFieldRegisterEmail" src="com.diseg.AppTextField" />
-                        </View>
-                        <View id="viewAppButtonRegister">
-                            <Widget id="widgetAppButtonRegister" src="com.diseg.AppButton" />
-                        </View>
-                    </ScrollView>
-                </Window>
-            </NavigationWindow>
+            <Window id="registerWindow">
+                <LeftNavButton>
+                    <Button id="btn_register_ios_back" onClick="OnBtnBack_Click" />
+                </LeftNavButton>
+                <ActivityIndicator id="activity_indicator_register" />
+                <ScrollView id="scrollViewRegister">
+                    <View id="viewAppTextFieldRegisterUsername">
+                        <Widget id="widgetAppTextFieldRegisterUsername" src="com.diseg.AppTextField" />
+                    </View>
+                    <View id="viewAppTextFieldRegisterPassword">
+                        <Widget id="widgetAppTextFieldRegisterPassword" src="com.diseg.AppTextField" />
+                    </View>
+                    <View id="viewAppTextFieldRegisterPasswordConfirm">
+                        <Widget id="widgetAppTextFieldRegisterPasswordConfirm" src="com.diseg.AppTextField" />
+                    </View>
+                    <View id="viewAppTextFieldRegisterName">
+                        <Widget id="widgetAppTextFieldRegisterName" src="com.diseg.AppTextField" />
+                    </View>
+                    <View id="viewAppTextFieldRegisterGroup">
+                        <Widget id="widgetAppTextFieldRegisterGroup" src="com.diseg.AppTextField" />
+                    </View>
+                    <View id="viewAppTextFieldRegisterEmail">
+                        <Widget id="widgetAppTextFieldRegisterEmail" src="com.diseg.AppTextField" />
+                    </View>
+                    <View id="viewAppButtonRegister">
+                        <Widget id="widgetAppButtonRegister" src="com.diseg.AppButton" />
+                    </View>
+                </ScrollView>
+            </Window>
         </Tab>
     </TabGroup>
 </Alloy>

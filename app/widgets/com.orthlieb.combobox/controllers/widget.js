@@ -1,5 +1,5 @@
 /*
-*   The Combobox widget provides a field that allows the user to pick from a list of items.   
+*   The Combobox widget provides a field that allows the user to pick from a list of items.
 *   See the documentation in the docs directory for more details.
 */
 
@@ -18,7 +18,7 @@ if (OS_IOS) {
     _.extend($.dropButton, args.dropButton);
     $.field.rightButton = $.dropButton;
 } else {
-    _.extend($.field, _.omit(args, properties));    
+    _.extend($.field, _.omit(args, properties));
 }
 
 /**
@@ -60,16 +60,16 @@ exports.setRight = function (right_value) {
     }
 };
 
-// id is currently selected item in the combobox.	
+// id is currently selected item in the combobox.
 Object.defineProperty($, "id", {
-    get: function() { 
-    	return $._id; 
+    get: function() {
+    	return $._id;
     },
-    set: function(id) { 
+    set: function(id) {
     	$._id = id;
     	if (OS_IOS) {
     	    // Keep text field in sync with the id change.
-    		$.field.value = ($._id && $._choices && $._choices[$._id]) ? $._choices[$._id].title : ""; 		
+    		$.field.value = ($._id && $._choices && $._choices[$._id]) ? $._choices[$._id].title : "";
     	} else {
     	    // Loop through the entries and convert the id based selector to an integer one.
     	    // Update the picker accordingly.
@@ -97,13 +97,13 @@ Object.defineProperty($, "choices", {
 	set: function(choices) {
 		$._choices = choices;
 		if (OS_IOS) {
-    		$.field.value = ($._id && $._choices && $._choices[$._id]) ? $._choices[$._id].title : ""; // Keep text field in sync.		
+    		$.field.value = ($._id && $._choices && $._choices[$._id]) ? $._choices[$._id].title : ""; // Keep text field in sync.
         } else {
             // Pickers must be destroyed and then recreated if you change their choices.
-	       if ($.picker) 
+	       if ($.picker)
 	           $.field.remove($.picker);
-	       $.picker = null;   	
-	       CreatePicker(); 
+	       $.picker = null;
+	       CreatePicker();
 	   }
 	}
 });
@@ -113,20 +113,20 @@ if (OS_IOS) {
         // Debounce in case the user clicks multiple times on the dropdown button.
         if (!$.debounce && $.choices) {
             $.debounce = true;
-            
+
             // ALLOYBUG: Would rather use createController but it is tied to the app directory and not the widget directory.
-        	var pickerView = new (require("alloy/widgets/com.orthlieb.combobox/controllers/pickerview"))( { 
-        		choices: $.choices, id: $.id, title: $.field.hintText, parentField: $.field, parentView: $.parentView 
+        	var pickerView = new (require("alloy/widgets/com.orthlieb.combobox/controllers/pickerview"))( {
+        		choices: $.choices, id: $.id, title: $.field.hintText, parentField: $.field, parentView: $.parentView
             });
         	pickerView.on('change', function (e) {
         		$.id = e.id;
         		// Trigger a change event for the combobox.
-        		$.trigger('change', { 
-        			source: $, 
-        			type: 'change', 
-        			value: e.value, 
-        			id: e.id 
-        		});	
+        		$.trigger('change', {
+        			source: $,
+        			type: 'change',
+        			value: e.value,
+        			id: e.id
+        		});
         	});
         	pickerView.on('done', function(e) {
         	    $.debounce = false;
@@ -139,12 +139,12 @@ if (OS_IOS) {
         // Pickers are slightly bizarre. You can't change the choices once they are instantiated. So we
         // create the picker on the fly and destroy/recreate when the choices change.
         $.picker = Ti.UI.createPicker({ left: 0, top: 0, width: Ti.UI.FILL, height: Ti.UI.FILL, backgroundColor: '#808080' });
-        
+
         // Degenerate case, no choices yet. You still need to create a picker!
         if (!$._choices || !_.keys($._choices).length) {
             $._choices = { dg: { title: $.field.hintText || "Choose..." } };
         }
-        
+
         // Load up the picker. We also populate an id entry to allow for easy back mapping on the trigger.
         var rows = [], i, count = -1, selected = -1;
         for (i in $.choices) {
@@ -156,7 +156,7 @@ if (OS_IOS) {
                 selected = count;
             }
         }
-        
+
         $.picker.add(rows);
 
         if (selected != -1)
@@ -183,11 +183,11 @@ if (OS_IOS) {
             var selectedRow = $.picker.getSelectedRow(0);
             $.id = selectedRow.id ;
 
-            $.trigger('change', { 
-                source: $, 
-                type: 'change', 
-                value: selectedRow.title, 
-                id: selectedRow.id 
+            $.trigger('change', {
+                source: $,
+                type: 'change',
+                value: selectedRow.title,
+                id: selectedRow.id
             });
         });
 

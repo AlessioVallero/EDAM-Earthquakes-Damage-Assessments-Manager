@@ -63,4 +63,12 @@
     top: 130 ,
     height: 50 ,
     width: 290
+} ,
+
+// Description view
+"#viewAppTextFieldAeDESModeFormsSectionEightMeasuresOfEmergencyDescription":
+{
+    top: 200 ,
+    height: 50 ,
+    width: Ti.UI.FILL
 }

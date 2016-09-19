@@ -4,7 +4,6 @@ exports.definition = {
         columns: {
             "FORM_ID": "integer PRIMARY KEY" ,
             "MORPHOLOGY_SITE": "TEXT" ,
-            "SLOPES_LOOMING": "TEXT" ,
             "SUBSOIL": "TEXT"
         },
 		adapter: {

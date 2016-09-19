@@ -29,6 +29,9 @@
             <View id="viewAppCheckBoxAeDESModeFormsSectionThreeSteelFrames">
                 <Widget id="widgetAppCheckBoxAeDESModeFormsSectionThreeSteelFrames" src="com.diseg.AppCheckBox" />
             </View>
+            <View id="viewAppCheckBoxAeDESModeFormsSectionThreeWoodFramesWalls">
+                <Widget id="widgetAppCheckBoxAeDESModeFormsSectionThreeWoodFramesWalls" src="com.diseg.AppCheckBox" />
+            </View>
             <Label id="lblAeDESModeFormsSectionThreeVerticalMasonryStructures" />
             <TableView id="tableViewAeDESModeFormsSectionThreeMasonryStructure" onClick="OnTableViewAeDESModeFormsSectionThreeMasonryStructure_Click">
                 <TableViewRow id="tableViewAeDESModeFormsSectionThreeMasonryStructureRowNotIdentified">

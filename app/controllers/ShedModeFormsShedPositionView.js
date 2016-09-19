@@ -234,15 +234,15 @@ try
     // Init controls
     $.btnShedModeFormsShedPositionLoadPosition.enabled = view_enabled ;
     // Init app textfields
-    $.widgetAppTextFieldShedModeFormsShedPositionLatitude.init( L( 'generic_latitude_txt_hint' ) , OnLatitude_Change , Titanium.UI.KEYBOARD_NUMBERS_PUNCTUATION ) ;
+    $.widgetAppTextFieldShedModeFormsShedPositionLatitude.init( L( 'generic_latitude_txt_hint' ) , OnLatitude_Change , Titanium.UI.KEYBOARD_TYPE_NUMBERS_PUNCTUATION ) ;
     $.widgetAppTextFieldShedModeFormsShedPositionLatitude.set_text_value( Alloy.Globals.ShedModeShedPosition["LATITUDE"] ) ;
     $.widgetAppTextFieldShedModeFormsShedPositionLatitude.enabled( view_enabled ) ;
 
-    $.widgetAppTextFieldShedModeFormsShedPositionLongitude.init( L( 'generic_longitude_txt_hint' ) , OnLongitude_Change , Titanium.UI.KEYBOARD_NUMBERS_PUNCTUATION ) ;
+    $.widgetAppTextFieldShedModeFormsShedPositionLongitude.init( L( 'generic_longitude_txt_hint' ) , OnLongitude_Change , Titanium.UI.KEYBOARD_TYPE_NUMBERS_PUNCTUATION ) ;
     $.widgetAppTextFieldShedModeFormsShedPositionLongitude.set_text_value( Alloy.Globals.ShedModeShedPosition["LONGITUDE"] ) ;
     $.widgetAppTextFieldShedModeFormsShedPositionLongitude.enabled( view_enabled ) ;
 
-    $.widgetAppTextFieldShedModeFormsShedPositionAltitude.init( L( 'generic_altitude_txt_hint' ) , OnAltitude_Change , Titanium.UI.KEYBOARD_NUMBERS_PUNCTUATION ) ;
+    $.widgetAppTextFieldShedModeFormsShedPositionAltitude.init( L( 'generic_altitude_txt_hint' ) , OnAltitude_Change , Titanium.UI.KEYBOARD_TYPE_NUMBERS_PUNCTUATION ) ;
     $.widgetAppTextFieldShedModeFormsShedPositionAltitude.set_text_value( Alloy.Globals.ShedModeShedPosition["ALTITUDE"] ) ;
     $.widgetAppTextFieldShedModeFormsShedPositionAltitude.enabled( view_enabled ) ;
 
@@ -262,7 +262,7 @@ try
     $.widgetAppTextFieldShedModeFormsShedPositionAddress.set_text_value( Alloy.Globals.ShedModeShedPosition["ADDRESS"] ) ;
     $.widgetAppTextFieldShedModeFormsShedPositionAddress.enabled( view_enabled ) ;
 
-    $.widgetAppTextFieldShedModeFormsShedPositionCivicNo.init( L( 'generic_civicno_txt_hint' ) , OnCivicNo_Change , Titanium.UI.KEYBOARD_NUMBER_PAD ) ;
+    $.widgetAppTextFieldShedModeFormsShedPositionCivicNo.init( L( 'generic_civicno_txt_hint' ) , OnCivicNo_Change , Titanium.UI.KEYBOARD_TYPE_NUMBER_PAD ) ;
     $.widgetAppTextFieldShedModeFormsShedPositionCivicNo.set_text_value( Alloy.Globals.ShedModeShedPosition["CIVIC_NO"] ) ;
     $.widgetAppTextFieldShedModeFormsShedPositionCivicNo.enabled( view_enabled ) ;
     // Init app buttons

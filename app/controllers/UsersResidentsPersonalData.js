@@ -91,7 +91,7 @@ function OnBtnViewSign_Click( e )
 
             var view_sign_param = null ;
             // The current sign blob (if setted) it's the most updated sign
-            // Otherwise we'll check if the sign is on the DB 
+            // Otherwise we'll check if the sign is on the DB
             if( Alloy.Globals.UsersResidentsCurrentSign )
             {
                 view_sign_param = Alloy.Globals.UsersResidentsCurrentSign ;
@@ -136,7 +136,7 @@ function OnBtnSave_Click( e )
     var alertDialog = Titanium.UI.createAlertDialog(
     {
         title: L( 'generic_save_title' ) ,
-        message: L( 'save_confirm_msg' ) ,             
+        message: L( 'save_confirm_msg' ) ,
         buttonNames: [ L( 'generic_yes_msg' ) , L( 'generic_no_msg' ) ] ,
         cancel: 1
     } ) ;
@@ -167,7 +167,7 @@ function OnBtnSave_Click( e )
                             // We'll compute the path
                             Alloy.Globals.UsersResidentsCurrentSignPath = new Date().getTime() + "_sign.png" ;
                         }
-    
+
                         // The time now, concatenated with _sign
                         var file = Alloy.Globals.getFileForWrite( Alloy.Globals.UsersResidentsCurrentSignPath ) ;
                         if( file.exists() )
@@ -182,11 +182,11 @@ function OnBtnSave_Click( e )
                         else
                         {
                             Alloy.Globals.AlertUserAndLogAsync( L( "image_saving_error_msg" ) ) ;
-    
+
                             bError = true ;
                         }
                     }
-    
+
                     if( !bError )
                     {
                         // Creating an instance of the model for saving it on the DB
@@ -245,7 +245,7 @@ function OnBtnSave_Click( e )
         else if( e.index == 1 )
         {
             // Clicked "NO"
-        }   
+        }
     } ) ;
 
     // Show alert message for saving
@@ -279,8 +279,8 @@ try
 
     // Init app textfields
     $.widgetAppTextFieldName.init( L( 'generic_name_txt_hint' ) ) ;
-    $.widgetAppTextFieldCell.init( L( 'generic_cell_txt_hint' ) , null , Titanium.UI.KEYBOARD_NUMBERS_PUNCTUATION ) ;
-    $.widgetAppTextFieldAge.init( L( 'generic_age_txt_hint' ) , null , Titanium.UI.KEYBOARD_NUMBER_PAD ) ;
+    $.widgetAppTextFieldCell.init( L( 'generic_cell_txt_hint' ) , null , Titanium.UI.KEYBOARD_TYPE_NUMBERS_PUNCTUATION ) ;
+    $.widgetAppTextFieldAge.init( L( 'generic_age_txt_hint' ) , null , Titanium.UI.KEYBOARD_TYPE_NUMBER_PAD ) ;
     $.widgetAppTextFieldJob.init( L( 'generic_job_txt_hint' ) ) ;
 
     // Init app buttons

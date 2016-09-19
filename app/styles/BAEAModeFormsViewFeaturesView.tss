@@ -237,24 +237,8 @@
     color: "#000" ,
 } ,
 
-// Activity Indicator iOS
-"#activity_indicator[platform=ios]":
-{
-    color: '#000' ,
-    font:
-    {
-        fontFamily: 'Helvetica Neue' ,
-        fontSize: 11 ,
-        fontWeight: 'bold'
-    } ,
-    style: Ti.UI.iPhone.ActivityIndicatorStyle.DARK ,
-    width: Ti.UI.SIZE ,
-    height: Ti.UI.SIZE ,
-    zIndex: 1
-} ,
-
-// Activity Indicator Android-mobileweb
-"#activity_indicator[platform=android,mobileweb]":
+// Activity Indicator
+"#activity_indicator":
 {
     color: '#000' ,
     font:
@@ -264,21 +248,6 @@
         fontWeight: 'bold'
     } ,
     style: Ti.UI.ActivityIndicatorStyle.DARK ,
-    width: Ti.UI.SIZE ,
-    height: Ti.UI.SIZE ,
-    zIndex: 1
-} ,
-
-// Activity Indicator BlackBerry
-"#activity_indicator[platform=blackberry]":
-{
-    color: '#000' ,
-    font:
-    {
-        fontFamily: 'Helvetica Neue' ,
-        fontSize: 11 ,
-        fontWeight: 'bold'
-    } ,
     width: Ti.UI.SIZE ,
     height: Ti.UI.SIZE ,
     zIndex: 1

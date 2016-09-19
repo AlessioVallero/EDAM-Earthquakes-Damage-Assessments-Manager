@@ -1,1 +1,0 @@
-module.exports={"dependencies":{"com.diseg.PaintView":"1.0","com.diseg.AppButton":"1.0","com.diseg.AppTextField":"1.0","com.diseg.AppTextArea":"1.0","com.diseg.AppComboBox":"1.0","com.diseg.AppCheckBox":"1.0","com.mcongrove.slideMenu":"1.1","com.orthlieb.combobox":"1.1"}};

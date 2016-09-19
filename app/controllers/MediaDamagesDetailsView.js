@@ -124,7 +124,7 @@ function OnBtnDone_Click( e )
                 var alertDialog = Titanium.UI.createAlertDialog(
                 {
                     title: L( 'generic_da_element_done_title' ) ,
-                    message: L( 'da_element_done_text_msg' ) ,             
+                    message: L( 'da_element_done_text_msg' ) ,
                     buttonNames: [ L( 'generic_yes_msg' ) , L( 'generic_no_msg' ) ] ,
                     cancel: 1
                 } ) ;
@@ -242,9 +242,9 @@ try
     // Init app buttons
     $.widgetAppButtonDone.init( '/images/done_normal.png' , '/images/done_pressed.png' , '/images/done_disabled.png' , L( 'generic_done_btn_title' ) , OnBtnDone_Click ) ;
     // Init app textfields
-    $.widgetAppTextFieldMediaDamagesDetailsDamagesLevel.init( L( 'generic_damages_level_txt_hint' ) , null , Titanium.UI.KEYBOARD_NUMBER_PAD , 2 , false , "5" ) ;
+    $.widgetAppTextFieldMediaDamagesDetailsDamagesLevel.init( L( 'generic_damages_level_txt_hint' ) , null , Titanium.UI.KEYBOARD_TYPE_NUMBER_PAD , 2 , false , "5" ) ;
     $.widgetAppTextFieldMediaDamagesDetailsDamagesLevel.set_text_value( "0" ) ;
-    $.widgetAppTextFieldMediaDamagesDetailsDamagesArea.init( L( 'generic_damages_area_txt_hint' ) , null , Titanium.UI.KEYBOARD_NUMBER_PAD , 3 ) ;
+    $.widgetAppTextFieldMediaDamagesDetailsDamagesArea.init( L( 'generic_damages_area_txt_hint' ) , null , Titanium.UI.KEYBOARD_TYPE_NUMBER_PAD , 3 ) ;
     $.widgetAppTextFieldMediaDamagesDetailsDamagesArea.set_text_value( "0" ) ;
     // Init app textareas
     $.widgetAppTextAreaMediaDamagesDetailsComment.init( L( 'generic_comment_txt_hint' ) ) ;

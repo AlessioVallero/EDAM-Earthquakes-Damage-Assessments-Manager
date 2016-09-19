@@ -33,21 +33,21 @@ function PickerButtonClick(event) {
     if (event.source.id == 'done') {
         // Trigger a change event for the picker.
         var selectedRow = $.picker.getSelectedRow(0);
-        $.trigger('change', { 
-            source: $, 
-            type: 'change', 
-            value: selectedRow.title, 
-            id: selectedRow.id 
+        $.trigger('change', {
+            source: $,
+            type: 'change',
+            value: selectedRow.title,
+            id: selectedRow.id
         });
     }
-    
+
     // Trigger a done event for the picker.
     $.trigger('done', {
         source: $,
         type: 'done'
     });
     if (!Alloy.isTablet) {
-        $.pickerview.animate({ bottom: -Ti.Platform.displayCaps.platformHeight, duration: 500 });   
+        $.pickerview.animate({ bottom: -Ti.Platform.displayCaps.platformHeight, duration: 500 });
         $.parentView.remove($.pickerview);
     } else {
         $.popover.hide({ animated:true });
@@ -59,11 +59,10 @@ exports.open = function (choices, id) {
 		$.parentView.add($.pickerview);
 		$.pickerview.animate({ bottom: 0, duration: 500 });
 	} else {
-		$.popover.show({ 
+		$.popover.show({
 			animated:true,
-			view: $.parentField 
+			view: $.parentField
 		 });
 	}
 	$.picker.selectionIndicator = true;
 };
-

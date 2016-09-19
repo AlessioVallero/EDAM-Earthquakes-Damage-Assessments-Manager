@@ -59,6 +59,19 @@ function Back()
     }
 }
 
+// Coordinates type picker change event handler
+function OnCoordinatesType_Change( e )
+{
+    Alloy.Globals.AeDESModeSectionOne["COORDINATES_TYPE"] = e.id ;
+
+    // If the selected item is not "Other" the Other will be set to empty
+    if( e.id != 3 )
+    {
+        $.widgetAppTextFieldAeDESModeFormsSectionOneCoordinatesTypeOther.set_text_value( "" ) ;
+        Alloy.Globals.AeDESModeSectionOne["OTHER_COORDINATES_TYPE"] = "" ;
+    }
+}
+
 // Code of use picker change event handler
 function OnCodeOfUse_Change( e )
 {
@@ -124,6 +137,31 @@ function EndAsyncBusyAction_CallBack()
 
         timeout = null ;
     }
+}
+
+// Other Coordinates Type textfield change event handler
+function OnCoordinatesTypeOther_Change( e , type )
+{
+    var newOtherCoordinatesTypeValue = $.widgetAppTextFieldAeDESModeFormsSectionOneCoordinatesTypeOther.get_text_value() ;
+    Alloy.Globals.AeDESModeSectionOne["OTHER_COORDINATES_TYPE"] = newOtherCoordinatesTypeValue ;
+    // If the value is not empty, we must also set the selected item of the OtherCoordinatesType picker to "Other"
+    if( newOtherCoordinatesTypeValue )
+    {
+        $.widgetAppComboBoxAeDESModeFormsSectionOneCoordinatesType.set_selected_index( "3" ) ;
+        Alloy.Globals.AeDESModeSectionOne["COORDINATES_TYPE"] = "3" ;
+    }
+}
+
+// Timezone picker event handler
+function OnTimezone_Change( e )
+{
+    Alloy.Globals.AeDESModeSectionOne["TIMEZONE"] = e.id ;
+}
+
+// Datum picker event handler
+function OnDatum_Change( e )
+{
+    Alloy.Globals.AeDESModeSectionOne["DATUM"] = e.id ;
 }
 
 // Latitude textfield change event handler
@@ -230,6 +268,32 @@ function OnAddress_Change( e , type )
     Alloy.Globals.AeDESModeSectionOne["ADDRESS"] = $.widgetAppTextFieldAeDESModeFormsSectionOneAddress.get_text_value() ;
 }
 
+// Location type picker change event handler
+function OnLocationType_Change( e )
+{
+    Alloy.Globals.AeDESModeSectionOne["LOCATION_TYPE"] = e.id ;
+
+    // If the selected item is not "Other" the Other will be set to empty
+    if( e.id != 5 )
+    {
+        $.widgetAppTextFieldAeDESModeFormsSectionOneLocationDetails.set_text_value( "" ) ;
+        Alloy.Globals.AeDESModeSectionOne["LOCATION_DETAILS"] = "" ;
+    }
+}
+
+// Other Location Details textfield change event handler
+function OnLocationDetails_Change( e , type )
+{
+    var newLocationDetailsValue = $.widgetAppTextFieldAeDESModeFormsSectionOneLocationDetails.get_text_value() ;
+    Alloy.Globals.AeDESModeSectionOne["LOCATION_DETAILS"] = newLocationDetailsValue ;
+    // If the value is not empty, we must also set the selected item of the LocationDetails picker to "Other"
+    if( newLocationDetailsValue )
+    {
+        $.widgetAppComboBoxAeDESModeFormsSectionOneLocationType.set_selected_index( "5" ) ;
+        Alloy.Globals.AeDESModeSectionOne["LOCATION_TYPE"] = "5" ;
+    }
+}
+
 // CivicNo textfield change event handler
 function OnCivicNo_Change( e , type )
 {
@@ -240,6 +304,70 @@ function OnCivicNo_Change( e , type )
 function OnBuildingNameOrOwner_Change( e , type )
 {
     Alloy.Globals.AeDESModeSectionOne["B_NAME_OR_OWNER"] = $.widgetAppTextFieldAeDESModeFormsSectionOneBuildingNameOrOwner.get_text_value() ;
+}
+
+// TableView Map Aggregate click event handler
+function OnTableViewAeDESModeFormsSectionOneMapAggregatePhoto_Click( e )
+{
+    try
+    {
+        // If a sketch already exists, we must ask to the user if the purpose is to see the existing one or create a new one (depending on the synchronization of the form)
+        if( Alloy.Globals.AeDESModeSectionOne["MAP_AGGREGATE_PATH"] )
+        {
+            if( view_enabled )
+            {
+                // OptionDialog to ask user about the type of ATC-20 form desired
+                var optionDialog = Ti.UI.createOptionDialog(
+                {
+                    title: L( 'generic_map_aggregate_title' ) ,
+                    cancel: 3 ,
+                    options: [ L( 'aedes_new_map_aggregate_sketch_msg' ) , L( 'aedes_view_map_aggregate_sketch_msg' ) , L( 'aedes_delete_map_aggregate_sketch_msg' ) , L( 'generic_cancel_btn_title' ) ] ,
+                    selectedIndex: 1
+                } ) ;
+                optionDialog.addEventListener( 'click' , function( e )
+                {
+                    switch( e.index )
+                    {
+                        case 0:
+                        {
+                            Alloy.Globals.createAndOpenControllerExt( 'DraftPaintView' , { type: "AeDES_SectionOne_Sketch" } ) ;
+                        }
+                        break ;
+
+                        case 1:
+                        {
+                            Alloy.Globals.createAndOpenControllerExt( 'ViewFormSketchView' , { image: Alloy.Globals.AeDESModeSectionOne["MAP_AGGREGATE_PATH"] } ) ;
+                        }
+                        break ;
+
+                        case 2:
+                        {
+                            // The sketch will be physically deleted only after saving
+                            Alloy.Globals.AeDESModeSectionOne["MAP_AGGREGATE_PATH"] = "" ;
+                            Alloy.Globals.AeDESModeSectionOne["MAP_AGGREGATE_MODIFIED"] = "Y" ;
+                        }
+                        break ;
+                    }
+                } ) ;
+                // Show OptionDialog about the map aggregate form
+                optionDialog.show() ;
+            }
+            else
+            {
+                // The form is synchronized, the only possibility is to see the existing sketch
+                Alloy.Globals.createAndOpenControllerExt( 'ViewFormSketchView' , { image: Alloy.Globals.AeDESModeSectionOne["MAP_AGGREGATE_PATH"] } ) ;
+            }
+        }
+        else
+        {
+            // No previous sketch exists, the user can create a new one
+            Alloy.Globals.createAndOpenControllerExt( 'DraftPaintView' , { type: "AeDES_SectionOne_Sketch" } ) ;
+        }
+    }
+    catch( exception )
+    {
+        Alloy.Globals.AlertUserAndLogAsync( L( 'generic_exception_msg' ) + exception.message ) ;
+    }
 }
 
 // Save button click event handler
@@ -253,6 +381,9 @@ try
     // Init controls
     var codeOfUseParentView = null ;
     var buildingPositionView = null ;
+    var timezoneView = null ;
+    var datumView = null ;
+    var locationTypeView = null ;
     // On iOS devices the parentView must be the mainView because is used a new Window to show the picker.
     // so if we use the container of the Widget, the new Window will appear compressed inside the container
     if( OS_IOS )
@@ -260,49 +391,65 @@ try
         var mainView = $.getView() ;
         codeOfUseParentView = mainView ;
         buildingPositionView = mainView ;
+        timezoneView = mainView ;
+        datumView = mainView ;
+        coordinatesTypeView = mainView ;
+        locationTypeView = mainView ;
     }
     else
     {
         codeOfUseParentView = $.viewAppComboBoxAeDESModeFormsSectionOneCodeOfUse ;
         buildingPositionView = $.viewAppComboBoxAeDESModeFormsSectionOneBuildingPosition ;
+        timezoneView = $.viewAppComboBoxAeDESModeFormsSectionOneTimezone ;
+        datumView = $.viewAppComboBoxAeDESModeFormsSectionOneDatum ;
+        coordinatesTypeView = $.viewAppComboBoxAeDESModeFormsSectionOneCoordinatesType ;
+        locationTypeView = $.viewAppComboBoxAeDESModeFormsSectionOneLocationType ;
     }
     $.btnAeDESModeFormsSectionOneLoadPosition.enabled = view_enabled ;
     // Init app textfields
-    $.widgetAppTextFieldAeDESModeFormsSectionOneLatitude.init( L( 'generic_latitude_txt_hint' ) , OnLatitude_Change , Titanium.UI.KEYBOARD_NUMBERS_PUNCTUATION ) ;
+    $.widgetAppTextFieldAeDESModeFormsSectionOneCoordinatesTypeOther.init( L( 'generic_coordinates_type_other_txt_hint' ) , OnCoordinatesTypeOther_Change , null , 7 ) ;
+    $.widgetAppTextFieldAeDESModeFormsSectionOneCoordinatesTypeOther.set_text_value( Alloy.Globals.AeDESModeSectionOne["OTHER_COORDINATES_TYPE"] ) ;
+    $.widgetAppTextFieldAeDESModeFormsSectionOneCoordinatesTypeOther.enabled( view_enabled ) ;
+
+    $.widgetAppTextFieldAeDESModeFormsSectionOneLatitude.init( L( 'generic_latitude_txt_hint' ) , OnLatitude_Change , Titanium.UI.KEYBOARD_TYPE_NUMBERS_PUNCTUATION , 10 ) ;
     $.widgetAppTextFieldAeDESModeFormsSectionOneLatitude.set_text_value( Alloy.Globals.AeDESModeSectionOne["LATITUDE"] ) ;
     $.widgetAppTextFieldAeDESModeFormsSectionOneLatitude.enabled( view_enabled ) ;
 
-    $.widgetAppTextFieldAeDESModeFormsSectionOneLongitude.init( L( 'generic_longitude_txt_hint' ) , OnLongitude_Change , Titanium.UI.KEYBOARD_NUMBERS_PUNCTUATION ) ;
+    $.widgetAppTextFieldAeDESModeFormsSectionOneLongitude.init( L( 'generic_longitude_txt_hint' ) , OnLongitude_Change , Titanium.UI.KEYBOARD_TYPE_NUMBERS_PUNCTUATION , 10 ) ;
     $.widgetAppTextFieldAeDESModeFormsSectionOneLongitude.set_text_value( Alloy.Globals.AeDESModeSectionOne["LONGITUDE"] ) ;
     $.widgetAppTextFieldAeDESModeFormsSectionOneLongitude.enabled( view_enabled ) ;
 
-    $.widgetAppTextFieldAeDESModeFormsSectionOneAltitude.init( L( 'generic_altitude_txt_hint' ) , OnAltitude_Change , Titanium.UI.KEYBOARD_NUMBERS_PUNCTUATION ) ;
+    $.widgetAppTextFieldAeDESModeFormsSectionOneAltitude.init( L( 'generic_altitude_txt_hint' ) , OnAltitude_Change , Titanium.UI.KEYBOARD_TYPE_NUMBERS_PUNCTUATION , 10 ) ;
     $.widgetAppTextFieldAeDESModeFormsSectionOneAltitude.set_text_value( Alloy.Globals.AeDESModeSectionOne["ALTITUDE"] ) ;
     $.widgetAppTextFieldAeDESModeFormsSectionOneAltitude.enabled( view_enabled ) ;
 
-    $.widgetAppTextFieldAeDESModeFormsSectionOneProvince.init( L( 'generic_province_txt_hint' ) , OnProvince_Change ) ;
+    $.widgetAppTextFieldAeDESModeFormsSectionOneProvince.init( L( 'generic_province_txt_hint' ) , OnProvince_Change , null , 29 ) ;
     $.widgetAppTextFieldAeDESModeFormsSectionOneProvince.set_text_value( Alloy.Globals.AeDESModeSectionOne["PROVINCE"] ) ;
     $.widgetAppTextFieldAeDESModeFormsSectionOneProvince.enabled( view_enabled ) ;
 
-    $.widgetAppTextFieldAeDESModeFormsSectionOneMunicipality.init( L( 'generic_municipality_txt_hint' ) , OnMunicipality_Change ) ;
+    $.widgetAppTextFieldAeDESModeFormsSectionOneMunicipality.init( L( 'generic_municipality_txt_hint' ) , OnMunicipality_Change , null , 29 ) ;
     $.widgetAppTextFieldAeDESModeFormsSectionOneMunicipality.set_text_value( Alloy.Globals.AeDESModeSectionOne["MUNICIPALITY"] ) ;
     $.widgetAppTextFieldAeDESModeFormsSectionOneMunicipality.enabled( view_enabled ) ;
 
-    $.widgetAppTextFieldAeDESModeFormsSectionOnePlace.init( L( 'generic_place_txt_hint' ) , OnPlace_Change ) ;
+    $.widgetAppTextFieldAeDESModeFormsSectionOnePlace.init( L( 'generic_place_txt_hint' ) , OnPlace_Change , null , 29 ) ;
     $.widgetAppTextFieldAeDESModeFormsSectionOnePlace.set_text_value( Alloy.Globals.AeDESModeSectionOne["PLACE"] ) ;
     $.widgetAppTextFieldAeDESModeFormsSectionOnePlace.enabled( view_enabled ) ;
 
-    $.widgetAppTextFieldAeDESModeFormsSectionOneAddress.init( L( 'generic_address_txt_hint' ) , OnAddress_Change ) ;
+    $.widgetAppTextFieldAeDESModeFormsSectionOneAddress.init( L( 'generic_address_txt_hint' ) , OnAddress_Change , null , 26 ) ;
     $.widgetAppTextFieldAeDESModeFormsSectionOneAddress.set_text_value( Alloy.Globals.AeDESModeSectionOne["ADDRESS"] ) ;
     $.widgetAppTextFieldAeDESModeFormsSectionOneAddress.enabled( view_enabled ) ;
 
-    $.widgetAppTextFieldAeDESModeFormsSectionOneCivicNo.init( L( 'generic_civicno_txt_hint' ) , OnCivicNo_Change , Titanium.UI.KEYBOARD_NUMBER_PAD ) ;
+    $.widgetAppTextFieldAeDESModeFormsSectionOneCivicNo.init( L( 'generic_civicno_txt_hint' ) , OnCivicNo_Change , Titanium.UI.KEYBOARD_TYPE_NUMBER_PAD , 5 ) ;
     $.widgetAppTextFieldAeDESModeFormsSectionOneCivicNo.set_text_value( Alloy.Globals.AeDESModeSectionOne["CIVIC_NO"] ) ;
     $.widgetAppTextFieldAeDESModeFormsSectionOneCivicNo.enabled( view_enabled ) ;
 
-    $.widgetAppTextFieldAeDESModeFormsSectionOneBuildingNameOrOwner.init( L( 'generic_building_name_or_owner_txt_hint' ) , OnBuildingNameOrOwner_Change ) ;
+    $.widgetAppTextFieldAeDESModeFormsSectionOneBuildingNameOrOwner.init( L( 'generic_building_name_or_owner_txt_hint' ) , OnBuildingNameOrOwner_Change , null , 113 ) ;
     $.widgetAppTextFieldAeDESModeFormsSectionOneBuildingNameOrOwner.set_text_value( Alloy.Globals.AeDESModeSectionOne["B_NAME_OR_OWNER"] ) ;
     $.widgetAppTextFieldAeDESModeFormsSectionOneBuildingNameOrOwner.enabled( view_enabled ) ;
+
+    $.widgetAppTextFieldAeDESModeFormsSectionOneLocationDetails.init( L( 'generic_location_details_txt_hint' ) , OnLocationDetails_Change , null , 31 ) ;
+    $.widgetAppTextFieldAeDESModeFormsSectionOneLocationDetails.set_text_value( Alloy.Globals.AeDESModeSectionOne["LOCATION_DETAILS"] ) ;
+    $.widgetAppTextFieldAeDESModeFormsSectionOneLocationDetails.enabled( view_enabled ) ;
 
     // Init app comboboxes
     var codeOfUseValues =
@@ -385,12 +532,74 @@ try
     {
         $.widgetAppComboBoxAeDESModeFormsSectionOneBuildingPosition.set_selected_index( Alloy.Globals.AeDESModeSectionOne["BUILDING_POSITION"] ) ;
     }
+
+    var coordinatesTypeValues =
+    {
+        0: { title: L( 'generic_coordinates_type_not_selected' ) } ,
+        1: { title: L( 'generic_coordinates_type_plane_utm' ) } ,
+        2: { title: L( 'generic_coordinates_type_geographical' ) } ,
+        3: { title: L( 'generic_coordinates_type_other' ) }
+    } ;
+    $.widgetAppComboBoxAeDESModeFormsSectionOneCoordinatesType.init( L( 'generic_coordinates_type_text_msg' ) , coordinatesTypeValues , OnCoordinatesType_Change , null , coordinatesTypeView ) ;
+    $.widgetAppComboBoxAeDESModeFormsSectionOneCoordinatesType.enabled( view_enabled ) ;
+
+    if( Alloy.Globals.AeDESModeSectionOne["COORDINATES_TYPE"] )
+    {
+        $.widgetAppComboBoxAeDESModeFormsSectionOneCoordinatesType.set_selected_index( Alloy.Globals.AeDESModeSectionOne["COORDINATES_TYPE"] ) ;
+    }
+
+    var timezoneValues =
+    {
+        0: { title: L( 'generic_timezone_not_selected' ) } ,
+        1: { title: "32" } ,
+        2: { title: "33" } ,
+        3: { title: "34" }
+    } ;
+    $.widgetAppComboBoxAeDESModeFormsSectionOneTimezone.init( L( 'generic_timezone_text_msg' ) , timezoneValues , OnTimezone_Change , null , timezoneView ) ;
+    $.widgetAppComboBoxAeDESModeFormsSectionOneTimezone.enabled( view_enabled ) ;
+
+    if( Alloy.Globals.AeDESModeSectionOne["TIMEZONE"] )
+    {
+        $.widgetAppComboBoxAeDESModeFormsSectionOneTimezone.set_selected_index( Alloy.Globals.AeDESModeSectionOne["TIMEZONE"] ) ;
+    }
+
+    var datumValues =
+    {
+        0: { title: L( 'generic_datum_not_selected' ) } ,
+        1: { title: "ED50" } ,
+        2: { title: "WGS84" }
+    } ;
+    $.widgetAppComboBoxAeDESModeFormsSectionOneDatum.init( L( 'generic_datum_text_msg' ) , datumValues , OnDatum_Change , null , datumView ) ;
+    $.widgetAppComboBoxAeDESModeFormsSectionOneDatum.enabled( view_enabled ) ;
+
+    if( Alloy.Globals.AeDESModeSectionOne["DATUM"] )
+    {
+        $.widgetAppComboBoxAeDESModeFormsSectionOneDatum.set_selected_index( Alloy.Globals.AeDESModeSectionOne["DATUM"] ) ;
+    }
+
+    var locationTypeValues =
+    {
+        0: { title: L( 'generic_location_type_not_selected' ) } ,
+        1: { title: L( 'generic_location_type_street' ) } ,
+        2: { title: L( 'generic_location_type_path' ) } ,
+        3: { title: L( 'generic_location_type_alley' ) } ,
+        4: { title: L( 'generic_location_type_plaza' ) } ,
+        5: { title: L( 'generic_location_type_other' ) }
+    } ;
+    $.widgetAppComboBoxAeDESModeFormsSectionOneLocationType.init( L( 'generic_location_type_text_msg' ) , locationTypeValues , OnLocationType_Change , null , locationTypeView ) ;
+    $.widgetAppComboBoxAeDESModeFormsSectionOneLocationType.enabled( view_enabled ) ;
+
+    if( Alloy.Globals.AeDESModeSectionOne["LOCATION_TYPE"] )
+    {
+        $.widgetAppComboBoxAeDESModeFormsSectionOneLocationType.set_selected_index( Alloy.Globals.AeDESModeSectionOne["LOCATION_TYPE"] ) ;
+    }
     // Init app buttons
     $.widgetAppButtonSave.init( '/images/save_normal.png' , '/images/save_pressed.png' , '/images/save_disabled.png' , L( 'generic_save_btn_title' ) , OnBtnSave_Click ) ;
     $.viewAppButtonSave.visible = view_enabled ;
 
     RegisterHideKeyboard( $.aedesModeFormsSectionOneWindow ,
     [
+        $.widgetAppTextFieldAeDESModeFormsSectionOneCoordinatesTypeOther.get_text_field() ,
         $.widgetAppTextFieldAeDESModeFormsSectionOneLatitude.get_text_field() ,
         $.widgetAppTextFieldAeDESModeFormsSectionOneLongitude.get_text_field() ,
         $.widgetAppTextFieldAeDESModeFormsSectionOneAltitude.get_text_field() ,
@@ -398,6 +607,7 @@ try
         $.widgetAppTextFieldAeDESModeFormsSectionOneMunicipality.get_text_field() ,
         $.widgetAppTextFieldAeDESModeFormsSectionOnePlace.get_text_field() ,
         $.widgetAppTextFieldAeDESModeFormsSectionOneAddress.get_text_field() ,
+        $.widgetAppTextFieldAeDESModeFormsSectionOneLocationDetails.get_text_field() ,
         $.widgetAppTextFieldAeDESModeFormsSectionOneCivicNo.get_text_field() ,
         $.widgetAppTextFieldAeDESModeFormsSectionOneBuildingNameOrOwner.get_text_field()
     ] ) ;

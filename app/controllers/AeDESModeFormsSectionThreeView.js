@@ -84,6 +84,12 @@ function OnSteelFrames_Change( e )
     Alloy.Globals.AeDESModeSectionThree["STEEL_FRAMES"] = $.widgetAppCheckBoxAeDESModeFormsSectionThreeSteelFrames.get_value() ;
 }
 
+// WoodFramesWalls checkbox event handler
+function OnWoodFramesWalls_Change( e )
+{
+    Alloy.Globals.AeDESModeSectionThree["WOOD_FRAMES_WALLS"] = $.widgetAppCheckBoxAeDESModeFormsSectionThreeWoodFramesWalls.get_value() ;
+}
+
 // Table view masonry structures click event handler
 function OnTableViewAeDESModeFormsSectionThreeMasonryStructure_Click( e )
 {
@@ -228,6 +234,8 @@ try
     $.widgetAppCheckBoxAeDESModeFormsSectionThreeReinforcedConcreteWalls.enabled( view_enabled ) ;
     $.widgetAppCheckBoxAeDESModeFormsSectionThreeSteelFrames.init( L( 'generic_steel_frames_text_msg' ) , Alloy.Globals.AeDESModeSectionThree["STEEL_FRAMES"] , OnSteelFrames_Change ) ;
     $.widgetAppCheckBoxAeDESModeFormsSectionThreeSteelFrames.enabled( view_enabled ) ;
+    $.widgetAppCheckBoxAeDESModeFormsSectionThreeWoodFramesWalls.init( L( 'generic_wood_frames_walls_text_msg' ) , Alloy.Globals.AeDESModeSectionThree["WOOD_FRAMES_WALLS"] , OnWoodFramesWalls_Change ) ;
+    $.widgetAppCheckBoxAeDESModeFormsSectionThreeWoodFramesWalls.enabled( view_enabled ) ;
 
     // On iOS devices will be opened the NavigationWindow, on Android will be opened the Window instead
     // Also the top margin of the ScrollView must be different depending on the device type

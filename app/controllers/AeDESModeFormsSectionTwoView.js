@@ -72,12 +72,6 @@ function OnUtilization_Change( e )
     Alloy.Globals.AeDESModeSectionTwo["UTILIZATION"] = e.id ;
 }
 
-// Property picker event handler
-function OnProperty_Change( e )
-{
-    Alloy.Globals.AeDESModeSectionTwo["PROPERTY"] = e.id ;
-}
-
 // UnitOfUseHousing textfield change event handler
 function OnUnitOfUseHousing_Change( e , type )
 {
@@ -132,6 +126,30 @@ function OnOccupants_Change( e , type )
     Alloy.Globals.AeDESModeSectionTwo["OCCUPANTS"] = $.widgetAppTextFieldAeDESModeFormsSectionTwoOccupants.get_text_value() ;
 }
 
+// Public property picker event handler
+function OnPublicProperty_Change( e )
+{
+    Alloy.Globals.AeDESModeSectionTwo["PUBLIC_PROPERTY"] = $.widgetAppTextFieldAeDESModeFormsSectionTwoPublicProperty.get_text_value() ;
+
+    if( parseInt( Alloy.Globals.AeDESModeSectionTwo["PUBLIC_PROPERTY"] ) > 100 )
+    {
+        $.widgetAppTextFieldAeDESModeFormsSectionTwoPublicProperty.set_text_value( "100" ) ;
+        Alloy.Globals.AeDESModeSectionTwo["PUBLIC_PROPERTY"] = "100" ;
+    }
+}
+
+// Private property picker event handler
+function OnPrivateProperty_Change( e )
+{
+    Alloy.Globals.AeDESModeSectionTwo["PRIVATE_PROPERTY"] = $.widgetAppTextFieldAeDESModeFormsSectionTwoPrivateProperty.get_text_value() ;
+
+    if( parseInt( Alloy.Globals.AeDESModeSectionTwo["PRIVATE_PROPERTY"] ) > 100 )
+    {
+        $.widgetAppTextFieldAeDESModeFormsSectionTwoPrivateProperty.set_text_value( "100" ) ;
+        Alloy.Globals.AeDESModeSectionTwo["PRIVATE_PROPERTY"] = "100" ;
+    }
+}
+
 // Save button click event handler
 function OnBtnSave_Click( e )
 {
@@ -148,7 +166,6 @@ try
     var constructionAgeParentView = null ;
     var renovationAgeParentView = null ;
     var utilizationParentView = null ;
-    var propertyParentView = null ;
     // On iOS devices the parentView must be the mainView because is used a new Window to show the picker.
     // so if we use the container of the Widget, the new Window will appear compressed inside the container
     if( OS_IOS )
@@ -161,7 +178,6 @@ try
         constructionAgeParentView = mainView ;
         renovationAgeParentView = mainView ;
         utilizationParentView = mainView ;
-        propertyParentView = mainView ;
     }
     else
     {
@@ -172,7 +188,6 @@ try
         constructionAgeParentView = $.viewAppComboBoxAeDESModeFormsSectionTwoConstructionAge ;
         renovationAgeParentView = $.viewAppComboBoxAeDESModeFormsSectionTwoRenovationAge ;
         utilizationParentView = $.viewAppComboBoxAeDESModeFormsSectionTwoUtilization ;
-        propertyParentView = $.viewAppComboBoxAeDESModeFormsSectionTwoProperty ;
     }
     // Init app comboboxes
     var plansNoValues =
@@ -232,19 +247,19 @@ try
     var averageSurfaceValues =
     {
         0: { title: '<=50' } ,
-        1: { title: '50-70' } ,
-        2: { title: '70-100' } ,
-        3: { title: '100-130' } ,
-        4: { title: '130-170' } ,
-        5: { title: '170-230' } ,
-        6: { title: '230-300' } ,
-        7: { title: '300-400' } ,
-        8: { title: '400-500' } ,
-        9: { title: '500-650' } ,
-        10: { title: '650-900' } ,
-        11: { title: '900-1200' } ,
-        12: { title: '1200-1600' } ,
-        13: { title: '1600-2200' } ,
+        1: { title: '50-69' } ,
+        2: { title: '70-99' } ,
+        3: { title: '100-129' } ,
+        4: { title: '130-169' } ,
+        5: { title: '170-229' } ,
+        6: { title: '230-299' } ,
+        7: { title: '300-399' } ,
+        8: { title: '400-499' } ,
+        9: { title: '500-649' } ,
+        10: { title: '650-899' } ,
+        11: { title: '900-1199' } ,
+        12: { title: '1200-1599' } ,
+        13: { title: '1600-2199' } ,
         14: { title: '2200-3000' } ,
         15: { title: '>3000' }
     } ;
@@ -263,10 +278,15 @@ try
         2: { title: '19-45' } ,
         3: { title: '46-61' } ,
         4: { title: '62-71' } ,
-        5: { title: '72-81' } ,
-        6: { title: '82-91' } ,
-        7: { title: '92-01' } ,
-        8: { title: '>=2002' }
+        5: { title: '72-75' } ,
+        6: { title: '76-81' } ,
+        7: { title: '82-86' } ,
+        8: { title: '87-91' } ,
+        9: { title: '92-96' } ,
+        10: { title: '97-01' } ,
+        11: { title: '02-08' } ,
+        12: { title: '09-11' } ,
+        13: { title: '>=2011' }
     } ;
     $.widgetAppComboBoxAeDESModeFormsSectionTwoConstructionAge.init( L( 'generic_construction_age_text_msg' ) , constructionAgeValues , OnConstructionAge_Change , null , constructionAgeParentView ) ;
     $.widgetAppComboBoxAeDESModeFormsSectionTwoConstructionAge.enabled( view_enabled ) ;
@@ -283,10 +303,15 @@ try
         2: { title: '19-45' } ,
         3: { title: '46-61' } ,
         4: { title: '62-71' } ,
-        5: { title: '72-81' } ,
-        6: { title: '82-91' } ,
-        7: { title: '92-01' } ,
-        8: { title: '>=2002' }
+        5: { title: '72-75' } ,
+        6: { title: '76-81' } ,
+        7: { title: '82-86' } ,
+        8: { title: '87-91' } ,
+        9: { title: '92-96' } ,
+        10: { title: '97-01' } ,
+        11: { title: '02-08' } ,
+        12: { title: '09-11' } ,
+        13: { title: '>=2011' }
     } ;
     $.widgetAppComboBoxAeDESModeFormsSectionTwoRenovationAge.init( L( 'generic_renovation_age_text_msg' ) , renovationAgeValues , OnRenovationAge_Change , null , renovationAgeParentView ) ;
     $.widgetAppComboBoxAeDESModeFormsSectionTwoRenovationAge.enabled( view_enabled ) ;
@@ -314,55 +339,50 @@ try
         $.widgetAppComboBoxAeDESModeFormsSectionTwoUtilization.set_selected_index( Alloy.Globals.AeDESModeSectionTwo["UTILIZATION"] ) ;
     }
 
-    var propertyValues =
-    {
-        0: { title: L( 'generic_property_private' ) } ,
-        1: { title: L( 'generic_property_public' ) }
-    } ;
-    $.widgetAppComboBoxAeDESModeFormsSectionTwoProperty.init( L( 'generic_property_text_msg' ) , propertyValues , OnProperty_Change , null , propertyParentView ) ;
-    $.widgetAppComboBoxAeDESModeFormsSectionTwoProperty.enabled( view_enabled ) ;
-
-    if( Alloy.Globals.AeDESModeSectionTwo["PROPERTY"] )
-    {
-        $.widgetAppComboBoxAeDESModeFormsSectionTwoProperty.set_selected_index( Alloy.Globals.AeDESModeSectionTwo["PROPERTY"] ) ;
-    }
-
     // Init app textfields
-    $.widgetAppTextFieldAeDESModeFormsSectionTwoUnitOfUseHousing.init( L( 'generic_unit_of_use_housing_txt_hint' ) , OnUnitOfUseHousing_Change , Titanium.UI.KEYBOARD_NUMBER_PAD ) ;
+    $.widgetAppTextFieldAeDESModeFormsSectionTwoUnitOfUseHousing.init( L( 'generic_unit_of_use_housing_txt_hint' ) , OnUnitOfUseHousing_Change , Titanium.UI.KEYBOARD_TYPE_NUMBER_PAD , 2 ) ;
     $.widgetAppTextFieldAeDESModeFormsSectionTwoUnitOfUseHousing.enabled( view_enabled ) ;
     $.widgetAppTextFieldAeDESModeFormsSectionTwoUnitOfUseHousing.set_text_value( Alloy.Globals.AeDESModeSectionTwo["UNIT_OF_USE_HOUSING"] ) ;
 
-    $.widgetAppTextFieldAeDESModeFormsSectionTwoUnitOfUseProductive.init( L( 'generic_unit_of_use_productive_txt_hint' ) , OnUnitOfUseProductive_Change , Titanium.UI.KEYBOARD_NUMBER_PAD ) ;
+    $.widgetAppTextFieldAeDESModeFormsSectionTwoUnitOfUseProductive.init( L( 'generic_unit_of_use_productive_txt_hint' ) , OnUnitOfUseProductive_Change , Titanium.UI.KEYBOARD_TYPE_NUMBER_PAD , 2 ) ;
     $.widgetAppTextFieldAeDESModeFormsSectionTwoUnitOfUseProductive.enabled( view_enabled ) ;
     $.widgetAppTextFieldAeDESModeFormsSectionTwoUnitOfUseProductive.set_text_value( Alloy.Globals.AeDESModeSectionTwo["UNIT_OF_USE_PRODUCTIVE"] ) ;
 
-    $.widgetAppTextFieldAeDESModeFormsSectionTwoUnitOfUseCommerce.init( L( 'generic_unit_of_use_commerce_txt_hint' ) , OnUnitOfUseCommerce_Change , Titanium.UI.KEYBOARD_NUMBER_PAD ) ;
+    $.widgetAppTextFieldAeDESModeFormsSectionTwoUnitOfUseCommerce.init( L( 'generic_unit_of_use_commerce_txt_hint' ) , OnUnitOfUseCommerce_Change , Titanium.UI.KEYBOARD_TYPE_NUMBER_PAD , 2 ) ;
     $.widgetAppTextFieldAeDESModeFormsSectionTwoUnitOfUseCommerce.enabled( view_enabled ) ;
     $.widgetAppTextFieldAeDESModeFormsSectionTwoUnitOfUseCommerce.set_text_value( Alloy.Globals.AeDESModeSectionTwo["UNIT_OF_USE_COMMERCE"] ) ;
 
-    $.widgetAppTextFieldAeDESModeFormsSectionTwoUnitOfUseOffices.init( L( 'generic_unit_of_use_offices_txt_hint' ) , OnUnitOfUseOffices_Change , Titanium.UI.KEYBOARD_NUMBER_PAD ) ;
+    $.widgetAppTextFieldAeDESModeFormsSectionTwoUnitOfUseOffices.init( L( 'generic_unit_of_use_offices_txt_hint' ) , OnUnitOfUseOffices_Change , Titanium.UI.KEYBOARD_TYPE_NUMBER_PAD , 2 ) ;
     $.widgetAppTextFieldAeDESModeFormsSectionTwoUnitOfUseOffices.enabled( view_enabled ) ;
     $.widgetAppTextFieldAeDESModeFormsSectionTwoUnitOfUseOffices.set_text_value( Alloy.Globals.AeDESModeSectionTwo["UNIT_OF_USE_OFFICES"] ) ;
 
-    $.widgetAppTextFieldAeDESModeFormsSectionTwoUnitOfUsePublicServices.init( L( 'generic_unit_of_use_public_services_txt_hint' ) , OnUnitOfUsePublicServices_Change , Titanium.UI.KEYBOARD_NUMBER_PAD ) ;
+    $.widgetAppTextFieldAeDESModeFormsSectionTwoUnitOfUsePublicServices.init( L( 'generic_unit_of_use_public_services_txt_hint' ) , OnUnitOfUsePublicServices_Change , Titanium.UI.KEYBOARD_TYPE_NUMBER_PAD , 2 ) ;
     $.widgetAppTextFieldAeDESModeFormsSectionTwoUnitOfUsePublicServices.enabled( view_enabled ) ;
     $.widgetAppTextFieldAeDESModeFormsSectionTwoUnitOfUsePublicServices.set_text_value( Alloy.Globals.AeDESModeSectionTwo["UNIT_OF_USE_PUBLIC_SERVICES"] ) ;
 
-    $.widgetAppTextFieldAeDESModeFormsSectionTwoUnitOfUseDeposit.init( L( 'generic_unit_of_use_deposit_txt_hint' ) , OnUnitOfUseDeposit_Change , Titanium.UI.KEYBOARD_NUMBER_PAD ) ;
+    $.widgetAppTextFieldAeDESModeFormsSectionTwoUnitOfUseDeposit.init( L( 'generic_unit_of_use_deposit_txt_hint' ) , OnUnitOfUseDeposit_Change , Titanium.UI.KEYBOARD_TYPE_NUMBER_PAD , 2 ) ;
     $.widgetAppTextFieldAeDESModeFormsSectionTwoUnitOfUseDeposit.enabled( view_enabled ) ;
     $.widgetAppTextFieldAeDESModeFormsSectionTwoUnitOfUseDeposit.set_text_value( Alloy.Globals.AeDESModeSectionTwo["UNIT_OF_USE_DEPOSIT"] ) ;
 
-    $.widgetAppTextFieldAeDESModeFormsSectionTwoUnitOfUseStrategic.init( L( 'generic_unit_of_use_strategic_txt_hint' ) , OnUnitOfUseStrategic_Change , Titanium.UI.KEYBOARD_NUMBER_PAD ) ;
+    $.widgetAppTextFieldAeDESModeFormsSectionTwoUnitOfUseStrategic.init( L( 'generic_unit_of_use_strategic_txt_hint' ) , OnUnitOfUseStrategic_Change , Titanium.UI.KEYBOARD_TYPE_NUMBER_PAD , 2 ) ;
     $.widgetAppTextFieldAeDESModeFormsSectionTwoUnitOfUseStrategic.enabled( view_enabled ) ;
     $.widgetAppTextFieldAeDESModeFormsSectionTwoUnitOfUseStrategic.set_text_value( Alloy.Globals.AeDESModeSectionTwo["UNIT_OF_USE_STRATEGIC"] ) ;
 
-    $.widgetAppTextFieldAeDESModeFormsSectionTwoUnitOfUseTourism.init( L( 'generic_unit_of_use_tourism_txt_hint' ) , OnUnitOfUseTourism_Change , Titanium.UI.KEYBOARD_NUMBER_PAD ) ;
+    $.widgetAppTextFieldAeDESModeFormsSectionTwoUnitOfUseTourism.init( L( 'generic_unit_of_use_tourism_txt_hint' ) , OnUnitOfUseTourism_Change , Titanium.UI.KEYBOARD_TYPE_NUMBER_PAD , 2 ) ;
     $.widgetAppTextFieldAeDESModeFormsSectionTwoUnitOfUseTourism.enabled( view_enabled ) ;
     $.widgetAppTextFieldAeDESModeFormsSectionTwoUnitOfUseTourism.set_text_value( Alloy.Globals.AeDESModeSectionTwo["UNIT_OF_USE_TOURISM"] ) ;
 
-    $.widgetAppTextFieldAeDESModeFormsSectionTwoOccupants.init( L( 'generic_occupants_txt_hint' ) , OnOccupants_Change ) ;
+    $.widgetAppTextFieldAeDESModeFormsSectionTwoOccupants.init( L( 'generic_occupants_txt_hint' ) , OnOccupants_Change , Titanium.UI.KEYBOARD_TYPE_NUMBER_PAD , 4 ) ;
     $.widgetAppTextFieldAeDESModeFormsSectionTwoOccupants.enabled( view_enabled ) ;
     $.widgetAppTextFieldAeDESModeFormsSectionTwoOccupants.set_text_value( Alloy.Globals.AeDESModeSectionTwo["OCCUPANTS"] ) ;
+
+    $.widgetAppTextFieldAeDESModeFormsSectionTwoPublicProperty.init( L( 'generic_public_property_txt_hint' ) , OnPublicProperty_Change , Titanium.UI.KEYBOARD_TYPE_NUMBER_PAD , 3 ) ;
+    $.widgetAppTextFieldAeDESModeFormsSectionTwoPublicProperty.enabled( view_enabled ) ;
+    $.widgetAppTextFieldAeDESModeFormsSectionTwoPublicProperty.set_text_value( Alloy.Globals.AeDESModeSectionTwo["PUBLIC_PROPERTY"] ) ;
+
+    $.widgetAppTextFieldAeDESModeFormsSectionTwoPrivateProperty.init( L( 'generic_private_property_txt_hint' ) , OnPrivateProperty_Change , Titanium.UI.KEYBOARD_TYPE_NUMBER_PAD , 3 ) ;
+    $.widgetAppTextFieldAeDESModeFormsSectionTwoPrivateProperty.enabled( view_enabled ) ;
+    $.widgetAppTextFieldAeDESModeFormsSectionTwoPrivateProperty.set_text_value( Alloy.Globals.AeDESModeSectionTwo["PRIVATE_PROPERTY"] ) ;
     // Init app buttons
     $.widgetAppButtonSave.init( '/images/save_normal.png' , '/images/save_pressed.png' , '/images/save_disabled.png' , L( 'generic_save_btn_title' ) , OnBtnSave_Click ) ;
     $.viewAppButtonSave.visible = view_enabled ;

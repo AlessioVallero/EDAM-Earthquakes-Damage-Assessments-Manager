@@ -12,6 +12,7 @@ exports.definition = {
             "REINFORCED_CONCRETE_FRAMES": "TEXT" ,
             "REINFORCED_CONCRETE_WALLS": "TEXT" ,
             "STEEL_FRAMES": "TEXT" ,
+						"WOOD_FRAMES_WALLS": "TEXT" ,
             "MASONRY_STRUCTURES": "TEXT"
         },
 		adapter: {
